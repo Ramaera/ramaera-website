@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Heading from '../../../../components/Heading/Heading'
 import Flex from '../../../../components/Styling/Flex'
 import Text from '../../../../components/Text/Text'
+import Button from '../../../../components/Button/Button'
 
 const TextContainer = () => {
 
@@ -57,6 +58,7 @@ const TextContainer = () => {
         <Text Text="We believe in innovation and excellence hence , our approach in the field of technology is focused to relish incredible customer experience and stabilising business models for tomorrow." 
           align="right" fw="500" size="23px" lh="45px" width="40rem"
         />
+        <Button Text="Read Me" align="right" ></Button>
     </StyleTextContainer>
   )
 }

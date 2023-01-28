@@ -14,7 +14,7 @@ const SocialMedia = () => {
         transform: translate( 0, -50%);
 
         @media(max-width: 1350px){
-            left: 3rem;
+            left: 2rem;
         }
     `
 
