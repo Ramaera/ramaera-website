@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 export const bg = '/background/blank.png'
 export const hover = '/content/card.png'
 export const stock = '/content/im.png'
+export const curve = '/content/rect.png'
 
 export const StockImage = styled.div`
   width: 90%;

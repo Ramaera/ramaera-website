@@ -6,7 +6,7 @@ export const CustomText = styled.h1`
   font-size: 25px;
   line-height: 39px;
   color: #FFF;
-  line-height: 42px
+  line-height: 42px;
   font-weight: 400;
   margin: 3rem 0;
 `

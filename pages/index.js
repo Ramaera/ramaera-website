@@ -14,6 +14,8 @@ import Data from './page/dataPage'
 import Story from './page/story'
 import Future from './page/future'
 import Leader from './page/leader'
+import Trust from './page/trust'
+import Promoting from './page/promoting'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,6 +36,8 @@ export default function Home() {
       <Story />
       <Future />
       <Leader />
+      <Trust />
+      <Promoting />
     </>
   )
 }
