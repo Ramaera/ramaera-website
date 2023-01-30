@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-function Tabs() {
-  const StylesTabsConatiner = styled.div`
+const Tabs = () => {  const StylesTabsConatiner = styled.div`
   position: absolute; 
   left: 0; 
   right: 0; 

@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-function Dots() {
-  const StyledDotsContainer = styled.div`
+const Dots = () => {  const StyledDotsContainer = styled.div`
     position: absolute;
     left: 15vw;
     padding-bottom: 20px;

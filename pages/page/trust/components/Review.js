@@ -2,8 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Text from "../../../../components/Text/Text"
 
-function Review() {
-  const Hero = styled.div`
+const Review = () => {  const Hero = styled.div`
     position: absolute;
     left: 20%;
     top: 48vh;

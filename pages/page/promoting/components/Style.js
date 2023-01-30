@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const bg = '/background/blank.png'
+export const curve = '/background/curve.png'
 
 export const CustomText = styled.h1`
   font-size: 25px;
