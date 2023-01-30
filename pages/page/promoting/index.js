@@ -13,7 +13,7 @@ import PromtContainer2 from "./components/PromtContainer2"
 
 const index = () => (
   <PageLayout bgColor="#f5f5f5" bg={bg}>
-    <PageWidth width="3000px" margin="0 0 0 0 ">
+    <PageWidth width="1500px" margin="0 0 0 0 ">
       <Text
         Text="Promoting Entrepreneurship"
         lg="linear-gradient(90deg, #FFE259 0%, #FFA751 100%)"
@@ -28,10 +28,10 @@ const index = () => (
       <Responsive>
         <Circle />
         <Dots />
-        <Image1/>
-        <Image2/>
-        <PromtContainer1/>
-        <PromtContainer2/>
+        <Image1 />
+        <Image2 />
+        <PromtContainer1 />
+        <PromtContainer2 />
       </Responsive>
     </PageWidth>
   </PageLayout>
