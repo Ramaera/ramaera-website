@@ -17,7 +17,7 @@ const CustomBg = () => {
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 250px;
+    top: 300px;
     text-align: center;
   `
   return (
