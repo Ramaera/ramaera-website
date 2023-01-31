@@ -17,6 +17,9 @@ import Leader from "./page/leader"
 import Trust from "./page/trust"
 import Promoting from "./page/promoting"
 import Footer from "./page/footer"
+import Transforming from "./page/transforming"
+import Faqs from "./page/faqs"
+import Tomorrow from "./page/tomorrow"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -38,6 +41,9 @@ export default function Home() {
       <Leader />
       <Trust />
       <Promoting />
+      <Tomorrow />
+      <Faqs />
+      <Transforming />
       <Footer />
     </>
   )

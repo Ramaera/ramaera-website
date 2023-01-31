@@ -2,9 +2,15 @@ import React from "react"
 import styled from "styled-components"
 
 const Foot = () => {
+  const d = new Date()
+  let year = d.getFullYear()
   const FootContainer = styled.div`
     position: absolute;
-    bottom: 160px;
+    bottom: 100px;
+    left: 50px;
+    display: flex;
+    gap: 50px;
+    bottom: 100px;
     left: 10vw;
     color: white;
   `
@@ -24,6 +30,18 @@ const Foot = () => {
     width: 80vw;
     background: #fff;
   `
+  const CopyRight = styled.div`
+    position: absolute;
+    font-weight: 100;
+    bottom: 110px;
+    left: 1000px;
+    color: white;
+    height: 2px;
+    width: 80vw;
+    font-size: 10px;
+    margin-bottom: 1rem;
+    color: white;
+  `
 
   return (
     <>
@@ -35,6 +53,7 @@ const Foot = () => {
         <Link href="#">Legal</Link>
         <Link href="#">Site Map</Link>
       </FootContainer>
+      <CopyRight>© {year} All Rights Reserved</CopyRight>
     </>
   )
 }

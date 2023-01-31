@@ -47,7 +47,6 @@ const Links = () => {
     width: 250px;
     height: 200px;
     margin-left: 3rem;
-
     border: 1px solid #ffffff;
     border-radius: 6px;
     background: linear-gradient(
@@ -61,7 +60,9 @@ const Links = () => {
     <Container>
       <Sub>
         <SubHeading>Subscribe</SubHeading>
-        <Input placeholder="Email Adddress" />
+        <form action="">
+          <Input placeholder="Email Adddress" />
+        </form>
         <SubText>
           Hello, we are Lift Media. Our goal is to translate the positive
           effects from revolutionizing how companies engage with their clients &

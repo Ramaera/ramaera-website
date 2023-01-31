@@ -22,7 +22,7 @@ const index = () => (
       />
       <Responsive>
         <BgRectangle />
-        <Review/>
+        <Review />
         <Dots />
         <Tabs />
       </Responsive>
