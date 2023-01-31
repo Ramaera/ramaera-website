@@ -1,18 +1,18 @@
 import styled from "styled-components"
 import Text from "../../../../components/Text/Text"
 
+const Div = styled.div`
+  display: flex;
+  margin-bottom: 300px;
+  align-items: center;
+  flex-direction: column;
+  width: 10vw;
+`
+const Image = styled.img`
+  height: 100px;
+  width: 100px;
+`
 const Logo = () => {
-  const Div = styled.div`
-    display: flex;
-    padding-bottom: 400px;
-    align-items: center;
-    flex-direction: column;
-    width: 10vw;
-  `
-  const Image = styled.img`
-    height: 100px;
-    width: 100px;
-  `
   return (
     <Div>
       <Image src="/logo/logo.png" />

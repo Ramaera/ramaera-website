@@ -1,37 +1,39 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 
-const Tabs = () => {  const StylesTabsConatiner = styled.div`
-  position: absolute; 
-  left: 0; 
-  right: 0; 
-  bottom:35vh;
-  margin-left: auto; 
-  margin-right: auto; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  `
-  const TabDot = styled.div`
-    height: 8px;
-    width: 8px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    &:hover {
-      background: linear-gradient(180deg, #ffe059 0%, #ffb253 100%);
-    }
-  `
-  const SelectedTabDot = styled.div`
-    height: 8px;
-    width: 8px;
-    border-radius: 10px;
+const StylesTabsConatiner = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 35vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+`
+const TabDot = styled.div`
+  height: 8px;
+  width: 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  &:hover {
     background: linear-gradient(180deg, #ffe059 0%, #ffb253 100%);
-  `
-  const ArrowContainer = styled.div`
-    margin:0  50px;
+  }
+`
+const SelectedTabDot = styled.div`
+  height: 8px;
+  width: 8px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ffe059 0%, #ffb253 100%);
+`
+const ArrowContainer = styled.div`
+  margin: 0 50px;
+`
 
-  `
+const Tabs = (review) => {
+  const [currentReview, setCurrentReview] = useState(review)
 
   return (
     <StylesTabsConatiner>
@@ -66,7 +68,7 @@ const Tabs = () => {  const StylesTabsConatiner = styled.div`
       <TabDot />
       <TabDot />
       <TabDot />
-      <ArrowContainer>
+      <ArrowContainer onClick={() => setCurrentReview(currentReview - 1)}>
         <svg
           width="20"
           height="20"

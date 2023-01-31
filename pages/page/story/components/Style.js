@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from "styled-components"
+import { motion } from "framer-motion"
 
-export const bg = '/background/blank.png'
-export const stock = '/content/im.png'
-export const hover = '/content/im2.png'
+export const bg = "/background/blank.png"
+export const stock = "/content/im.png"
+export const hover = "/content/im2.png"
 
 export const StockImage = styled.div`
   width: 90%;
   height: 42rem;
-` 
+`
 export const HoverImage = styled(motion.div)`
   width: 60%;
   height: 35rem;
@@ -27,18 +27,14 @@ export const HoverImage = styled(motion.div)`
   transform: translate(-50%, -50%);
   z-index: 2;
 
-  @media(max-width: 1350px){
+  @media (max-width: 1350px) {
     width: 75%;
     height: 32rem;
   }
 `
 
-import React from 'react'
-
 const Style = () => {
-  return (
-    <div>StyleImage</div>
-  )
+  return <div>StyleImage</div>
 }
 
 export default Style

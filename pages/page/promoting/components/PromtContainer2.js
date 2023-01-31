@@ -2,14 +2,13 @@ import styled from "styled-components"
 import Text from "../../../../components/Text/Text"
 import Button from "../../../../components/Button/Button"
 
+const Texts = styled.div`
+  position: absolute;
+  top: 86vh;
+  left: 25vw;
+  width: 35vw;
+`
 const PromtContainer2 = () => {
-  const Texts = styled.div`
-    position: absolute;
-    top: 86vh;
-    left: 25vw;
-    width: 35vw;
-  `
-
   return (
     <Texts>
       <Text

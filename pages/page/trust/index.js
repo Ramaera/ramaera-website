@@ -5,7 +5,6 @@ import Text from "../../../components/Text/Text"
 import { bg, Responsive } from "./components/Style"
 import BgRectangle from "./components/BgRectangle"
 import Dots from "./components/Dots"
-import Tabs from "./components/Tabs"
 import Review from "./components/Review"
 
 const index = () => (
@@ -24,7 +23,6 @@ const index = () => (
         <BgRectangle />
         <Review />
         <Dots />
-        <Tabs />
       </Responsive>
     </PageWidth>
   </PageLayout>

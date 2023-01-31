@@ -77,44 +77,44 @@ import Text from "../../../../components/Text/Text"
 }
 */
 
+const QuestionsContainer = styled.div`
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  gap: 50px;
+  text-align: center;
+  margin-top: 100px;
+  top: 300px;
+  color: white;
+  display: flex;
+  justify-content: center;
+`
+const QuestionDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+const Question = styled.p`
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+`
+const Hr = styled.div`
+  margin-top: 20px;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+`
+const Answer = styled.p`
+  line-height: 20px;
+  padding-right: 100px;
+  font-weight: 200;
+  font-size: 12px;
+  text-align: left;
+  max-width: 40vw;
+`
 const Questions = () => {
-  const QuestionsContainer = styled.div`
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    gap: 50px;
-    text-align: center;
-    margin-top: 100px;
-    top: 300px;
-    color: white;
-    display: flex;
-    justify-content: center;
-  `
-  const QuestionDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-  `
-  const Question = styled.p`
-    font-size: 18px;
-    margin-top: 30px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  `
-  const Hr = styled.div`
-    margin-top: 20px;
-    border-top: 0.5px solid rgba(255, 255, 255, 0.5);
-  `
-  const Answer = styled.p`
-    line-height: 20px;
-    padding-right: 100px;
-    font-weight: 200;
-    font-size: 12px;
-    text-align: left;
-    max-width: 40vw;
-  `
   return (
     <QuestionsContainer>
       <QuestionDiv>

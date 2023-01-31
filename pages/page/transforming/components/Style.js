@@ -19,8 +19,6 @@ export const Responsive = styled.div`
   margin: 4rem 0 0 0;
 `
 
-import React from "react"
-
 const Style = () => {
   return <div>StyleImage</div>
 }

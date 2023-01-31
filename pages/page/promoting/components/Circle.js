@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
+const Image = styled.img`
+  position: absolute;
+  height: 25vw;
+  top: 280px;
+  left: 100px;
+`
 const Circle = () => {
-  const Image = styled.img`
-    position: absolute;
-    height: 25vw;
-    top: 280px;
-    left: 100px;
-  `
   return <Image src="/content/promtCircle.png" alt="" />
 }
 

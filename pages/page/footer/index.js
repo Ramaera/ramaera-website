@@ -9,7 +9,7 @@ import Socials from "./components/Socials"
 import Foot from "./components/Foot"
 
 const index = () => (
-  <PageLayout bgColor="#000000" height="30vh">
+  <PageLayout bgColor="#000000" height="40vh">
     <PageWidth width="1500px" margin="0 0 0 0">
       <Responsive>
         <Logo />

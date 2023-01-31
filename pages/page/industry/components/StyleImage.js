@@ -1,23 +1,19 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Image = styled.div`
-    height: 27rem;
-    width: 31rem;
-    position: absolute;
-    right: 0;
+  height: 27rem;
+  width: 31rem;
+  position: absolute;
+  right: 0;
 `
 export const Responsive = styled.div`
-    display: flex;
-    align-items: center;
-    //justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  //justify-content: flex-end;
 `
 
-import React from 'react'
-
 const StyleImage = () => {
-  return (
-    <div>StyleImage</div>
-  )
+  return <div>StyleImage</div>
 }
 
 export default StyleImage

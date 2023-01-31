@@ -1,61 +1,60 @@
 import styled from "styled-components"
-import Text from "../../../../components/Text/Text"
+
+const Container = styled.div`
+  display: flex;
+  gap: 4rem;
+  align-items: top;
+`
+const Div = styled.div`
+  display: flex;
+  padding-bottom: 220px;
+  flex-direction: column;
+`
+const Link = styled.a`
+  font-size: 10px;
+  margin-bottom: 1rem;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+`
+const Heading = styled.h3`
+  font-size: 16px;
+  color: white;
+  margin-bottom: 2rem;
+`
+const SubHeading = styled.h3`
+  color: white;
+  margin-bottom: 1rem;
+`
+const SubText = styled.h3`
+  color: white;
+  font-weight: 100;
+  font-size: 8px;
+  line-height: 16px;
+`
+const Input = styled.input`
+  margin-bottom: 1rem;
+  height: 30px;
+  border: 1.5px solid #ffffff;
+  border-radius: 6px;
+  padding-left: 1rem;
+`
+const Sub = styled.div`
+  color: white;
+  padding: 2rem;
+  width: 250px;
+  height: 200px;
+  margin-left: 3rem;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+`
 
 const Links = () => {
-  const Container = styled.div`
-    display: flex;
-    gap: 4rem;
-    align-items: top;
-  `
-  const Div = styled.div`
-    display: flex;
-    padding-bottom: 220px;
-    flex-direction: column;
-  `
-  const Link = styled.a`
-    font-size: 10px;
-    margin-bottom: 1rem;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-  `
-  const Heading = styled.h3`
-    font-size: 16px;
-    color: white;
-    margin-bottom: 2rem;
-  `
-  const SubHeading = styled.h3`
-    color: white;
-    margin-bottom: 1rem;
-  `
-  const SubText = styled.h3`
-    color: white;
-    font-weight: 100;
-    font-size: 8px;
-    line-height: 16px;
-  `
-  const Input = styled.input`
-    margin-bottom: 1rem;
-    height: 30px;
-    border: 1.5px solid #ffffff;
-    border-radius: 6px;
-    padding-left: 1rem;
-  `
-  const Sub = styled.div`
-    color: white;
-    padding: 2rem;
-    width: 250px;
-    height: 200px;
-    margin-left: 3rem;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.05),
-      rgba(255, 255, 255, 0.05)
-    );
-  `
-
   return (
     <Container>
       <Sub>
