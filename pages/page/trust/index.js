@@ -21,7 +21,15 @@ const index = () => (
       />
       <Responsive>
         <BgRectangle />
-        <Review />
+        <Review
+          what={"What our customer are saying"}
+          avatar={"/content/avatar.png"}
+          profileName={"Edward Newgate"}
+          profileTitle={"Founder Circle"}
+          profileReview={
+            "“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls or administrative hassle) and securely"
+          }
+        />
         <Dots />
       </Responsive>
     </PageWidth>

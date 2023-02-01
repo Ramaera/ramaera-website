@@ -1,4 +1,3 @@
-import { useState } from "react"
 import styled from "styled-components"
 import Text from "../../../../components/Text/Text"
 import Tabs from "./Tabs"
@@ -73,14 +72,13 @@ const ReviewText = styled.div`
   margin-right: 100px;
   overflow-wrap: wrap;
 `
-const Review = () => {
-  const [currentReview, setCurrentReview] = useState(ReviewData[0])
+const Review = ({ what, avatar, profileName, profileTitle, profileReview }) => {
   return (
     <>
       <Hero>
         <TopHalf>
           <Text
-            Text={currentReview[0]}
+            Text={what}
             size="28px"
             lh="60px"
             color="#FFF"
@@ -92,11 +90,11 @@ const Review = () => {
         <BottomHalf>
           <Profile>
             <Avatar>
-              <img src={currentReview[1]} height={110} width={110} />
+              <img src={avatar} height={110} width={110} />
             </Avatar>
             <div>
               <Text
-                Text={currentReview[2]}
+                Text={profileName}
                 color="#fff"
                 size="18px"
                 m="1rem 0 0 0"
@@ -105,7 +103,7 @@ const Review = () => {
                 lh="31px"
               />
               <Text
-                Text={currentReview[3]}
+                Text={profileTitle}
                 color="#fff"
                 size="14px"
                 m="0.2rem 0 0 0"
@@ -117,7 +115,7 @@ const Review = () => {
           </Profile>
           <ReviewText>
             <Text
-              Text={currentReview[4]}
+              Text={profileReview}
               color="#fff"
               size="14px"
               fw="200"
@@ -127,7 +125,7 @@ const Review = () => {
           </ReviewText>
         </BottomHalf>
       </Hero>
-      <Tabs review={currentReview} />
+      <Tabs />
     </>
   )
 }
