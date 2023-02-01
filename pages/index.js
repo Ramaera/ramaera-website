@@ -20,6 +20,7 @@ import Footer from "./page/footer"
 import Transforming from "./page/transforming"
 import Faqs from "./page/faqs"
 import Tomorrow from "./page/tomorrow"
+import Review from "./page/review"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -40,6 +41,7 @@ export default function Home() {
       <Future />
       <Leader />
       <Trust />
+      {/*<Review />*/}
       <Promoting />
       <Tomorrow />
       <Faqs />

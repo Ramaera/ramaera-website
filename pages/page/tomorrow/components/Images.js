@@ -12,7 +12,7 @@ const slides = [
     eachSlide: "url(/content/tom1.png)",
   },
 ]
-const Arrows = styled.button`
+export const Arrows = styled.button`
   position: absolute;
   top: 40%;
   background: none;
@@ -22,7 +22,7 @@ const Arrows = styled.button`
   transition: ease 0.3s all;
   outline: none;
 `
-const Slide = styled.div`
+export const Slide = styled.div`
   transform: scale(80%);
   width: 100vw;
   height: 100vh;
@@ -34,17 +34,17 @@ const Slide = styled.div`
   background-position: center center;
   background-color: transparent;
 `
-const ArrowsHover = styled.div`
+export const ArrowsHover = styled.div`
   &:hover ${Arrows} {
     transform: scale(105%);
   }
 `
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   height: 60vh;
   transition: 0.5s all linear;
   will-change: transform;
 `
-const Section = styled.section`
+export const Section = styled.section`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
