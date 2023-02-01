@@ -10,8 +10,8 @@ const index = () => {
   return (
     <PageLayout bgColor="#f5f5f5" bg={bg} Y height="90rem">
       <RotateImage
-        animate={{ rotate: 90 }}
-        transition={{ duration: 2, repeat: repeatAnimation }}
+        animate={{ rotate: 315 }}
+        transition={{ duration: 4, repeat: 1 }}
       />
       <FutureContainer>
         <PageWidth width="1400px" margin="0 0 2rem 0">
