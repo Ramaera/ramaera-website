@@ -7,7 +7,7 @@ import Images from "./components/Images"
 
 const index = () => (
   <PageLayout bgColor="#f5f5f5" bg={bg}>
-    <PageWidth width="1500px" margin="8rem 0 0 0">
+    <PageWidth width="1500px" margin="2rem 0 0 0">
       <Text
         Text="Striving today for enabling a better tomorrow"
         width="80vw"
