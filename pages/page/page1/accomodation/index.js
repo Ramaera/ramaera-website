@@ -1,33 +1,41 @@
-import PageLayout from "../../../../components/PageLayout/PageLayout"
-import PageWidth from "../../../../components/Width/PageWidth"
-import TextContainer from "./components/TextContainer"
-import { Image, Responsive } from "./components/StyleImage"
-import styled from "styled-components"
-
+import PageLayout from "../../../../components/PageLayout/PageLay";
+import PageWidth from "../../../../components/Width/PageWidth";
+import TextContainer from "./components/TextContainer";
+import { Image, Responsive } from "./components/StyleImage";
+import styled from "styled-components";
 const Animdiv = styled.div`
   position: absolute;
   right: 0;
-  top: 15vh;
   @media only screen and (max-width: 768px) {
+    padding: 0;
+    margin: 0;
     top: -30vh;
+    left: auto;
+    right: auto;
   }
-`
+`;
 const Line = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 const Buy = () => {
   return (
-    <PageLayout>
-      <PageWidth sp="0" scale={"90%"} width="1500px" position="relative">
+    <PageLayout
+      mmheight="150vh"
+      bg="red"
+      paddingBottom="200px"
+      mtpadding="0"
+      height="90vh"
+    >
+      <PageWidth full sp="0" scale={"95%"} width="1500px" position="relative">
         <div style={{ width: "100%" }}>
           <Line>
             <img
               loading="lazy"
               src="/content/LineY.png"
-              alt=""
+              alt="Line"
               style={{ width: "100%", height: "10rem" }}
             />
           </Line>
@@ -44,7 +52,7 @@ const Buy = () => {
             <img
               loading="lazy"
               src="/content/LineY.png"
-              alt=""
+              alt="line"
               style={{ width: "100%", height: "10rem" }}
             />
           </Line>
@@ -55,22 +63,14 @@ const Buy = () => {
           data-aos-anchor-placement="top-bottom"
         >
           <Image>
-            <img
-              loading="lazy"
-              src="/content/hotel.gif"
-              alt=""
-              style={{
-                position: "absolute",
-                top: "-200px",
-                width: "100%",
-                height: "100%",
-              }}
-            />
+            <video autoPlay loop muted>
+              <source src="/content/hotel.webm" type="video/webm" />
+            </video>
           </Image>
         </Animdiv>
       </PageWidth>
     </PageLayout>
-  )
-}
+  );
+};
 
-export default Buy
+export default Buy;

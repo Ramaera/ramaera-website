@@ -6,7 +6,7 @@ import { images } from "./Style"
 const Image = styled.img`
   padding: 13.5rem 2rem;
   position: absolute;
-  transform: scale(60%);
+  transform: scale(0.6);
   @media only screen and (max-width: 1000px) {
     opacity: 0;
   }
@@ -21,9 +21,7 @@ function Holder() {
           imagen={images[0]}
           onDate={"19 JUNE, 2019 | Blog"}
           title={"Ramaera Narmada - an ode to the Grandeur of Gujarat"}
-          subTitle={
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas minima accusantium odio autem tempore veritatis fugit distinctio veniam. Saepe, ducimus!"
-          }
+          subTitle={""}
         />
       ),
     },
@@ -34,9 +32,7 @@ function Holder() {
           imagen={images[1]}
           onDate={"19 JUNE, 2019 | Blog"}
           title={"Ramaera Narmada - an ode to the Grandeur of Gujarat"}
-          subTitle={
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas minima accusantium odio autem tempore veritatis fugit distinctio veniam. Saepe, ducimus!"
-          }
+          subTitle={""}
         />
       ),
     },
@@ -47,17 +43,23 @@ function Holder() {
           imagen={images[2]}
           onDate={"19 JUNE, 2019 | Blog"}
           title={"Ramaera Narmada - an ode to the Grandeur of Gujarat"}
-          subTitle={
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas minima accusantium odio autem tempore veritatis fugit distinctio veniam. Saepe, ducimus!"
-          }
+          subTitle={""}
         />
       ),
     },
   ]
   return (
     <div>
-      <Image style={{ left: 0 }} src={"/content/left.png"} />
-      <Image style={{ right: 0 }} src={"/content/right.png"} />
+      <Image
+        style={{ left: 0 }}
+        src={"/content/right.png"}
+        alt="left background"
+      />
+      <Image
+        style={{ right: 0 }}
+        src={"/content/left.png"}
+        alt="right background"
+      />
       <Carousel
         showArrows={true}
         cards={cards}

@@ -1,18 +1,17 @@
-import PageLayout from "../../../../components/PageLayout/PageLayout"
+import PageLayout from "../../../../components/PageLayout/PageLay"
 import PageWidth from "../../../../components/Width/PageWidth"
 import TextContainer from "./components/TextContainer"
 import { Image, Responsive } from "./components/StyleImage"
 import styled from "styled-components"
-import NextImage from "next/image"
 
 const Animdiv = styled.div`
   position: absolute;
   left: 0;
-  bottom: 0;
+  margin: 10vh 0 0 0;
   @media only screen and (max-width: 768px) {
     left: auto;
     right: auto;
-    bottom: 30vh;
+    bottom: 20vh;
   }
 `
 const Line = styled.div`
@@ -23,58 +22,71 @@ const Line = styled.div`
 
 const Buy = () => {
   return (
-    <PageLayout height="100vh">
-      <PageWidth scale={"90%"} width="1500px" position="relative">
-        <Animdiv
-          data-aos="slide-right"
-          data-aos-anchor-placement="center-center"
-          data-aos-duration="500"
-        >
-          <Image>
-            <NextImage
-              loading="lazy"
-              src="/content/tech.gif"
-              alt=""
-              width={100}
-              height={100}
-              style={{
-                position: "absolute",
-                top: "35vh",
-                width: "100%",
-                height: "100%",
-              }}
-            />
-          </Image>
-        </Animdiv>
-        <div style={{ width: "100%" }}>
-          <Line>
-            <img
-              loading="lazy"
-              src="/background/Line.png"
-              alt=""
-              style={{ position: "absolute", width: "100%", height: "10rem" }}
-            />
-          </Line>
-          <div
-            data-aos="slide-left"
-            data-aos-anchor-placement="bottom-bottom"
+    <>
+      <PageLayout
+        paddingTop="200px"
+        paddingBottom="450px"
+        mheight="100vh"
+        height="120vh"
+      >
+        <PageWidth full scale={"95%"} width="1500px" position="relative">
+          <Animdiv
+            data-aos="slide-right"
             data-aos-duration="500"
+            data-aos-anchor-placement="center-bottom"
           >
-            <Responsive>
-              <TextContainer />
-            </Responsive>
+            <Image>
+              <video
+                autoPlay
+                loop
+                muted
+                style={{ width: "115%", height: "110%" }}
+              >
+                <source src="/content/tech.webm" type="video/webm" />
+              </video>
+            </Image>
+          </Animdiv>
+          <div style={{ width: "100%" }}>
+            <Line>
+              <img
+                loading="lazy"
+                src="/background/Line.png"
+                alt="line"
+                style={{
+                  position: "absolute",
+                  marginTop: "-50px",
+                  width: "100%",
+                  height: "10rem",
+                }}
+              />
+            </Line>
+            <div
+              data-aos="slide-left"
+              // data-aos-offset="2000"
+              data-aos-duration="500"
+              data-aos-anchor-placement="top-bottom"
+            >
+              <Responsive>
+                <TextContainer />
+              </Responsive>
+            </div>
+            <Line>
+              <img
+                loading="lazy"
+                src="/background/Line.png"
+                alt="line"
+                style={{
+                  position: "absolute",
+                  marginTop: "150px",
+                  width: "100%",
+                  height: "10rem",
+                }}
+              />
+            </Line>
           </div>
-          <Line>
-            <img
-              loading="lazy"
-              src="/background/Line.png"
-              alt=""
-              style={{ position: "absolute", width: "100%", height: "10rem" }}
-            />
-          </Line>
-        </div>
-      </PageWidth>
-    </PageLayout>
+        </PageWidth>
+      </PageLayout>
+    </>
   )
 }
 

@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import Text from "../../../../../../components/Text/Text"
+import React from "react";
+import styled from "styled-components";
+import Text from "../../../../../../components/Text/Text";
 
 const Tab = (props) => {
   const StyledSocialMedia = styled.div`
@@ -8,18 +8,19 @@ const Tab = (props) => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     position: absolute;
     top: 50%; /* position the top  edge of the element at the middle of the parent */
-    right: 5rem; /* position the left edge of the element at the middle of the parent */
-    transform: translate(0, -50%);
+    right: 4.5rem; /* position the left edge of the element at the middle of the parent */
+    transform: translate(0, -40%);
     @media only screen and (max-width: 768px) {
-      transform: scale(70%);
+      transform: scale(0.7);
       width: 20px;
       top: -35vw;
       right: 40vw;
     }
-  `
-  const txt = ["01", "02", "03"]
+  `;
+  const txt = [" ", " ", " "];
 
   return (
     <StyledSocialMedia>
@@ -144,7 +145,7 @@ const Tab = (props) => {
         m="2rem 0 0 0"
       />
     </StyledSocialMedia>
-  )
-}
+  );
+};
 
-export default Tab
+export default Tab;

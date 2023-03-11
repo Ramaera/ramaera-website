@@ -36,12 +36,12 @@ export const Bg = styled.div`
 
 const StyledImageContainer = styled.div`
   @media (max-width: 768px) {
-    transform: scale(70%);
+    transform: scale(0.7);
   }
 `
 
 const MainImg = styled.div`
-  transform: scale(80%);
+  transform: scale(0.8);
   width: 30rem;
   height: 40rem;
   @media (max-width: 1350px) {
@@ -54,7 +54,7 @@ const MainImg = styled.div`
   }
 `
 const TeamImg = styled.div`
-  transform: scale(80%);
+  transform: scale(0.8);
 
   width: 18rem;
   height: 10rem;
@@ -120,7 +120,7 @@ const Imagecontainer = () => {
         >
           <img
             src="/content/p.png"
-            alt=""
+            alt="line"
             style={{ width: "100%", height: "100%" }}
           />
         </MainImg>
@@ -130,7 +130,7 @@ const Imagecontainer = () => {
         >
           <img
             src="/content/t.png"
-            alt=""
+            alt="line"
             style={{ width: "100%", height: "100%" }}
           />
         </TeamImg>

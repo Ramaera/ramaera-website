@@ -10,7 +10,7 @@ const StyledItem = styled.div`
   justify-content: center;
   width: 15rem;
   height: 8rem;
-  transform: scale(80%);
+  transform: scale(0.8);
 `
 const Item = (props) => {
   return (
@@ -18,7 +18,7 @@ const Item = (props) => {
       <img
         loading="lazy"
         src={props.img ? props.img : ""}
-        alt=""
+        alt={props.img}
         style={{ height: "4rem", width: "4.25rem" }}
       />
       <Heading
