@@ -47,10 +47,7 @@ const DashSection = () => {
               <li className="divider"></li>
 
               <li>
-                <Link
-                  //onClick={() => logMeOut()}
-                  href="/Login"
-                >
+                <Link onClick={() => logMeOut()} href="/Login">
                   Logout
                 </Link>
               </li>

@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }) {
     AOS.init()
     AOS.refresh()
   }, [])
+
   return (
     <>
       <Head>
