@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { DataGrid,GridToolbar } from "@mui/x-data-grid"
+import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import Box from "@mui/material/Box"
 import Text from "../../../components/Text/Text"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
@@ -21,9 +21,23 @@ const Applicant = () => {
   if (loading) {
     return "Loading..."
   }
+  /*  if (error) {
+    return (
+      <>
+        <Link
+          style={{
+            color: "white",
+          }}
+          href="/Login"
+        >
+          Login to continue
+        </Link>
+      </>
+    )
+  } */
 
   const ACCESSTOKEN = window.localStorage.getItem("accessToken")
-  if (!ACCESSTOKEN) {
+  if (!ACCESSTOKEN && error) {
     return (
       <>
         <Link
@@ -63,21 +77,21 @@ const Applicant = () => {
       width: 150,
       editable: false,
       selection: false,
-      filterable:false,
-      sortable:false,
+      filterable: false,
+      sortable: false,
       renderCell: (params) => (
         <Link href={`/DistributionChannelResponses/${params.value}`}>
           <button style={{ background: "none", border: "none" }} type="submit">
-        <Button
-          nav
-          width="auto"
-          height="auto"
-          Text="View Details"
-          inheight="auto"
-          fontSize="auto"
-          padding=" 5px 8px"
-        />
-      </button>
+            <Button
+              nav
+              width="auto"
+              height="auto"
+              Text="View Details"
+              inheight="auto"
+              fontSize="auto"
+              padding=" 5px 8px"
+            />
+          </button>
           {/* <button>View Details</button> */}
         </Link>
       ),
@@ -86,42 +100,42 @@ const Applicant = () => {
       field: "name",
       headerName: " Name",
       minWidth: 200,
-      flex:1,
+      flex: 1,
     },
     {
       field: "email",
       headerName: "Email",
       minWidth: 250,
-      flex:1,
+      flex: 1,
     },
     {
       field: "applicatant",
       headerName: "Applicatant",
       minWidth: 150,
-      flex:1,
+      flex: 1,
     },
     {
       field: "state",
       headerName: "State",
       minWidth: 120,
-      flex:1,
+      flex: 1,
     },
     {
       field: "district",
       headerName: "District",
       minWidth: 160,
-      flex:1,
+      flex: 1,
     },
     {
       field: "status",
       headerName: "Status",
       minWidth: 150,
-      flex:1,
+      flex: 1,
     },
   ]
 
   const rows = []
-
+  console.log("data", data)
   if (data) {
     dataPush()
     data.applicants.forEach((item, index) => {
@@ -194,16 +208,16 @@ const Applicant = () => {
 
           <Box className="boxGird">
             <DataGrid
-            //  slots={{
-            //   toolbar: GridToolbar
-            // }}
-            components={{ Toolbar: GridToolbar }}
-            componentsProps={{
-            toolbar: {
-            printOptions: { disableToolbarButton: true },
-            csvOptions: { disableToolbarButton: true },            }
-           }}
-
+              //  slots={{
+              //   toolbar: GridToolbar
+              // }}
+              components={{ Toolbar: GridToolbar }}
+              componentsProps={{
+                toolbar: {
+                  printOptions: { disableToolbarButton: true },
+                  csvOptions: { disableToolbarButton: true },
+                },
+              }}
               rows={rows}
               columns={columns}
               initialState={{
@@ -224,7 +238,16 @@ const Applicant = () => {
       </>
     )
   } else {
-    return <div onClick={location.reload()}></div>
+    return (
+      <>
+        <div
+          style={{ color: "white", cursor: "pointer" }}
+          onClick={() => location.reload()}
+        >
+          Click here to Get Data
+        </div>
+      </>
+    )
   }
 }
 
