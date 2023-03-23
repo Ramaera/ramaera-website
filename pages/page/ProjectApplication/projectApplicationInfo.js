@@ -102,11 +102,234 @@ const ProjectApplicationInfo = () => {
       flex:1,
     },
     {
+      field: "director",
+      headerName: "Director",
+      minWidth: 200,
+      flex:1,
+    }, 
+    {
       field: "createAt",
       headerName: "Created At",
       minWidth: 150,
       flex:1,
     },
+    {
+      field: "city",
+      headerName: "City",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "state",
+      headerName: "State",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "Country",
+      headerName: "Country",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "dob",
+      headerName: "dob",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "occupation",
+      headerName: "occupation",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "yourProjectType",
+      headerName: "Project Type",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "youAre",
+      headerName: "you Are",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "typeOfPartnership",
+      headerName: "Partnership Type",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "fundingType",
+      headerName: "Funding Type",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "receivingMode",
+      headerName: "Receiving Mode",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "goal",
+      headerName: "Goal",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "targetFor",
+      headerName: "Target For",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "perPersonAmount",
+      headerName: "Per Person Amount",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "yourProjectTitle",
+      headerName: "Project Title",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "brief",
+      headerName: "Brief",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "marketProblem",
+      headerName: "Market Problem",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "solution",
+      headerName: "Solution",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "businessModel",
+      headerName: "Business Model",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "sizeOfMarket",
+      headerName: "Market Size",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "currentTransaction",
+      headerName: "Current Transaction",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "competitiveLandscape",
+      headerName: "Competitive Landscape",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "financialProjection",
+      headerName: "Financial Projection",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "fundNeed",
+      headerName: "Fund Need",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "equityStructure",
+      headerName: "Equity Structure",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "exitOption",
+      headerName: "Exit Option",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "selectFundingType",
+      headerName: "Funding Type",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "fundingStage",
+      headerName: "Funding Stage",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "selectFundingTypeAgain",
+      headerName: "Funding Type Again",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "fundingAmount",
+      headerName: "Funding Amount",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "fundingDate",
+      headerName: "Funding Date",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "linkedinProfile",
+      headerName: "Linkedin Profile",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "twitterProfile",
+      headerName: "Twitter Profile",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "facebookProfile",
+      headerName: "Facebook Profile",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "instagramProfile",
+      headerName: "Instagram Profile",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "websiteURL",
+      headerName: "Website URL",
+      minWidth: 200,
+      flex:1,
+    },
+    {
+      field: "thanksNote",
+      headerName: "Thanks Note",
+      minWidth: 200,
+      flex:1,
+    },
+   
   ]
 
   const rows = []
@@ -121,6 +344,41 @@ const ProjectApplicationInfo = () => {
         contact: item.mobileNumber,
         project: item.yourProduct,
         createdAt: item.createAt,
+        city:item.City,
+        state:item.State,
+        country:item.Country,
+        dob:item.dob,
+        occupation:item.occupation,
+        yourProjectType:item.yourProjectType,
+        youAre:item.youAre,
+        typeOfPartnership:item.typeOfPartnership,
+        fundingType:item.fundingType,
+        receivingMode:item.receivingMode,
+        goal:item.goal,
+        targetFor:item.targetFor,
+        perPersonAmount:item.perPersonAmount,
+        yourProjectTitle:item.yourProjectTitle,
+        brief:item.brief,
+        marketProblem:item.marketProblem,
+        solution:item.solution,
+        businessModel:item.businessModel,
+        sizeOfMarket:item.sizeOfMarket,
+        currentTransaction:item.currentTransaction,
+        competitiveLandscape:item.competitiveLandscape,
+        financialProjection:item.financialProjection,
+        fundNeed:item.fundNeed,
+        equityStructure:item.equityStructure,
+        exitOption:item.exitOption,
+        selectFundingType:item.selectFundingType,
+        fundingAmount:item.fundingAmount,
+        fundingDate:item.fundingDate,
+        linkedinProfile:item.linkedinProfile,
+        twitterProfile:item.twitterProfile,
+        facebookProfile:item.facebookProfile,
+        instagramProfile:item.instagramProfile,
+        websiteURL:item.websiteURL,
+        thanksNote:item.thanksNote,
+        director:item.director,
       })
     })
 
@@ -182,12 +440,9 @@ const ProjectApplicationInfo = () => {
 
           <Box className="boxGird">
             <DataGrid
-              components={{ Toolbar: GridToolbar }}
-              componentsProps={{
-              toolbar: {
-              printOptions: { disableToolbarButton: true },
-              csvOptions: { disableToolbarButton: true },            }
-             }}
+               slots={{
+                toolbar: GridToolbar
+              }}
               rows={rows}
               columns={columns}
               initialState={{

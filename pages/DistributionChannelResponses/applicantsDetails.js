@@ -69,7 +69,7 @@ const applicantsDetails = ({ AppData }) => {
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Firm Name</label>
               <br />
-              <p>{AppData.applicantType}</p>
+              <p>{AppData.firmName}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>State</label>

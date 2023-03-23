@@ -136,6 +136,14 @@ const Applicant = () => {
     },
 
     {
+      field: "firmName",
+      headerName: "firmName",
+      minWidth: 150,
+      flex:1,
+      sortable:false,
+    },
+
+    {
       field: "extraInfo",
       headerName: "Info",
       minWidth: 150,
@@ -162,6 +170,7 @@ const Applicant = () => {
         applicantAddress:item.applicantAddress,
         mobileNumber:item.mobileNumber,
         extraInfo:item.extraInfo,
+        firmName:item.firmName,
       })
     })
     return (

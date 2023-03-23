@@ -102,6 +102,12 @@ const ContactInfo = () => {
       minWidth: 350,
       flex:1,
     },
+    {
+      field: "message",
+      headerName: "Message",
+      minWidth: 350,
+      flex:1,
+    },
   ]
 
   const rows = []
@@ -178,11 +184,8 @@ const ContactInfo = () => {
 
           <Box className="boxGird" >
             <DataGrid
-               components={{ Toolbar: GridToolbar }}
-               componentsProps={{
-               toolbar: {
-               printOptions: { disableToolbarButton: true },
-               csvOptions: { disableToolbarButton: true },            }
+               slots={{
+                toolbar: GridToolbar
               }}
               rows={rows}
               columns={columns}

@@ -139,39 +139,3 @@ query getProjectApplicants {
     director
   }
 }`)
-export const fGetProjectApplications = gql(`
-
-query getProjectApplicants {
-  AllProjectDetails {
-    name
-    typeOfPartnership
-    fundingType
-    receivingMode
-    goal
-    targetFor
-    perPersonAmount
-    brief
-    marketProblem
-    solution
-    businessModel
-    sizeOfMarket
-    currentTransaction
-    competitiveLandscape
-    financialProjection
-    fundNeed
-    equityStructure
-    exitOption
-    selectFundingType
-    fundingStage
-    selectFundingTypeAgain
-    fundingAmount
-    fundingDate
-    linkedinProfile
-    twitterProfile
-    facebookProfile
-    instagramProfile
-    websiteURL
-    thanksNote
-    director
-  }
-}`)
