@@ -12,10 +12,15 @@ import Link from "next/link"
 import { useDispatch, useSelector } from "react-redux"
 import { changeAppData } from "../../../state/slice/applicantDataSlice"
 import Button from "../../../components/Button/SubmitButton"
+import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 
 const Applicant = () => {
   const applicantdata = useSelector((state) => state.applicationData.appData)
-  const dispatch = useDispatch()
+
+  const logMeOut = () => {
+    dispatch(setAccessToken(""))
+    window.localStorage.setItem("accessToken", "")
+  }
   const { loading, error, data } = useQuery(GetApplications)
   const [anchorEl, setAnchorEl] = useState(false)
   if (loading) {
@@ -203,7 +208,11 @@ const Applicant = () => {
             <a href="/passwordChange">
               <MenuItem onClick={handleClose}>Change Password</MenuItem>
             </a>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <MenuItem onClick={handleClose}>
+              <Link onClick={() => logMeOut()} href="/Login">
+                Logout
+              </Link>
+            </MenuItem>
           </Menu>
 
           <Box className="boxGird">

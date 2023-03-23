@@ -1,4 +1,4 @@
-import DashSection from "../page/DashBoard/DashSection"
+import DashSection from "../page/Dashboard/DashSection"
 const dashboard = () => {
   return (
     <>
