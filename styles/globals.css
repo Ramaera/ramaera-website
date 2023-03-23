@@ -1039,18 +1039,18 @@ a:hover {
   grid-template-columns: auto minmax(auto, 400px);
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .formWrapper {
     grid-template-columns: auto;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .lineHr1 {
     width: 90vw;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .lineHr2 {
     display: none;
   }
@@ -1059,13 +1059,13 @@ a:hover {
 .navSpace {
   height: 200px;
 }
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .navSpace {
     height: 80px;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .detailContact {
     width: 60vw !important;
   }
@@ -1078,7 +1078,7 @@ a:hover {
 .responseSpaceDetail {
   height: 150px;
 }
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .responseSpaceDetail {
     height: 100px;
   }
@@ -1087,7 +1087,7 @@ a:hover {
 .divResponsive{
   padding-right: 2rem;
 }
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .divResponsive {
     width: 85vw !important;
     overflow-wrap: break-word;
@@ -1121,7 +1121,7 @@ a:hover {
   margin-bottom: 50px;
 }
 
-@media (max-width: 450px){
+@media (max-width: 600px){
   .boxGird{
     padding: 10px;
     border-radius: 5px;
