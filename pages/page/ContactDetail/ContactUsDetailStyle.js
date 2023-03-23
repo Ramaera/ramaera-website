@@ -6,8 +6,8 @@ export const Container = styled.div`
   padding: 2rem 2rem 3.5rem 2rem;
   margin: 1rem;
   border-radius: 0.5rem;
-  max-width: "max-content";
-  @media (max-width: 450px) {
+  max-width:max-content;
+  @media (max-width: 500px) {
     width: 100vw;
     padding: 1.5rem;
   }

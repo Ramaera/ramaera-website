@@ -6,8 +6,8 @@ export const Container = styled.div`
   padding: 2rem;
   margin: 1rem;
   border-radius: 0.5rem;
-  max-width: "max-content";
-  @media (max-width: 450px) {
+  max-width: max-content;
+  @media (max-width: 500px) {
     width: 100vw;
     padding: 1.5rem;
   }
@@ -18,7 +18,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   gap: 0.5rem;
   justify-content: flex-end;
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     gap: 3rem;
   }
 `
