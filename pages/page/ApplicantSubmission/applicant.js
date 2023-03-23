@@ -18,16 +18,13 @@ const Applicant = () => {
   const dispatch = useDispatch()
   const applicantdata = useSelector((state) => state.applicationData.appData)
 
-  const logMeOut = () => {
-    dispatch(setAccessToken(""))
-    window.localStorage.setItem("accessToken", "")
-  }
   const { loading, error, data } = useQuery(GetApplications)
   const [anchorEl, setAnchorEl] = useState(false)
   if (loading) {
     return "Loading..."
   }
-  /*  if (error) {
+  if (error) {
+    console.log("ACCESSTOKerrorEN", error)
     return (
       <>
         <Link
@@ -40,11 +37,10 @@ const Applicant = () => {
         </Link>
       </>
     )
-  } */
+  }
 
   const ACCESSTOKEN = window.localStorage.getItem("accessToken")
-  if (!ACCESSTOKEN && error) {
-    console.log("erroe", error)
+  if (!ACCESSTOKEN) {
     console.log("ACCESSTOKEN", ACCESSTOKEN)
     return (
       <>
@@ -164,7 +160,7 @@ const Applicant = () => {
   ]
   const rows = []
 
-  if (data) {
+  if (ACCESSTOKEN) {
     dataPush()
     data.applicants.forEach((item, index) => {
       rows.push({
@@ -236,11 +232,7 @@ const Applicant = () => {
             <a href="/passwordChange">
               <MenuItem onClick={handleClose}>Change Password</MenuItem>
             </a>
-            <MenuItem onClick={handleClose}>
-              <Link onClick={() => logMeOut()} href="/Login">
-                Logout
-              </Link>
-            </MenuItem>
+            <MenuItem onClick={handleClose}>Logout</MenuItem>
           </Menu>
 
           <Box className="boxGird">
