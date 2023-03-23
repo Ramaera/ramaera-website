@@ -98,8 +98,8 @@ const Applicant = () => {
       flex: 1,
     },
     {
-      field: "applicatant",
-      headerName: "Applicatant",
+      field: "applicant",
+      headerName: "Applicant",
       minWidth: 150,
       flex: 1,
     },
@@ -155,7 +155,7 @@ const Applicant = () => {
         number: index + 1,
         name: item.name,
         email: item.email,
-        applicatant: item.applicantType,
+        applicant: item.applicantType,
         state: item.State,
         district: item.District,
         status: item.status,
@@ -169,7 +169,7 @@ const Applicant = () => {
       <>
         <Container>
           <Text
-            Text="Applicant List"
+            Text="Distribution Channal Responses"
             lg="linear-gradient(to right, #ffa73d, gold)"
             font
             size="clamp(2.2rem, 1.2vw, 1.5rem)"

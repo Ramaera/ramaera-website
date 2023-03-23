@@ -32,7 +32,7 @@ const DashSection = () => {
     return (
       <>
         <div className="container heading-container">
-          <h1 className="heading-text">Dashboard Details </h1>
+          <h1 className="heading-text">Dashboard</h1>
           <label class="dropdown">
             <div class="dd-button">Dropdown</div>
             <AccountCircleIcon style={{ fontSize: "50px", color: "white" }} />
@@ -60,38 +60,38 @@ const DashSection = () => {
             <table id="myTable">
               <thead>
                 <tr className="header">
-                  <th>DashBoard</th>
+                  <th>Dashboard</th>
                   <th>Details</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Application Data</td>
+                  <td>Project (Idea) Responses Data</td>
                   <td>
                     <Link
                       href="/SubmitProjectResponses"
                       className="btn success"
                     >
-                      View All
+                      View Responses
                     </Link>
                   </td>
                 </tr>
                 <tr>
-                  <td>Contact Data</td>
+                  <td>Contact Us Responses Data</td>
                   <td>
                     <Link href="/ContactUsResponses" className="btn success">
-                      View All
+                      View Responses
                     </Link>
                   </td>
                 </tr>
                 <tr>
-                  <td>Distributer Data</td>
+                  <td>Distributer Channel Responses Data</td>
                   <td>
                     <Link
                       href="/DistributionChannelResponses"
                       className="btn success"
                     >
-                      View All
+                      View Responses
                     </Link>
                   </td>
                 </tr>

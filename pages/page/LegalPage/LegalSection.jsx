@@ -22,7 +22,7 @@ const LegalSection = () => {
             </h2>
             <p style={{ color: "white", textAlign: "center" }}>
               Email :
-              <a href="mailto:legal@ramaera&subject=Query">legal@ramaera.com</a>
+              <a href="mailto:legal@ramaera&subject=Query" style={{color:"white"}}> legal@ramaera.com</a>
             </p>
             {/* <MailIcon /> */}
           </div>
