@@ -16,13 +16,13 @@ const ContactInfo = () => {
   const dispatch = useDispatch()
   let ACCESSTOKEN
   const { loading, error, data } = useQuery(GetContactResponses)
-  ACCESSTOKEN = localStorage.getItem("accessToken")
 
   const [anchorEl, setAnchorEl] = useState(false)
 
   if (loading) {
     return "Loading..."
   }
+  ACCESSTOKEN = localStorage.getItem("accessToken")
 
   if (!ACCESSTOKEN) {
     return (

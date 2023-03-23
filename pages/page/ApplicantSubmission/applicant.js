@@ -28,6 +28,7 @@ const Applicant = () => {
   ACCESSTOKEN = localStorage.getItem("accessToken")
 
   if (!ACCESSTOKEN) {
+    console.log("eerihugouverbdf this is me")
     return (
       <>
         <Link
