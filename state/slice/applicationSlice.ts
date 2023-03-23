@@ -9,6 +9,7 @@ const initialState = {
   mobileNumber: "",
   District: "",
   State: "",
+  extraInfo: "",
 }
 
 export const applicationSlice = createSlice({
@@ -39,6 +40,9 @@ export const applicationSlice = createSlice({
     changeState: (state, action) => {
       state.State = action.payload
     },
+    changeExtraInfo: (state, action) => {
+      state.extraInfo = action.payload
+    },
   },
 })
 
@@ -48,6 +52,7 @@ export const {
   changeApplicantAddress,
   changeEmail,
   changeFirmName,
+  changeExtraInfo,
   changeMobileNumber,
   changeDistrict,
   changeState,

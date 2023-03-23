@@ -10,6 +10,7 @@ import {
   changeMobileNumber,
   changeDistrict,
   changeState,
+  changeExtraInfo
 } from "../../../state/slice/applicationSlice"
 export function UserForm({}) {
   const [partner, setPartner] = useState("")
@@ -1999,7 +2000,7 @@ export function UserForm({}) {
           rows={5}
           cols={80}
           type="text"
-          // onChange={(e) => dispatch(changeApplicantAddress(e.target.value))}
+          onChange={(e) => dispatch(changeExtraInfo(e.target.value))}
           placeholder="Type Extra Info"
         />
       </div>

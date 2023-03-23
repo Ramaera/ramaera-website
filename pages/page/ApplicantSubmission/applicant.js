@@ -46,7 +46,7 @@ const Applicant = () => {
     }
   }
 
-  //console.log(applicantdata)
+  //console.log(data)
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget)
@@ -118,6 +118,31 @@ const Applicant = () => {
       minWidth: 150,
       flex:1,
     },
+
+    {
+      field: "applicantAddress",
+      headerName: "Address",
+      minWidth: 300,
+      flex:1,
+      sortable:false,
+    },
+
+    {
+      field: "mobileNumber",
+      headerName: "Mobile",
+      minWidth: 150,
+      flex:1,
+      sortable:false,
+    },
+
+    {
+      field: "extraInfo",
+      headerName: "Info",
+      minWidth: 150,
+      flex:1,
+      sortable:false,
+    },
+
   ]
 
   const rows = []
@@ -134,6 +159,9 @@ const Applicant = () => {
         state: item.State,
         district: item.District,
         status: item.status,
+        applicantAddress:item.applicantAddress,
+        mobileNumber:item.mobileNumber,
+        extraInfo:item.extraInfo,
       })
     })
     return (
@@ -194,15 +222,15 @@ const Applicant = () => {
 
           <Box className="boxGird">
             <DataGrid
-            //  slots={{
-            //   toolbar: GridToolbar
-            // }}
-            components={{ Toolbar: GridToolbar }}
-            componentsProps={{
-            toolbar: {
-            printOptions: { disableToolbarButton: true },
-            csvOptions: { disableToolbarButton: true },            }
-           }}
+             slots={{
+              toolbar: GridToolbar
+            }}
+          //   components={{ Toolbar: GridToolbar }}
+          //   componentsProps={{
+          //   toolbar: {
+          //   printOptions: { disableToolbarButton: true },
+          //   csvOptions: { disableToolbarButton: true },            }
+          //  }}
 
               rows={rows}
               columns={columns}

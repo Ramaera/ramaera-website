@@ -9,6 +9,7 @@ $email: String!,
 $firmName: String!,
 $mobileNumber: String!,
 $name: String!,
+$extraInfo: String!,
 ){createApplication(
     data: {
       name: $name
@@ -19,6 +20,7 @@ $name: String!,
       mobileNumber: $mobileNumber
       District: $District
       State: $State
+      extraInfo :$extraInfo
     }) 
     {
       name
@@ -70,6 +72,7 @@ export const GetApplications = gql(`
     applicantAddress
     firmName
     mobileNumber
+    extraInfo
   }
 }`)
 
