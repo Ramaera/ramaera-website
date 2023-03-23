@@ -19,6 +19,7 @@ const Ideas = () => {
   const mobileNumber1 = useSelector((state) => state.application.mobileNumber)
   const District1 = useSelector((state) => state.application.District)
   const State1 = useSelector((state) => state.application.State)
+  const extraInfo1 = useSelector((state) => state.application.extraInfo)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -32,6 +33,7 @@ const Ideas = () => {
         mobileNumber: mobileNumber1,
         District: District1,
         State: State1,
+        extraInfo :extraInfo1,
       },
     })
     clearForm()

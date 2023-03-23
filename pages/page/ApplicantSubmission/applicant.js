@@ -65,7 +65,7 @@ const Applicant = () => {
     }
   }
 
-  //console.log(applicantdata)
+  //console.log(data)
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget)
@@ -135,13 +135,37 @@ const Applicant = () => {
       field: "status",
       headerName: "Status",
       minWidth: 150,
-      flex: 1,
     },
   ]
 
+    {
+      field: "applicantAddress",
+      headerName: "Address",
+      minWidth: 300,
+      flex:1,
+      sortable:false,
+    },
+
+    {
+      field: "mobileNumber",
+      headerName: "Mobile",
+      minWidth: 150,
+      flex:1,
+      sortable:false,
+    },
+
+    {
+      field: "extraInfo",
+      headerName: "Info",
+      minWidth: 150,
+      flex:1,
+      sortable:false,
+    },
+
+
   const rows = []
+
   console.log("data", data)
-  if (data) {
     dataPush()
     data.applicants.forEach((item, index) => {
       rows.push({
@@ -154,6 +178,9 @@ const Applicant = () => {
         district: item.District,
         status: item.status,
       })
+        applicantAddress:item.applicantAddress,
+        mobileNumber:item.mobileNumber,
+        extraInfo:item.extraInfo,
     })
     return (
       <>
@@ -208,25 +235,25 @@ const Applicant = () => {
             <a href="/passwordChange">
               <MenuItem onClick={handleClose}>Change Password</MenuItem>
             </a>
+            <MenuItem onClick={handleClose}>Logout</MenuItem>
             <MenuItem onClick={handleClose}>
               <Link onClick={() => logMeOut()} href="/Login">
                 Logout
               </Link>
             </MenuItem>
-          </Menu>
 
           <Box className="boxGird">
             <DataGrid
-              //  slots={{
-              //   toolbar: GridToolbar
-              // }}
-              components={{ Toolbar: GridToolbar }}
-              componentsProps={{
-                toolbar: {
-                  printOptions: { disableToolbarButton: true },
-                  csvOptions: { disableToolbarButton: true },
-                },
-              }}
+            //  slots={{
+             slots={{
+              toolbar: GridToolbar
+            }}
+          //   components={{ Toolbar: GridToolbar }}
+          //   componentsProps={{
+          //   toolbar: {
+          //   printOptions: { disableToolbarButton: true },
+          //   csvOptions: { disableToolbarButton: true },            }
+          //  }}
               rows={rows}
               columns={columns}
               initialState={{
@@ -247,6 +274,7 @@ const Applicant = () => {
       </>
     )
   } else {
+    return <div onClick={location.reload()}></div>
     return (
       <>
         <div
@@ -257,7 +285,6 @@ const Applicant = () => {
         </div>
       </>
     )
-  }
 }
 
 export default Applicant

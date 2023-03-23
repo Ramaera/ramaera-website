@@ -32,28 +32,25 @@ const applicantsDetails = ({ AppData }) => {
               <p>{AppData.email}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
-              <label>Address</label>
-              <br />
-              <p>{AppData.applicantAddress}</p>
-            </div>
-            <div className="divResponsive" style={{ width: "450px" }}>
-              <label>State </label>
-              <br />
-              <p>{AppData.applicantState} </p>
-            </div>
-            <div className="divResponsive" style={{ width: "500px" }}>
-              <label>Pincode </label>
-              <br />
-              <p>{AppData.applicantPin} </p>
-            </div>
-            <div className="divResponsive" style={{ width: "450px" }}>
               <label>Applicant's Mobile No. </label>
               <br />
               <p>{AppData.mobileNumber}</p>
             </div>
+            <div className="divResponsive" style={{ width: "450px" }}>
+              <label>Address</label>
+              <br />
+              <p>{AppData.applicantAddress}</p>
+            </div>
+            <div className="divResponsive" style={{ width: "500px" }}>
+              <label>Extra Info </label>
+              <br />
+              <p>{AppData.extraInfo} </p>
+            </div>
+            <div className="divResponsive" style={{ width: "450px" }}></div>
+
             <div
               className="divResponsive"
-              style={{ width: "500px", marginTop: "30px" }}
+              style={{ width: "450px", marginTop: "30px" }}
             >
               <label
                 style={{ fontSize: "1.3rem", opacity: ".9", fontWeight: "600" ,color:"#5a5a5a"}}
@@ -84,7 +81,6 @@ const applicantsDetails = ({ AppData }) => {
               <br />
               <p>{AppData.District}</p>
             </div>
-
             <div className="divResponsive" style={{ width: "450px" }}>
               <label
                 style={{ fontSize: ".8rem", opacity: ".9", fontWeight: "600" }}
