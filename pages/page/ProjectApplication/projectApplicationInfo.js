@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { DataGrid ,GridToolbar} from "@mui/x-data-grid"
+import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import Box from "@mui/material/Box"
 import Text from "../../../components/Text/Text"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
@@ -13,6 +13,8 @@ import Link from "next/link"
 import Button from "../../../components/Button/SubmitButton"
 
 const ProjectApplicationInfo = () => {
+  let ACCESSTOKEN
+
   const projectData = useSelector((state) => state.applicationData.projectData)
   const dispatch = useDispatch()
   const { loading, error, data } = useQuery(GetProjectApplications)
@@ -21,7 +23,8 @@ const ProjectApplicationInfo = () => {
   if (loading) {
     return "Loading..."
   }
-  const ACCESSTOKEN = window.localStorage.getItem("accessToken")
+  ACCESSTOKEN = localStorage.getItem("accessToken")
+
   if (!ACCESSTOKEN) {
     return (
       <>
@@ -58,8 +61,8 @@ const ProjectApplicationInfo = () => {
       width: 150,
       editable: false,
       selection: false,
-      filterable:false,
-      sortable:false,
+      filterable: false,
+      sortable: false,
       renderCell: (params) => (
         <Link href={`/SubmitProjectResponses/${params.value}`}>
           <button style={{ background: "none", border: "none" }} type="submit">
@@ -81,31 +84,31 @@ const ProjectApplicationInfo = () => {
       field: "name",
       headerName: " Name",
       minWidth: 200,
-      flex:1,
+      flex: 1,
     },
     {
       field: "email",
       headerName: "Email",
       minWidth: 250,
-      flex:1,
+      flex: 1,
     },
     {
       field: "contact",
       headerName: "Contact No.",
       minWidth: 200,
-      flex:1,
+      flex: 1,
     },
     {
       field: "project",
       headerName: "Project Name",
       minWidth: 300,
-      flex:1,
+      flex: 1,
     },
     {
       field: "createAt",
       headerName: "Created At",
       minWidth: 150,
-      flex:1,
+      flex: 1,
     },
   ]
 
@@ -184,10 +187,11 @@ const ProjectApplicationInfo = () => {
             <DataGrid
               components={{ Toolbar: GridToolbar }}
               componentsProps={{
-              toolbar: {
-              printOptions: { disableToolbarButton: true },
-              csvOptions: { disableToolbarButton: true },            }
-             }}
+                toolbar: {
+                  printOptions: { disableToolbarButton: true },
+                  csvOptions: { disableToolbarButton: true },
+                },
+              }}
               rows={rows}
               columns={columns}
               initialState={{
@@ -207,7 +211,16 @@ const ProjectApplicationInfo = () => {
       </>
     )
   } else {
-    return <div onClick={location.reload()}></div>
+    return (
+      <>
+        <div
+          style={{ color: "white", cursor: "pointer" }}
+          onClick={() => location.reload()}
+        >
+          Click here to Get Data
+        </div>
+      </>
+    )
   }
 }
 

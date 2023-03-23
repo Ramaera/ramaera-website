@@ -1,15 +1,13 @@
-import Link from "next/link";
-import styled from "styled-components";
-import Text from "../../../../../components/Text/Text";
+import Link from "next/link"
+import styled from "styled-components"
+import Text from "../../../../../components/Text/Text"
 
 const Div = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  //width: 10vw;
-  //margin: 50px 50px;
-  width: 60%;
-  margin: 15px 0px;
+  width: 15vw;
+  margin: 30px 0 30px 80px;
   position: relative;
   left: -50px;
   @media only screen and (max-width: 1000px) {
@@ -18,7 +16,7 @@ const Div = styled.div`
     left: unset;
     width: auto;
   }
-`;
+`
 const Image = styled.img`
   /* height: 150px;
   width: 165px; */
@@ -26,7 +24,7 @@ const Image = styled.img`
   @media only screen and (max-width: 1000px) {
     width: auto;
   }
-`;
+`
 const Logo = () => {
   return (
     <Link href="/">
@@ -41,7 +39,7 @@ const Logo = () => {
         />
       </Div>
     </Link>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

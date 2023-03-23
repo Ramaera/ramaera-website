@@ -3,15 +3,12 @@ import PageLayout from "../../components/PageLayout/PageLayout"
 import PageWidth from "../../components/Width/PageWidth"
 import ApplicantsDetails from "./applicantsDetails"
 import { useSelector } from "react-redux"
+import Button from "@/components/Button/SubmitButton"
 import { useRouter } from "next/router"
 import Pdf from "react-to-pdf"
 import { createRef } from "react"
-import Button from "@/components/Button/SubmitButton"
 import Link from "next/link"
 
-/* const applicantDetail = () => {
-  return <>'</>
-} */
 const applicantDetail = () => {
   const router = useRouter()
   const applicantdata = useSelector((state) => state.applicationData.appData)

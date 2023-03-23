@@ -90,9 +90,9 @@ const Foot = () => {
             />
           </div>
         </Link>
-        <Link href="/PrivacyPolicy">Privacy Policy</Link>
+        {/* <Link href="/PrivacyPolicy">Privacy Policy</Link>
         <Link href="/TermsAndConditions">Terms & Conditions</Link>
-        <Link href="/Legal">Legal</Link>
+        <Link href="/Legal">Legal</Link> */}
 
         {/* <Link href="#">Site Map</Link> */}
       </FootContainer>

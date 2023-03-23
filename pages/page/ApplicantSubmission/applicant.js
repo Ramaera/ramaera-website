@@ -12,36 +12,22 @@ import Link from "next/link"
 import { useDispatch, useSelector } from "react-redux"
 import { changeAppData } from "../../../state/slice/applicantDataSlice"
 import Button from "../../../components/Button/SubmitButton"
-import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 
 const Applicant = () => {
-  const dispatch = useDispatch()
-  const applicantdata = useSelector((state) => state.applicationData.appData)
+  let ACCESSTOKEN
 
+  const applicationData = useSelector((state) => state.applicationData.appData)
+  const dispatch = useDispatch()
   const { loading, error, data } = useQuery(GetApplications)
   const [anchorEl, setAnchorEl] = useState(false)
+
   if (loading) {
     return "Loading..."
   }
-  if (error) {
-    console.log("ACCESSTOKerrorEN", error)
-    return (
-      <>
-        <Link
-          style={{
-            color: "white",
-          }}
-          href="/Login"
-        >
-          Login to continue
-        </Link>
-      </>
-    )
-  }
 
-  const ACCESSTOKEN = window.localStorage.getItem("accessToken")
+  ACCESSTOKEN = localStorage.getItem("accessToken")
+
   if (!ACCESSTOKEN) {
-    console.log("ACCESSTOKEN", ACCESSTOKEN)
     return (
       <>
         <Link
@@ -160,7 +146,7 @@ const Applicant = () => {
   ]
   const rows = []
 
-  if (ACCESSTOKEN) {
+  if (data) {
     dataPush()
     data.applicants.forEach((item, index) => {
       rows.push({
@@ -172,7 +158,6 @@ const Applicant = () => {
         state: item.State,
         district: item.District,
         status: item.status,
-
         applicantAddress: item.applicantAddress,
         mobileNumber: item.mobileNumber,
         extraInfo: item.extraInfo,

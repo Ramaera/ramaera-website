@@ -33,14 +33,14 @@ const Ideas = () => {
         mobileNumber: mobileNumber1,
         District: District1,
         State: State1,
-        extraInfo :extraInfo1,
+        extraInfo: extraInfo1,
       },
     })
     clearForm()
   }
   const clearForm = () => {
     toast.success("Application Submitted!", {
-      position: "bottom-center",
+      position: "top-center",
       autoClose: 2500,
       hideProgressBar: false,
       closeOnClick: true,

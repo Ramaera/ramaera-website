@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { DataGrid,GridToolbar } from "@mui/x-data-grid"
+import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import Box from "@mui/material/Box"
 import Text from "../../../components/Text/Text"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
@@ -14,14 +14,16 @@ import Button from "../../../components/Button/SubmitButton"
 
 const ContactInfo = () => {
   const dispatch = useDispatch()
+  let ACCESSTOKEN
   const { loading, error, data } = useQuery(GetContactResponses)
+  ACCESSTOKEN = localStorage.getItem("accessToken")
+
   const [anchorEl, setAnchorEl] = useState(false)
 
   if (loading) {
     return "Loading..."
   }
 
-  const ACCESSTOKEN = window.localStorage.getItem("accessToken")
   if (!ACCESSTOKEN) {
     return (
       <>
@@ -59,8 +61,8 @@ const ContactInfo = () => {
       width: 150,
       editable: false,
       selection: false,
-      filterable:false,
-      sortable:false,
+      filterable: false,
+      sortable: false,
       renderCell: (params) => (
         <Link href={`/ContactUsResponses/${params.value}`}>
           <button style={{ background: "none", border: "none" }} type="submit">
@@ -82,25 +84,25 @@ const ContactInfo = () => {
       field: "name",
       headerName: " Name",
       minWidth: 200,
-      flex:1,
+      flex: 1,
     },
     {
       field: "email",
       headerName: "Email",
       minWidth: 250,
-      flex:1,
+      flex: 1,
     },
     {
       field: "company",
       headerName: "Company",
       minWidth: 280,
-      flex:1,
+      flex: 1,
     },
     {
       field: "subject",
       headerName: "Subject",
       minWidth: 350,
-      flex:1,
+      flex: 1,
     },
   ]
 
@@ -176,13 +178,14 @@ const ContactInfo = () => {
             <MenuItem onClick={handleClose}>Logout</MenuItem>
           </Menu>
 
-          <Box className="boxGird" >
+          <Box className="boxGird">
             <DataGrid
-               components={{ Toolbar: GridToolbar }}
-               componentsProps={{
-               toolbar: {
-               printOptions: { disableToolbarButton: true },
-               csvOptions: { disableToolbarButton: true },            }
+              components={{ Toolbar: GridToolbar }}
+              componentsProps={{
+                toolbar: {
+                  printOptions: { disableToolbarButton: true },
+                  csvOptions: { disableToolbarButton: true },
+                },
               }}
               rows={rows}
               columns={columns}

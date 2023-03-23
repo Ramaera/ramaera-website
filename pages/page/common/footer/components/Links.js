@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import Link from "next/link"
 const Container = styled.div`
   display: flex;
   gap: 4rem;
@@ -14,19 +14,26 @@ const Container = styled.div`
   }
 `
 const Div = styled.div`
+  text-transform: uppercase;
+  margin: auto;
   display: flex;
+  text-align: center;
   padding-bottom: 220px;
   flex-direction: column;
+
   @media only screen and (max-width: 1000px) {
     padding-bottom: 20px;
   }
 `
-const Link = styled.a`
+const Linked = styled(Link)`
   font-size: 10px;
   margin-bottom: 1rem;
   color: white;
   cursor: pointer;
   text-decoration: none;
+  &:hover {
+    color: whitesmoke;
+  }
   @media only screen and (max-width: 1000px) {
     font-size: 0.8rem;
   }
@@ -103,52 +110,48 @@ export const DispFlex = styled.div`
 const Links = () => {
   return (
     <Container>
-      <Sub>
-        <SubHeading>Subscribe</SubHeading>
-        <form action="">
-          <Input placeholder="Email Adddress" />
-        </form>
-        <SubText>
-          Hello, we are Lift Media. Our goal is to translate the positive
-          effects from revolutionizing how companies engage with their clients &
-          their team.
-        </SubText>
-      </Sub>
-      <MobileDiv>
+      {/* <MobileDiv>
         <Div>
           <Heading>Product</Heading>
-          <Link href="#">Landing Page</Link>
-          <Link href="#">Popup Builder</Link>
-          <Link href="#">Web-design</Link>
-          <Link href="#">Content</Link>
-          <Link href="#">Integrations</Link>
+          <Linked href="#">Landing Page</Linked>
+          <Linked href="#">Popup Builder</Linked>
+          <Linked href="#">Web-design</Linked>
+          <Linked href="#">Content</Linked>
+          <Linked href="#">Integrations</Linked>
         </Div>
         <Div>
           <Heading href="#">Use Cases</Heading>
-          <Link href="#">Web-designers</Link>
-          <Link href="#">Marketers</Link>
-          <Link href="#">Small Business</Link>
-          <Link href="#">Website Builder</Link>
+          <Linked href="#">Web-designers</Linked>
+          <Linked href="#">Marketers</Linked>
+          <Linked href="#">Small Business</Linked>
+          <Linked href="#">Website Builder</Linked>
         </Div>
-      </MobileDiv>
+      </MobileDiv> */}
       <MobileDiv>
-        <Div>
+        {/* <Div>
           <Heading href="#">Resources</Heading>
-          <Link href="#">Academy</Link>
-          <Link href="#">Blog</Link>
-          <Link href="#">Themes</Link>
-          <Link href="#">Hosting</Link>
-          <Link href="#">Developers</Link>
-          <Link href="#">Support</Link>
-        </Div>
+          <Linked href="#">Academy</Linked>
+          <Linked href="#">Blog</Linked>
+          <Linked href="#">Themes</Linked>
+          <Linked href="#">Hosting</Linked>
+          <Linked href="#">Developers</Linked>
+          <Linked href="#">Support</Linked>
+        </Div> */}
         <Div>
-          <Heading href="#">Company</Heading>
-          <Link href="#">About Us</Link>
-          <Link href="#">Careers</Link>
-          <Link href="#">FAQs</Link>
-          <Link href="/gallery">Teams</Link>
-          <Link href="#">Contact Us</Link>
+          <Heading href="">Links</Heading>
+          <Linked href="/PrivacyPolicy">Privacy Policy</Linked>
+          <Linked href="/TermsAndConditions">Terms & Conditions</Linked>
+          <Linked href="/Legal">Legal</Linked>
+          <Linked href="/Login">Login</Linked>
         </Div>
+        {/* <Div>
+          <Heading href="#">Company</Heading>
+          <Linked href="#">About Us</Linked>
+          <Linked href="#">Careers</Linked>
+          <Linked href="#">FAQs</Linked>
+          <Linked href="/gallery">Teams</Linked>
+          <Linked href="#">Contact Us</Linked>
+        </Div> */}
       </MobileDiv>
     </Container>
   )

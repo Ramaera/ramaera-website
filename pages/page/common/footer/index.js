@@ -32,8 +32,8 @@ const index = () => (
               clients & their team.
             </SubText>
           </Sub> */}
-          {/*           <Links />
-           */}
+          <Links />
+
           <Map />
         </DispFlex>
         <Socials />

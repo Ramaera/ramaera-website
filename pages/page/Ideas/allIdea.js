@@ -169,7 +169,7 @@ const Ideas = () => {
   }
   const clearForm = () => {
     toast.success("Thanks for Submission", {
-      position: "top-center",
+      position: "bottom-center",
       autoClose: 2500,
       hideProgressBar: false,
       closeOnClick: true,
