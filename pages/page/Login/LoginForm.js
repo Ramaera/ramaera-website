@@ -35,7 +35,7 @@ const LoginForm = () => {
 
       // setTimeout(myStopFunction, 2000)
 
-      router.push("/DistributionChannelResponses")
+      router.push("/Dashboard")
     } catch (err) {
       if (err) {
         //console.log(err)
@@ -44,7 +44,7 @@ const LoginForm = () => {
   }
 
   /* function myStopFunction() {
-    router.push("DistributionChannelResponses")
+    router.push("Dashboard")
   } */
   return (
     <Container>

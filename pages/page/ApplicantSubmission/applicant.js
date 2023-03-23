@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { DataGrid,GridToolbar } from "@mui/x-data-grid"
+import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import Box from "@mui/material/Box"
 import Text from "../../../components/Text/Text"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
@@ -12,18 +12,36 @@ import Link from "next/link"
 import { useDispatch, useSelector } from "react-redux"
 import { changeAppData } from "../../../state/slice/applicantDataSlice"
 import Button from "../../../components/Button/SubmitButton"
+import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 
 const Applicant = () => {
-  const applicantdata = useSelector((state) => state.applicationData.appData)
   const dispatch = useDispatch()
+  const applicantdata = useSelector((state) => state.applicationData.appData)
+
   const { loading, error, data } = useQuery(GetApplications)
   const [anchorEl, setAnchorEl] = useState(false)
   if (loading) {
     return "Loading..."
   }
+  if (error) {
+    console.log("ACCESSTOKerrorEN", error)
+    return (
+      <>
+        <Link
+          style={{
+            color: "white",
+          }}
+          href="/Login"
+        >
+          Login to continue
+        </Link>
+      </>
+    )
+  }
 
   const ACCESSTOKEN = window.localStorage.getItem("accessToken")
   if (!ACCESSTOKEN) {
+    console.log("ACCESSTOKEN", ACCESSTOKEN)
     return (
       <>
         <Link
@@ -46,8 +64,6 @@ const Applicant = () => {
     }
   }
 
-  //console.log(data)
-
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget)
   }
@@ -63,21 +79,21 @@ const Applicant = () => {
       width: 150,
       editable: false,
       selection: false,
-      filterable:false,
-      sortable:false,
+      filterable: false,
+      sortable: false,
       renderCell: (params) => (
         <Link href={`/DistributionChannelResponses/${params.value}`}>
           <button style={{ background: "none", border: "none" }} type="submit">
-        <Button
-          nav
-          width="auto"
-          height="auto"
-          Text="View Details"
-          inheight="auto"
-          fontSize="auto"
-          padding=" 5px 8px"
-        />
-      </button>
+            <Button
+              nav
+              width="auto"
+              height="auto"
+              Text="View Details"
+              inheight="auto"
+              fontSize="auto"
+              padding=" 5px 8px"
+            />
+          </button>
           {/* <button>View Details</button> */}
         </Link>
       ),
@@ -86,50 +102,57 @@ const Applicant = () => {
       field: "name",
       headerName: " Name",
       minWidth: 200,
-      flex:1,
+      flex: 1,
     },
     {
       field: "email",
       headerName: "Email",
       minWidth: 250,
-      flex:1,
+      flex: 1,
     },
     {
       field: "applicatant",
       headerName: "Applicatant",
       minWidth: 150,
-      flex:1,
+      flex: 1,
     },
     {
       field: "state",
       headerName: "State",
       minWidth: 120,
-      flex:1,
+      flex: 1,
     },
     {
       field: "district",
       headerName: "District",
       minWidth: 160,
-      flex:1,
+      flex: 1,
     },
     {
       field: "status",
       headerName: "Status",
       minWidth: 150,
-      flex:1,
     },
 
     {
       field: "applicantAddress",
       headerName: "Address",
       minWidth: 300,
-      flex:1,
-      sortable:false,
+      flex: 1,
+      sortable: false,
     },
 
     {
       field: "mobileNumber",
       headerName: "Mobile",
+      minWidth: 150,
+      flex: 1,
+      sortable: false,
+    },
+
+    {
+      field: "firmName",
+      headerName: "firmName",
       minWidth: 150,
       flex:1,
       sortable:false,
@@ -147,15 +170,13 @@ const Applicant = () => {
       field: "extraInfo",
       headerName: "Info",
       minWidth: 150,
-      flex:1,
-      sortable:false,
+      flex: 1,
+      sortable: false,
     },
-
   ]
-
   const rows = []
 
-  if (data) {
+  if (ACCESSTOKEN) {
     dataPush()
     data.applicants.forEach((item, index) => {
       rows.push({
@@ -173,6 +194,7 @@ const Applicant = () => {
         firmName:item.firmName,
       })
     })
+
     return (
       <>
         <Container>
@@ -231,16 +253,15 @@ const Applicant = () => {
 
           <Box className="boxGird">
             <DataGrid
-             slots={{
-              toolbar: GridToolbar
-            }}
-          //   components={{ Toolbar: GridToolbar }}
-          //   componentsProps={{
-          //   toolbar: {
-          //   printOptions: { disableToolbarButton: true },
-          //   csvOptions: { disableToolbarButton: true },            }
-          //  }}
-
+              slots={{
+                toolbar: GridToolbar,
+              }}
+              //   components={{ Toolbar: GridToolbar }}
+              //   componentsProps={{
+              //   toolbar: {
+              //   printOptions: { disableToolbarButton: true },
+              //   csvOptions: { disableToolbarButton: true },            }
+              //  }}
               rows={rows}
               columns={columns}
               initialState={{
@@ -261,7 +282,16 @@ const Applicant = () => {
       </>
     )
   } else {
-    return <div onClick={location.reload()}></div>
+    return (
+      <>
+        <div
+          style={{ color: "white", cursor: "pointer" }}
+          onClick={() => location.reload()}
+        >
+          Click here to Get Data
+        </div>
+      </>
+    )
   }
 }
 

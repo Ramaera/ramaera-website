@@ -1,13 +1,33 @@
-// import { DataGrid } from "@mui/x-data-grid";
-// import Box from "@mui/material/Box";
-// import Text from "../../../components/Text/Text";
+import Link from "next/link"
+import AccountCircleIcon from "@mui/icons-material/AccountCircle"
+import { setAccessToken } from "../../../state/slice/accessTokenSlice"
+import { useDispatch } from "react-redux"
 
-import Link from "next/link";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-
-// import { data } from "./Collection/data";
-Link;
 const DashSection = () => {
+  let ACCESSTOKEN
+  const dispatch = useDispatch()
+  if (typeof window !== "undefined") {
+    ACCESSTOKEN = localStorage.getItem("accessToken")
+  }
+  if (!ACCESSTOKEN) {
+    return (
+      <>
+        <Link
+          style={{
+            color: "white",
+          }}
+          href=" /Login"
+        >
+          Login to continue
+        </Link>
+      </>
+    )
+  }
+
+  const logMeOut = () => {
+    dispatch(setAccessToken(""))
+    window.localStorage.setItem("accessToken", "")
+  }
   return (
     <>
       <div className="container heading-container">
@@ -24,7 +44,12 @@ const DashSection = () => {
             <li class="divider"></li>
             <li>Role</li>
             <li className="divider"></li>
-            <li>Logout</li>
+
+            <li>
+              <Link onClick={() => logMeOut()} href="/Login">
+                Logout
+              </Link>
+            </li>
           </ul>
         </label>
       </div>
@@ -42,7 +67,7 @@ const DashSection = () => {
               <tr>
                 <td>Application Data</td>
                 <td>
-                  <Link href="/applicants" className="btn success">
+                  <Link href="/SubmitProjectResponses" className="btn success">
                     View All
                   </Link>
                 </td>
@@ -50,7 +75,7 @@ const DashSection = () => {
               <tr>
                 <td>Contact Data</td>
                 <td>
-                  <Link href="/projectApplication" className="btn success">
+                  <Link href="/ContactUsResponses" className="btn success">
                     View All
                   </Link>
                 </td>
@@ -58,7 +83,10 @@ const DashSection = () => {
               <tr>
                 <td>Distributer Data</td>
                 <td>
-                  <Link href="/contactDetail" className="btn success">
+                  <Link
+                    href="/DistributionChannelResponses"
+                    className="btn success"
+                  >
                     View All
                   </Link>
                 </td>
@@ -82,7 +110,7 @@ const DashSection = () => {
         <div className="basis-2/12 table-2"></div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default DashSection;
+export default DashSection
