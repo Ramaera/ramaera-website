@@ -3,8 +3,6 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import { useDispatch } from "react-redux"
 
-let ACCESSTOKEN
-
 const DashSection = () => {
   let ACCESSTOKEN
   const dispatch = useDispatch()
