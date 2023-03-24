@@ -7,6 +7,7 @@ import { useMutation } from "@apollo/client"
 import { useSelector, useDispatch } from "react-redux"
 import { useRouter } from "next/router"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 import { Container, FormBox, LoginContainer, LoginTitle } from "./style"
 import {
   getEmail,
@@ -16,8 +17,10 @@ import {
 } from "../../../state/slice/userSlice"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import { useState } from "react"
 const LoginForm = () => {
   const router = useRouter()
+  const [showPassword, setShowPassword] = useState(false)
   const [loginUser, { loading, data }] = useMutation(LOG_IN)
   const passwordVar = useSelector((state) => state.logInUser.password)
   const emailVar = useSelector((state) => state.logInUser.email)
@@ -156,11 +159,12 @@ const LoginForm = () => {
               }}
             />
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               required
               onChange={(e) => dispatch(getPassword(e.target.value))}
               style={{
+                position: "static",
                 width: "380px",
                 height: "45px",
                 paddingLeft: "60px",
@@ -168,6 +172,18 @@ const LoginForm = () => {
               }}
               className="loginInput"
             />
+            <span
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                transform: "translateX(1vmax)",
+                fontSize: "30px",
+                margin: "6px 0 0 -40px",
+              }}
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              <VisibilityOffIcon />
+            </span>
           </LoginTitle>
           <button type="submit" style={{ background: "none", border: "none" }}>
             <Button

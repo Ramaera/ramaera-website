@@ -8,11 +8,16 @@ import { Container, FormBox, LoginContainer, LoginTitle } from "./style"
 import { useMutation } from "@apollo/client"
 import { CHANGE_PASSWORD } from "apollo/queries/changePassword"
 import { useState } from "react"
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
 const Password = () => {
   const router = useRouter()
+
+  const [showPassword1, setShowPassword1] = useState(false)
+  const [showPassword2, setShowPassword2] = useState(false)
+  const [showPassword3, setShowPassword3] = useState(false)
 
   const [changePassword] = useMutation(CHANGE_PASSWORD)
   const [oldPassword, setOldPassword] = useState("")
@@ -99,7 +104,7 @@ const Password = () => {
               }}
             />
             <input
-              type="password"
+              type={showPassword1 ? "text" : "password"}
               onChange={(e) => setOldPassword(e.target.value)}
               placeholder="Old Password"
               required
@@ -110,6 +115,18 @@ const Password = () => {
                 marginTop: "0",
               }}
             />
+            <span
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                transform: "translateX(1vmax)",
+                fontSize: "30px",
+                margin: "6px 0 0 -40px",
+              }}
+              onClick={() => setShowPassword1(!showPassword1)}
+            >
+              <VisibilityOffIcon />
+            </span>
           </LoginTitle>
           <LoginTitle>
             <LockIcon
@@ -122,7 +139,7 @@ const Password = () => {
               }}
             />
             <input
-              type="password"
+              type={showPassword2 ? "text" : "password"}
               placeholder="New Password"
               required
               onChange={(e) => setNewPassword(e.target.value)}
@@ -134,6 +151,18 @@ const Password = () => {
                 marginTop: "0",
               }}
             />
+            <span
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                transform: "translateX(1vmax)",
+                fontSize: "30px",
+                margin: "6px 0 0 -40px",
+              }}
+              onClick={() => setShowPassword2(!showPassword2)}
+            >
+              <VisibilityOffIcon />
+            </span>
           </LoginTitle>
           <LoginTitle>
             <LockResetIcon
@@ -146,7 +175,7 @@ const Password = () => {
               }}
             />
             <input
-              type="password"
+              type={showPassword3 ? "text" : "password"}
               placeholder="Confirm Password"
               required
               id="confirmPassword"
@@ -158,6 +187,18 @@ const Password = () => {
                 marginTop: "0",
               }}
             />
+            <span
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                transform: "translateX(1vmax)",
+                fontSize: "30px",
+                margin: "6px 0 0 -40px",
+              }}
+              onClick={() => setShowPassword3(!showPassword3)}
+            >
+              <VisibilityOffIcon />
+            </span>
           </LoginTitle>
           <button type="submit" style={{ background: "none", border: "none" }}>
             <Button
