@@ -424,21 +424,21 @@ const ProjectApplicationInfo = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem>
-              <Link onClick={() => logMeOut()} href="/Login">
+            <Link onClick={() => logMeOut()} href="/Login">
+              <MenuItem>
                 <LogoutIcon fontSize={"medium"} />
                 <div style={{ fontWeight: "500", fontSize: "12px" }}>
                   LogOut
                 </div>
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link href="/Dashboard">
+              </MenuItem>
+            </Link>
+            <Link href="/Dashboard">
+              <MenuItem>
                 <div style={{ fontWeight: "500", fontSize: "12px" }}>
                   Dashboard
                 </div>
-              </Link>
-            </MenuItem>
+              </MenuItem>
+            </Link>
           </Menu>
 
           <Box className="boxGird">
