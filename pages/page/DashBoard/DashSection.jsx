@@ -9,7 +9,7 @@ import BadgeIcon from "@mui/icons-material/Badge"
 
 const DashSection = () => {
   const nameVar = useSelector((state) => state.logInUser.name)
-  const rolevar = useSelector((state) => state.logInUser.role)
+  const roleVar = useSelector((state) => state.logInUser.role)
 
   let ACCESSTOKEN
   const dispatch = useDispatch()
@@ -56,7 +56,7 @@ const DashSection = () => {
               <li style={{ cursor: "default" }}>
                 <span style={{ color: "black" }}>
                   <PersonIcon fontSize={"small"} />
-                  {rolevar ? rolevar : "Role : "}
+                  {roleVar ? ("Role : ", roleVar) : "Role : "}
                 </span>
               </li>
               <li className="divider"></li>
