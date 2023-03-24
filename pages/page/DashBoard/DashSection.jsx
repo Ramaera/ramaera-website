@@ -11,7 +11,7 @@ import Button from "../../../components/Button/SubmitButton"
 
 const DashSection = () => {
   const nameVar = useSelector((state) => state.logInUser.name)
-  const rolevar = useSelector((state) => state.logInUser.role)
+  const roleVar = useSelector((state) => state.logInUser.role)
 
   let ACCESSTOKEN
   const dispatch = useDispatch()
@@ -44,44 +44,46 @@ const DashSection = () => {
           <h1 className="heading-text">Dashboard</h1>
           <label class="dropdown">
             <div class="dd-button">Dropdown</div>
-            <AccountCircleIcon style={{ fontSize: "50px", color: "white",cursor:"pointer" }} />
+            <AccountCircleIcon
+              style={{ fontSize: "50px", color: "white", cursor: "pointer" }}
+            />
             <input type="checkbox" class="dd-input" id="test" />
 
             <ul class="dd-menu">
               <li style={{ cursor: "default" }}>
                 <span style={{ color: "black" }}>
-                 <Typography sx={{ display: "flex", alignItems: "center" }}>
-                 <BadgeIcon style={{marginRight:"10px"}}/>
-                 {nameVar ? nameVar : "Name : "}
-                </Typography> 
+                  <Typography sx={{ display: "flex", alignItems: "center" }}>
+                    <BadgeIcon style={{ marginRight: "10px" }} />
+                    {nameVar ? `Name : ${nameVar}` : "Name : "}
+                  </Typography>
                 </span>
               </li>
               <li class="divider"></li>
               <li style={{ cursor: "default" }}>
-               <span style={{ color: "black" }}>
-                <Typography sx={{ display: "flex", alignItems: "center" }}>
-                <PersonIcon style={{marginRight:"10px"}}/>
-                {rolevar ? rolevar : "Role : "}
-                </Typography> 
-               </span>
+                <span style={{ color: "black" }}>
+                  <Typography sx={{ display: "flex", alignItems: "center" }}>
+                    <PersonIcon style={{ marginRight: "10px" }} />
+                    {roleVar ? `Role : ${roleVar}` : "Role : "}
+                  </Typography>
+                </span>
               </li>
               <li className="divider"></li>
               <li>
                 <Link href="/Dashboard/ChangePassword">
                   <Typography sx={{ display: "flex", alignItems: "center" }}>
-                  <LockResetIcon style={{marginRight:"10px"}}/>
-                Change Password
-                </Typography> 
+                    <LockResetIcon style={{ marginRight: "10px" }} />
+                    Change Password
+                  </Typography>
                 </Link>
               </li>
               <li class="divider"></li>
 
               <li>
                 <Link onClick={() => logMeOut()} href="/Login">
-                <Typography sx={{ display: "flex", alignItems: "center" }}>
-                <LogoutIcon style={{marginRight:"10px"}}/>
-                Logout
-                </Typography> 
+                  <Typography sx={{ display: "flex", alignItems: "center" }}>
+                    <LogoutIcon style={{ marginRight: "10px" }} />
+                    Logout
+                  </Typography>
                 </Link>
               </li>
             </ul>
@@ -101,23 +103,28 @@ const DashSection = () => {
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td className="dashboardText">Project (Idea) Responses Data</td>
+                  <td className="dashboardText">
+                    Project (Idea) Responses Data
+                  </td>
                   <td>
                     <Link
                       href="/SubmitProjectResponses"
-                     // className="btn success"
+                      // className="btn success"
                     >
-                  <button style={{ background: "none", border: "none" }} type="submit">
-                    <Button
-                     nav
-                     width="auto"
-                     height="auto"
-                     Text="Responses"
-                     inheight="auto"
-                     fontSize="auto"
-                     padding=" 15px 10px"
-                     />
-                  </button>                     
+                      <button
+                        style={{ background: "none", border: "none" }}
+                        type="submit"
+                      >
+                        <Button
+                          nav
+                          width="auto"
+                          height="auto"
+                          Text="Responses"
+                          inheight="auto"
+                          fontSize="auto"
+                          padding=" 15px 10px"
+                        />
+                      </button>
                     </Link>
                   </td>
                 </tr>
@@ -125,42 +132,51 @@ const DashSection = () => {
                   <td>2</td>
                   <td className="dashboardText">Contact Us Responses Data</td>
                   <td>
-                    <Link href="/ContactUsResponses" 
-                    //className="btn success"
+                    <Link
+                      href="/ContactUsResponses"
+                      //className="btn success"
                     >
-                  <button style={{ background: "none", border: "none" }} type="submit">
-                    <Button
-                     nav
-                     width="auto"
-                     height="auto"
-                     Text="Responses"
-                     inheight="auto"
-                     fontSize="auto"
-                     padding=" 15px 10px"
-                     />
-                  </button>
+                      <button
+                        style={{ background: "none", border: "none" }}
+                        type="submit"
+                      >
+                        <Button
+                          nav
+                          width="auto"
+                          height="auto"
+                          Text="Responses"
+                          inheight="auto"
+                          fontSize="auto"
+                          padding=" 15px 10px"
+                        />
+                      </button>
                     </Link>
                   </td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td className="dashboardText">Distributer Channel Responses Data</td>
+                  <td className="dashboardText">
+                    Distributer Channel Responses Data
+                  </td>
                   <td>
                     <Link
                       href="/DistributionChannelResponses"
-                     // className="btn success"
+                      // className="btn success"
                     >
-                    <button style={{ background: "none", border: "none" }} type="submit">
-                    <Button
-                     nav
-                     width="auto"
-                     height="auto"
-                     Text="Responses"
-                     inheight="auto"
-                     fontSize="auto"
-                     padding=" 15px 10px"
-                     />
-                  </button>
+                      <button
+                        style={{ background: "none", border: "none" }}
+                        type="submit"
+                      >
+                        <Button
+                          nav
+                          width="auto"
+                          height="auto"
+                          Text="Responses"
+                          inheight="auto"
+                          fontSize="auto"
+                          padding=" 15px 10px"
+                        />
+                      </button>
                     </Link>
                   </td>
                 </tr>

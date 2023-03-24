@@ -178,7 +178,7 @@ const LoginForm = () => {
                 position: "absolute",
                 transform: "translateX(1vmax)",
                 fontSize: "30px",
-                margin: "6px 0 0 -40px",
+                margin: "6px 0 0 -50px",
               }}
               onClick={() => setShowPassword(!showPassword)}
             >

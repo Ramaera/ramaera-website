@@ -12,6 +12,17 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
+/* toast.error("Password Incorrect", {
+  position: "top-center",
+  autoClose: 1200,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: false,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+}) */
+
 const Password = () => {
   const router = useRouter()
 
@@ -25,6 +36,7 @@ const Password = () => {
   const [newConfirmPassword, setNewConfirmPassword] = useState("")
   function handleSubmit(e) {
     e.preventDefault()
+
     if (newPassword === newConfirmPassword) {
       changePassword({
         variables: {
@@ -42,6 +54,7 @@ const Password = () => {
         progress: undefined,
         theme: "light",
       })
+
       setTimeout(() => {
         router.push("/Dashboard")
       }, "2000")
@@ -121,7 +134,7 @@ const Password = () => {
                 position: "absolute",
                 transform: "translateX(1vmax)",
                 fontSize: "30px",
-                margin: "6px 0 0 -40px",
+                margin: "6px 0 0 -50px",
               }}
               onClick={() => setShowPassword1(!showPassword1)}
             >
@@ -157,7 +170,7 @@ const Password = () => {
                 position: "absolute",
                 transform: "translateX(1vmax)",
                 fontSize: "30px",
-                margin: "6px 0 0 -40px",
+                margin: "6px 0 0 -50px",
               }}
               onClick={() => setShowPassword2(!showPassword2)}
             >
@@ -193,7 +206,7 @@ const Password = () => {
                 position: "absolute",
                 transform: "translateX(1vmax)",
                 fontSize: "30px",
-                margin: "6px 0 0 -40px",
+                margin: "6px 0 0 -50px",
               }}
               onClick={() => setShowPassword3(!showPassword3)}
             >
