@@ -22,10 +22,8 @@ const Ideas = () => {
       directorThreeVar,
       directorIntroThreeVar,
     ]
-    console.log("directorsString", directorsString)
     setAllDirectorsData(directorsString)
   }
-  console.log("allDirectorsData", allDirectorsData)
 
   const [CreateProject] = useMutation(CreateProjectApplications)
   const CityVar = useSelector((state) => state.project.City)

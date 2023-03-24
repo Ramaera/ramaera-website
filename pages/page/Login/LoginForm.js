@@ -14,8 +14,8 @@ const LoginForm = () => {
   const router = useRouter()
 
   const [loginUser] = useMutation(LogIn)
-  const password1 = useSelector((state) => state.logInUser.password)
-  const email1 = useSelector((state) => state.logInUser.email)
+  const passwordVar = useSelector((state) => state.logInUser.password)
+  const emailVar = useSelector((state) => state.logInUser.email)
   const dispatch = useDispatch()
 
   const handleSubmit = async (e) => {
@@ -25,8 +25,8 @@ const LoginForm = () => {
       //console.log(window.localStorage.getItem("access_token"))
       const data1 = await loginUser({
         variables: {
-          email: email1,
-          password: password1,
+          email: emailVar,
+          password: passwordVar,
         },
       })
       window.localStorage.setItem("accessToken", data1.data.login.accessToken)

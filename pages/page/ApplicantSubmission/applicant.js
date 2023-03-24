@@ -169,7 +169,7 @@ const Applicant = () => {
       <>
         <Container>
           <Text
-            Text="Distribution Channal Responses"
+            Text="Distribution Channel Responses"
             lg="linear-gradient(to right, #ffa73d, gold)"
             font
             size="clamp(2.2rem, 1.2vw, 1.5rem)"
