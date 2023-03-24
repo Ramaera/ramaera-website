@@ -26,7 +26,10 @@ const ResHeading = styled.div`
     right: auto;
   }
   @media only screen and (max-width: 450px) {
-    top: -65vh;
+    top: -55vh;
+  }
+  @media only screen and (max-width: 400px) {
+    top: -58vh;
   }
 `
 const ResSub = styled.div`
@@ -114,7 +117,7 @@ const Textcontainer = () => {
           xmsize="2rem"
           xssize="3vw"
           msize="1.8rem"
-          mwidth="100"
+          mwidth="100%"
         />
       </ResHeading>
       <ResSub>

@@ -65,10 +65,11 @@ const CustomBg = () => {
             size="42px"
             lg="linear-gradient(90deg, #FFE259 0%, #FFA751 100%)"
             lh="55px"
-            mlh="30px"
+            mlh="40px"
             xmsize="2rem"
             xssize="3vw"
             msize="2.4rem"
+            mwidth="100%"
             mmwidth="100%"
           />
         </Txt>

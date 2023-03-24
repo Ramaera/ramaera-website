@@ -44,9 +44,9 @@ const index = () => {
             msize="1.2rem"
             mta="center"
             padding=" 0 10.5vw 0 5vw"
-            mwidth="60%"
+            mwidth="100%"
             mpadding="5vw"
-            mmargin=" 2rem"
+            mmargin=" unset"
             mmwidth="100%"
             mm="unset"
           />
