@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar/Navbar"
 import PageLayout from "../../components/PageLayout/PageLayout"
 import PageWidth from "../../components/Width/PageWidth"
-import CareerHr from "../page/Job/AllJob"
+import Partner from "../page/Partner/AllPartner"
 import Footer from "../page/common/footer"
 const partner = () => {
   return (
@@ -10,7 +10,7 @@ const partner = () => {
         <Navbar />
         <div className="navSpace"></div>
         <PageWidth full scale={"95%"} width="1500px" position="relative">
-          <CareerHr />
+          <Partner />
         </PageWidth>
         <hr style={{ borderBottom: "1px solid white", width: "80vw" }} />
         <Footer />
