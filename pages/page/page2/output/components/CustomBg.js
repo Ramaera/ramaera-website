@@ -75,6 +75,7 @@ const CustomBg = () => {
             xmsize="2rem"
             xssize="3vw"
             msize="2.4rem"
+            mwidth="100%"
             mmwidth="100%"
           />
         </Txt>
