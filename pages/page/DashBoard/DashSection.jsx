@@ -2,6 +2,11 @@ import Link from "next/link"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import { useDispatch } from "react-redux"
+import LogoutIcon from "@mui/icons-material/Logout"
+import LockResetIcon from "@mui/icons-material/LockReset"
+import PersonIcon from "@mui/icons-material/Person"
+import BadgeIcon from "@mui/icons-material/Badge"
+import { Typography } from "@mui/material"
 
 const DashSection = () => {
   let ACCESSTOKEN
@@ -39,17 +44,29 @@ const DashSection = () => {
             <input type="checkbox" class="dd-input" id="test" />
 
             <ul class="dd-menu">
-              <li>Name</li>
+              <li style={{ cursor: "default" }}>
+                <span>
+                  <BadgeIcon fontSize={"small"} />
+                  Name
+                </span>
+              </li>
               <li class="divider"></li>
-              <li>Role: {}</li>
+              <li style={{ cursor: "default" }}>
+                <PersonIcon fontSize={"small"} />
+                Role: {}
+              </li>
               <li className="divider"></li>
               <li>
-                <Link href="/Dashboard/ChangePassword">Change Password</Link>
+                <Link href="/Dashboard/ChangePassword">
+                  <LockResetIcon fontSize={"small"} />
+                  Change Password
+                </Link>
               </li>
               <li class="divider"></li>
 
               <li>
                 <Link onClick={() => logMeOut()} href="/Login">
+                  <LogoutIcon fontSize={"small"} />
                   Logout
                 </Link>
               </li>
@@ -62,38 +79,42 @@ const DashSection = () => {
             <table id="myTable">
               <thead>
                 <tr className="header">
+                  <th>Serial No.</th>
                   <th>Dashboard</th>
                   <th>Details</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td>1</td>
                   <td>Project (Idea) Responses Data</td>
                   <td>
                     <Link
                       href="/SubmitProjectResponses"
                       className="btn success"
                     >
-                      View Responses
+                      Responses
                     </Link>
                   </td>
                 </tr>
                 <tr>
+                  <td>2</td>
                   <td>Contact Us Responses Data</td>
                   <td>
                     <Link href="/ContactUsResponses" className="btn success">
-                      View Responses
+                      Responses
                     </Link>
                   </td>
                 </tr>
                 <tr>
+                  <td>3</td>
                   <td>Distributer Channel Responses Data</td>
                   <td>
                     <Link
                       href="/DistributionChannelResponses"
                       className="btn success"
                     >
-                      View Responses
+                      Responses
                     </Link>
                   </td>
                 </tr>
