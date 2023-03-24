@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client"
 
-export const CreateProjectApplications = gql(`
+export const CREATE_PROJECT_APPLICATIONS = gql(`
 mutation CreateProject (
 $City: String!,
 $State: String!,
@@ -92,7 +92,7 @@ $director: [String!]!,
     }
 }`)
 
-export const GetProjectApplications = gql(`
+export const GET_PROJECT_APPLICATIONS = gql(`
 
 query getProjectApplicants {
   AllProjectDetails {
@@ -117,42 +117,6 @@ query getProjectApplicants {
     marketProblem
     solution
     yourProduct
-    businessModel
-    sizeOfMarket
-    currentTransaction
-    competitiveLandscape
-    financialProjection
-    fundNeed
-    equityStructure
-    exitOption
-    selectFundingType
-    fundingStage
-    selectFundingTypeAgain
-    fundingAmount
-    fundingDate
-    linkedinProfile
-    twitterProfile
-    facebookProfile
-    instagramProfile
-    websiteURL
-    thanksNote
-    director
-  }
-}`)
-export const fGetProjectApplications = gql(`
-
-query getProjectApplicants {
-  AllProjectDetails {
-    name
-    typeOfPartnership
-    fundingType
-    receivingMode
-    goal
-    targetFor
-    perPersonAmount
-    brief
-    marketProblem
-    solution
     businessModel
     sizeOfMarket
     currentTransaction

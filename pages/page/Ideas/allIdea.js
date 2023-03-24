@@ -3,7 +3,7 @@ import { AccountForm } from "./AccountForm"
 import { useMultistepForm } from "./useMultistepForm"
 import { UserForm } from "./UserForm"
 import Button from "../../../components/Button/SubmitButton"
-import { CreateProjectApplications } from "../../../apollo/queries/idea"
+import { CREATE_PROJECT_APPLICATIONS } from "../../../apollo/queries/idea"
 import { useMutation } from "@apollo/client"
 import { useSelector } from "react-redux"
 import { ToastContainer, toast } from "react-toastify"
@@ -22,12 +22,10 @@ const Ideas = () => {
       directorThreeVar,
       directorIntroThreeVar,
     ]
-    console.log("directorsString", directorsString)
     setAllDirectorsData(directorsString)
   }
-  console.log("allDirectorsData", allDirectorsData)
 
-  const [CreateProject] = useMutation(CreateProjectApplications)
+  const [CreateProject] = useMutation(CREATE_PROJECT_APPLICATIONS)
   const CityVar = useSelector((state) => state.project.City)
   const CountryVar = useSelector((state) => state.project.Country)
   const StateVar = useSelector((state) => state.project.State)

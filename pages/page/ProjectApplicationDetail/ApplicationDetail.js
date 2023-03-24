@@ -14,8 +14,13 @@ const ApplicationDetail = ({ ProjectData }) => {
               style={{ width: "500px", marginTop: "30px" }}
             >
               <label
-                style={{ fontSize: "1.3rem", opacity: ".9", fontWeight: "600" ,color:"#5a5a5a"}}
-                >
+                style={{
+                  fontSize: "1.3rem",
+                  opacity: ".9",
+                  fontWeight: "600",
+                  color: "#5a5a5a",
+                }}
+              >
                 Basic Details
               </label>
             </div>
@@ -35,7 +40,7 @@ const ApplicationDetail = ({ ProjectData }) => {
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Contact No </label>
               <br />
-              <p>{ProjectData.contactNo}</p>
+              <p>{ProjectData.mobileNumber}</p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Date Of Birth </label>
@@ -45,17 +50,17 @@ const ApplicationDetail = ({ ProjectData }) => {
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Country</label>
               <br />
-              <p>{ProjectData.country}</p>
+              <p>{ProjectData.Country}</p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>State </label>
               <br />
-              <p>{ProjectData.state} </p>
+              <p>{ProjectData.State} </p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>City </label>
               <br />
-              <p>{ProjectData.city} </p>
+              <p>{ProjectData.City} </p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Occupation </label>
@@ -79,28 +84,36 @@ const ApplicationDetail = ({ ProjectData }) => {
             {ProjectData.director[2] && (
               <>
                 <div className="divResponsive" style={{ width: "500px" }}>
-                  <label>Director Name </label>
+                  <label>Director Name 2</label>
                   <br />
                   <p>{ProjectData.director[2]} </p>
                 </div>
                 <div className="divResponsive" style={{ width: "450px" }}>
-                  <label>Basic Introduction </label>
-                  <br />
-                  <p>{ProjectData.director[3]} </p>
+                  {ProjectData.director[3] && (
+                    <>
+                      <label>Basic Introduction </label>
+                      <br />
+                      <p>{ProjectData.director[3]} </p>
+                    </>
+                  )}
                 </div>
               </>
             )}
             {ProjectData.director[4] && (
               <>
                 <div className="divResponsive" style={{ width: "500px" }}>
-                  <label>Director Name </label>
+                  <label>Director Name 3</label>
                   <br />
                   <p>{ProjectData.director[4]} </p>
                 </div>
                 <div className="divResponsive" style={{ width: "450px" }}>
-                  <label>Basic Introduction </label>
-                  <br />
-                  <p>{ProjectData.director[5]} </p>
+                  {ProjectData.director[5] && (
+                    <>
+                      <label>Basic Introduction </label>
+                      <br />
+                      <p>{ProjectData.director[5]} </p>
+                    </>
+                  )}
                 </div>
               </>
             )}
@@ -110,8 +123,13 @@ const ApplicationDetail = ({ ProjectData }) => {
               style={{ width: "450px", marginTop: "30px" }}
             >
               <label
-                style={{ fontSize: "1.3rem", opacity: ".9", fontWeight: "600" ,color:"#5a5a5a"}}
-                >
+                style={{
+                  fontSize: "1.3rem",
+                  opacity: ".9",
+                  fontWeight: "600",
+                  color: "#5a5a5a",
+                }}
+              >
                 Project Details
               </label>
             </div>
@@ -121,12 +139,12 @@ const ApplicationDetail = ({ ProjectData }) => {
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Project Title </label>
               <br />
-              <p>{ProjectData.projectTitle}</p>
+              <p>{ProjectData.yourProjectTitle}</p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label> Project Type</label>
               <br />
-              <p>{ProjectData.projectType}</p>
+              <p>{ProjectData.yourProjectTitle}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>You Are</label>
@@ -136,12 +154,12 @@ const ApplicationDetail = ({ ProjectData }) => {
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Partnership Type</label>
               <br />
-              <p>{ProjectData.PartnershipType}</p>
+              <p>{ProjectData.typeOfPartnership}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Funding Type</label>
               <br />
-              <p>{ProjectData.fundingType}</p>
+              <p>{ProjectData.typeOfPartnership}</p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Receiving Mode</label>
@@ -151,22 +169,13 @@ const ApplicationDetail = ({ ProjectData }) => {
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Amount Goal</label>
               <br />
-              <p>{ProjectData.amountGoal}</p>
+              <p>{ProjectData.goal}</p>
             </div>
-            <div className="divResponsive" style={{ width: "450px" }}>
-              <label>Number of Partner</label>
-              <br />
-              <p>{ProjectData.targetPartner}</p>
-            </div>
-            <div className="divResponsive" style={{ width: "500px" }}>
-              <label> Per Person Amount</label>
-              <br />
-              <p>{ProjectData.perPersonAmount}</p>
-            </div>
+
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Brief About</label>
               <br />
-              <p>{ProjectData.briefAbout}</p>
+              <p>{ProjectData.brief}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Market Problem</label>
@@ -181,7 +190,7 @@ const ApplicationDetail = ({ ProjectData }) => {
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>About Product</label>
               <br />
-              <p>{ProjectData.product}</p>
+              <p>{ProjectData.yourProduct}</p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Business Model</label>
@@ -191,12 +200,12 @@ const ApplicationDetail = ({ ProjectData }) => {
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Size of Market</label>
               <br />
-              <p>{ProjectData.sizeMarket}</p>
+              <p>{ProjectData.sizeOfMarket}</p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Current Trasaction</label>
               <br />
-              <p>{ProjectData.currentTrasaction}</p>
+              <p>{ProjectData.currentTransaction}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Competitive Landscape</label>
@@ -226,12 +235,12 @@ const ApplicationDetail = ({ ProjectData }) => {
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Fundraising Type</label>
               <br />
-              <p>{ProjectData.fundraisingType}</p>
+              <p>{ProjectData.fundingType}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Fundraising Stage</label>
               <br />
-              <p>{ProjectData.fundraisingStage}</p>
+              <p>{ProjectData.fundingStage}</p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Funding Type</label>
@@ -254,8 +263,13 @@ const ApplicationDetail = ({ ProjectData }) => {
               style={{ width: "450px", marginTop: "30px" }}
             >
               <label
-                style={{ fontSize: "1.3rem", opacity: ".9", fontWeight: "600" ,color:"#5a5a5a"}}
-                >
+                style={{
+                  fontSize: "1.3rem",
+                  opacity: ".9",
+                  fontWeight: "600",
+                  color: "#5a5a5a",
+                }}
+              >
                 Finish Details
               </label>
             </div>
@@ -265,7 +279,7 @@ const ApplicationDetail = ({ ProjectData }) => {
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>LinkedIn Profile </label>
               <br />
-              <p>{ProjectData.LinkedInProfile}</p>
+              <p>{ProjectData.linkedinProfile}</p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label> Facebook Profile</label>

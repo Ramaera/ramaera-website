@@ -1,20 +1,61 @@
-import Text from "../../../components/Text/Text";
-import Button from "../../../components/Button/SubmitButton";
-import LockOpenIcon from "@mui/icons-material/LockOpen";
-import LockIcon from "@mui/icons-material/Lock";
-import LockResetIcon from "@mui/icons-material/LockReset";
-
-import { Container, FormBox, LoginContainer, LoginTitle } from "./style";
-
-function onSubmit(e) {
-  e.preventDefault();
-  if (password !== confirmPassword) alert("Password does not match");
-}
+import Text from "../../../components/Text/Text"
+import Button from "../../../components/Button/SubmitButton"
+import LockOpenIcon from "@mui/icons-material/LockOpen"
+import LockIcon from "@mui/icons-material/Lock"
+import LockResetIcon from "@mui/icons-material/LockReset"
+import { useRouter } from "next/router"
+import { Container, FormBox, LoginContainer, LoginTitle } from "./style"
+import { useMutation } from "@apollo/client"
+import { CHANGE_PASSWORD } from "apollo/queries/changePassword"
+import { useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 const Password = () => {
+  const router = useRouter()
+
+  const [changePassword] = useMutation(CHANGE_PASSWORD)
+  const [oldPassword, setOldPassword] = useState("")
+  const [newPassword, setNewPassword] = useState("")
+  const [newConfirmPassword, setNewConfirmPassword] = useState("")
+  function handleSubmit(e) {
+    e.preventDefault()
+    if (newPassword === newConfirmPassword) {
+      changePassword({
+        variables: {
+          OldPassword: oldPassword,
+          NewPassword: newConfirmPassword,
+        },
+      })
+      toast.success("Password Changed", {
+        position: "top-center",
+        autoClose: 1200,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
+      setTimeout(() => {
+        router.push("/Dashboard")
+      }, "2000")
+    } else {
+      toast.error("Passwords does not match", {
+        position: "top-center",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
+    }
+  }
   return (
     <Container>
-      <FormBox onSubmit={onSubmit}>
+      <FormBox onSubmit={(e) => handleSubmit(e)}>
         <Text
           Text="UPDATE PASSWORD"
           lg="linear-gradient(to right, #ffa73d, gold)"
@@ -35,6 +76,18 @@ const Password = () => {
         />
 
         <LoginContainer>
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
           <LoginTitle>
             <LockOpenIcon
               style={{
@@ -47,6 +100,7 @@ const Password = () => {
             />
             <input
               type="password"
+              onChange={(e) => setOldPassword(e.target.value)}
               placeholder="Old Password"
               required
               style={{
@@ -71,6 +125,7 @@ const Password = () => {
               type="password"
               placeholder="New Password"
               required
+              onChange={(e) => setNewPassword(e.target.value)}
               id="password"
               style={{
                 width: "380px",
@@ -95,6 +150,7 @@ const Password = () => {
               placeholder="Confirm Password"
               required
               id="confirmPassword"
+              onChange={(e) => setNewConfirmPassword(e.target.value)}
               style={{
                 width: "380px",
                 height: "45px",
@@ -117,7 +173,7 @@ const Password = () => {
         </LoginContainer>
       </FormBox>
     </Container>
-  );
-};
+  )
+}
 
-export default Password;
+export default Password

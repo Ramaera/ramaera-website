@@ -7,18 +7,20 @@ import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import { Container } from "./style"
 import { useQuery } from "@apollo/client"
-import { GetApplications } from "../../../apollo/queries"
+import { GET_APPLICATIONS } from "../../../apollo/queries"
 import Link from "next/link"
 import { useDispatch, useSelector } from "react-redux"
 import { changeAppData } from "../../../state/slice/applicantDataSlice"
 import Button from "../../../components/Button/SubmitButton"
+import { setAccessToken } from "../../../state/slice/accessTokenSlice"
+import LogoutIcon from "@mui/icons-material/Logout"
 
 const Applicant = () => {
   let ACCESSTOKEN
 
   const applicationData = useSelector((state) => state.applicationData.appData)
   const dispatch = useDispatch()
-  const { loading, error, data } = useQuery(GetApplications)
+  const { loading, error, data } = useQuery(GET_APPLICATIONS)
   const [anchorEl, setAnchorEl] = useState(false)
 
   if (loading) {
@@ -146,7 +148,10 @@ const Applicant = () => {
     },
   ]
   const rows = []
-
+  const logMeOut = () => {
+    dispatch(setAccessToken(""))
+    window.localStorage.setItem("accessToken", "")
+  }
   if (data) {
     dataPush()
     data.applicants.forEach((item, index) => {
@@ -169,7 +174,7 @@ const Applicant = () => {
       <>
         <Container>
           <Text
-            Text="Distribution Channal Responses"
+            Text="Distribution Channel Responses"
             lg="linear-gradient(to right, #ffa73d, gold)"
             font
             size="clamp(2.2rem, 1.2vw, 1.5rem)"
@@ -214,11 +219,21 @@ const Applicant = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Name</MenuItem>
-            <a href="/passwordChange">
-              <MenuItem onClick={handleClose}>Change Password</MenuItem>
-            </a>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <Link onClick={() => logMeOut()} href="/Login">
+              <MenuItem>
+                <LogoutIcon fontSize={"medium"} />
+                <div style={{ fontWeight: "500", fontSize: "12px" }}>
+                  LogOut
+                </div>
+              </MenuItem>
+            </Link>
+            <Link href="/Dashboard">
+              <MenuItem>
+                <div style={{ fontWeight: "500", fontSize: "12px" }}>
+                  Dashboard
+                </div>
+              </MenuItem>
+            </Link>
           </Menu>
 
           <Box className="boxGird">
