@@ -9,31 +9,33 @@ import { Container, ButtonContainer } from "./allPartnerStyle.js"
 
 const Ideas = () => {
   const [createApplication] = useMutation(CreateApplications)
-  const name1 = useSelector((state) => state.application.name)
-  const applicantType1 = useSelector((state) => state.application.applicantType)
-  const applicantAddress1 = useSelector(
+  const nameVar = useSelector((state) => state.application.name)
+  const applicantTypeVar = useSelector(
+    (state) => state.application.applicantType
+  )
+  const applicantAddressVar = useSelector(
     (state) => state.application.applicantAddress
   )
-  const email1 = useSelector((state) => state.application.email)
-  const firmName1 = useSelector((state) => state.application.firmName)
-  const mobileNumber1 = useSelector((state) => state.application.mobileNumber)
-  const District1 = useSelector((state) => state.application.District)
-  const State1 = useSelector((state) => state.application.State)
-  const extraInfo1 = useSelector((state) => state.application.extraInfo)
+  const emailVar = useSelector((state) => state.application.email)
+  const firmNameVar = useSelector((state) => state.application.firmName)
+  const mobileNumberVar = useSelector((state) => state.application.mobileNumber)
+  const DistrictVar = useSelector((state) => state.application.District)
+  const StateVar = useSelector((state) => state.application.State)
+  const extraInfoVar = useSelector((state) => state.application.extraInfo)
 
   const handleSubmit = (e) => {
     e.preventDefault()
     createApplication({
       variables: {
-        name: name1,
-        applicantType: applicantType1,
-        applicantAddress: applicantAddress1,
-        email: email1,
-        firmName: firmName1,
-        mobileNumber: mobileNumber1,
-        District: District1,
-        State: State1,
-        extraInfo: extraInfo1,
+        name: nameVar,
+        applicantType: applicantTypeVar,
+        applicantAddress: applicantAddressVar,
+        email: emailVar,
+        firmName: firmNameVar,
+        mobileNumber: mobileNumberVar,
+        District: DistrictVar,
+        State: StateVar,
+        extraInfo: extraInfoVar,
       },
     })
     clearForm()

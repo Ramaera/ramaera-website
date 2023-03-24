@@ -20,6 +20,7 @@ export function AccountForm() {
         <input
           required
           type="text"
+          placeholder="Type your link here"
           onChange={(e) => dispatch(changelinkedinProfile(e.target.value))}
         />
       </div>
@@ -30,7 +31,7 @@ export function AccountForm() {
           required
           type="text"
           onChange={(e) => dispatch(changefacebookProfile(e.target.value))}
-          placeholder="paste or type  link here"
+          placeholder="Type your link here"
         />
       </div>
       <div style={{ width: "500px" }}>
@@ -40,7 +41,7 @@ export function AccountForm() {
           required
           type="text"
           onChange={(e) => dispatch(changetwitterProfile(e.target.value))}
-          placeholder="paste or type  link here"
+          placeholder="Type your link here"
         />{" "}
       </div>
       <div style={{ width: "450px" }}>
@@ -50,7 +51,7 @@ export function AccountForm() {
           required
           type="text"
           onChange={(e) => dispatch(changeinstagramProfile(e.target.value))}
-          placeholder="paste or type  link here"
+          placeholder="Type your link here"
         />
       </div>
       <div style={{ width: "500px" }}>
@@ -60,7 +61,7 @@ export function AccountForm() {
           required
           type="text"
           onChange={(e) => dispatch(changewebsiteURL(e.target.value))}
-          placeholder="paste or type  link here"
+          placeholder="Type your link here"
         />
       </div>
 
