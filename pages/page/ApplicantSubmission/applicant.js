@@ -7,7 +7,7 @@ import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import { Container } from "./style"
 import { useQuery } from "@apollo/client"
-import { GetApplications } from "../../../apollo/queries"
+import { GET_APPLICATIONS } from "../../../apollo/queries"
 import Link from "next/link"
 import { useDispatch, useSelector } from "react-redux"
 import { changeAppData } from "../../../state/slice/applicantDataSlice"
@@ -18,7 +18,7 @@ const Applicant = () => {
 
   const applicationData = useSelector((state) => state.applicationData.appData)
   const dispatch = useDispatch()
-  const { loading, error, data } = useQuery(GetApplications)
+  const { loading, error, data } = useQuery(GET_APPLICATIONS)
   const [anchorEl, setAnchorEl] = useState(false)
 
   if (loading) {

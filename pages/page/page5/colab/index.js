@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Text from "../../../../components/Text/Text"
 import Button from "../../../../components/Button/SubmitButton"
-import { CreateContactResponse } from "../../../../apollo/queries/index"
+import { CREATE_CONTACT_RESPONSE } from "../../../../apollo/queries/index"
 import { useMutation } from "@apollo/client"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
@@ -24,7 +24,7 @@ import {
 
 const index = () => {
   const [createContactUsResponse, { data, loading, error }] = useMutation(
-    CreateContactResponse
+    CREATE_CONTACT_RESPONSE
   )
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")

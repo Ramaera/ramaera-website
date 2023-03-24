@@ -41,10 +41,12 @@ const DashSection = () => {
             <ul class="dd-menu">
               <li>Name</li>
               <li class="divider"></li>
-              <li>Change Password</li>
-              <li class="divider"></li>
-              <li>Role</li>
+              <li>Role: {}</li>
               <li className="divider"></li>
+              <li>
+                <Link href="/Dashboard/ChangePassword">Change Password</Link>
+              </li>
+              <li class="divider"></li>
 
               <li>
                 <Link onClick={() => logMeOut()} href="/Login">

@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client"
 
-export const CreateApplications = gql(`
+export const CREATE_APPLICATIONS = gql(`
 mutation creator ($District: String!,
 $State: String!,
 $applicantAddress: String!,
@@ -27,7 +27,7 @@ $extraInfo: String!,
     }
 }`)
 
-export const CreateContactResponse = gql(`
+export const CREATE_CONTACT_RESPONSE = gql(`
 mutation createUs (
   $name: String!,
       $email: String!
@@ -47,7 +47,7 @@ mutation createUs (
     }
 }`)
 
-export const LogIn = gql(`
+export const LOG_IN = gql(`
 mutation loginUser (
 $email: String!,
 $password: String!,
@@ -61,7 +61,7 @@ $password: String!,
     }
 }`)
 
-export const GetApplications = gql(`
+export const GET_APPLICATIONS = gql(`
   query getAllApps{
   applicants{
     name
@@ -76,7 +76,7 @@ export const GetApplications = gql(`
   }
 }`)
 
-export const GetContactResponses = gql(`
+export const GET_CONTACT_RESPONSES = gql(`
   query getContactResponses{
     contactUsRepsonses{
       name

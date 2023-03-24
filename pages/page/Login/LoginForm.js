@@ -2,7 +2,7 @@ import Text from "../../../components/Text/Text"
 import Button from "../../../components/Button/SubmitButton"
 import EmailIcon from "@mui/icons-material/Email"
 import LockIcon from "@mui/icons-material/Lock"
-import { LogIn } from "../../../apollo/queries/index"
+import { LOG_IN } from "../../../apollo/queries/index"
 import { useMutation } from "@apollo/client"
 import { useSelector, useDispatch } from "react-redux"
 import { useRouter } from "next/router"
@@ -13,7 +13,7 @@ import { getEmail, getPassword } from "../../../state/slice/userSlice"
 const LoginForm = () => {
   const router = useRouter()
 
-  const [loginUser] = useMutation(LogIn)
+  const [loginUser] = useMutation(LOG_IN)
   const passwordVar = useSelector((state) => state.logInUser.password)
   const emailVar = useSelector((state) => state.logInUser.email)
   const dispatch = useDispatch()

@@ -1,14 +1,14 @@
 ///Users/apple/Documents/Ramaera-website/ramaera-website/ramaera-website/pages/page/ContactInfo/contactInfo.js
 
 import React, { useState } from "react"
-import { DataGrid,GridToolbar } from "@mui/x-data-grid"
+import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import Box from "@mui/material/Box"
 import Text from "../../../components/Text/Text"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
 import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
 import { useQuery } from "@apollo/client"
-import { GetContactResponses } from "../../../apollo/queries"
+import { GET_CONTACT_RESPONSES } from "../../../apollo/queries"
 import Link from "next/link"
 import { useDispatch, useSelector } from "react-redux"
 import { changeContactData } from "../../../state/slice/applicantDataSlice"
@@ -16,7 +16,7 @@ import Button from "../../../components/Button/SubmitButton"
 
 const ContactInfo = () => {
   const dispatch = useDispatch()
-  const { loading, error, data } = useQuery(GetContactResponses)
+  const { loading, error, data } = useQuery(GET_CONTACT_RESPONSES)
   const [anchorEl, setAnchorEl] = useState(false)
 
   if (loading) {
@@ -61,8 +61,8 @@ const ContactInfo = () => {
       width: 150,
       editable: false,
       selection: false,
-      filterable:false,
-      sortable:false,
+      filterable: false,
+      sortable: false,
       renderCell: (params) => (
         <Link href={`/ContactUsResponses/${params.value}`}>
           <button style={{ background: "none", border: "none" }} type="submit">
@@ -84,31 +84,31 @@ const ContactInfo = () => {
       field: "name",
       headerName: " Name",
       minWidth: 200,
-      flex:1,
+      flex: 1,
     },
     {
       field: "email",
       headerName: "Email",
       minWidth: 250,
-      flex:1,
+      flex: 1,
     },
     {
       field: "company",
       headerName: "Company",
       minWidth: 280,
-      flex:1,
+      flex: 1,
     },
     {
       field: "subject",
       headerName: "Subject",
       minWidth: 350,
-      flex:1,
+      flex: 1,
     },
     {
       field: "message",
       headerName: "Message",
       minWidth: 350,
-      flex:1,
+      flex: 1,
     },
   ]
 
@@ -184,10 +184,10 @@ const ContactInfo = () => {
             <MenuItem onClick={handleClose}>Logout</MenuItem>
           </Menu>
 
-          <Box className="boxGird" >
+          <Box className="boxGird">
             <DataGrid
-               slots={{
-                toolbar: GridToolbar
+              slots={{
+                toolbar: GridToolbar,
               }}
               rows={rows}
               columns={columns}
@@ -213,4 +213,3 @@ const ContactInfo = () => {
 }
 
 export default ContactInfo
-
