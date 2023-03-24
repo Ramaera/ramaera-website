@@ -1,14 +1,16 @@
 import Link from "next/link"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import LogoutIcon from "@mui/icons-material/Logout"
 import LockResetIcon from "@mui/icons-material/LockReset"
 import PersonIcon from "@mui/icons-material/Person"
 import BadgeIcon from "@mui/icons-material/Badge"
-import { Typography } from "@mui/material"
 
 const DashSection = () => {
+  const nameVar = useSelector((state) => state.logInUser.name)
+  const rolevar = useSelector((state) => state.logInUser.role)
+
   let ACCESSTOKEN
   const dispatch = useDispatch()
   if (typeof window !== "undefined") {
@@ -45,15 +47,17 @@ const DashSection = () => {
 
             <ul class="dd-menu">
               <li style={{ cursor: "default" }}>
-                <span>
+                <span style={{ color: "black" }}>
                   <BadgeIcon fontSize={"small"} />
-                  Name
+                  {nameVar ? nameVar : "Name : "}
                 </span>
               </li>
               <li class="divider"></li>
               <li style={{ cursor: "default" }}>
-                <PersonIcon fontSize={"small"} />
-                Role: {}
+                <span style={{ color: "black" }}>
+                  <PersonIcon fontSize={"small"} />
+                  {rolevar ? rolevar : "Role : "}
+                </span>
               </li>
               <li className="divider"></li>
               <li>

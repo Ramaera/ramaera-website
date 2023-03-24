@@ -11,8 +11,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { changeProjectData } from "../../../state/slice/applicantDataSlice"
 import Link from "next/link"
 import Button from "../../../components/Button/SubmitButton"
-import { Item } from "../Privacy/Card/style"
-
+import LogoutIcon from "@mui/icons-material/Logout"
+import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 const ProjectApplicationInfo = () => {
   const projectData = useSelector((state) => state.applicationData.projectData)
   const dispatch = useDispatch()
@@ -321,6 +321,10 @@ const ProjectApplicationInfo = () => {
   ]
 
   const rows = []
+  const logMeOut = () => {
+    dispatch(setAccessToken(""))
+    window.localStorage.setItem("accessToken", "")
+  }
   if (data) {
     dataPush()
     data.AllProjectDetails.forEach((item, index) => {
@@ -420,11 +424,21 @@ const ProjectApplicationInfo = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Name</MenuItem>
-            <a href="/PasswordChange">
-              <MenuItem onClick={handleClose}>Change Password</MenuItem>
-            </a>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <MenuItem>
+              <Link onClick={() => logMeOut()} href="/Login">
+                <LogoutIcon fontSize={"medium"} />
+                <div style={{ fontWeight: "500", fontSize: "12px" }}>
+                  LogOut
+                </div>
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/Dashboard">
+                <div style={{ fontWeight: "500", fontSize: "12px" }}>
+                  Dashboard
+                </div>
+              </Link>
+            </MenuItem>
           </Menu>
 
           <Box className="boxGird">

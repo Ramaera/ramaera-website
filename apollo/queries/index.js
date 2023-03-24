@@ -58,6 +58,10 @@ $password: String!,
     }) 
     {
       accessToken
+      user{
+      role
+      name
+    }
     }
 }`)
 

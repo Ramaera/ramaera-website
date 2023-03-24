@@ -10,9 +10,11 @@ import MenuItem from "@mui/material/MenuItem"
 import { useQuery } from "@apollo/client"
 import { GET_CONTACT_RESPONSES } from "../../../apollo/queries"
 import Link from "next/link"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { changeContactData } from "../../../state/slice/applicantDataSlice"
 import Button from "../../../components/Button/SubmitButton"
+import { setAccessToken } from "../../../state/slice/accessTokenSlice"
+import LogoutIcon from "@mui/icons-material/Logout"
 
 const ContactInfo = () => {
   const dispatch = useDispatch()
@@ -113,7 +115,10 @@ const ContactInfo = () => {
   ]
 
   const rows = []
-
+  const logMeOut = () => {
+    dispatch(setAccessToken(""))
+    window.localStorage.setItem("accessToken", "")
+  }
   if (data) {
     dataPush()
     data.contactUsRepsonses.forEach((item, index) => {
@@ -177,11 +182,21 @@ const ContactInfo = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Name</MenuItem>
-            <a href="/PasswordChange">
-              <MenuItem onClick={handleClose}>Change Password</MenuItem>
-            </a>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <MenuItem>
+              <Link onClick={() => logMeOut()} href="/Login">
+                <LogoutIcon fontSize={"medium"} />
+                <div style={{ fontWeight: "500", fontSize: "12px" }}>
+                  LogOut
+                </div>
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href="/Dashboard">
+                <div style={{ fontWeight: "500", fontSize: "12px" }}>
+                  Dashboard
+                </div>
+              </Link>
+            </MenuItem>
           </Menu>
 
           <Box className="boxGird">

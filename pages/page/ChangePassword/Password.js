@@ -3,12 +3,17 @@ import Button from "../../../components/Button/SubmitButton"
 import LockOpenIcon from "@mui/icons-material/LockOpen"
 import LockIcon from "@mui/icons-material/Lock"
 import LockResetIcon from "@mui/icons-material/LockReset"
+import { useRouter } from "next/router"
 import { Container, FormBox, LoginContainer, LoginTitle } from "./style"
 import { useMutation } from "@apollo/client"
 import { CHANGE_PASSWORD } from "apollo/queries/changePassword"
 import { useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 const Password = () => {
+  const router = useRouter()
+
   const [changePassword] = useMutation(CHANGE_PASSWORD)
   const [oldPassword, setOldPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
@@ -22,9 +27,30 @@ const Password = () => {
           NewPassword: newConfirmPassword,
         },
       })
-      alert("Password changed")
+      toast.success("Password Changed", {
+        position: "top-center",
+        autoClose: 1200,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
+      setTimeout(() => {
+        router.push("/Dashboard")
+      }, "2000")
     } else {
-      alert("Password does not match")
+      toast.error("Passwords does not match", {
+        position: "top-center",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
     }
   }
   return (
@@ -50,6 +76,18 @@ const Password = () => {
         />
 
         <LoginContainer>
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
           <LoginTitle>
             <LockOpenIcon
               style={{

@@ -8,15 +8,27 @@ import { useSelector, useDispatch } from "react-redux"
 import { useRouter } from "next/router"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import { Container, FormBox, LoginContainer, LoginTitle } from "./style"
-import { getEmail, getPassword } from "../../../state/slice/userSlice"
-
+import {
+  getEmail,
+  getPassword,
+  getName,
+  getRole,
+} from "../../../state/slice/userSlice"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 const LoginForm = () => {
   const router = useRouter()
-
-  const [loginUser] = useMutation(LOG_IN)
+  const [loginUser, { loading, data }] = useMutation(LOG_IN)
   const passwordVar = useSelector((state) => state.logInUser.password)
   const emailVar = useSelector((state) => state.logInUser.email)
   const dispatch = useDispatch()
+  if (loading) {
+  }
+  if (data) {
+    console.log(data.login.user)
+    dispatch(getName(data.login.user.name))
+    dispatch(getRole(data.login.user.role))
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -38,7 +50,16 @@ const LoginForm = () => {
       router.push("/Dashboard")
     } catch (err) {
       if (err) {
-        //console.log(err)
+        toast.error("Please check your email and password", {
+          position: "top-center",
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        })
       }
     }
   }
@@ -87,7 +108,18 @@ const LoginForm = () => {
           mta="center"
           mlh="unset"
         />
-
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
         <LoginContainer>
           <LoginTitle>
             <EmailIcon
