@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
   visitingInfo: [],
-  date: "",
+  fromDate: "",
+  toDate: "",
   email: "",
   mobileNumber: "",
   name: "",
@@ -20,8 +21,11 @@ export const visitingInfoSlice = createSlice({
     changeVisitingInfo: (state, action) => {
       state.visitingInfo = action.payload
     },
-    changedate: (state, action) => {
-      state.date = action.payload
+    changetoDate: (state, action) => {
+      state.toDate = action.payload
+    },
+    changefromDate: (state, action) => {
+      state.fromDate = action.payload
     },
     changeemail: (state, action) => {
       state.email = action.payload
@@ -52,7 +56,8 @@ export const visitingInfoSlice = createSlice({
 
 export const {
   changeVisitingInfo,
-  changedate,
+  changefromDate,
+  changetoDate,
   changeemail,
   changemobileNumber,
   changename,

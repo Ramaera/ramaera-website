@@ -1,7 +1,8 @@
 import { FormWrapper } from "./FormWrapper"
 import { useDispatch } from "react-redux"
 import {
-  changedate,
+  changefromDate,
+  changetoDate,
   changeemail,
   changemobileNumber,
   changename,
@@ -120,7 +121,7 @@ export function VisitForm({}) {
           type="date"
           required
           onChange={(e) => {
-            dispatch(changedate(e.target.value))
+            dispatch(changefromDate(e.target.value))
           }}
         />
       </div>
@@ -131,7 +132,7 @@ export function VisitForm({}) {
           type="date"
           required
           onChange={(e) => {
-            dispatch(changedate(e.target.value))
+            dispatch(changetoDate(e.target.value))
           }}
         />
       </div>
@@ -157,6 +158,7 @@ export function VisitForm({}) {
         <label>Number Of People</label>
         <br />
         <input
+          required
           placeholder="Number Of People"
           type="number"
           onChange={(e) => {

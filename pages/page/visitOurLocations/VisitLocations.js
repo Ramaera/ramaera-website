@@ -6,12 +6,12 @@ import { useSelector } from "react-redux"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { Container, ButtonContainer } from "./allJobStyle.js"
+import { useState } from "react"
 
 const VisitLocations = () => {
   const [createVisitorForm] = useMutation(VISIT_US)
-
-  const visitingInfo = useSelector((state) => state.visitingInfo.visitingInfo)
-  const dateVar = useSelector((state) => state.visitingInfo.date)
+  const fromDateVar = useSelector((state) => state.visitingInfo.fromDate)
+  const toDateVar = useSelector((state) => state.visitingInfo.toDate)
   const emailVar = useSelector((state) => state.visitingInfo.email)
   const mobileNumberVar = useSelector(
     (state) => state.visitingInfo.mobileNumber
@@ -24,13 +24,14 @@ const VisitLocations = () => {
   const pwIdVar = useSelector((state) => state.visitingInfo.pwId)
   const reasonVar = useSelector((state) => state.visitingInfo.reason)
   const typeOfVisitVar = useSelector((state) => state.visitingInfo.typeOfVisit)
+  const theDate = fromDateVar + "," + toDateVar
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(visitingInfo)
+    console.log(theDate)
     createVisitorForm({
       variables: {
-        date: dateVar,
+        date: theDate,
         email: emailVar,
         mobileNumber: mobileNumberVar,
         name: nameVar,
@@ -45,7 +46,7 @@ const VisitLocations = () => {
   }
   const clearForm = () => {
     toast.success("We will contact you soon!", {
-      position: "top-center",
+      position: "bottom-center",
       autoClose: 2500,
       hideProgressBar: false,
       closeOnClick: true,

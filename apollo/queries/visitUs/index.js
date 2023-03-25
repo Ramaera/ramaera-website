@@ -27,3 +27,19 @@ typeOfVisit: $typeOfVisit
       name
     }
 }`)
+
+export const GET_ALL_VISITORS = gql(`
+  query {
+  findAllVisitorsList {
+    date
+    name
+    email
+    id
+    reason
+    mobileNumber
+    numberOfPeople
+    pwId
+    typeOfVisit
+    plantName
+  }
+}`)
