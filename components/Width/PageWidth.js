@@ -40,6 +40,9 @@ const PageWidth = ({
       width: 100%;
       padding: ${sp ? sp : "0 1rem"};
     }
+    @media only screen and (min-width: 1601px) {
+    transform: scale(100%)
+    }
   `;
 
   return <StyledWidth>{children}</StyledWidth>;

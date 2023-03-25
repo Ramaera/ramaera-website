@@ -12,7 +12,7 @@ export const TabsContent = styled.div`
   width: 80vw;
   height: 100%;
   overflow-y: scroll;
-  padding: 0 5vw;
+  padding: 0 2vw;
   justify-content: center;
   background-image: url("./content/mntns.png");
   background-size: cover;
