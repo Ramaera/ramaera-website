@@ -143,6 +143,7 @@ const Links = () => {
           <Linked href="/TermsAndConditions">Terms & Conditions</Linked>
           <Linked href="/Legal">Legal</Linked>
           <Linked href="/Login">Login</Linked>
+          <Linked href="/VisitUs">Visit Us</Linked>
         </Div>
         {/* <Div>
           <Heading href="#">Company</Heading>
