@@ -1,38 +1,17 @@
 import { FormWrapper } from "./FormWrapper"
 // import { useState } from "react"
-// import { useDispatch } from "react-redux"
-// import {
-//   changeName,
-//   changeApplicantType,
-//   changeApplicantAddress,
-//   changeEmail,
-//   changeFirmName,
-//   changeMobileNumber,
-//   changeDistrict,
-//   changeState,
-//   changeExtraInfo
-// } from "../../../state/slice/applicationSlice"
+import { useDispatch } from "react-redux"
+ import {
+  changeDepartment,
+  changeJobDescription,
+  changeJobLocation,
+  changeJobTitle,
+  changeJobType,
+  changeJobStatus,
+ } from "../../../state/slice/jobSlice"
 
 export function JobForm({}) {
-  // const [partner, setPartner] = useState("")
-  // const [stateIndia, setStateIndia] = useState("")
-  // const [isFirm, setIsFirm] = useState(false)
-  // const [district, setDistrict] = useState("")
-  // const [location, setLocation] = useState([])
-  // const [locationStock, setLocationStock] = useState([])
-  // const dispatch = useDispatch()
-
-  // const changeHandler = (val) => {
-  //   setPartner(val)
-  //   setDistrict("")
-  // }
-  // const changeStateIndia = (val) => {
-  //   setStateIndia(val)
-  //   setDistrict("")
-  // }
-  // const changeDistricts = async (val) => {
-  //   setDistrict(val)
-  // }
+   const dispatch = useDispatch()
     
   return (
     <FormWrapper title="JOB POST">
@@ -46,21 +25,18 @@ export function JobForm({}) {
       <hr className="lineHr2" />
 
       <div style={{ width: "500px" }}>
-        <label>Job Type</label>
+        <label>Job Department</label>
         <br />
         <select
           required
-          // onChange={(e) => {
-          //   changeHandler(e.target.value)
-          //   dispatch(changeApplicantType(e.target.value))
-          // }}
+          onChange={(e) => dispatch(changeDepartment(e.target.value))}
         >
           <option value={""} disabled selected>
-            Select Job Type
+            Select Job Department
           </option>
-          <option value={""}>Marketing</option>
-          <option value={""}>Development</option>
-          <option value={""}>Product</option>
+          <option value={"Marketing"}>Marketing</option>
+          <option value={"Development"}>Development</option>
+          <option value={"Product"}>Product</option>
         </select>
       </div>
 
@@ -70,7 +46,7 @@ export function JobForm({}) {
         <input
           required
           type="text"
-          // onChange={(e) => dispatch(changeEmail(e.target.value))}
+          onChange={(e) => dispatch(changeJobTitle(e.target.value))}
           placeholder="Type Job Title"
         />
       </div>
@@ -80,34 +56,28 @@ export function JobForm({}) {
         <br />
         <select
           required
-          // onChange={(e) => {
-          //   changeHandler(e.target.value)
-          //   dispatch(changeApplicantType(e.target.value))
-          // }}
+          onChange={(e) => dispatch(changeJobLocation(e.target.value))}
         >
           <option value={""} disabled selected>
             Select Job location
           </option>
-          <option value={""}>Noida,IN</option>
-          <option value={""}>Remote</option>
+          <option value={"Noida,IN"}>Noida,IN</option>
+          <option value={"Remote"}>Remote</option>
         </select>
       </div>
 
       <div style={{ width: "450px" }}>
-        <label>Job Time Period</label>
+        <label>Job Type </label>
         <br />
         <select
           required
-          // onChange={(e) => {
-          //   changeHandler(e.target.value)
-          //   dispatch(changeApplicantType(e.target.value))
-          // }}
+          onChange={(e) => dispatch(changeJobType(e.target.value))}
         >
           <option value={""} disabled selected>
-            Select Job Time Period
+            Select Job Type
           </option>
-          <option value={""}>Full Time</option>
-          <option value={""}>Internship</option>
+          <option value={"Full Time"}>Full Time</option>
+          <option value={"Internship"}>Internship</option>
         </select>
       </div>
 
@@ -119,10 +89,26 @@ export function JobForm({}) {
           rows={5}
           cols={80}
           type="text"
-          // onChange={(e) => dispatch(changeExtraInfo(e.target.value))}
+          onChange={(e) => dispatch(changeJobDescription(e.target.value))}
           placeholder="Type Job Description"
         />
-      </div>     
+      </div>  
+
+      <div style={{ width: "450px" }}>
+        <label>Job Status </label>
+        <br />
+        <select
+          required
+          onChange={(e) => dispatch(changeJobStatus(e.target.value))}
+        >
+          <option value={""} disabled selected>
+            Select Job Status
+          </option>
+          <option value={"ACTIVE"}>ACTIVE</option>
+          <option value={"COMPLETED"}>COMPLETED</option>
+          <option value={"PENDING"}>PENDING</option>
+        </select>
+      </div>   
   
     </FormWrapper>
   )
