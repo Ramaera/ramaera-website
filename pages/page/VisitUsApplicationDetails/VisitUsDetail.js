@@ -58,14 +58,14 @@ const ApplicationDetail = ({ VisitUsData }) => {
               <p>{VisitUsData.typeOfVisit} </p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
-              <label>Date From </label>
+              <label>Date</label>
               <br />
-              <p>{VisitUsData.date.slice(0,10)} </p>
+              <p>{VisitUsData.date} </p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
-              <label>Date To</label>
+              <label>Time</label>
               <br />
-              <p>{VisitUsData.date.slice(11,21)} </p>
+              <p>{VisitUsData.time} </p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>PWID </label>

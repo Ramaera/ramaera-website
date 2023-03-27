@@ -116,14 +116,14 @@ const VisitUsApplicationInfo = () => {
       flex: 1,
     },
     {
-      field: "dateFrom",
-      headerName: "Date Range (from)",
+      field: "date",
+      headerName: "Date",
       minWidth: 200,
       flex: 1,
     },
     {
-      field: "dateTo",
-      headerName: "Date Range (To)",
+      field: "time",
+      headerName: "Time",
       minWidth: 200,
       flex: 1,
     },
@@ -168,8 +168,8 @@ const VisitUsApplicationInfo = () => {
         typeOfVisit: item.typeOfVisit,
         plantName: item.plantName,
         address: item.address,
-        dateFrom: item.date.slice(0,10),
-        dateTo: item.date.slice(11,21)
+        date: item.date,
+        time: item.time,
       })
     })
 
