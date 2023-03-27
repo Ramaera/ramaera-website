@@ -12,6 +12,7 @@ const initialState = {
   pwId: "",
   reason: "",
   typeOfVisit: "",
+  address: "",
 }
 
 export const visitingInfoSlice = createSlice({
@@ -51,10 +52,14 @@ export const visitingInfoSlice = createSlice({
     changetypeOfVisit: (state, action) => {
       state.typeOfVisit = action.payload
     },
+    changeaddress: (state, action) => {
+      state.address = action.payload
+    },
   },
 })
 
 export const {
+  changeaddress,
   changeVisitingInfo,
   changefromDate,
   changetoDate,

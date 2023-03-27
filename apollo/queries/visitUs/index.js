@@ -11,6 +11,7 @@ $plantName: String!,
 $pwId: String,
 $reason: String!,
 $typeOfVisit: String!,
+$address: String!,
 ){createVisitorForm(
     data: {
       date: $date
@@ -22,6 +23,7 @@ plantName: $plantName
 pwId: $pwId
 reason: $reason
 typeOfVisit: $typeOfVisit
+address: $address
     }) 
     {
       name
@@ -41,5 +43,6 @@ export const GET_ALL_VISITORS = gql(`
     pwId
     typeOfVisit
     plantName
+    address
   }
 }`)

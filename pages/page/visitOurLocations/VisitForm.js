@@ -11,6 +11,7 @@ import {
   changepwId,
   changereason,
   changetypeOfVisit,
+  changeaddress,
 } from "state/slice/visitingInfoSlice"
 
 export function VisitForm({}) {
@@ -28,7 +29,7 @@ export function VisitForm({}) {
             color: "#5a5a5a",
           }}
         >
-          Visiting Details
+          Visitor Details
         </label>
       </div>
       <div style={{ width: "450px" }}></div>
@@ -58,28 +59,33 @@ export function VisitForm({}) {
           }}
         />
       </div>
+
       <div style={{ width: "500px" }}>
-        <label>Phone Number</label>
+        <label>Reason for Visit</label>
         <br />
-        <input
-          placeholder="Phone Number"
+        <textarea
           required
-          type="number"
+          rows={5}
+          cols={80}
+          type="text"
           onChange={(e) => {
-            dispatch(changemobileNumber(e.target.value))
+            dispatch(changereason(e.target.value))
           }}
+          placeholder="Reason for Visit"
         />
       </div>
       <div style={{ width: "450px" }}>
         <label>Address</label>
         <br />
-        <input
-          placeholder="Address"
+        <textarea
           required
-          email
-          /* onChange={(e) => {
-            dispatch(changename(e.target.value))
-          }} */
+          rows={5}
+          cols={80}
+          type="text"
+          onChange={(e) => {
+            dispatch(changeaddress(e.target.value))
+          }}
+          placeholder="Address"
         />
       </div>
       <div style={{ width: "500px" }}>
@@ -110,7 +116,7 @@ export function VisitForm({}) {
           <option value={""} disabled selected>
             Select
           </option>
-          <option value={"Planerway"}>Planerway Member</option>
+          <option value={"Planetway"}>Planetway Member</option>
           <option value={"Vendor"}>Vendor</option>
         </select>
       </div>
@@ -157,27 +163,31 @@ export function VisitForm({}) {
       <div style={{ width: "450px" }}>
         <label>Number Of People</label>
         <br />
-        <input
+        <select
           required
-          placeholder="Number Of People"
-          type="number"
           onChange={(e) => {
             dispatch(changenumberOfPeople(e.target.value))
           }}
-        />
+        >
+          <option value={""} disabled selected>
+            Number Of People
+          </option>
+          <option value={"1"}>1</option>
+          <option value={"2"}>2</option>
+          <option value={"3"}>3</option>
+          <option value={"4+"}>4 or more</option>
+        </select>
       </div>
       <div style={{ width: "500px" }}>
-        <label>Reason for Visit</label>
+        <label>Phone Number</label>
         <br />
-        <textarea
+        <input
+          placeholder="Phone Number"
           required
-          rows={5}
-          cols={80}
-          type="text"
+          type="number"
           onChange={(e) => {
-            dispatch(changereason(e.target.value))
+            dispatch(changemobileNumber(e.target.value))
           }}
-          placeholder="Reason for Visit"
         />
       </div>
     </FormWrapper>

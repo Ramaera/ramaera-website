@@ -6,7 +6,6 @@ import { useSelector } from "react-redux"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { Container, ButtonContainer } from "./allJobStyle.js"
-import { useState } from "react"
 
 const VisitLocations = () => {
   const [createVisitorForm] = useMutation(VISIT_US)
@@ -24,6 +23,7 @@ const VisitLocations = () => {
   const pwIdVar = useSelector((state) => state.visitingInfo.pwId)
   const reasonVar = useSelector((state) => state.visitingInfo.reason)
   const typeOfVisitVar = useSelector((state) => state.visitingInfo.typeOfVisit)
+  const addressVar = useSelector((state) => state.visitingInfo.address)
   const theDate = fromDateVar + "," + toDateVar
 
   const handleSubmit = (e) => {
@@ -40,6 +40,7 @@ const VisitLocations = () => {
         pwId: pwIdVar,
         reason: reasonVar,
         typeOfVisit: typeOfVisitVar,
+        address: addressVar,
       },
     })
     clearForm()
