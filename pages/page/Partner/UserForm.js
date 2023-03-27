@@ -10,7 +10,7 @@ import {
   changeMobileNumber,
   changeDistrict,
   changeState,
-  changeExtraInfo
+  changeExtraInfo,
 } from "../../../state/slice/applicationSlice"
 export function UserForm({}) {
   const [partner, setPartner] = useState("")
@@ -35,7 +35,7 @@ export function UserForm({}) {
     setIsFirm(!isFirm)
   }
   const setRetailLocation = (val) => {
-    console.log(locationStock)
+    //console.log(locationStock)
     switch (val) {
       case "Danapur":
         setLocation([
@@ -1924,7 +1924,14 @@ export function UserForm({}) {
   return (
     <FormWrapper title="BECOME A PART OF OUR DISTRIBUTION CHANNEL">
       <div style={{ width: "500px", marginTop: "30px" }}>
-        <label style={{ fontSize: "1.3rem", opacity: ".9", fontWeight: "600" ,color:"#5a5a5a"}}>
+        <label
+          style={{
+            fontSize: "1.3rem",
+            opacity: ".9",
+            fontWeight: "600",
+            color: "#5a5a5a",
+          }}
+        >
           Personal Details
         </label>
       </div>
@@ -2008,7 +2015,14 @@ export function UserForm({}) {
       <div style={{ width: "450px" }}></div>
 
       <div style={{ width: "500px", marginTop: "30px" }}>
-      <label style={{ fontSize: "1.3rem", opacity: ".9", fontWeight: "600" ,color:"#5a5a5a"}}>
+        <label
+          style={{
+            fontSize: "1.3rem",
+            opacity: ".9",
+            fontWeight: "600",
+            color: "#5a5a5a",
+          }}
+        >
           Application Details
         </label>
       </div>

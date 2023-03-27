@@ -3,7 +3,7 @@ import { FormWrapper } from "./FormWrapper"
 import { Container } from "./VisitUsDetailStyle.js"
 
 const ApplicationDetail = ({ VisitUsData }) => {
-  console.log(VisitUsData)
+  //console.log(VisitUsData)
   try {
     return (
       <>
@@ -21,7 +21,7 @@ const ApplicationDetail = ({ VisitUsData }) => {
                   color: "#5a5a5a",
                 }}
               >
-                Visitor Details 
+                Visitor Details
               </label>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}></div>
@@ -82,7 +82,6 @@ const ApplicationDetail = ({ VisitUsData }) => {
               <br />
               <p>{VisitUsData.mobileNumber} </p>
             </div>
-            
           </FormWrapper>
         </Container>
       </>

@@ -28,7 +28,6 @@ const VisitLocations = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(theDate)
     createVisitorForm({
       variables: {
         date: theDate,

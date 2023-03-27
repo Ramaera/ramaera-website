@@ -3,7 +3,7 @@ import { FormWrapper } from "./FormWrapper"
 import { Container } from "./ApplicationDetailStyle.js"
 
 const ApplicationDetail = ({ ProjectData }) => {
-  console.log(ProjectData)
+  // console.log(ProjectData)
   try {
     return (
       <>

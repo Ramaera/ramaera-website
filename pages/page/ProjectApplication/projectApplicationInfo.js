@@ -328,7 +328,7 @@ const ProjectApplicationInfo = () => {
   if (data) {
     dataPush()
     data.AllProjectDetails.forEach((item, index) => {
-      console.log("SDffd", item)
+      //console.log("SDffd", item)
       rows.push({
         id: index,
         number: index + 1,

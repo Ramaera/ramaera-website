@@ -172,10 +172,10 @@ export function VisitForm({}) {
       </div>
       <div style={{ width: "450px" }}></div>
       <div style={{ width: "500px" }}>
-        <label>PWID (Optional)</label>
+        <label>PW id (Optional)</label>
         <br />
         <input
-          placeholder="PWID (Optional)"
+          placeholder="PW id (Optional)"
           type="text"
           onChange={(e) => {
             dispatch(changepwId(e.target.value))
