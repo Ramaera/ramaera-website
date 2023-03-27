@@ -5,6 +5,7 @@ import projectReducer from "../slice/projectSlice"
 import applicationDataReducer from "../slice/applicantDataSlice"
 import accessTokenReducer from "../slice/accessTokenSlice"
 import jobReducer from "../slice/jobSlice"
+import visitingInfoReducer from "../slice/visitingInfoSlice"
 
 export const store = configureStore({
   reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
     project: projectReducer,
     applicationData: applicationDataReducer,
     accessToken: accessTokenReducer,
+    visitingInfo: visitingInfoReducer,
     jobApplication:jobReducer,
   },
 })

@@ -38,7 +38,9 @@ const Linked = styled(Link)`
     font-size: 0.8rem;
   }
 `
+
 const Heading = styled.h3`
+  text-decoration: underline;
   font-size: 16px;
   color: white;
   margin-bottom: 2rem;
@@ -143,6 +145,7 @@ const Links = () => {
           <Linked href="/TermsAndConditions">Terms & Conditions</Linked>
           <Linked href="/Legal">Legal</Linked>
           <Linked href="/Login">Login</Linked>
+          <Linked href="/VisitUs">Visit Us</Linked>
         </Div>
         {/* <Div>
           <Heading href="#">Company</Heading>
