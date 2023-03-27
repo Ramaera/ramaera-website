@@ -17,7 +17,7 @@ const Div = styled.div`
   text-transform: uppercase;
   margin: auto;
   display: flex;
-  text-align: center;
+  text-align: left;
   padding-bottom: 220px;
   flex-direction: column;
 
@@ -40,7 +40,7 @@ const Linked = styled(Link)`
 `
 
 const Heading = styled.h3`
-  text-decoration: underline;
+  border-bottom: solid white 2px;
   font-size: 16px;
   color: white;
   margin-bottom: 2rem;
