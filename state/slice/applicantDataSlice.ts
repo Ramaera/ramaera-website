@@ -4,6 +4,7 @@ const initialState = {
   appData: [],
   projectData: [],
   contactUsData: [],
+  visitUsData: [],
 }
 
 export const applicantDataSlice = createSlice({
@@ -19,9 +20,12 @@ export const applicantDataSlice = createSlice({
     changeContactData: (state, action) => {
       state.contactUsData = action.payload
     },
+    changeVisitUsData: (state, action) => {
+      state.visitUsData = action.payload
+    },
   },
 })
 
-export const { changeAppData, changeProjectData ,changeContactData} = applicantDataSlice.actions
+export const { changeAppData, changeProjectData ,changeContactData,changeVisitUsData} = applicantDataSlice.actions
 
 export default applicantDataSlice.reducer
