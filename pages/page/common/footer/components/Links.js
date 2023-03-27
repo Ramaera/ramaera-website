@@ -17,7 +17,7 @@ const Div = styled.div`
   text-transform: uppercase;
   margin: auto;
   display: flex;
-  text-align: center;
+  text-align: left;
   padding-bottom: 220px;
   flex-direction: column;
 
@@ -26,7 +26,7 @@ const Div = styled.div`
   }
 `
 const Linked = styled(Link)`
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 1rem;
   color: white;
   cursor: pointer;
@@ -40,8 +40,10 @@ const Linked = styled(Link)`
 `
 
 const Heading = styled.h3`
-  text-decoration: underline;
-  font-size: 16px;
+  border-bottom: solid white 2px;
+  padding-bottom: 10px;
+  width: 60px;
+  font-size: 18px;
   color: white;
   margin-bottom: 2rem;
 `

@@ -45,7 +45,7 @@ const ContactInfo = () => {
     try {
       dispatch(changeContactData(data.contactUsRepsonses))
     } catch (err) {
-      console.log(err)
+      //console.log(err)
     }
   }
 

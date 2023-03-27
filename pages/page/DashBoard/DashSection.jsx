@@ -12,6 +12,7 @@ import Button from "../../../components/Button/SubmitButton"
 const DashSection = () => {
   const nameVar = useSelector((state) => state.logInUser.name)
   const roleVar = useSelector((state) => state.logInUser.role)
+  //console.log(roleVar)
 
   let ACCESSTOKEN
   const dispatch = useDispatch()
@@ -95,66 +96,97 @@ const DashSection = () => {
             <table id="myTable">
               <thead>
                 <tr className="header">
-                  <th>Serial No.</th>
+                  <th>S. No.</th>
                   <th>Dashboard</th>
                   <th>Details</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td className="dashboardText">
-                    Project (Idea) Responses Data
-                  </td>
-                  <td>
-                    <Link
-                      href="/SubmitProjectResponses"
-                      // className="btn success"
-                    >
-                      <button
-                        style={{ background: "none", border: "none" }}
-                        type="submit"
+                {roleVar !== "SALES" ? (
+                  <tr>
+                    <td>1</td>
+                    <td className="dashboardText">
+                      Project (Idea) Responses Data
+                    </td>
+                    <td>
+                      <Link
+                        href="/SubmitProjectResponses"
+                        // className="btn success"
                       >
-                        <Button
-                          nav
-                          width="auto"
-                          height="auto"
-                          Text="Responses"
-                          inheight="auto"
-                          fontSize="auto"
-                          padding=" 15px 10px"
-                        />
-                      </button>
-                    </Link>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td className="dashboardText">Contact Us Responses Data</td>
-                  <td>
-                    <Link
-                      href="/ContactUsResponses"
-                      //className="btn success"
-                    >
-                      <button
-                        style={{ background: "none", border: "none" }}
-                        type="submit"
+                        <button
+                          style={{ background: "none", border: "none" }}
+                          type="submit"
+                        >
+                          <Button
+                            nav
+                            width="auto"
+                            height="auto"
+                            Text="Responses"
+                            inheight="auto"
+                            fontSize="auto"
+                            padding=" 15px 10px"
+                          />
+                        </button>
+                      </Link>
+                    </td>
+                  </tr>
+                ) : null}
+                {roleVar !== "SALES" ? (
+                  <tr>
+                    <td>2</td>
+                    <td className="dashboardText">Visit Us Responses</td>
+                    <td>
+                      <Link
+                        href="/VisitUsResponses"
+                        //className="btn success"
                       >
-                        <Button
-                          nav
-                          width="auto"
-                          height="auto"
-                          Text="Responses"
-                          inheight="auto"
-                          fontSize="auto"
-                          padding=" 15px 10px"
-                        />
-                      </button>
-                    </Link>
-                  </td>
-                </tr>
+                        <button
+                          style={{ background: "none", border: "none" }}
+                          type="submit"
+                        >
+                          <Button
+                            nav
+                            width="auto"
+                            height="auto"
+                            Text="Responses"
+                            inheight="auto"
+                            fontSize="auto"
+                            padding=" 15px 10px"
+                          />
+                        </button>
+                      </Link>
+                    </td>
+                  </tr>
+                ) : null}
+                {roleVar !== "SALES" ? (
+                  <tr>
+                    <td>3</td>
+                    <td className="dashboardText">Contact Us Responses Data</td>
+                    <td>
+                      <Link
+                        href="/ContactUsResponses"
+                        //className="btn success"
+                      >
+                        <button
+                          style={{ background: "none", border: "none" }}
+                          type="submit"
+                        >
+                          <Button
+                            nav
+                            width="auto"
+                            height="auto"
+                            Text="Responses"
+                            inheight="auto"
+                            fontSize="auto"
+                            padding=" 15px 10px"
+                          />
+                        </button>
+                      </Link>
+                    </td>
+                  </tr>
+                ) : null}
                 <tr>
-                  <td>3</td>
+                  <td>{roleVar === "SALES" ? "1" : "4"}</td>
                   <td className="dashboardText">
                     Distributer Channel Responses Data
                   </td>

@@ -100,8 +100,8 @@ export function VisitForm({}) {
           <option value={""} disabled selected>
             Select Location
           </option>
-          <option value={"Ramaera"}>Ramaera (Noida)</option>
-          <option value={"Plantsera"}>Plantsera (Hajipur)</option>
+          <option value={"Headoffice"}>Headoffice (Noida)</option>
+          <option value={"Factory"}>Factory (Hajipur)</option>
         </select>
       </div>
       <div style={{ width: "450px" }}>
