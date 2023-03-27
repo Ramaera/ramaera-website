@@ -13,9 +13,10 @@ import {
   changetypeOfVisit,
   changeaddress,
 } from "state/slice/visitingInfoSlice"
+import { useState } from "react"
 
 export function VisitForm({}) {
-  // const [partner, setPartner] = useState("")
+  const [typeOfVisitor, setTypeOfVisitor] = useState("")
   const dispatch = useDispatch()
 
   return (
@@ -100,28 +101,49 @@ export function VisitForm({}) {
           <option value={""} disabled selected>
             Select Location
           </option>
-          <option value={"Headoffice"}>Headoffice (Noida)</option>
-          <option value={"Factory"}>Factory (Hajipur)</option>
+          <option value={"Headoffice"}>Head Office (Noida)</option>
+          <option value={"Factory"}>Spice Factory (Hajipur)</option>
         </select>
       </div>
       <div style={{ width: "450px" }}>
-        <label>Type of Visit</label>
+        <label>Type of Visitor</label>
         <br />
         <select
           required
           onChange={(e) => {
+            setTypeOfVisitor(e.target.value)
             dispatch(changetypeOfVisit(e.target.value))
           }}
         >
           <option value={""} disabled selected>
             Select
           </option>
-          <option value={"Planetway"}>Planetway Member</option>
+          <option value={"Planetway Community Member"}>
+            Planetway Community Member
+          </option>
           <option value={"Vendor"}>Vendor</option>
+          <option value={"Other"}>Other</option>
         </select>
       </div>
+      <div style={{ width: "500px" }}></div>
+      <div style={{ width: "450px" }}>
+        {typeOfVisitor === "Other" ? (
+          <>
+            <label>Please mention here...</label>
+            <br />
+            <input
+              required
+              placeholder="Other"
+              type="text"
+              onChange={(e) => {
+                dispatch(changetypeOfVisit(e.target.value))
+              }}
+            />
+          </>
+        ) : null}
+      </div>
       <div style={{ width: "500px" }}>
-        <label>Date Range (from)</label>
+        <label>Date</label>
         <br />
         <input
           type="date"
@@ -132,10 +154,10 @@ export function VisitForm({}) {
         />
       </div>
       <div style={{ width: "450px" }}>
-        <label>Date Range (to)</label>
+        <label>Time</label>
         <br />
         <input
-          type="date"
+          type="time"
           required
           onChange={(e) => {
             dispatch(changetoDate(e.target.value))
