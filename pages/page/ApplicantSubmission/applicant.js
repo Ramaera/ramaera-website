@@ -30,7 +30,7 @@ const Applicant = () => {
   ACCESSTOKEN = localStorage.getItem("accessToken")
 
   if (!ACCESSTOKEN) {
-    console.log("eerihugouverbdf this is me")
+    //console.log("eerihugouverbdf this is me")
     return (
       <>
         <Link
@@ -49,7 +49,7 @@ const Applicant = () => {
     try {
       dispatch(changeAppData(data.applicants))
     } catch (err) {
-      console.log(err)
+      //console.log(err)
     }
   }
 

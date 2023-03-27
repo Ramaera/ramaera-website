@@ -26,7 +26,7 @@ const Div = styled.div`
   }
 `
 const Linked = styled(Link)`
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 1rem;
   color: white;
   cursor: pointer;
@@ -41,7 +41,9 @@ const Linked = styled(Link)`
 
 const Heading = styled.h3`
   border-bottom: solid white 2px;
-  font-size: 16px;
+  padding-bottom: 10px;
+  width: 60px;
+  font-size: 18px;
   color: white;
   margin-bottom: 2rem;
 `

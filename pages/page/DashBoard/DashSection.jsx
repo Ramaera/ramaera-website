@@ -12,7 +12,7 @@ import Button from "../../../components/Button/SubmitButton"
 const DashSection = () => {
   const nameVar = useSelector((state) => state.logInUser.name)
   const roleVar = useSelector((state) => state.logInUser.role)
-  console.log(roleVar)
+  //console.log(roleVar)
 
   let ACCESSTOKEN
   const dispatch = useDispatch()
