@@ -8,6 +8,7 @@ import PersonIcon from "@mui/icons-material/Person"
 import BadgeIcon from "@mui/icons-material/Badge"
 import { Typography } from "@mui/material"
 import Button from "../../../components/Button/SubmitButton"
+import { logout } from "../../../state/userSlice/"
 
 const DashSection = () => {
   const nameVar = useSelector((state) => state.logInUser.name)
@@ -35,8 +36,7 @@ const DashSection = () => {
   }
 
   const logMeOut = () => {
-    dispatch(setAccessToken(""))
-    window.localStorage.setItem("accessToken", "")
+    dispatch(logout())
   }
   try {
     return (
@@ -68,6 +68,16 @@ const DashSection = () => {
                   </Typography>
                 </span>
               </li>
+              <li className="divider"></li>
+              <li>
+                <Link href="/Dashboard/CreateUser">
+                  <Typography sx={{ display: "flex", alignItems: "center" }}>
+                    <LockResetIcon style={{ marginRight: "10px" }} />
+                    Create User
+                  </Typography>
+                </Link>
+              </li>
+              <li class="divider"></li>
               <li className="divider"></li>
               <li>
                 <Link href="/Dashboard/ChangePassword">

@@ -14,6 +14,7 @@ import { changeAppData } from "../../../state/slice/applicantDataSlice"
 import Button from "../../../components/Button/SubmitButton"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import LogoutIcon from "@mui/icons-material/Logout"
+import { logout } from "../../../state/slice/userSlice"
 
 const Applicant = () => {
   let ACCESSTOKEN
@@ -149,8 +150,7 @@ const Applicant = () => {
   ]
   const rows = []
   const logMeOut = () => {
-    dispatch(setAccessToken(""))
-    window.localStorage.setItem("accessToken", "")
+    dispatch(logout())
   }
   if (data) {
     dataPush()

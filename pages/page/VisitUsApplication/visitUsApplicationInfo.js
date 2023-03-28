@@ -4,6 +4,7 @@ import Box from "@mui/material/Box"
 import Text from "../../../components/Text/Text"
 import AccountCircleIcon from "@mui/icons-material/AccountCircle"
 import Menu from "@mui/material/Menu"
+import { logout } from "../../../state/slice/userSlice"
 import MenuItem from "@mui/material/MenuItem"
 import { useQuery } from "@apollo/client"
 import { GET_ALL_VISITORS } from "../../../apollo/queries/visitUs"
@@ -149,8 +150,7 @@ const VisitUsApplicationInfo = () => {
 
   const rows = []
   const logMeOut = () => {
-    dispatch(setAccessToken(""))
-    window.localStorage.setItem("accessToken", "")
+    dispatch(logout())
   }
   if (data) {
     dataPush()

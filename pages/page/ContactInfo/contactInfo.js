@@ -12,6 +12,7 @@ import { GET_CONTACT_RESPONSES } from "../../../apollo/queries"
 import Link from "next/link"
 import { useDispatch } from "react-redux"
 import { changeContactData } from "../../../state/slice/applicantDataSlice"
+import { logout } from "../../../state/slice/userSlice"
 import Button from "../../../components/Button/SubmitButton"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import LogoutIcon from "@mui/icons-material/Logout"
@@ -116,8 +117,7 @@ const ContactInfo = () => {
 
   const rows = []
   const logMeOut = () => {
-    dispatch(setAccessToken(""))
-    window.localStorage.setItem("accessToken", "")
+    dispatch(logout())
   }
   if (data) {
     dataPush()

@@ -2,14 +2,15 @@ import { gql } from "@apollo/client"
 
 export const CHANGE_PASSWORD = gql(`
 mutation changePassword (
-$OldPassword: String!,
-$NewPassword: String!,
+$oldPassword: String!,
+$newPassword: String!,
 ){changePassword(
     data: {
-      oldPassword:$OldPassword
-      newPassword: $NewPassword    
+      oldPassword:$oldPassword
+      newPassword: $newPassword    
     }) 
     {
       name
+      email
     }
 }`)

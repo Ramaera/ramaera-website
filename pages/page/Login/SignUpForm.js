@@ -5,12 +5,14 @@ import LockIcon from "@mui/icons-material/Lock"
 import { ADD_USER } from "../../../apollo/queries/signUp"
 import { useMutation } from "@apollo/client"
 import { useRouter } from "next/router"
-import { setAccessToken } from "../../../state/slice/accessTokenSlice"
+// import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 import { Container, FormBox, LoginContainer, LoginTitle } from "./style"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { useState } from "react"
+import dashboard from "@/pages/Dashboard"
+import Link from "next/link"
 const SignUpForm = () => {
   const router = useRouter()
   const [showPassword, setShowPassword] = useState(false)
@@ -25,7 +27,24 @@ const SignUpForm = () => {
   if (data) {
     console.log(data)
   }
-
+  let ACCESSTOKEN
+  if (typeof window !== "undefined") {
+    ACCESSTOKEN = localStorage.getItem("accessToken")
+  }
+  if (!ACCESSTOKEN) {
+    return (
+      <>
+        <Link
+          style={{
+            color: "white",
+          }}
+          href=" /Login"
+        >
+          Login to continue
+        </Link>
+      </>
+    )
+  }
   const handleSubmit = async (e) => {
     console.log(nameVar, emailVar, passwordVar, roleVar)
 
@@ -39,10 +58,19 @@ const SignUpForm = () => {
           role: roleVar,
         },
       })
-      window.localStorage.setItem("accessToken", data1.data.login.accessToken)
-      dispatch(setAccessToken(data1.data.login.accessToken))
 
-      //router.push("/Dashboard")
+      toast.success("User Created ", {
+        position: "top-center",
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
+      setTimeout(() => {
+        router.push("/Dashboard")
+      }, "3200")
     } catch (err) {
       if (err) {
         toast.error("Please check your email and password", {
@@ -133,10 +161,10 @@ const SignUpForm = () => {
                 marginTop: "7px",
               }}
             />
-            <input
-              type="text"
-              placeholder="Role"
+
+            <select
               required
+              placeholder="Role"
               onChange={(e) => setRoleVar(e.target.value)}
               style={{
                 width: "380px",
@@ -145,7 +173,15 @@ const SignUpForm = () => {
                 marginTop: "0",
               }}
               className="loginInput"
-            />
+            >
+              <option value={""} disabled selected>
+                Select Role Type
+              </option>
+              <option value={"ADMIN"}>ADMIN</option>
+              <option value={"EXECUTIVE"}>EXECUTIVE</option>
+              <option value={"HR"}>HR</option>
+              <option value={"SALES"}>SALES</option>
+            </select>
           </LoginTitle>
           <LoginTitle>
             <EmailIcon
@@ -211,7 +247,7 @@ const SignUpForm = () => {
           <button type="submit" style={{ background: "none", border: "none" }}>
             <Button
               Text="Create User"
-              width="150px"
+              width="170px"
               padding="0.85rem 1rem"
               height="2.75rem"
               inheight="2rem"

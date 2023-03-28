@@ -7,9 +7,11 @@ import NextNProgress from "nextjs-progressbar"
 import { ApolloProvider } from "@apollo/client"
 import { store } from "../state/store"
 import { Provider } from "react-redux"
-import client from "../apollo/index"
+import { getApolloClient } from "apollo"
+// import client from "../apollo/index"
 
 export default function App({ Component, pageProps }) {
+  const client = getApolloClient()
   useEffect(() => {
     AOS.init()
     AOS.refresh()

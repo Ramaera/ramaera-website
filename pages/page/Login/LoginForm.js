@@ -9,24 +9,22 @@ import { useRouter } from "next/router"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 import { Container, FormBox, LoginContainer, LoginTitle } from "./style"
-import {
-  getEmail,
-  getPassword,
-  getName,
-  getRole,
-} from "../../../state/slice/userSlice"
+import { getEmail, getName, getRole } from "../../../state/slice/userSlice"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { useState } from "react"
 const LoginForm = () => {
   const router = useRouter()
   const [showPassword, setShowPassword] = useState(false)
+  const [emailVar, setEmail] = useState("")
+  const [passwordVar, setPassword] = useState("")
   const [loginUser, { loading, data }] = useMutation(LOG_IN)
-  const passwordVar = useSelector((state) => state.logInUser.password)
-  const emailVar = useSelector((state) => state.logInUser.email)
+
   const dispatch = useDispatch()
+
   if (loading) {
   }
+
   if (data) {
     console.log(data.login.user)
     dispatch(getName(data.login.user.name))
@@ -44,9 +42,11 @@ const LoginForm = () => {
           password: passwordVar,
         },
       })
+      console.log("accessToken", data1)
+
       window.localStorage.setItem("accessToken", data1.data.login.accessToken)
       //todo add accesstoken guards to protected links
-      dispatch(setAccessToken(data1.data.login.accessToken))
+      // dispatch(setAccessToken(data1.data.login.accessToken))
 
       // setTimeout(myStopFunction, 2000)
 
@@ -138,7 +138,10 @@ const LoginForm = () => {
               type="email"
               placeholder="Email Id"
               required
-              onChange={(e) => dispatch(getEmail(e.target.value))}
+              onChange={(e) => {
+                setEmail(e.target.value)
+                //dispatch(getEmail(e.target.value))
+              }}
               style={{
                 width: "380px",
                 height: "45px",
@@ -162,7 +165,9 @@ const LoginForm = () => {
               type={showPassword ? "text" : "password"}
               placeholder="Password"
               required
-              onChange={(e) => dispatch(getPassword(e.target.value))}
+              onChange={(e) => {
+                setPassword(e.target.value)
+              }}
               style={{
                 position: "static",
                 width: "380px",

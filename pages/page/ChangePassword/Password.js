@@ -30,30 +30,46 @@ const Password = () => {
   const [showPassword2, setShowPassword2] = useState(false)
   const [showPassword3, setShowPassword3] = useState(false)
 
-  const [changePassword] = useMutation(CHANGE_PASSWORD)
+  const [changePassword, { loading, error, data }] =
+    useMutation(CHANGE_PASSWORD)
   const [oldPassword, setOldPassword] = useState("")
   const [newPassword, setNewPassword] = useState("")
   const [newConfirmPassword, setNewConfirmPassword] = useState("")
+  if (loading) {
+    console.log(loading)
+  }
+  if (error) {
+    console.log("error", error)
+  }
+  if (data) {
+    console.log("data", data)
+  }
   function handleSubmit(e) {
     e.preventDefault()
 
     if (newPassword === newConfirmPassword) {
-      changePassword({
-        variables: {
-          OldPassword: oldPassword,
-          NewPassword: newConfirmPassword,
-        },
-      })
-      toast.success("Password Changed", {
-        position: "top-center",
-        autoClose: 1200,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      })
+      try {
+        console.log("oldPassword", oldPassword)
+        changePassword({
+          variables: {
+            oldPassword: oldPassword,
+            newPassword: newConfirmPassword,
+          },
+        })
+        console.log("jihihihihi")
+        toast.success("Password Changed", {
+          position: "top-center",
+          autoClose: 1200,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        })
+      } catch (err) {
+        console.log("password ChangeErroe", err)
+      }
 
       setTimeout(() => {
         router.push("/Dashboard")

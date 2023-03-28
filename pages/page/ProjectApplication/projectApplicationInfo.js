@@ -10,6 +10,7 @@ import { GET_PROJECT_APPLICATIONS } from "../../../apollo/queries/idea"
 import { useDispatch, useSelector } from "react-redux"
 import { changeProjectData } from "../../../state/slice/applicantDataSlice"
 import Link from "next/link"
+import { logout } from "../../../state/slice/userSlice"
 import Button from "../../../components/Button/SubmitButton"
 import LogoutIcon from "@mui/icons-material/Logout"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
@@ -322,8 +323,7 @@ const ProjectApplicationInfo = () => {
 
   const rows = []
   const logMeOut = () => {
-    dispatch(setAccessToken(""))
-    window.localStorage.setItem("accessToken", "")
+    dispatch(logout())
   }
   if (data) {
     dataPush()

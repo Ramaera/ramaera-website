@@ -1,9 +1,9 @@
-import Navbar from "../../components/Navbar/Navbar"
-import PageLayout from "../../components/PageLayout/PageLayout"
-import PageWidth from "../../components/Width/PageWidth"
-import SignUpForm from "../page/Login/SignUpForm"
+import Navbar from "../../../components/Navbar/Navbar"
+import PageLayout from "../../../components/PageLayout/PageLayout"
+import PageWidth from "../../../components/Width/PageWidth"
+import SignUpForm from "../../page/Login/SignUpForm"
 
-const login = () => {
+const index = () => {
   return (
     <>
       <PageLayout mheight="100vh" height="120vh">
@@ -17,4 +17,4 @@ const login = () => {
   )
 }
 
-export default login
+export default index

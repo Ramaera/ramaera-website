@@ -3,7 +3,7 @@ import PageLayout from "../../components/PageLayout/PageLayout"
 import PageWidth from "../../components/Width/PageWidth"
 import LoginForm from "../page/Login/LoginForm"
 
-const login = () => {
+const index = () => {
   return (
     <>
       <PageLayout mheight="100vh" height="120vh">
@@ -17,4 +17,4 @@ const login = () => {
   )
 }
 
-export default login
+export default index
