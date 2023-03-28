@@ -1,6 +1,5 @@
-import React from "react";
-import styled from "styled-components";
-import Text from "../../../../components/Text/Text";
+import React from "react"
+import Text from "../../../../components/Text/Text"
 
 import {
   Container,
@@ -9,7 +8,7 @@ import {
   ImagePoint,
   MapBox,
   HoverText,
-} from "./style";
+} from "./style"
 
 const index = () => {
   return (
@@ -75,7 +74,7 @@ const index = () => {
         </MapIcon>
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default index;
+export default index
