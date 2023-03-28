@@ -504,8 +504,8 @@ a {
   width: 100vw;
 }
 
-@media (max-width: 450px){
-  .tabscontent{
+@media (max-width: 450px) {
+  .tabscontent {
     padding: 0 4vw !important;
   }
 }
@@ -544,11 +544,11 @@ select {
   margin-top: 10px;
 }
 
-@media (min-width: 1500px){
+@media (min-width: 1500px) {
   input,
   select {
-  width: 450px;
- }
+    width: 450px;
+  }
 }
 
 input::placeholder,
@@ -807,14 +807,14 @@ h3 {
   padding: 25px;
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   #myTable td {
     padding: 10px;
   }
 }
 
-@media (max-width: 400px){
-  .dashboardText{
+@media (max-width: 400px) {
+  .dashboardText {
     font-size: 15px;
   }
 }
@@ -1105,7 +1105,7 @@ a:hover {
   }
 }
 
-.divResponsive{
+.divResponsive {
   padding-right: 2rem;
 }
 @media (max-width: 600px) {
@@ -1120,11 +1120,11 @@ a:hover {
   margin-top: unset !important;
 }
 
-.MuiDataGrid-menuIcon{
+.MuiDataGrid-menuIcon {
   display: none !important;
 }
 
-.MuiButtonBase-root{
+.MuiButtonBase-root {
   color: black !important;
   font-weight: 900 !important;
 }
@@ -1132,7 +1132,7 @@ a:hover {
 .css-yrdy0g-MuiDataGrid-columnHeaderRow {
   background: #eeece8 !important;
 }
-.boxGird{
+.boxGird {
   height: 76vh;
   width: 90%;
   margin: auto;
@@ -1142,19 +1142,19 @@ a:hover {
   margin-bottom: 50px;
 }
 
-@media (max-width: 600px){
-  .boxGird{
+@media (max-width: 600px) {
+  .boxGird {
     padding: 10px;
     border-radius: 5px;
   }
 }
 
-.termSpaceTop{
+.termSpaceTop {
   height: 200px;
 }
 
-@media (max-width: 450px){
-  .termSpaceTop{
+@media (max-width: 450px) {
+  .termSpaceTop {
     height: 130px;
   }
 }

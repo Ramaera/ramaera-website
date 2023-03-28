@@ -25,6 +25,41 @@ const ImageHolder = styled.img`
     transform: scale(0.5);
   }
 `
+const LinkTo = styled.div`
+  font-weight: 300;
+  line-height: 20px;
+  //width: 50px;
+  @media (min-width: 1200px) {
+    width: 11vw;
+  }
+`
+const LinkDrop = styled(Link)`
+  font-weight: 300;
+  color: white;
+  font-size: 16px;
+  left: 40px;
+  line-height: 40px;
+  &:hover {
+    font-weight: 400;
+  }
+`
+const Dropdown = styled.div`
+  position: absolute;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 230px;
+  text-align: left;
+  top: 72.9px;
+  display: none;
+  &:hover {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
 const Link2 = styled.div`
   display: flex;
   margin: 0 10px;
@@ -33,7 +68,10 @@ const Link2 = styled.div`
   cursor: pointer;
   font-weight: 500;
   position: relative;
-  height: 3.5rem !important;
+  height: 4.5rem !important;
+  &:hover ${Dropdown} {
+    display: block;
+  }
 
   @media (max-width: 1400px) {
     font-style: normal;
@@ -43,14 +81,6 @@ const Link2 = styled.div`
     /* identical to box height */
 
     text-transform: uppercase;
-  }
-`
-const LinkTo = styled.div`
-  font-weight: 300;
-  line-height: 20px;
-  //width: 50px;
-  @media (min-width: 1200px) {
-    width: 11vw;
   }
 `
 
@@ -122,7 +152,7 @@ const Navbar = ({ selectedTab }) => {
                 className="left-nav-font"
                 style={{ color: "white" }}
               >
-                OUR COMPANIES
+                OUR COMPANIES &#x25BE;
                 <div
                   className="Line"
                   style={{
@@ -130,6 +160,14 @@ const Navbar = ({ selectedTab }) => {
                   }}
                 />
               </Link>
+              <Dropdown>
+                <LinkDrop href="/OurBrands">OUR BRANDS</LinkDrop>
+                <br />
+                <LinkDrop href="/Login">LOGIN</LinkDrop>
+
+                <br />
+                <LinkDrop href="/VisitUs">VISIT US</LinkDrop>
+              </Dropdown>
             </Link2>
           </ul>
         </div>
@@ -157,7 +195,7 @@ const Navbar = ({ selectedTab }) => {
             <Link
               href="/ContactUs"
               className="right-nav-font"
-              style={{ fontWeight: "300", color: "white",minWidth:"90px" }}
+              style={{ fontWeight: "300", color: "white", minWidth: "90px" }}
             >
               Contact Us
             </Link>

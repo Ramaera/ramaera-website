@@ -6,6 +6,7 @@ import { useSelector } from "react-redux"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { Container, ButtonContainer } from "./allJobStyle.js"
+import { useState } from "react"
 
 const VisitLocations = () => {
   const [clickOnce, setClickOnce] = useState(0)
