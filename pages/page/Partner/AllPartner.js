@@ -6,8 +6,10 @@ import { useSelector } from "react-redux"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { Container, ButtonContainer } from "./allPartnerStyle.js"
+import { useState } from "react"
 
 const Ideas = () => {
+  const [clickOnce, setClickOnce] = useState(0)
   const [createApplication] = useMutation(CREATE_APPLICATIONS)
   const nameVar = useSelector((state) => state.application.name)
   const applicantTypeVar = useSelector(
@@ -25,19 +27,23 @@ const Ideas = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    createApplication({
-      variables: {
-        name: nameVar,
-        applicantType: applicantTypeVar,
-        applicantAddress: applicantAddressVar,
-        email: emailVar,
-        firmName: firmNameVar,
-        mobileNumber: mobileNumberVar,
-        District: DistrictVar,
-        State: StateVar,
-        extraInfo: extraInfoVar,
-      },
-    })
+
+    if (clickOnce === 0) {
+      createApplication({
+        variables: {
+          name: nameVar,
+          applicantType: applicantTypeVar,
+          applicantAddress: applicantAddressVar,
+          email: emailVar,
+          firmName: firmNameVar,
+          mobileNumber: mobileNumberVar,
+          District: DistrictVar,
+          State: StateVar,
+          extraInfo: extraInfoVar,
+        },
+      })
+      setClickOnce(2)
+    }
     clearForm()
   }
   const clearForm = () => {

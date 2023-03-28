@@ -23,9 +23,9 @@ import {
 } from "./style"
 
 const index = () => {
-  const [createContactUsResponse, { data, loading, error }] = useMutation(
-    CREATE_CONTACT_RESPONSE
-  )
+  const [clickOnce, setClickOnce] = useState(0)
+
+  const [createContactUsResponse] = useMutation(CREATE_CONTACT_RESPONSE)
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [company, setCompany] = useState("")
@@ -33,15 +33,18 @@ const index = () => {
   const [message, setMessage] = useState("")
   const handleSubmit = (e) => {
     e.preventDefault()
-    const darara = createContactUsResponse({
-      variables: {
-        name: name,
-        email: email,
-        company: company,
-        Subject: Subject,
-        message: message,
-      },
-    })
+    if (clickOnce === 0) {
+      createContactUsResponse({
+        variables: {
+          name: name,
+          email: email,
+          company: company,
+          Subject: Subject,
+          message: message,
+        },
+      })
+      setClickOnce(2)
+    }
     clearForm()
   }
   const clearForm = () => {

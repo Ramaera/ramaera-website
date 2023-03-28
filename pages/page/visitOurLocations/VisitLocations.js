@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css"
 import { Container, ButtonContainer } from "./allJobStyle.js"
 
 const VisitLocations = () => {
+  const [clickOnce, setClickOnce] = useState(0)
+
   const [createVisitorForm] = useMutation(VISIT_US)
   const fromDateVar = useSelector((state) => state.visitingInfo.fromDate)
   const toDateVar = useSelector((state) => state.visitingInfo.toDate)
@@ -28,20 +30,23 @@ const VisitLocations = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    createVisitorForm({
-      variables: {
-        date: theDate,
-        email: emailVar,
-        mobileNumber: mobileNumberVar,
-        name: nameVar,
-        numberOfPeople: numberOfPeopleVar,
-        plantName: plantNameVar,
-        pwId: pwIdVar,
-        reason: reasonVar,
-        typeOfVisit: typeOfVisitVar,
-        address: addressVar,
-      },
-    })
+    if (clickOnce === 0) {
+      createVisitorForm({
+        variables: {
+          date: theDate,
+          email: emailVar,
+          mobileNumber: mobileNumberVar,
+          name: nameVar,
+          numberOfPeople: numberOfPeopleVar,
+          plantName: plantNameVar,
+          pwId: pwIdVar,
+          reason: reasonVar,
+          typeOfVisit: typeOfVisitVar,
+          address: addressVar,
+        },
+      })
+      setClickOnce(2)
+    }
     clearForm()
   }
   const clearForm = () => {
