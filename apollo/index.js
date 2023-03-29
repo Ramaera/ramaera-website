@@ -36,7 +36,7 @@ let ACCESSTOKEN
 export const getApolloClient = () => {
   if (typeof window !== "undefined") {
     ACCESSTOKEN = localStorage.getItem("accessToken")
-    console.log("!@£$", ACCESSTOKEN)
+    //console.log("!@£$", ACCESSTOKEN)
   }
   return new ApolloClient({
     link: authLink.concat(httpLink),

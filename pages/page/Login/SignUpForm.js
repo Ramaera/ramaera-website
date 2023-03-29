@@ -25,7 +25,7 @@ const SignUpForm = () => {
   if (loading) {
   }
   if (data) {
-    console.log(data)
+    //console.log(data)
   }
   let ACCESSTOKEN
   if (typeof window !== "undefined") {
@@ -46,7 +46,7 @@ const SignUpForm = () => {
     )
   }
   const handleSubmit = async (e) => {
-    console.log(nameVar, emailVar, passwordVar, roleVar)
+    //console.log(nameVar, emailVar, passwordVar, roleVar)
 
     e.preventDefault()
     try {

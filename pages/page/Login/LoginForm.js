@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { useRouter } from "next/router"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
+import VisibilityIcon from "@mui/icons-material/Visibility"
 import { Container, FormBox, LoginContainer, LoginTitle } from "./style"
 import { getEmail, getName, getRole } from "../../../state/slice/userSlice"
 import { ToastContainer, toast } from "react-toastify"
@@ -26,7 +27,7 @@ const LoginForm = () => {
   }
 
   if (data) {
-    console.log(data.login.user)
+    //console.log(data.login.user)
     dispatch(getName(data.login.user.name))
     dispatch(getRole(data.login.user.role))
   }
@@ -42,7 +43,7 @@ const LoginForm = () => {
           password: passwordVar,
         },
       })
-      console.log("accessToken", data1)
+      //console.log("accessToken", data1)
 
       window.localStorage.setItem("accessToken", data1.data.login.accessToken)
       //todo add accesstoken guards to protected links
@@ -187,7 +188,7 @@ const LoginForm = () => {
               }}
               onClick={() => setShowPassword(!showPassword)}
             >
-              <VisibilityOffIcon />
+              {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </span>
           </LoginTitle>
           <button type="submit" style={{ background: "none", border: "none" }}>

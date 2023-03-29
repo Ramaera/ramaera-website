@@ -1,6 +1,7 @@
 import Text from "../../../components/Text/Text"
 import Button from "../../../components/Button/SubmitButton"
 import LockOpenIcon from "@mui/icons-material/LockOpen"
+import VisibilityIcon from "@mui/icons-material/Visibility"
 import LockIcon from "@mui/icons-material/Lock"
 import LockResetIcon from "@mui/icons-material/LockReset"
 import { useRouter } from "next/router"
@@ -11,6 +12,7 @@ import { useState } from "react"
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import Settings from "../Dashboard/Settings"
 
 /* toast.error("Password Incorrect", {
   position: "top-center",
@@ -42,35 +44,31 @@ const Password = () => {
     console.log("error", error)
   }
   if (data) {
-    console.log("data", data)
+    //console.log("data", data)
   }
+
   function handleSubmit(e) {
     e.preventDefault()
 
     if (newPassword === newConfirmPassword) {
-      try {
-        console.log("oldPassword", oldPassword)
-        changePassword({
-          variables: {
-            oldPassword: oldPassword,
-            newPassword: newConfirmPassword,
-          },
-        })
-        console.log("jihihihihi")
-        toast.success("Password Changed", {
-          position: "top-center",
-          autoClose: 1200,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        })
-      } catch (err) {
-        console.log("password ChangeErroe", err)
-      }
+      //console.log("oldPassword", oldPassword)
 
+      changePassword({
+        variables: {
+          oldPassword: oldPassword,
+          newPassword: newConfirmPassword,
+        },
+      })
+      toast.success("Password Changed", {
+        position: "top-center",
+        autoClose: 1200,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
       setTimeout(() => {
         router.push("/Dashboard")
       }, "2000")
@@ -132,6 +130,7 @@ const Password = () => {
                 marginTop: "7px",
               }}
             />
+
             <input
               type={showPassword1 ? "text" : "password"}
               onChange={(e) => setOldPassword(e.target.value)}
@@ -154,7 +153,7 @@ const Password = () => {
               }}
               onClick={() => setShowPassword1(!showPassword1)}
             >
-              <VisibilityOffIcon />
+              {showPassword1 ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </span>
           </LoginTitle>
           <LoginTitle>
@@ -190,7 +189,7 @@ const Password = () => {
               }}
               onClick={() => setShowPassword2(!showPassword2)}
             >
-              <VisibilityOffIcon />
+              {showPassword2 ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </span>
           </LoginTitle>
           <LoginTitle>
@@ -226,7 +225,7 @@ const Password = () => {
               }}
               onClick={() => setShowPassword3(!showPassword3)}
             >
-              <VisibilityOffIcon />
+              {showPassword3 ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </span>
           </LoginTitle>
           <button type="submit" style={{ background: "none", border: "none" }}>

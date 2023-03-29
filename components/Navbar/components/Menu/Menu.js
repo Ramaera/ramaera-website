@@ -80,16 +80,19 @@ const Menu = ({ open, setOpen, ...props }) => {
           </Link>
         </H>
         <H>
-          <Link href="/SubmitProject"> Submit Your Ideas</Link>
+          <Link href="/OurBrands">OUR BRANDS</Link>
+        </H>
+        <H>
+          <Link href="/SubmitProject">SUBMIT YOUR IDEAS</Link>
         </H>
         <H>
           <Link href="/Career" onClick={() => setOpen(false)}>
-            Career
+            CAREER
           </Link>
         </H>
         <H>
           <Link href="/ContactUs" onClick={() => setOpen(false)}>
-            Contact Us
+            CONTACT US
           </Link>
         </H>
         <Link target="_blank" href="https://kyc.ramaera.com/Kyc-login.aspx">

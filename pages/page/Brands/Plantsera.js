@@ -4,6 +4,7 @@ export const ValueContainer = styled.div`
   width: 50%;
   @media (max-width: 768px) {
     height: auto;
+    width: 100%;
   }
 `
 export const Wrapper = styled.div`
@@ -12,9 +13,15 @@ export const Wrapper = styled.div`
 export const MainContainer = styled.div`
   width: 100%;
   display: flex;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 export const TextContainer = styled.div`
   width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 export const ImageTag = styled.img`
   transform: scale(90%);

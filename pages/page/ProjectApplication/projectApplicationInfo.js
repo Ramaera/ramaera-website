@@ -14,6 +14,8 @@ import { logout } from "../../../state/slice/userSlice"
 import Button from "../../../components/Button/SubmitButton"
 import LogoutIcon from "@mui/icons-material/Logout"
 import { setAccessToken } from "../../../state/slice/accessTokenSlice"
+import Settings from "../Dashboard/Settings"
+
 const ProjectApplicationInfo = () => {
   const projectData = useSelector((state) => state.applicationData.projectData)
   const dispatch = useDispatch()
@@ -322,9 +324,7 @@ const ProjectApplicationInfo = () => {
   ]
 
   const rows = []
-  const logMeOut = () => {
-    dispatch(logout())
-  }
+
   if (data) {
     dataPush()
     data.AllProjectDetails.forEach((item, index) => {
@@ -397,49 +397,19 @@ const ProjectApplicationInfo = () => {
             mlh="unset"
           />
 
-          <AccountCircleIcon
-            onClick={handleMenu}
+          <div
             style={{
               color: "white",
               fontSize: "50px",
               right: "5%",
               top: "20px",
+              zIndex: "10",
               position: "absolute",
               cursor: "pointer",
             }}
-          />
-
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
           >
-            <Link onClick={() => logMeOut()} href="/Login">
-              <MenuItem>
-                <LogoutIcon fontSize={"medium"} />
-                <div style={{ fontWeight: "500", fontSize: "12px" }}>
-                  LogOut
-                </div>
-              </MenuItem>
-            </Link>
-            <Link href="/Dashboard">
-              <MenuItem>
-                <div style={{ fontWeight: "500", fontSize: "12px" }}>
-                  Dashboard
-                </div>
-              </MenuItem>
-            </Link>
-          </Menu>
+            <Settings />
+          </div>
 
           <Box className="boxGird">
             <DataGrid
