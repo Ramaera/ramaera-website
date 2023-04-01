@@ -22,7 +22,7 @@ export function FormWrapper({ title, children }) {
         mlh="unset"
       />
       <Text
-        Text={"Contact Application Details"}
+        Text={"Contact Responses"}
         lg="linear-gradient(to right, #000, #000)"
         font
         size="clamp(1.4rem, 1.5vw, 2rem)"
@@ -40,9 +40,7 @@ export function FormWrapper({ title, children }) {
         mta="center"
         mlh="unset"
       />
-      <div className="formWrapper">
-        {children}
-      </div>
+      <div className="formWrapper">{children}</div>
     </>
   )
 }

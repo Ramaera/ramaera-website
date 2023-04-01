@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import { useSelector } from "react-redux"
-import Navbar from "../../components/Navbar/Navbar"
 import PageLayout from "../../components/PageLayout/PageLayout"
 import PageWidth from "../../components/Width/PageWidth"
 import VisitUsDetail from "../page/VisitUsApplicationDetails/VisitUsDetail"
@@ -18,8 +17,6 @@ const visitUsApplicationDetail = () => {
     return (
       <>
         <PageLayout mheight="100vh" height="120vh">
-          <Navbar />
-          <div className="navSpace"></div>
           <PageWidth full scale={"95%"} width="1500px" position="relative">
             <Pdf
               targetRef={ref}

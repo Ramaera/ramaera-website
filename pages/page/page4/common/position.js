@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Text from "../../../../components/Text/Text";
+import styled from "styled-components"
+import Text from "../../../../components/Text/Text"
 
 const Div1 = styled.div`
   display: flex;
@@ -8,14 +8,14 @@ const Div1 = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`;
+`
 const Div2 = styled.div`
   width: 70%;
   @media (max-width: 768px) {
     width: 90vw;
     padding: 0 5vw;
   }
-`;
+`
 const Div3 = styled.div`
   margin: 1rem 0;
   display: flex;
@@ -23,7 +23,7 @@ const Div3 = styled.div`
 
   @media (max-width: 768px) {
   }
-`;
+`
 const CustomText = styled.div`
   margin: 0 10vw;
   padding: 4rem 0;
@@ -32,14 +32,14 @@ const CustomText = styled.div`
     border: none;
     padding: 0 7vw;
   }
-`;
+`
 const Head = styled.h3`
   padding: 1rem 0;
 
   @media (max-width: 768px) {
     padding: 0 0;
   }
-`;
+`
 const Button = styled.button`
   color: white;
   border-radius: 999px;
@@ -56,24 +56,24 @@ const Button = styled.button`
   @media (max-width: 768px) {
     margin-bottom: 2rem;
   }
-`;
+`
 const Location = styled.div`
   margin-right: 1rem;
   @media (max-width: 768px) {
   }
-`;
+`
 const Work = styled.div`
   padding-left: 1rem;
   border-left: 1px solid;
 
   @media (max-width: 768px) {
   }
-`;
+`
 const Breif = styled.div`
   @media (max-width: 768px) {
     width: 100%;
   }
-`;
+`
 
 const position = ({ role, place, work, description }) => {
   return (
@@ -158,10 +158,18 @@ const position = ({ role, place, work, description }) => {
           </Breif>
         </Div2>
 
-        <Button>Apply Now</Button>
+        <Button>
+          <a
+            style={{ color: "white" }}
+            href="mailto:rajeev.hr@ramaera.com?subject=Job Application"
+          >
+            {" "}
+            Apply Now
+          </a>
+        </Button>
       </Div1>
     </CustomText>
-  );
-};
+  )
+}
 
-export default position;
+export default position

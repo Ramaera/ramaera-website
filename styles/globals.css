@@ -1096,15 +1096,6 @@ a:hover {
   height: 80px;
 }
 
-.responseSpaceDetail {
-  height: 150px;
-}
-@media (max-width: 600px) {
-  .responseSpaceDetail {
-    height: 100px;
-  }
-}
-
 .divResponsive {
   padding-right: 2rem;
 }
