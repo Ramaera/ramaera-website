@@ -1,5 +1,4 @@
 import styled from "styled-components"
-
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -8,7 +7,6 @@ export const Container = styled.div`
   margin-top: -25vh;
   // width: 100%;
 `
-
 export const FormBox = styled.form`
   background-color: whitesmoke;
   width: 35vw;
@@ -23,9 +21,8 @@ export const FormBox = styled.form`
   @media (max-width: 450px) {
     width: 100vw;
     min-width: unset;
-     }
+  }
 `
-
 export const LoginContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,10 +32,40 @@ export const LoginContainer = styled.div`
   gap: 30px;
   transition: all 0.5s;
 `
-
 export const LoginTitle = styled.div``
+export const LoginTitlee = styled.div`
+  display: flex;
+`
+export const Details = styled.div`
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 270px;
+  right: -300px;
+  text-align: left;
+  top: -70px;
+  display: none;
+  &:hover {
+    display: block;
+  }
+`
+export const Access = styled.div`
+  display: flex;
+  margin: 0 10px;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  height: 4.5rem;
+  &:hover ${Details} {
+    display: block;
+  }
+`
 const StyleImage = () => {
   return <div>StyleImage</div>
 }
-
 export default StyleImage

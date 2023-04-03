@@ -137,7 +137,7 @@ const DashSection = () => {
                   <tr>
                     <td>{roleVar === "ADMIN" ? "4" : "1"}</td>
                     <td className="dashboardText">
-                      Distributer Channel Responses Data
+                      Distributor Channel Responses Data
                     </td>
                     <td>
                       <Link

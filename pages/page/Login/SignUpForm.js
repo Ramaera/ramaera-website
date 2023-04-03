@@ -7,12 +7,22 @@ import { useMutation } from "@apollo/client"
 import { useRouter } from "next/router"
 // import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
-import { Container, FormBox, LoginContainer, LoginTitle } from "./style"
+import VisibilityIcon from "@mui/icons-material/Visibility"
+import {
+  Container,
+  FormBox,
+  LoginTitlee,
+  LoginContainer,
+  LoginTitle,
+  Access,
+  Details,
+} from "./style"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { useState } from "react"
-import dashboard from "@/pages/Dashboard"
 import Link from "next/link"
+import Settings from "../Dashboard/Settings"
+
 const SignUpForm = () => {
   const router = useRouter()
   const [showPassword, setShowPassword] = useState(false)
@@ -21,7 +31,6 @@ const SignUpForm = () => {
   const [passwordVar, setPasswordVar] = useState("")
   const [roleVar, setRoleVar] = useState("")
   const [signup, { loading, data }] = useMutation(ADD_USER)
-
   if (loading) {
   }
   if (data) {
@@ -47,7 +56,6 @@ const SignUpForm = () => {
   }
   const handleSubmit = async (e) => {
     //console.log(nameVar, emailVar, passwordVar, roleVar)
-
     e.preventDefault()
     try {
       const data1 = await signup({
@@ -58,7 +66,6 @@ const SignUpForm = () => {
           role: roleVar,
         },
       })
-
       toast.success("User Created ", {
         position: "top-center",
         hideProgressBar: false,
@@ -86,16 +93,28 @@ const SignUpForm = () => {
       }
     }
   }
-
   /* function myStopFunction() {
     router.push("Dashboard")
   } */
   return (
     <Container>
+      <div
+        style={{
+          color: "white",
+          fontSize: "50px",
+          right: "2%",
+          top: "-200px",
+          zIndex: "10",
+          position: "absolute",
+          cursor: "pointer",
+        }}
+      >
+        <Settings />
+      </div>
       <FormBox onSubmit={(e) => handleSubmit(e)}>
         <Text
           Text="Create User"
-          lg="linear-gradient(to right, #ffa73d, gold)"
+          lg="linear-gradient(to right, #FFA73D, gold)"
           font
           size="clamp(2.2rem, 1.2vw, 1.5rem)"
           fw="400"
@@ -113,7 +132,6 @@ const SignUpForm = () => {
           mlh="unset"
         />
         <div style={{ height: "50px" }}></div>
-
         <ToastContainer
           position="top-center"
           autoClose={5000}
@@ -133,7 +151,7 @@ const SignUpForm = () => {
                 position: "absolute",
                 transform: "translateX(1vmax)",
                 fontSize: "30px",
-                color: "#ff8800",
+                color: "#FF8800",
                 marginTop: "7px",
               }}
             />
@@ -151,45 +169,82 @@ const SignUpForm = () => {
               className="loginInput"
             />
           </LoginTitle>
+          <LoginTitlee>
+            <div>
+              <EmailIcon
+                style={{
+                  position: "absolute",
+                  transform: "translateX(1vmax)",
+                  fontSize: "30px",
+                  color: "#FF8800",
+                  marginTop: "7px",
+                }}
+              />
+              <select
+                required
+                placeholder="Role"
+                onChange={(e) => setRoleVar(e.target.value)}
+                style={{
+                  width: "380px",
+                  height: "45px",
+                  paddingLeft: "60px",
+                  marginTop: "0",
+                }}
+                className="loginInput"
+              >
+                <option value={""} disabled selected>
+                  Select Role Type
+                </option>
+                <option value={"ADMIN"}>ADMIN</option>
+                <option value={"EXECUTIVE"}>EXECUTIVE</option>
+                <option value={"HR"}>HR</option>
+                <option value={"SALES"}>SALES</option>
+              </select>
+            </div>
+            <div style={{ display: "flex" }}>
+              <Access style={{ position: "absolute" }}>
+                <span
+                  style={{
+                    position: "absolute",
+                    margin: "right",
+                    marginTop: "-30px",
+                    display: "flex",
+                  }}
+                >
+                  &#63;
+                </span>
+                <Details>
+                  <h2
+                    style={{
+                      textAlign: "center",
+                      textDecorationLine: "underline",
+                    }}
+                  >
+                    Role Access
+                  </h2>
+                  <h1>Admin</h1>
+                  <li>Visit Us Responses</li>
+                  <li>Project (Idea) Responses Data</li>
+                  <li>Contact Us Responses Data</li>
+                  <li>Distributor Channel Responses Data</li>
+                  <h1>Executive</h1>
+                  <li>Visit Us Responses</li>
+                  <li>Contact Us Responses Data</li>
+                  <h1>HR</h1>
+                  <li>Visit Us Responses</li>
+                  <h1>Sales</h1>
+                  <li>Distributor Channel Responses Data</li>
+                </Details>
+              </Access>
+            </div>
+          </LoginTitlee>
           <LoginTitle>
             <EmailIcon
               style={{
                 position: "absolute",
                 transform: "translateX(1vmax)",
                 fontSize: "30px",
-                color: "#ff8800",
-                marginTop: "7px",
-              }}
-            />
-
-            <select
-              required
-              placeholder="Role"
-              onChange={(e) => setRoleVar(e.target.value)}
-              style={{
-                width: "380px",
-                height: "45px",
-                paddingLeft: "60px",
-                marginTop: "0",
-              }}
-              className="loginInput"
-            >
-              <option value={""} disabled selected>
-                Select Role Type
-              </option>
-              <option value={"ADMIN"}>ADMIN</option>
-              <option value={"EXECUTIVE"}>EXECUTIVE</option>
-              <option value={"HR"}>HR</option>
-              <option value={"SALES"}>SALES</option>
-            </select>
-          </LoginTitle>
-          <LoginTitle>
-            <EmailIcon
-              style={{
-                position: "absolute",
-                transform: "translateX(1vmax)",
-                fontSize: "30px",
-                color: "#ff8800",
+                color: "#FF8800",
                 marginTop: "7px",
               }}
             />
@@ -213,7 +268,7 @@ const SignUpForm = () => {
                 position: "absolute",
                 transform: "translateX(1vmax)",
                 fontSize: "30px",
-                color: "#ff8800",
+                color: "#FF8800",
                 marginTop: "6px",
               }}
             />
@@ -238,10 +293,11 @@ const SignUpForm = () => {
                 transform: "translateX(1vmax)",
                 fontSize: "30px",
                 margin: "6px 0 0 -50px",
+                right: "560px",
               }}
               onClick={() => setShowPassword(!showPassword)}
             >
-              <VisibilityOffIcon />
+              {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </span>
           </LoginTitle>
           <button type="submit" style={{ background: "none", border: "none" }}>
@@ -252,7 +308,7 @@ const SignUpForm = () => {
               height="2.75rem"
               inheight="2rem"
               sh="none"
-              m="50px 0 0 0"
+              m="10px 0 20px 0"
             />
           </button>
         </LoginContainer>
@@ -260,5 +316,4 @@ const SignUpForm = () => {
     </Container>
   )
 }
-
 export default SignUpForm
