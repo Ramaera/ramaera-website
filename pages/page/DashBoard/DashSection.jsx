@@ -50,7 +50,7 @@ const DashSection = () => {
                 </tr>
               </thead>
               <tbody>
-                {roleVar === "ADMIN" ? (
+                {roleVar === "ADMIN" || roleVar === "EXECUTIVE" ? (
                   <tr>
                     <td>1</td>
                     <td className="dashboardText">

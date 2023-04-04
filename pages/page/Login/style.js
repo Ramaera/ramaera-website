@@ -7,6 +7,13 @@ export const Container = styled.div`
   margin-top: -25vh;
   // width: 100%;
 `
+export const P = styled.p`
+  font-weight: bold;
+  margin-top: 5px;
+`
+export const Li = styled.li`
+  list-style: circle;
+`
 export const FormBox = styled.form`
   background-color: whitesmoke;
   width: 35vw;
@@ -44,7 +51,7 @@ export const Details = styled.div`
   font-size: 12px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   width: 270px;
-  right: -300px;
+  right: -322px;
   text-align: left;
   top: -70px;
   display: none;

@@ -9,6 +9,8 @@ import { useRouter } from "next/router"
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff"
 import VisibilityIcon from "@mui/icons-material/Visibility"
 import {
+  Li,
+  P,
   Container,
   FormBox,
   LoginTitlee,
@@ -196,7 +198,7 @@ const SignUpForm = () => {
                   Select Role Type
                 </option>
                 <option value={"ADMIN"}>ADMIN</option>
-                <option value={"EXECUTIVE"}>EXECUTIVE</option>
+                <option value={"EXECUTIVE"}>PROJECT TEAM</option>
                 <option value={"HR"}>HR</option>
                 <option value={"SALES"}>SALES</option>
               </select>
@@ -222,18 +224,18 @@ const SignUpForm = () => {
                   >
                     Role Access
                   </h2>
-                  <h1>Admin</h1>
-                  <li>Visit Us Responses</li>
-                  <li>Project (Idea) Responses Data</li>
-                  <li>Contact Us Responses Data</li>
-                  <li>Distributor Channel Responses Data</li>
-                  <h1>Executive</h1>
-                  <li>Visit Us Responses</li>
-                  <li>Contact Us Responses Data</li>
-                  <h1>HR</h1>
-                  <li>Visit Us Responses</li>
-                  <h1>Sales</h1>
-                  <li>Distributor Channel Responses Data</li>
+                  <P>Admin</P>
+                  <Li>Visit Us Responses</Li>
+                  <Li>Project (Idea) Responses</Li>
+                  <Li>Contact Us Responses</Li>
+                  <Li>Distributor Channel Responses</Li>
+                  <Li>Contact Us Responses</Li>
+                  <P>HR</P>
+                  <Li>Visit Us Responses</Li>
+                  <P>Sales</P>
+                  <Li>Distributor Channel Responses</Li>
+                  <P>Project Team</P>
+                  <Li>Project (Idea) Responses</Li>
                 </Details>
               </Access>
             </div>
