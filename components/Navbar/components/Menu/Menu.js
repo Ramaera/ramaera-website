@@ -43,6 +43,8 @@ const T = styled.p`
 
 const H = styled.div`
   font-size: 1.5rem;
+  text-align: left;
+
   font-weight: bold;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
@@ -79,9 +81,51 @@ const Menu = ({ open, setOpen, ...props }) => {
             OUR COMPANIES
           </Link>
         </H>
-        <H>
+        {/* <H>
           <Link href="/OurBrands">OUR BRANDS</Link>
-        </H>
+        </H> */}
+        <div style={{}}>
+          <a
+            style={{
+              fontSize: "14px",
+              padding: "5px",
+              background: "#f9b223",
+              borderRadius: "5px",
+              marginRight: "5px",
+            }}
+            href="https://planetsera.com/"
+            target="_blank"
+          >
+            PLANETSERA
+          </a>
+
+          <a
+            style={{
+              fontSize: "14px",
+              padding: "5px",
+              background: "#f9b223",
+              borderRadius: "5px",
+              marginRight: "5px",
+            }}
+            href="https://hednor.com/"
+            target="_blank"
+          >
+            HEDNOR
+          </a>
+
+          <a
+            style={{
+              fontSize: "14px",
+              padding: "5px",
+              background: "#f9b223",
+              borderRadius: "5px",
+            }}
+            href="https://www.groceryworld.in/"
+            target="_blank"
+          >
+            GROCERYWORLD
+          </a>
+        </div>
         <H>
           <Link href="/SubmitProject">SUBMIT YOUR IDEAS</Link>
         </H>

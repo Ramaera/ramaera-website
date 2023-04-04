@@ -35,7 +35,17 @@ const LinkTo = styled.div`
 `
 const LinkDrop = styled(Link)`
   font-weight: 300;
-  color: white;
+  color: black;
+  font-size: 16px;
+  left: 40px;
+  line-height: 40px;
+  &:hover {
+    font-weight: 400;
+  }
+`
+const ADrop = styled.a`
+  font-weight: 300;
+  color: black;
   font-size: 16px;
   left: 40px;
   line-height: 40px;
@@ -45,7 +55,7 @@ const LinkDrop = styled(Link)`
 `
 const Dropdown = styled.div`
   position: absolute;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 0 0 8px 8px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   width: 230px;
@@ -166,6 +176,19 @@ const Navbar = ({ selectedTab }) => {
                 {/* <LinkDrop href="/Login">LOGIN</LinkDrop>
 
                 <br /> */}
+
+                <ADrop href="https://planetsera.com/" target="_blank">
+                  PLANETSERA
+                </ADrop>
+                <br />
+                <ADrop href="https://hednor.com/" target="_blank">
+                  HEDNOR
+                </ADrop>
+                <br />
+                <ADrop href="https://www.groceryworld.in/" target="_blank">
+                  GROCERYWORLD
+                </ADrop>
+                <br />
                 <LinkDrop href="/VisitUs">VISIT US</LinkDrop>
               </Dropdown>
             </Link2>
