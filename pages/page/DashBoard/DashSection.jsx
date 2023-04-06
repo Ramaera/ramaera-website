@@ -13,7 +13,7 @@ const DashSection = () => {
       ACCESSTOKEN = localStorage.getItem("accessToken")
     }
   }, [])
-
+  const checkAccess = () => {}
   useEffect(() => {
     if (!ACCESSTOKEN) {
       return (

@@ -5,9 +5,10 @@ import "aos/dist/aos.css"
 import Head from "next/head"
 import NextNProgress from "nextjs-progressbar"
 import { ApolloProvider } from "@apollo/client"
-import { store } from "../state/store"
-import { Provider } from "react-redux"
 import { getApolloClient } from "apollo"
+import { persistor, store } from "../state/store"
+import { PersistGate } from "redux-persist/integration/react"
+import { Provider } from "react-redux"
 // import client from "../apollo/index"
 
 export default function App({ Component, pageProps }) {
@@ -51,11 +52,13 @@ export default function App({ Component, pageProps }) {
       <NextNProgress color="#f9d523" startPosition={0.4} height={3} />
 
       {
-        <ApolloProvider client={client}>
-          <Provider store={store}>
-            <Component {...pageProps} />
-          </Provider>
-        </ApolloProvider>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <ApolloProvider client={client}>
+              <Component {...pageProps} />
+            </ApolloProvider>
+          </PersistGate>
+        </Provider>
       }
     </>
   )

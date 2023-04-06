@@ -37,9 +37,6 @@ export function AddressForm() {
   const [totalPeople, setTotalPeople] = useState(1)
   const [goalAmount, setGoalAmount] = useState(0)
 
-  const changeTotalPeople = (val) => {
-    setTotalPeople(val)
-  }
   const changeGoalAmount = (val) => {
     setGoalAmount(val)
   }
