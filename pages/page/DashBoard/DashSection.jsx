@@ -3,8 +3,11 @@ import { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
 import Button from "../../../components/Button/SubmitButton"
 import Settings from "./Settings"
+import { useRouter } from "next/router"
 
 const DashSection = () => {
+  const router = useRouter()
+
   const roleVar = useSelector((state) => state.logInUser.role)
 
   let ACCESSTOKEN
@@ -13,21 +16,10 @@ const DashSection = () => {
       ACCESSTOKEN = localStorage.getItem("accessToken")
     }
   }, [])
-  const checkAccess = () => {}
+
   useEffect(() => {
     if (!ACCESSTOKEN) {
-      return (
-        <>
-          <Link
-            style={{
-              color: "white",
-            }}
-            href=" /Login"
-          >
-            Login to continue
-          </Link>
-        </>
-      )
+      router.push("/Login")
     }
   }, [ACCESSTOKEN])
 
