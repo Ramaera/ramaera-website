@@ -14,7 +14,15 @@ import {
   changeaddress,
 } from "state/slice/visitingInfoSlice"
 import { useState } from "react"
+import PwId from "@/pages/VisitUs/pw_id"
 
+const checkPwId = (id) => {
+  let UpperId = id.toUpperCase()
+  const check = PwId.includes(UpperId)
+  if (check) {
+    dispatch(changepwId(UpperId))
+  }
+}
 export function VisitForm({}) {
   const [typeOfVisitor, setTypeOfVisitor] = useState("")
   const dispatch = useDispatch()
@@ -178,7 +186,8 @@ export function VisitForm({}) {
           placeholder="PW id (Optional)"
           type="text"
           onChange={(e) => {
-            dispatch(changepwId(e.target.value))
+            checkPwId(e.target.value)
+            // dispatch(changepwId(e.target.value))
           }}
         />
       </div>
