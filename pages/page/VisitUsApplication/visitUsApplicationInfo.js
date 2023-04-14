@@ -94,6 +94,12 @@ const VisitUsApplicationInfo = () => {
       flex: 1,
     },
     {
+      field: "pwId",
+      headerName: "PWID",
+      minWidth: 200,
+      flex: 1,
+    },
+    {
       field: "reason",
       headerName: "Reason for Visit",
       minWidth: 200,
@@ -129,12 +135,7 @@ const VisitUsApplicationInfo = () => {
       minWidth: 200,
       flex: 1,
     },
-    {
-      field: "pwId",
-      headerName: "PWID",
-      minWidth: 200,
-      flex: 1,
-    },
+
     {
       field: "numberOfPeople",
       headerName: "Number Of People",

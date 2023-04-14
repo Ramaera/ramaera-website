@@ -38,7 +38,7 @@ const ApplicationDetail = ({ VisitUsData }) => {
               <p>{VisitUsData.email}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
-              <label>Reason for Visi </label>
+              <label>Reason for Visit</label>
               <br />
               <p>{VisitUsData.reason}</p>
             </div>
