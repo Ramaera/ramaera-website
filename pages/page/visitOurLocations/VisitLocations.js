@@ -28,7 +28,6 @@ const VisitLocations = () => {
   const typeOfVisitVar = useSelector((state) => state.visitingInfo.typeOfVisit)
   const addressVar = useSelector((state) => state.visitingInfo.address)
   const theDate = fromDateVar + "," + toDateVar
-
   const handleSubmit = (e) => {
     e.preventDefault()
     if (clickOnce === 0) {

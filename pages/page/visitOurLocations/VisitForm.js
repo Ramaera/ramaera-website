@@ -16,19 +16,19 @@ import {
 import { useState } from "react"
 import { PwId } from "@/pages/VisitUs/pw_id"
 
-const checkPwId = (id) => {
-  let UpperId = id.toUpperCase()
-  const check = PwId.includes(UpperId)
-  if (!check) {
-    dispatch(changepwId(UpperId))
-  }
-  if (check) {
-    dispatch(changepwId("Board Member's Pw_Id : " + UpperId))
-  }
-}
 export function VisitForm({}) {
   const [typeOfVisitor, setTypeOfVisitor] = useState("")
   const dispatch = useDispatch()
+  const checkPwId = (id) => {
+    let UpperId = id.toUpperCase()
+    const check = PwId.includes(UpperId)
+    if (check) {
+      dispatch(changepwId("Board Member's Pw_Id : " + UpperId))
+    }
+    if (!check) {
+      dispatch(changepwId(UpperId))
+    }
+  }
 
   return (
     <FormWrapper title="Visit Us">
