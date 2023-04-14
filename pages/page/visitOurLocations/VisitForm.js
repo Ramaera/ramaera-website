@@ -14,13 +14,16 @@ import {
   changeaddress,
 } from "state/slice/visitingInfoSlice"
 import { useState } from "react"
-import PwId from "@/pages/VisitUs/pw_id"
+import { PwId } from "@/pages/VisitUs/pw_id"
 
 const checkPwId = (id) => {
   let UpperId = id.toUpperCase()
   const check = PwId.includes(UpperId)
-  if (check) {
+  if (!check) {
     dispatch(changepwId(UpperId))
+  }
+  if (check) {
+    dispatch(changepwId("Board Member's Pw_Id : " + UpperId))
   }
 }
 export function VisitForm({}) {

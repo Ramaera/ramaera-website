@@ -1,4 +1,4 @@
-const PwId = [
+export const PwId = [
   "RIL-14",
   "PW684724",
   "PW645186",
@@ -143,4 +143,10 @@ const PwId = [
   "PW650113",
 ]
 
-export default PwId
+import React from "react"
+
+const a = () => {
+  return <div>a</div>
+}
+
+export default a
