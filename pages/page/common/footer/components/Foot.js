@@ -93,7 +93,7 @@ const Foot = () => {
         <Link href={"/AnnualMeet"}>
           <div class="glow_button">
             <Text
-              Text="AGM Attencence Form"
+              Text="Annual General Meeting Attendence Form"
               lg="linear-gradient(90deg, white 0%, white 100%)"
               font
               padding=" 0 "
