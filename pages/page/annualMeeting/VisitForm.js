@@ -20,7 +20,7 @@ export function VisitForm({}) {
     }
   }
   return (
-    <FormWrapper title="FIRST ANNUAL MEET RAMAERA INDUSTRIES LIMITED">
+    <FormWrapper title="FIRST ANNUAL GENERAL MEET RAMAERA INDUSTRIES LIMITED">
       <div style={{ width: "500px", marginTop: "30px" }}>
         <label
           style={{
