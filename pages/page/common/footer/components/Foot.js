@@ -90,6 +90,20 @@ const Foot = () => {
             />
           </div>
         </Link>
+        <Link href={"/AnnualMeet"}>
+          <div class="glow_button">
+            <Text
+              Text="AGM Attencence Form"
+              lg="linear-gradient(90deg, white 0%, white 100%)"
+              font
+              padding=" 0 "
+              size="14px"
+              msize="14px"
+              align="center"
+              mpadding="1vw"
+            />
+          </div>
+        </Link>
         {/* <Link href="/PrivacyPolicy">Privacy Policy</Link>
         <Link href="/TermsAndConditions">Terms & Conditions</Link>
         <Link href="/Legal">Legal</Link> */}
