@@ -109,7 +109,17 @@ export function VisitForm({}) {
         <label>Date Of Visit</label>
         <br />
         <input
-          checked
+          style={{ width: "20px" }}
+          type="radio"
+          id="7"
+          name="date"
+          value="7th and 8th May"
+        />
+        <label style={{ position: "absolute", marginLeft: "10px" }} for="7">
+          7th and 8th May 2023
+        </label>
+        <br />
+        <input
           style={{ width: "20px" }}
           type="radio"
           id="7"
