@@ -52,6 +52,9 @@ const Hr = styled.hr`
   height: 2px;
   width: 80vw;
   background: #fff;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `
 const CopyRight = styled.div`
   position: absolute;
