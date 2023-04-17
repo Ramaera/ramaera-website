@@ -60,13 +60,14 @@ const CopyRight = styled.div`
   position: absolute;
   font-weight: 100;
   bottom: 110px;
-  left: 900px;
+  left: 1050px;
   color: white;
   height: 13px;
   width: 80vw;
   font-size: 10px;
   margin-bottom: 1rem;
   color: white;
+
   @media only screen and (max-width: 768px) {
     width: fit-content;
     left: auto;
@@ -113,7 +114,7 @@ const Foot = () => {
 
         {/* <Link href="#">Site Map</Link> */}
       </FootContainer>
-      <CopyRight>© {year} All Rights Reserved</CopyRight>
+      <CopyRight>© 2023 All Rights Reserved</CopyRight>
     </>
   )
 }
