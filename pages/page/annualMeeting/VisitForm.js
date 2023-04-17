@@ -91,7 +91,7 @@ export function VisitForm({}) {
         <br />
         <textarea
           required
-          rows={5}
+          rows={7}
           cols={80}
           type="text"
           onChange={(e) => {
