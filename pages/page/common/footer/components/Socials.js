@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Image = styled.img`
   height: 20px;
-  margin: 5px;
+  margin: 5px 10px;
 `
 const SocialHead = styled.h4`
   font-size: 14px;
