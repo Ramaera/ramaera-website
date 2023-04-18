@@ -59,7 +59,7 @@ const Hr = styled.hr`
 const CopyRight = styled.div`
   position: absolute;
   font-weight: 100;
-  bottom: 110px;
+  bottom: 10px;
   left: 1050px;
   color: white;
   height: 13px;
