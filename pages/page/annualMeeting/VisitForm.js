@@ -17,6 +17,8 @@ export function VisitForm({}) {
     const check = PwId.includes(UpperId)
     if (check) {
       dispatch(changepwId("Board Member's Pw_Id : " + UpperId))
+    } else {
+      dispatch(changepwId(UpperId))
     }
   }
   return (
@@ -44,7 +46,7 @@ export function VisitForm({}) {
           required
           text
           onChange={(e) => {
-            dispatch(changename(e.target.value))
+            dispatch(changename("Board Member : " + e.target.value))
           }}
         />
       </div>
