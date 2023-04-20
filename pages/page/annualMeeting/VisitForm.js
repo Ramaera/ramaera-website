@@ -14,11 +14,12 @@ export function VisitForm({}) {
   const dispatch = useDispatch()
   const checkPwId = (id) => {
     let UpperId = id.toUpperCase()
+    UpperId = UpperId.split(/ /)[0].replace(/[^\d]/g, "")
     const check = PwId.includes(UpperId)
     if (check) {
-      dispatch(changepwId("Board Member's Pw_Id : " + UpperId))
+      dispatch(changepwId("Board Member's Pw_Id : " + id))
     } else {
-      dispatch(changepwId(UpperId))
+      dispatch(changepwId(id))
     }
   }
   return (
