@@ -30,7 +30,7 @@ const authLink = setContext((_, { headers }) => {
   }
 })
 const httpLink = createHttpLink({
-  uri: process.env.NEXT_PUBLIC_APOLLO_URI,
+  uri: "https://websitebackend.ramaera.com/graphql",
 })
 let ACCESSTOKEN
 export const getApolloClient = () => {
