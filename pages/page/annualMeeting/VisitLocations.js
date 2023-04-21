@@ -32,7 +32,7 @@ const VisitLocations = () => {
     e.preventDefault()
     console.log(pwIdVar)
     if (clickOnce === 0) {
-      /* createVisitorForm({
+      createVisitorForm({
         variables: {
           date: theDate,
           email: emailVar,
@@ -46,9 +46,9 @@ const VisitLocations = () => {
           address: addressVar,
         },
       })
-      setClickOnce(2) */
+      setClickOnce(2)
     }
-    /* clearForm() */
+    clearForm()
   }
   const clearForm = () => {
     toast.success(
