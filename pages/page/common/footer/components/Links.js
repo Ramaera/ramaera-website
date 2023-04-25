@@ -14,7 +14,6 @@ const Container = styled.div`
   }
 `
 const Div = styled.div`
-  text-transform: uppercase;
   margin: auto;
   display: flex;
   text-align: left;
@@ -148,7 +147,7 @@ const Links = () => {
           <Linked href="/Legal">Legal</Linked>
           <Linked href="/Login">Login</Linked>
           <Linked href="/VisitUs">Visit Us</Linked>
-          <Linked href="/LocateDistributor">Locate Distributor</Linked>
+          <Linked href="/LocateDistributor">Locate a Distributor</Linked>
         </Div>
         {/* <Div>
           <Heading href="#">Company</Heading>

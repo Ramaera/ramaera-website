@@ -9,7 +9,7 @@ import Marketing from "../page/page4/marketing"
 import Talent from "../page/page4/talent"
 import Family from "../page/page4/family"
 import Head from "next/head"
-const career = () => {
+const Career = () => {
   return (
     <>
       <Head>
@@ -29,4 +29,4 @@ const career = () => {
   )
 }
 
-export default career
+export default Career

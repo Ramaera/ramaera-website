@@ -1,3 +1,4 @@
+import Text from "@/components/Text/Text"
 import PageWidth from "@/components/Width/PageWidth"
 import { useEffect, useState } from "react"
 import styled from "styled-components"
@@ -59,6 +60,25 @@ const DistributorForm = () => {
   return (
     <PageWidth full scale={"95%"} width="1500px" position="relative">
       <Container>
+        <Text
+          Text="Locate a Distributor"
+          lg="linear-gradient(to right, #ffa73d, gold)"
+          font
+          size="clamp(3rem, 1.5vw, 2rem)"
+          fw="400"
+          align="center"
+          lh="50px"
+          m="0 0 1rem 0"
+          xmsize="clamp(2.4rem, 1.5vw, 2rem)"
+          xssize="clamp(2.4rem, 1.5vw, 2rem)"
+          msize="1.7rem"
+          mwidth="100%"
+          mmwidth="100%"
+          padding="0"
+          mpadding="0"
+          mta="center"
+          mlh="unset"
+        />
         <Form>
           <FlexCol>
             <label>Choose State</label>
@@ -98,7 +118,11 @@ const DistributorForm = () => {
             </select>
           </FlexCol>
         </Form>
-        {district && <H2>Distributor Details</H2>}
+        {district ? (
+          <H2>Distributor Details</H2>
+        ) : (
+          <div style={{ height: "50px" }}></div>
+        )}
         {district === "Gopalganj" && (
           <Details>
             <Tr>

@@ -63,7 +63,7 @@ const index = () => {
         />
         <Position
           role={"FRONTEND DEVELOPER (REACT.JS)"}
-          place={"Remote"}
+          place={"Noida,IN"}
           work={"Full Time"}
           description={
             "We are looking for a skilled react.js developer to join our front-end development team. In this role, you will be responsible for developing and implementing user interface components using React.js concepts and workflows such as Redux and Webpack."
