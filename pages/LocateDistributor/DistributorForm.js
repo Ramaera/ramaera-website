@@ -146,12 +146,6 @@ const DistributorForm = () => {
               <Td>Zone</Td>
               <Td>Zone 2 </Td>
             </Tr>
-
-            <Tr>
-              <Td>Year of Establishment</Td>
-              <Td>2017</Td>
-            </Tr>
-
             <Tr>
               <Td>Address Of Business</Td>
               <Td>Bhore, Chaarmuhani near Chahat, 841426</Td>
@@ -185,12 +179,6 @@ const DistributorForm = () => {
               <Td>Zone</Td>
               <Td>Zone 2 </Td>
             </Tr>
-
-            <Tr>
-              <Td>Year of Establishment</Td>
-              <Td>2015</Td>
-            </Tr>
-
             <Tr>
               <Td>Address Of Business</Td>
               <Td>BAGMALI HAJIPUR VAISHALI 844101</Td>
