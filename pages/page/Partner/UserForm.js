@@ -2538,7 +2538,7 @@ export function UserForm({}) {
             <br />
             Security Deposit (Refundable):
             <br />
-            <strong> ₹50 Thousand</strong>
+            <strong> ₹25 Thousand</strong>
             <sup> *</sup>{" "}
           </p>
 
