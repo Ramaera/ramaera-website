@@ -144,7 +144,7 @@ const DistributorForm = () => {
             </Tr>
             <Tr>
               <Td>Zone</Td>
-              <Td>Zone 2 (Tarun)</Td>
+              <Td>Zone 2 </Td>
             </Tr>
 
             <Tr>
@@ -183,7 +183,7 @@ const DistributorForm = () => {
             </Tr>
             <Tr>
               <Td>Zone</Td>
-              <Td>Zone 2 (Tarun)</Td>
+              <Td>Zone 2 </Td>
             </Tr>
 
             <Tr>
