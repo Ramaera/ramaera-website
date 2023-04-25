@@ -126,12 +126,17 @@ const DistributorForm = () => {
         {district === "Gopalganj" && (
           <Details>
             <Tr>
-              <Td>State</Td>
-              <Td>Bihar</Td>
+              <Td>Name of Business</Td>
+              <Td>Sonali Enterprises</Td>
             </Tr>
             <Tr>
-              <Td>District</Td>
-              <Td>Gopalganj</Td>
+              <Td>Name Of the Proprietor</Td>
+              <Td>Prabhakar Tiwari</Td>
+            </Tr>
+
+            <Tr>
+              <Td>Mobile No.</Td>
+              <Td>9523038408</Td>
             </Tr>
             <Tr>
               <Td>Firm Type</Td>
@@ -141,22 +146,12 @@ const DistributorForm = () => {
               <Td>Zone</Td>
               <Td>Zone 2 (Tarun)</Td>
             </Tr>
-            <Tr>
-              <Td>Name of Business</Td>
-              <Td>Sonali Enterprises</Td>
-            </Tr>
+
             <Tr>
               <Td>Year of Establishment</Td>
               <Td>2017</Td>
             </Tr>
-            <Tr>
-              <Td>Name Of the Proprietor</Td>
-              <Td>Prabhakar Tiwari</Td>
-            </Tr>
-            <Tr>
-              <Td>Mobile No.</Td>
-              <Td>9523038408</Td>
-            </Tr>
+
             <Tr>
               <Td>Address Of Business</Td>
               <Td>Bhore, Chaarmuhani near Chahat, 841426</Td>
@@ -170,12 +165,17 @@ const DistributorForm = () => {
         {district === "Hajipur" && (
           <Details>
             <Tr>
-              <Td>State</Td>
-              <Td>Bihar</Td>
+              <Td>Name of Business</Td>
+              <Td>JEET TELECOM</Td>
+            </Tr>
+
+            <Tr>
+              <Td>Name Of the Proprietor</Td>
+              <Td>KAMAL JEET CHOUDHARY</Td>
             </Tr>
             <Tr>
-              <Td>District</Td>
-              <Td>Hajipur</Td>
+              <Td>Mobile No.</Td>
+              <Td>9905640570</Td>
             </Tr>
             <Tr>
               <Td>Firm Type</Td>
@@ -185,22 +185,12 @@ const DistributorForm = () => {
               <Td>Zone</Td>
               <Td>Zone 2 (Tarun)</Td>
             </Tr>
-            <Tr>
-              <Td>Name of Business</Td>
-              <Td>JEET TELECOM</Td>
-            </Tr>
+
             <Tr>
               <Td>Year of Establishment</Td>
               <Td>2015</Td>
             </Tr>
-            <Tr>
-              <Td>Name Of the Proprietor</Td>
-              <Td>KAMAL JEET CHOUDHARY</Td>
-            </Tr>
-            <Tr>
-              <Td>Mobile No.</Td>
-              <Td>9905640570</Td>
-            </Tr>
+
             <Tr>
               <Td>Address Of Business</Td>
               <Td>BAGMALI HAJIPUR VAISHALI 844101</Td>
