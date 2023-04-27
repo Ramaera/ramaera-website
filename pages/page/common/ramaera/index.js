@@ -71,7 +71,7 @@ const index = ({ imageIndex = 0 }) => {
       } else {
         setCurrentIndex(currentIndex + 1)
       }
-    }, 50000)
+    }, 3000)
 
     return () => clearInterval(intervalId)
   }, [imageNo[currentIndex]])
