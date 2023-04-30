@@ -1,6 +1,6 @@
 import { VisitForm } from "./VisitForm"
 import Button from "../../../components/Button/SubmitButton"
-import { VISIT_US } from "../../../apollo/queries/visitUs"
+import { VISIT_US_ANNUAL } from "../../../apollo/queries/visitUs"
 import { useMutation } from "@apollo/client"
 import { useSelector } from "react-redux"
 import { ToastContainer, toast } from "react-toastify"
@@ -11,7 +11,7 @@ import { useState } from "react"
 const VisitLocations = () => {
   const [clickOnce, setClickOnce] = useState(0)
 
-  const [createVisitorForm] = useMutation(VISIT_US)
+  const [createGeneralMeetingVisitorForm] = useMutation(VISIT_US_ANNUAL)
   const fromDateVar = useSelector((state) => state.visitingInfo.fromDate)
   const toDateVar = useSelector((state) => state.visitingInfo.toDate)
   const emailVar = useSelector((state) => state.visitingInfo.email)
@@ -27,45 +27,60 @@ const VisitLocations = () => {
   const reasonVar = useSelector((state) => state.visitingInfo.reason)
   const typeOfVisitVar = useSelector((state) => state.visitingInfo.typeOfVisit)
   const addressVar = useSelector((state) => state.visitingInfo.address)
-  const theDate = fromDateVar + "," + toDateVar
-  const handleSubmit = (e) => {
+  const theDate = fromDateVar + " " + toDateVar
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(pwIdVar)
+    // console.log(pwIdVar)
     if (clickOnce === 0) {
-      createVisitorForm({
-        variables: {
-          date: theDate,
-          email: emailVar,
-          mobileNumber: mobileNumberVar,
-          name: nameVar,
-          numberOfPeople: numberOfPeopleVar,
-          plantName: plantNameVar,
-          pwId: pwIdVar,
-          reason: reasonVar,
-          typeOfVisit: typeOfVisitVar,
-          address: addressVar,
-        },
-      })
-      setClickOnce(2)
+      try {
+        await createGeneralMeetingVisitorForm({
+          variables: {
+            date: theDate,
+            email: emailVar,
+            mobileNumber: mobileNumberVar,
+            name: nameVar,
+            numberOfPeople: numberOfPeopleVar,
+            plantName: plantNameVar,
+            pwId: pwIdVar,
+            reason: reasonVar,
+            typeOfVisit: typeOfVisitVar,
+            address: addressVar,
+          },
+        })
+        toast.success(
+          `Your Response has been submitted, Welcome to the Board Meeting`,
+          {
+            position: "top-center",
+            autoClose: 3500,
+            width: "600px",
+            fontFamily: "monospace",
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          }
+        )
+        setClickOnce(2)
+        clearForm()
+      } catch (error) {
+        toast.error(error.message, {
+          position: "top-center",
+          autoClose: 3500,
+          width: "600px",
+          fontFamily: "monospace",
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        })
+      }
     }
-    clearForm()
   }
   const clearForm = () => {
-    toast.success(
-      `Your Response has been submitted, Welcome to the Board Meeting`,
-      {
-        position: "top-center",
-        autoClose: 3500,
-        width: "600px",
-        fontFamily: "monospace",
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      }
-    )
     setTimeout(() => {
       location.reload()
     }, "4200")

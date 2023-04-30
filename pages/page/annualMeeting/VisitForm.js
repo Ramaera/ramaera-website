@@ -6,6 +6,7 @@ import {
   changename,
   changepwId,
   changefromDate,
+  changetoDate,
   changeaddress,
 } from "state/slice/visitingInfoSlice"
 import { PwId } from "@/pages/VisitUs/pw_id"
@@ -103,15 +104,10 @@ export function VisitForm({}) {
           placeholder="Coming From"
         />
       </div>
-      <div
-        onChange={(e) => {
-          dispatch(changefromDate(e.target.value))
-        }}
-        style={{ width: "450px" }}
-      >
+      <div style={{ width: "450px" }}>
         <label>Date Of Visit</label>
         <br />
-        <input
+        {/*  <input
           style={{ width: "20px" }}
           type="radio"
           id="7"
@@ -121,13 +117,16 @@ export function VisitForm({}) {
         <label style={{ position: "absolute", marginLeft: "10px" }} for="7">
           7th and 8th May 2023
         </label>
-        <br />
+        <br />*/}
         <input
           style={{ width: "20px" }}
-          type="radio"
+          type="checkbox"
           id="7"
           name="date"
           value="7th May"
+          onChange={(e) => {
+            dispatch(changefromDate(e.target.checked ? e.target.value : ""))
+          }}
         />
         <label style={{ position: "absolute", marginLeft: "10px" }} for="7">
           7th May 2023
@@ -135,10 +134,13 @@ export function VisitForm({}) {
         <br />
         <input
           style={{ width: "20px" }}
-          type="radio"
+          type="checkbox"
           id="8"
           name="date"
           value="8th May"
+          onChange={(e) => {
+            dispatch(changetoDate(e.target.checked ? e.target.value : ""))
+          }}
         />
         <label style={{ position: "absolute", marginLeft: "10px" }} for="8">
           8th May 2023
