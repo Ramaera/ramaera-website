@@ -10,8 +10,10 @@ import {
   changeaddress,
 } from "state/slice/visitingInfoSlice"
 import { PwId } from "@/pages/VisitUs/pw_id"
+import { useState } from "react"
 
 export function VisitForm({}) {
+  const [isDateChecked, setDateChecked] = useState(false)
   const dispatch = useDispatch()
   const checkPwId = (id) => {
     let UpperId = id.toUpperCase()
@@ -106,6 +108,9 @@ export function VisitForm({}) {
       </div>
       <div style={{ width: "450px" }}>
         <label>Date Of Visit</label>
+        {/* <label style={{ marginLeft: "10px", paddingTop: "60px" }}>
+          Please Select an option
+        </label> */}
         <br />
         {/*  <input
           style={{ width: "20px" }}
@@ -122,10 +127,12 @@ export function VisitForm({}) {
           style={{ width: "20px" }}
           type="checkbox"
           id="7"
+          required={!isDateChecked}
           name="date"
           value="7th May"
           onChange={(e) => {
             dispatch(changefromDate(e.target.checked ? e.target.value : ""))
+            setDateChecked(e.target.checked)
           }}
         />
         <label style={{ position: "absolute", marginLeft: "10px" }} for="7">
@@ -136,15 +143,19 @@ export function VisitForm({}) {
           style={{ width: "20px" }}
           type="checkbox"
           id="8"
+          required={!isDateChecked}
           name="date"
           value="8th May"
           onChange={(e) => {
             dispatch(changetoDate(e.target.checked ? e.target.value : ""))
+            setDateChecked(e.target.checked)
           }}
         />
         <label style={{ position: "absolute", marginLeft: "10px" }} for="8">
           8th May 2023
         </label>
+
+        {/* <input style={{ display: "none" }} required={!isDateChecked} /> */}
       </div>
     </FormWrapper>
   )
