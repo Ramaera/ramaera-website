@@ -22,7 +22,7 @@ export function VisitForm({}) {
     if (check) {
       dispatch(changepwId("Board Member's Pw_Id : " + id))
     } else {
-      dispatch(changepwId(id))
+      dispatch(changepwId(""))
     }
   }
   return (

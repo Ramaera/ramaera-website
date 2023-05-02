@@ -30,8 +30,21 @@ const VisitLocations = () => {
   const theDate = fromDateVar + " " + toDateVar
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // console.log(pwIdVar)
-    if (clickOnce === 0) {
+    if (!pwIdVar) {
+      toast.error("Your PW ID is not Approved or invalid PW ID", {
+        position: "top-center",
+        autoClose: 3500,
+        width: "600px",
+        fontFamily: "monospace",
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      })
+    }
+    if (clickOnce === 0 && pwIdVar) {
       try {
         await createGeneralMeetingVisitorForm({
           variables: {
@@ -62,8 +75,8 @@ const VisitLocations = () => {
             theme: "light",
           }
         )
-        setClickOnce(2)
-        clearForm()
+        //setClickOnce(2)
+        //clearForm()
       } catch (error) {
         toast.error(error.message, {
           position: "top-center",
