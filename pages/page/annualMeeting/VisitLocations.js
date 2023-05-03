@@ -6,7 +6,92 @@ import { useSelector } from "react-redux"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import { Container, ButtonContainer } from "./allJobStyle.js"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import styled from "styled-components"
+
+const Br = styled.br`
+  display: none;
+  @media only screen and (max-width: 510px) {
+    display: flex;
+  }
+`
+const CounterDiv = styled.div`
+  text-align: center;
+  font-size: 1.6rem;
+  color: white;
+
+  margin-bottom: 20px;
+  @media only screen and (max-width: 510px) {
+    display: none;
+  }
+`
+const CounterDivMobile = styled.div`
+  text-align: center;
+  font-size: 1.4rem;
+  display: none;
+  color: white;
+  @media only screen and (max-width: 510px) {
+    display: flex;
+  }
+`
+const Countdown = () => {
+  const [countdownDate, setCountdownDate] = useState(
+    new Date("05/04/2023").getTime()
+  )
+  const [state, setState] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
+
+  useEffect(() => {
+    setInterval(() => setNewTime(), 1000)
+  }, [])
+
+  const setNewTime = () => {
+    if (countdownDate) {
+      const currentTime = new Date().getTime()
+
+      const distanceToDate = countdownDate - currentTime
+
+      let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24))
+      let hours = Math.floor(
+        (distanceToDate % (1000 * 60 * 60 * 24 * 12)) / (1000 * 60 * 60) + 12
+      )
+      let minutes = Math.floor(
+        (distanceToDate % (1000 * 60 * 60)) / (1000 * 60)
+      )
+      let seconds = Math.floor((distanceToDate % (1000 * 60)) / 1000)
+
+      const numbersToAddZeroTo = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+      days = `${days}`
+      if (numbersToAddZeroTo.includes(hours)) {
+        hours = `0${hours}`
+      } else if (numbersToAddZeroTo.includes(minutes)) {
+        minutes = `0${minutes}`
+      } else if (numbersToAddZeroTo.includes(seconds)) {
+        seconds = `0${seconds}`
+      }
+
+      setState({ days: days, hours: hours, minutes, seconds })
+    }
+  }
+  state.hours >= 0 ? state.hours : (state.hours = 0)
+  state.minutes >= 0 ? state.minutes : (state.minutes = 0)
+  state.seconds >= 0 ? state.seconds : (state.seconds = 0)
+
+  return (
+    <div>
+      <div>
+        <span> Registration will close in </span> : <Br />{" "}
+        {state.hours || " 00"} Hours {state.minutes || "00"} Minutes{" "}
+        {state.seconds || "00"} Seconds
+      </div>
+    </div>
+  )
+}
 
 const VisitLocations = () => {
   const [clickOnce, setClickOnce] = useState(0)
@@ -100,50 +185,68 @@ const VisitLocations = () => {
   }
 
   return (
-    <Container>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <ToastContainer
-          toastClassName="toast-font"
-          style={{
-            width: "600px",
-            textAlign: "center",
-            fontFamily:
-              "Sans-serif,Times New Roman, Serif,Patrick Hand, cursive",
-          }}
-          position="top-center"
-          autoClose={5000}
-          hideProgressBar={true}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
+    <>
+      <CounterDiv>
+        <Countdown />
+      </CounterDiv>
+      <CounterDivMobile>
+        <Countdown />
+      </CounterDivMobile>
 
+      <Container>
         <div
           style={{
-            position: "absolute",
-            top: ".5rem",
-            right: ".5rem",
-            fontSize: ".8rem",
+            display: "flex ",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         ></div>
-        <VisitForm />
-        <ButtonContainer>
-          <button style={{ background: "none", border: "none" }} type="submit">
-            <Button
-              nav
-              width="140px"
-              height="2.75rem"
-              Text="Submit"
-              inheight="2.5rem"
-            />
-          </button>
-        </ButtonContainer>
-      </form>
-    </Container>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <ToastContainer
+            toastClassName="toast-font"
+            style={{
+              width: "600px",
+              textAlign: "center",
+              fontFamily:
+                "Sans-serif,Times New Roman, Serif,Patrick Hand, cursive",
+            }}
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: ".5rem",
+              right: ".5rem",
+              fontSize: ".8rem",
+            }}
+          ></div>
+          <VisitForm />
+          <ButtonContainer>
+            <button
+              style={{ background: "none", border: "none" }}
+              type="submit"
+            >
+              <Button
+                nav
+                width="140px"
+                height="2.75rem"
+                Text="Submit"
+                inheight="2.5rem"
+              />
+            </button>
+          </ButtonContainer>
+        </form>
+      </Container>
+    </>
   )
 }
 
