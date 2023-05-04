@@ -16,13 +16,12 @@ const Br = styled.br`
   }
 `
 const CounterDiv = styled.div`
-  text-align: center;
   font-size: 1.6rem;
-  color: white;
-
-  margin-bottom: 20px;
-  @media only screen and (max-width: 510px) {
-    display: none;
+  padding: 8rem;
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
   }
 `
 const CounterDivMobile = styled.div`
@@ -186,7 +185,13 @@ const VisitLocations = () => {
       </CounterDivMobile> */}
 
       <Container>
-        <div
+        <CounterDiv>
+          <div style={{}}>
+            Registration has been closed for Annual General Meet
+            <div>Please contact your Applience</div>
+          </div>
+        </CounterDiv>
+        {/*  <div
           style={{
             display: "flex ",
             justifyContent: "center",
@@ -236,7 +241,7 @@ const VisitLocations = () => {
               />
             </button>
           </ButtonContainer>
-        </form>
+        </form> */}
       </Container>
     </>
   )
