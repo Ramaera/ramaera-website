@@ -188,7 +188,6 @@ const VisitLocations = () => {
         <CounterDiv>
           <div style={{}}>
             Registration has been closed for Annual General Meet
-            <div>Please contact your Applience</div>
           </div>
         </CounterDiv>
         {/*  <div

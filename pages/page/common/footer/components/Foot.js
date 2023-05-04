@@ -94,7 +94,7 @@ const Foot = () => {
             />
           </div>
         </Link>
-        <Link href={"/AnnualMeet"}>
+        {/* <Link href={"/AnnualMeet"}>
           <div class="glow_button">
             <Text
               Text="Annual General Meeting Attendence Form"
@@ -107,7 +107,7 @@ const Foot = () => {
               mpadding="1vw"
             />
           </div>
-        </Link>
+        </Link> */}
         {/* <Link href="/PrivacyPolicy">Privacy Policy</Link>
         <Link href="/TermsAndConditions">Terms & Conditions</Link>
         <Link href="/Legal">Legal</Link> */}
