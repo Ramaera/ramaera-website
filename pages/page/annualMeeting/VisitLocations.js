@@ -67,14 +67,6 @@ const Countdown = () => {
       const numbersToAddZeroTo = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
       days = `${days}`
-      if (numbersToAddZeroTo.includes(hours)) {
-        hours = `0${hours}`
-      } else if (numbersToAddZeroTo.includes(minutes)) {
-        minutes = `0${minutes}`
-      } else if (numbersToAddZeroTo.includes(seconds)) {
-        seconds = `0${seconds}`
-      }
-
       setState({ days: days, hours: hours, minutes, seconds })
     }
   }
@@ -186,12 +178,12 @@ const VisitLocations = () => {
 
   return (
     <>
-      <CounterDiv>
+      {/*  <CounterDiv>
         <Countdown />
       </CounterDiv>
       <CounterDivMobile>
         <Countdown />
-      </CounterDivMobile>
+      </CounterDivMobile> */}
 
       <Container>
         <div
