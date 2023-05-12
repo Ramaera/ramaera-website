@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const SocialMedia = () => {
   const StyledSocialMedia = styled.div`
-    height: 9.5rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,14 +20,21 @@ const SocialMedia = () => {
       transform: scale(0.8);
       left: 20vw;
     }
-  `;
+  `
 
   const LinkTo = styled.a`
     cursor: pointer;
-  `;
+  `
 
   return (
     <StyledSocialMedia>
+      <LinkTo href="https://www.linkedin.com/company/ramaera/" target="_blank">
+        <img
+          src="https://www.citypng.com/public/uploads/preview/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png"
+          width={32}
+          alt="facebook icon"
+        />
+      </LinkTo>
       <LinkTo href="https://twitter.com/ramaeraltd" target="_blank">
         <svg
           width="25"
@@ -74,7 +81,7 @@ const SocialMedia = () => {
         </svg>
       </LinkTo>
     </StyledSocialMedia>
-  );
-};
+  )
+}
 
-export default SocialMedia;
+export default SocialMedia

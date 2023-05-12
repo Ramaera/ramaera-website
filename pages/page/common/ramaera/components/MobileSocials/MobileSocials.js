@@ -22,6 +22,13 @@ const LinkTo = styled.a`
 const MobileSocials = () => {
   return (
     <StyledSocialMedia>
+      <LinkTo href="https://www.linkedin.com/company/ramaera/" target="_blank">
+        <img
+          src="https://www.citypng.com/public/uploads/preview/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png"
+          width={32}
+          alt="facebook icon"
+        />
+      </LinkTo>
       <LinkTo href="https://twitter.com/ramaeraltd" target="_blank">
         <div>
           <svg
