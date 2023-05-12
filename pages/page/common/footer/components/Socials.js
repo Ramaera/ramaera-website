@@ -30,6 +30,12 @@ const Socials = () => {
   return (
     <SocialContainer>
       <SocialHead>Let's Do it!</SocialHead>
+      <LinkTo href="https://www.linkedin.com/company/ramaera/" target="_blank">
+        <Image
+          src="https://www.citypng.com/public/uploads/preview/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png"
+          alt="facebook icon"
+        />
+      </LinkTo>
       <LinkTo href="https://www.facebook.com/ramaeraindustries" target="_blank">
         <Image src="/content/social-5.png" alt="facebook icon" />
       </LinkTo>
