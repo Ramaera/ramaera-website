@@ -93,8 +93,9 @@ const Quote = styled.img`
   top: 220px;
   left: 550px;
   @media (max-width: 1200px) {
-  top: 210px;
-  left: 380px;  }
+    top: 210px;
+    left: 380px;
+  }
   @media (max-width: 768px) {
     opacity: 0;
   }
@@ -127,7 +128,7 @@ const Textcontainer = () => {
             target="_blank"
             href="https://in.linkedin.com/in/devendra-kumar-mishra-b2109518"
           >
-            <span style={{ color: "#FFE259" }}>Devendra Mishra </span>{" "}
+            <span style={{ color: "#FFE259" }}>Mr. Devendra Mishra </span>{" "}
           </Link>
           said that for India to stay on the growth trajectory, a triple decker
           strategy focused on employment generation...
