@@ -77,6 +77,8 @@ export const GET_APPLICATIONS = gql(`
     firmName
     mobileNumber
     extraInfo
+    createdAt
+    updatedAt
   }
 }`)
 

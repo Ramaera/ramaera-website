@@ -92,7 +92,7 @@ const applicantsDetails = ({ AppData }) => {
               <br />
               <p>{AppData.District}</p>
             </div>
-            <div className="divResponsive" style={{ width: "450px" }}>
+            {/* <div className="divResponsive" style={{ width: "450px" }}>
               <label
                 style={{ fontSize: ".8rem", opacity: ".9", fontWeight: "600" }}
               >
@@ -107,7 +107,7 @@ const applicantsDetails = ({ AppData }) => {
                 <option value={"approval"}>Approval </option>
                 <option value={"rejected"}>Rejected </option>
               </select>
-            </div>
+            </div> */}
           </FormWrapper>
         </Container>
       </>

@@ -22,7 +22,7 @@ const Applicant = () => {
 
   const applicationData = useSelector((state) => state.applicationData.appData)
   const dispatch = useDispatch()
-  const { loading, error, data } = useQuery(GET_APPLICATIONS)
+  const { loading, data } = useQuery(GET_APPLICATIONS)
   const [anchorEl, setAnchorEl] = useState(false)
 
   if (loading) {
@@ -90,11 +90,18 @@ const Applicant = () => {
       ),
     },
     {
+      field: "createdAt",
+      headerName: "Created At",
+      minWidth: 150,
+      flex: 1,
+    },
+    {
       field: "name",
       headerName: " Name",
       minWidth: 200,
       flex: 1,
     },
+
     {
       field: "email",
       headerName: "Email",
@@ -154,7 +161,7 @@ const Applicant = () => {
   if (data) {
     dataPush()
     data.applicants.forEach((item, index) => {
-      rows.push({
+      rows.unshift({
         id: index,
         number: index + 1,
         name: item.name,
@@ -166,6 +173,7 @@ const Applicant = () => {
         applicantAddress: item.applicantAddress,
         mobileNumber: item.mobileNumber,
         extraInfo: item.extraInfo,
+        createdAt: item.createdAt.slice(0, 10),
       })
     })
 
