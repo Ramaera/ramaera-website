@@ -1,9 +1,45 @@
 import Link from "next/link"
 import { FormWrapper } from "./FormWrapper"
 import { Container } from "./VisitUsDetailStyle.js"
+import { UPDATE_VISIT_US } from "../../../apollo/queries/index"
+import { useMutation } from "@apollo/client"
+import { useState, useEffect } from "react"
+import Button from "@/components/Button/SubmitButton"
 
 const ApplicationDetail = ({ VisitUsData }) => {
-  //console.log(VisitUsData)
+  const [UpdateVisitorForm] = useMutation(UPDATE_VISIT_US)
+
+  const [isSubmitted, setSubmitted] = useState(false)
+  const [email, setEmail] = useState("")
+  const [isRead, setRead] = useState(false)
+  const [status, setStatus] = useState("")
+
+  useEffect(() => {
+    try {
+      setEmail(VisitUsData.email.split("%_%")[0])
+      setRead(VisitUsData.email.split("%_%")[1].split("%~%")[0])
+      setStatus(VisitUsData.email.split("%_%")[1].split("%~%")[1])
+    } catch {
+      setEmail(VisitUsData.email)
+    }
+  }, [VisitUsData])
+
+  const handleSubmit = async () => {
+    await UpdateVisitorForm({
+      variables: {
+        visitorID: VisitUsData.id,
+        email: email + "%_%" + true + "%~%" + status,
+      },
+    })
+    clearForm()
+  }
+  const clearForm = () => {
+    setSubmitted(true)
+    setTimeout(() => {
+      history.back()
+    }, "1500")
+  }
+
   try {
     return (
       <>
@@ -13,6 +49,7 @@ const ApplicationDetail = ({ VisitUsData }) => {
               className="divResponsive"
               style={{ width: "500px", marginTop: "30px" }}
             >
+              <br />
               <label
                 style={{
                   fontSize: "1.3rem",
@@ -35,7 +72,7 @@ const ApplicationDetail = ({ VisitUsData }) => {
             <div className="divResponsive" style={{ width: "450px" }}>
               <label> Email </label>
               <br />
-              <p>{VisitUsData.email}</p>
+              <p>{email}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Reason for Visit</label>
@@ -82,6 +119,32 @@ const ApplicationDetail = ({ VisitUsData }) => {
               <br />
               <p>{VisitUsData.mobileNumber} </p>
             </div>
+            <div className="divResponsive" style={{ width: "450px" }}>
+              <label>Status </label>
+              <br />
+              <input
+                value={status}
+                onChange={(e) => setStatus(e.target.value)}
+                type="text"
+              />
+            </div>
+            <div className="divResponsive" style={{ width: "500px" }}></div>
+            <button
+              style={{
+                cursor: "pointer",
+                background: "none",
+                border: "none",
+              }}
+              onClick={() => {
+                handleSubmit()
+              }}
+            >
+              <Button
+                fontSize="16px"
+                Text="Submit and Mark As Read "
+                width="fit-content"
+              />
+            </button>
           </FormWrapper>
         </Container>
       </>

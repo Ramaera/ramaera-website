@@ -1154,3 +1154,9 @@ a:hover {
     height: 130px;
   }
 }
+.custom-row-color-read {
+  background: #8c8c8c;
+}
+.custom-row-color-unread {
+  background: #ffffff;
+}

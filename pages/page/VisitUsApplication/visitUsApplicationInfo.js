@@ -21,6 +21,7 @@ const VisitUsApplicationInfo = () => {
   const dispatch = useDispatch()
   const { loading, error, data } = useQuery(GET_ALL_VISITORS)
   const [anchorEl, setAnchorEl] = useState(false)
+  const [rowColor, setRowColor] = useState("")
 
   if (loading) {
     return "Loading..."
@@ -40,6 +41,15 @@ const VisitUsApplicationInfo = () => {
       </>
     )
   }
+  const getRowClassName = (params) => {
+    const isRead = params.row.isRead
+    if (isRead) {
+      return "custom-row-color-read"
+    } else {
+      return "custom-row-color-unread"
+    }
+  }
+
   const dataPush = async () => {
     try {
       dispatch(changeVisitUsData(data.findAllVisitorsList))
@@ -80,6 +90,13 @@ const VisitUsApplicationInfo = () => {
           {/* <button>View Details</button> */}
         </Link>
       ),
+    },
+
+    {
+      field: "createdAt",
+      headerName: "Ceated At",
+      minWidth: 150,
+      flex: 1,
     },
     {
       field: "name",
@@ -170,6 +187,8 @@ const VisitUsApplicationInfo = () => {
         address: item.address,
         date: item.date,
         time: item.time,
+        createdAt: item.createdAt.slice(0, 10),
+        isRead: item.email.match("true"),
       })
     })
 
@@ -228,6 +247,12 @@ const VisitUsApplicationInfo = () => {
                     pageSize: 8,
                   },
                 },
+              }}
+              getRowClassName={getRowClassName}
+              onSelectionModelChange={(newSelection) => {
+                setRowColor(
+                  newSelection.length > 0 ? "custom-row-color-read" : ""
+                )
               }}
               pageSizeOptions={[8]}
               disablecolumnSelectionOnClick

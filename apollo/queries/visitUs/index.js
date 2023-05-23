@@ -63,6 +63,7 @@ address: $address
 export const GET_ALL_VISITORS = gql(`
   query {
   findAllVisitorsList {
+    id
     date
     name
     email
@@ -74,5 +75,6 @@ export const GET_ALL_VISITORS = gql(`
     typeOfVisit
     plantName
     address
+    createdAt
   }
 }`)

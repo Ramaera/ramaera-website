@@ -1,5 +1,31 @@
 import { gql } from "@apollo/client"
 
+export const UPDATE_VISIT_US = gql(`
+mutation UpdateVisitorForm (
+$visitorID: String!,
+$email: String!,
+){UpdateVisitorForm(
+    data: {
+      visitorID: $visitorID
+      email: $email
+    }) 
+    {
+      email
+    }
+}`)
+export const UPDATE_APPLICATIONS = gql(`
+mutation UpdateApplication (
+$applicationId: String!,
+$email: String!,
+){UpdateApplication(
+    data: {
+      applicationId: $applicationId
+      email: $email
+    }) 
+    {
+      email
+    }
+}`)
 export const CREATE_APPLICATIONS = gql(`
 mutation creator ($District: String!,
 $State: String!,
@@ -68,6 +94,7 @@ $password: String!,
 export const GET_APPLICATIONS = gql(`
   query getAllApps{
   applicants{
+    id
     name
     email
     District

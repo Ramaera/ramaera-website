@@ -1,9 +1,45 @@
 import Link from "next/link"
 import { FormWrapper } from "./FormWrapper"
 import { Container } from "./applicantsDetailsStyle.js"
+import { UPDATE_APPLICATIONS } from "../../apollo/queries/index"
+import { useEffect, useState } from "react"
+import { useMutation } from "@apollo/client"
+import Button from "@/components/Button/SubmitButton"
 
 const applicantsDetails = ({ AppData }) => {
-  //console.log(AppData)
+  const [UpdateApplication] = useMutation(UPDATE_APPLICATIONS)
+
+  const [isSubmitted, setSubmitted] = useState(false)
+  const [email, setEmail] = useState("")
+  const [customOne, setCustomOne] = useState("")
+  const [customTwo, setCustomTwo] = useState("")
+
+  useEffect(() => {
+    try {
+      setEmail(AppData.email.split("%_%")[0])
+      setCustomOne(AppData.email.split("%_%")[1].split("%~%")[0])
+      setCustomTwo(AppData.email.split("%_%")[1].split("%~%")[1])
+    } catch {
+      setEmail(AppData.email)
+    }
+  }, [AppData])
+
+  const handleSubmit = async () => {
+    await UpdateApplication({
+      variables: {
+        applicationId: AppData.id,
+        email: email + "%_%" + customOne + "%~%" + customTwo,
+      },
+    })
+    clearForm()
+  }
+  const clearForm = () => {
+    setSubmitted(true)
+    setTimeout(() => {
+      history.back()
+    }, "1500")
+  }
+
   try {
     return (
       <>
@@ -24,6 +60,7 @@ const applicantsDetails = ({ AppData }) => {
                 Personal Details
               </label>
             </div>
+
             <div className="divResponsive" style={{ width: "450px" }}></div>
             <hr className="lineHr1" />
             <hr className="lineHr2" />
@@ -35,7 +72,7 @@ const applicantsDetails = ({ AppData }) => {
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Applicant's Email </label>
               <br />
-              <p>{AppData.email}</p>
+              <p>{email}</p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Applicant's Mobile No. </label>
@@ -92,22 +129,52 @@ const applicantsDetails = ({ AppData }) => {
               <br />
               <p>{AppData.District}</p>
             </div>
-            {/* <div className="divResponsive" style={{ width: "450px" }}>
+            <div className="divResponsive" style={{ width: "500px" }}>
               <label
                 style={{ fontSize: ".8rem", opacity: ".9", fontWeight: "600" }}
               >
-                Status
+                Custom 1
               </label>
               <br />
-              <select>
-                <option disabled selected>
-                  Select Status
-                </option>
-                <option value={"pending"}>Pending</option>
-                <option value={"approval"}>Approval </option>
-                <option value={"rejected"}>Rejected </option>
-              </select>
-            </div> */}
+              <input
+                onChange={(e) => setCustomOne(e.target.value)}
+                type="text"
+                name=""
+                value={customOne}
+                id=""
+              />
+            </div>
+            <div className="divResponsive" style={{ width: "450px" }}>
+              <label
+                style={{ fontSize: ".8rem", opacity: ".9", fontWeight: "600" }}
+              >
+                Custom 2
+              </label>
+              <br />
+              <input
+                onChange={(e) => setCustomTwo(e.target.value)}
+                type="text"
+                name=""
+                value={customTwo}
+                id=""
+              />
+            </div>
+            <div className="divResponsive" style={{ width: "500px" }}>
+              {isSubmitted && (
+                <p style={{ color: "black" }}>Custom Fields Updated</p>
+              )}
+              <button
+                style={{
+                  marginTop: "25px",
+                  cursor: "pointer",
+                  background: "none",
+                  border: "none",
+                }}
+                onClick={handleSubmit}
+              >
+                <Button Text="Submit" width="fit-content" />
+              </button>
+            </div>
           </FormWrapper>
         </Container>
       </>
