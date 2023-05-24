@@ -86,6 +86,7 @@ const DistributorForm = () => {
               value={aState}
               onChange={(e) => {
                 setAState(e.target.value)
+                setDistrict("")
               }}
             >
               {!aState && (
