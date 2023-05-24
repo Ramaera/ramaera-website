@@ -94,10 +94,11 @@ const DistributorForm = () => {
                 </option>
               )}
               <option value="Bihar">Bihar</option>
+              <option value="Telangana">Telangana</option>
             </select>
           </FlexCol>
           <FlexCol>
-            <label>Choose District</label>
+            <label>Choose Area</label>
             <select
               value={district}
               onChange={(e) => {
@@ -106,13 +107,20 @@ const DistributorForm = () => {
             >
               {!district && (
                 <option disabled value={""} selected={!district}>
-                  Select district
+                  Select Area
                 </option>
               )}
               {aState === "Bihar" && (
                 <>
                   <option value="Gopalganj">Gopalganj</option>
                   <option value="Hajipur">Hajipur</option>
+                  <option value="Mahua">Mahua (Vaishali)</option>
+                  <option value="Mahnar">Mahnar (Vaishali)</option>
+                </>
+              )}
+              {aState === "Telangana" && (
+                <>
+                  <option value="Hyderabad">Hyderabad</option>
                 </>
               )}
             </select>
@@ -186,6 +194,110 @@ const DistributorForm = () => {
             <Tr>
               <Td>Email Id</Td>
               <Td>kamaljeetchoudhary93962@gmail.com</Td>
+            </Tr>
+          </Details>
+        )}
+        {district === "Mahua" && (
+          <Details>
+            <Tr>
+              <Td>Name of Business</Td>
+              <Td>Vaishnavi Enterprises</Td>
+            </Tr>
+
+            <Tr>
+              <Td>Name Of the Proprietor</Td>
+              <Td>Mr. Lalan Kumar</Td>
+            </Tr>
+            <Tr>
+              <Td>Mobile No.</Td>
+              <Td>9491553215</Td>
+            </Tr>
+            <Tr>
+              <Td>Firm Type</Td>
+              <Td>Distributor</Td>
+            </Tr>
+            <Tr>
+              <Td>Zone</Td>
+              <Td>Zone 1</Td>
+            </Tr>
+            <Tr>
+              <Td>Address Of Business</Td>
+              <Td>Ward no-6, Chhatwara(Mahua), 844122</Td>
+            </Tr>
+            <Tr>
+              <Td>Email Id</Td>
+              <Td>lkumar94915@gmail.com</Td>
+            </Tr>
+          </Details>
+        )}
+        {district === "Mahnar" && (
+          <Details>
+            <Tr>
+              <Td>Name of Business</Td>
+              <Td>Shiv shakti Enterprises</Td>
+            </Tr>
+
+            <Tr>
+              <Td>Name Of the Proprietor</Td>
+              <Td>Mr. Santosh Kumar Singh</Td>
+            </Tr>
+            <Tr>
+              <Td>Mobile No.</Td>
+              <Td>7209438100</Td>
+            </Tr>
+            <Tr>
+              <Td>Firm Type</Td>
+              <Td>Distributor</Td>
+            </Tr>
+            <Tr>
+              <Td>Zone</Td>
+              <Td>Zone 1</Td>
+            </Tr>
+            <Tr>
+              <Td>Address Of Business</Td>
+              <Td>
+                STATION ROAD, MAHNAR , VAISHALI , BIHAR Near Chuda mill, 844506
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>Email Id</Td>
+              <Td>sshakitenterprises97@gmail.com</Td>
+            </Tr>
+          </Details>
+        )}
+        {district === "Hyderabad" && (
+          <Details>
+            <Tr>
+              <Td>Name of Business</Td>
+              <Td>Limra Enterprises</Td>
+            </Tr>
+
+            <Tr>
+              <Td>Name Of the Proprietor</Td>
+              <Td>Mr. MIR Mubashir Ali</Td>
+            </Tr>
+            <Tr>
+              <Td>Mobile No.</Td>
+              <Td>9542517864</Td>
+            </Tr>
+            <Tr>
+              <Td>Firm Type</Td>
+              <Td>Distributor</Td>
+            </Tr>
+            <Tr>
+              <Td>Zone</Td>
+              <Td>South</Td>
+            </Tr>
+            <Tr>
+              <Td>Address Of Business</Td>
+              <Td>
+                17-2-1198/8, Jawawhar pura, Charminar, Yakulpura, Hyderabad,
+                Telangana, 500023
+              </Td>
+            </Tr>
+            <Tr>
+              <Td>Email Id</Td>
+              <Td>mirmubashirali333@gmail.com</Td>
             </Tr>
           </Details>
         )}
