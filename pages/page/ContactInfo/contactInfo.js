@@ -24,7 +24,19 @@ const ContactInfo = () => {
   const [anchorEl, setAnchorEl] = useState(false)
 
   if (loading) {
-    return "Loading..."
+    return (
+      <p
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          color: "white",
+        }}
+      >
+        Loading...
+      </p>
+    )
   }
 
   const ACCESSTOKEN = window.localStorage.getItem("accessToken")

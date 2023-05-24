@@ -133,10 +133,10 @@ const applicantsDetails = ({ AppData }) => {
               <label
                 style={{ fontSize: ".8rem", opacity: ".9", fontWeight: "600" }}
               >
-                Custom 1
+                Remarks
               </label>
               <br />
-              <input
+              <textarea
                 onChange={(e) => setCustomOne(e.target.value)}
                 type="text"
                 name=""
@@ -145,7 +145,7 @@ const applicantsDetails = ({ AppData }) => {
               />
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
-              <label
+              {/* <label
                 style={{ fontSize: ".8rem", opacity: ".9", fontWeight: "600" }}
               >
                 Custom 2
@@ -157,12 +157,10 @@ const applicantsDetails = ({ AppData }) => {
                 name=""
                 value={customTwo}
                 id=""
-              />
+              /> */}
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
-              {isSubmitted && (
-                <p style={{ color: "black" }}>Custom Fields Updated</p>
-              )}
+              {isSubmitted && <p style={{ color: "black" }}>Remarks Updated</p>}
               <button
                 style={{
                   marginTop: "25px",

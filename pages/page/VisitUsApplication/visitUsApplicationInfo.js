@@ -2,29 +2,34 @@ import { useState } from "react"
 import { DataGrid, GridToolbar } from "@mui/x-data-grid"
 import Box from "@mui/material/Box"
 import Text from "../../../components/Text/Text"
-import AccountCircleIcon from "@mui/icons-material/AccountCircle"
-import Menu from "@mui/material/Menu"
-import { logout } from "../../../state/slice/userSlice"
-import MenuItem from "@mui/material/MenuItem"
 import { useQuery } from "@apollo/client"
 import { GET_ALL_VISITORS } from "../../../apollo/queries/visitUs"
 import { useDispatch, useSelector } from "react-redux"
 import { changeVisitUsData } from "../../../state/slice/applicantDataSlice"
 import Link from "next/link"
 import Button from "../../../components/Button/SubmitButton"
-import LogoutIcon from "@mui/icons-material/Logout"
-import { setAccessToken } from "../../../state/slice/accessTokenSlice"
 import Settings from "../Dashboard/Settings"
 
 const VisitUsApplicationInfo = () => {
-  const projectData = useSelector((state) => state.applicationData.projectData)
+  // const projectData = useSelector((state) => state.applicationData.projectData)
   const dispatch = useDispatch()
-  const { loading, error, data } = useQuery(GET_ALL_VISITORS)
-  const [anchorEl, setAnchorEl] = useState(false)
+  const { loading, data } = useQuery(GET_ALL_VISITORS)
   const [rowColor, setRowColor] = useState("")
 
   if (loading) {
-    return "Loading..."
+    return (
+      <p
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          color: "white",
+        }}
+      >
+        Loading...
+      </p>
+    )
   }
   const ACCESSTOKEN = window.localStorage.getItem("accessToken")
   if (!ACCESSTOKEN) {
@@ -56,13 +61,6 @@ const VisitUsApplicationInfo = () => {
     } catch (err) {
       console.log(err)
     }
-  }
-
-  const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
-  const handleClose = () => {
-    setAnchorEl(null)
   }
 
   const columns = [
@@ -177,7 +175,7 @@ const VisitUsApplicationInfo = () => {
         id: index,
         number: index + 1,
         name: item.name,
-        email: item.email,
+        email: item.email.split("%_%")[0],
         mobileNumber: item.mobileNumber,
         reason: item.reason,
         numberOfPeople: item.numberOfPeople,

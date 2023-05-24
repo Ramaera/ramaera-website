@@ -26,7 +26,19 @@ const Applicant = () => {
   const [anchorEl, setAnchorEl] = useState(false)
 
   if (loading) {
-    return "Loading..."
+    return (
+      <p
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+          color: "white",
+        }}
+      >
+        Loading...
+      </p>
+    )
   }
 
   ACCESSTOKEN = localStorage.getItem("accessToken")
@@ -165,7 +177,7 @@ const Applicant = () => {
         id: index,
         number: index + 1,
         name: item.name,
-        email: item.email,
+        email: item.email.split("%_%")[0],
         applicant: item.applicantType,
         state: item.State,
         district: item.District,
