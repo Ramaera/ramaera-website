@@ -118,11 +118,17 @@ const ApplicationDetail = ({ VisitUsData }) => {
               <label>Phone Number </label>
               <br />
               <p>{VisitUsData.mobileNumber} </p>
-            </div>
-            <div className="divResponsive" style={{ width: "450px" }}>
+              {/*  <br />
+
               <label>Status </label>
               <br />
-              <input
+              <input 
+                type="text" /> */}
+            </div>
+            <div className="divResponsive" style={{ width: "450px" }}>
+              <label>Remarks </label>
+              <br />
+              <textarea
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
                 type="text"

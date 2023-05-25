@@ -120,6 +120,18 @@ const VisitUsApplicationInfo = () => {
       minWidth: 200,
       flex: 1,
     },
+    /*  {
+      field: "remarks",
+      headerName: "Remarks",
+      minWidth: 200,
+      flex: 1,
+    },
+    {
+      field: "status",
+      headerName: "Status",
+      minWidth: 200,
+      flex: 1,
+    }, */
     {
       field: "address",
       headerName: "Address",
@@ -169,6 +181,7 @@ const VisitUsApplicationInfo = () => {
 
   if (data) {
     dataPush()
+
     data.findAllVisitorsList.forEach((item, index) => {
       //console.log("SDffd", item)
       rows.unshift({
@@ -178,13 +191,15 @@ const VisitUsApplicationInfo = () => {
         email: item.email.split("%_%")[0],
         mobileNumber: item.mobileNumber,
         reason: item.reason,
+        // remarks: item.email.split("%_%")[1],
+        // status: item.email.split("%_%")[1],
         numberOfPeople: item.numberOfPeople,
         pwId: item.pwId,
         typeOfVisit: item.typeOfVisit,
         plantName: item.plantName,
         address: item.address,
-        date: item.date,
-        time: item.time,
+        date: item.date.slice(0, 10),
+        time: item.date.slice(11, 24),
         createdAt: item.createdAt.slice(0, 10),
         isRead: item.email.match("true"),
       })
@@ -242,7 +257,7 @@ const VisitUsApplicationInfo = () => {
               initialState={{
                 pagination: {
                   paginationModel: {
-                    pageSize: 8,
+                    pageSize: 12,
                   },
                 },
               }}
@@ -252,7 +267,7 @@ const VisitUsApplicationInfo = () => {
                   newSelection.length > 0 ? "custom-row-color-read" : ""
                 )
               }}
-              pageSizeOptions={[8]}
+              pageSizeOptions={[12]}
               disablecolumnSelectionOnClick
               displayRowCheckbox={false}
               disableRowSelectionOnClick
