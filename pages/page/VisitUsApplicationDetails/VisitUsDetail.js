@@ -145,11 +145,7 @@ const ApplicationDetail = ({ VisitUsData }) => {
                 handleSubmit()
               }}
             >
-              <Button
-                fontSize="16px"
-                Text="Submit and Mark As Read "
-                width="fit-content"
-              />
+              <Button fontSize="16px" Text="Submit" width="fit-content" />
             </button>
           </FormWrapper>
         </Container>
