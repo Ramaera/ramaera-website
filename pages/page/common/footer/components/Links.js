@@ -147,7 +147,9 @@ const Links = () => {
           <Linked href="/Legal">Legal</Linked>
           <Linked href="/Login">Login</Linked>
           <Linked href="/VisitUs">Visit Us</Linked>
-          <Linked href="/LocateDistributor">Locate a Distributor</Linked>
+          <Linked href="/LocateDistributor">
+            Locate a Stockist or Distributor
+          </Linked>
         </Div>
         {/* <Div>
           <Heading href="#">Company</Heading>
