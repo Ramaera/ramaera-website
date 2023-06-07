@@ -575,7 +575,7 @@ const DistributorForm = () => {
                   </Tr>
                   <Tr>
                     <Td>Email Id</Td>
-                    <Td>mirmubashirali333@gmail.com</Td>
+                    <Td>mirmouzam@gmail.com</Td>
                   </Tr>
                 </Details>
               </>
