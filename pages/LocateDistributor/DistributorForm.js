@@ -117,7 +117,7 @@ const DistributorForm = () => {
                   Select type
                 </option>
               )}
-              <option value="Stockist">Stockist</option>
+              <option value="Stockist">Super Stockist</option>
               <option value="Distribitor">Distribitor</option>
             </select>
           </FlexCol>
@@ -161,6 +161,7 @@ const DistributorForm = () => {
                   <option value="Mahua">Mahua (Vaishali)</option>
                   <option value="Mahnar">Mahnar (Vaishali)</option>
                   <option value="WestChamparan">West Champaran</option>
+                  <option value="Patna">Patna</option>
                 </>
               )}
               {aState === "Telangana" && (
@@ -313,83 +314,9 @@ const DistributorForm = () => {
                 </Tr>
               </Details>
             )}
-            {district === "WestChamparan" && (
-              <Details>
-                <Tr>
-                  <Td>Name of Business</Td>
-                  <Td>Pallavi Traders</Td>
-                </Tr>
-
-                <Tr>
-                  <Td>Name Of the Proprietor</Td>
-                  <Td>Ms. Pallavi Kumari</Td>
-                </Tr>
-                <Tr>
-                  <Td>Mobile No.</Td>
-                  <Td>9939898370</Td>
-                </Tr>
-                <Tr>
-                  <Td>Firm Type</Td>
-                  <Td>Distributor</Td>
-                </Tr>
-                <Tr>
-                  <Td>Zone</Td>
-                  <Td>Zone 2</Td>
-                </Tr>
-                <Tr>
-                  <Td>Address Of Business</Td>
-                  <Td>
-                    M/S PALLAVI TRADERS, VILL - AMWA MAJHAR, TOLA - CHAURAHA,
-                    <br />
-                    MAJHAULIA, Pashchim Champaran, Bihar, 845459
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>Email Id</Td>
-                  <Td>arjunajanabibth@gmail.com</Td>
-                </Tr>
-              </Details>
-            )}
             {district === "Hyderabad" && (
               <>
                 <h4>Distributor 1</h4>
-                <Details>
-                  <Tr>
-                    <Td>Name of Business</Td>
-                    <Td>Limra Enterprises</Td>
-                  </Tr>
-
-                  <Tr>
-                    <Td>Name Of the Proprietor</Td>
-                    <Td>Mr. MIR Mubashir Ali</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Mobile No.</Td>
-                    <Td>9542517864</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Firm Type</Td>
-                    <Td>Distributor</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Zone</Td>
-                    <Td>South</Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Address Of Business</Td>
-                    <Td>
-                      17-2-1198/8, Jawawhar pura, Charminar, Yakulpura,
-                      Hyderabad, Telangana, 500023
-                    </Td>
-                  </Tr>
-                  <Tr>
-                    <Td>Email Id</Td>
-                    <Td>mirmubashirali333@gmail.com</Td>
-                  </Tr>
-                </Details>
-                <br />
-                <br />
-                <h4>Distributor 2</h4>
 
                 <Details>
                   <Tr>
@@ -427,7 +354,7 @@ const DistributorForm = () => {
                 </Details>
                 <br />
                 <br />
-                <h4>Distributor 3</h4>
+                <h4>Distributor 2</h4>
 
                 <Details>
                   <Tr>
@@ -463,7 +390,117 @@ const DistributorForm = () => {
                     <Td>abdussalamsaleem783@gmail.com</Td>
                   </Tr>
                 </Details>
+                <br />
+                <br />
+                <h4>Distributor 3</h4>
+
+                <Details>
+                  <Tr>
+                    <Td>Name of Business</Td>
+                    <Td>Galaxy Enterprises</Td>
+                  </Tr>
+
+                  <Tr>
+                    <Td>Name Of the Proprietor</Td>
+                    <Td>Mir. Mubashir Ali</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Mobile No.</Td>
+                    <Td>9542517864</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Firm Type</Td>
+                    <Td>Distributor</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Zone</Td>
+                    <Td>South</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Address Of Business</Td>
+                    <Td>
+                      17-2-1198/8, Yakulpura, Behind Apple Hospital, Hyderabad,
+                      500053
+                    </Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Email Id</Td>
+                    <Td>mirmubashirali@333@gmail.com</Td>
+                  </Tr>
+                </Details>
               </>
+            )}
+            {district === "WestChamparan" && (
+              <Details>
+                <Tr>
+                  <Td>Name of Business</Td>
+                  <Td>Pallavi Traders</Td>
+                </Tr>
+
+                <Tr>
+                  <Td>Name Of the Proprietor</Td>
+                  <Td>Ms. Pallavi Kumari</Td>
+                </Tr>
+                <Tr>
+                  <Td>Mobile No.</Td>
+                  <Td>9939898370</Td>
+                </Tr>
+                <Tr>
+                  <Td>Firm Type</Td>
+                  <Td>Distributor</Td>
+                </Tr>
+                <Tr>
+                  <Td>Zone</Td>
+                  <Td>Zone 2</Td>
+                </Tr>
+                <Tr>
+                  <Td>Address Of Business</Td>
+                  <Td>
+                    M/S PALLAVI TRADERS, VILL - AMWA MAJHAR, TOLA - CHAURAHA,
+                    <br />
+                    MAJHAULIA, Pashchim Champaran, Bihar, 845459
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Email Id</Td>
+                  <Td>arjunajanabibth@gmail.com</Td>
+                </Tr>
+              </Details>
+            )}
+            {district === "Patna" && (
+              <Details>
+                <Tr>
+                  <Td>Name of Business</Td>
+                  <Td>Kailash Enterprises</Td>
+                </Tr>
+
+                <Tr>
+                  <Td>Name Of the Proprietor</Td>
+                  <Td>Mr. Sharwan Kumar</Td>
+                </Tr>
+                <Tr>
+                  <Td>Mobile No.</Td>
+                  <Td>8581883417</Td>
+                </Tr>
+                <Tr>
+                  <Td>Firm Type</Td>
+                  <Td>Distributor</Td>
+                </Tr>
+                <Tr>
+                  <Td>Zone</Td>
+                  <Td>Zone 1</Td>
+                </Tr>
+                <Tr>
+                  <Td>Address Of Business</Td>
+                  <Td>
+                    Adarsh Colony, Near- Child hospital, 800001, Patna, Bihar
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Email Id</Td>
+                  <Td>sharwan9100@gmail.com</Td>
+                </Tr>
+              </Details>
             )}
           </>
         )}
@@ -504,6 +541,44 @@ const DistributorForm = () => {
                   <Td>vnshpthk@gmail.com</Td>
                 </Tr>
               </Details>
+            )}
+            {district === "Hyderabad" && (
+              <>
+                <Details>
+                  <Tr>
+                    <Td>Name of Business</Td>
+                    <Td>Limra Traders</Td>
+                  </Tr>
+
+                  <Tr>
+                    <Td>Name Of the Proprietor</Td>
+                    <Td>Mir. Mouzam Ali</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Mobile No.</Td>
+                    <Td>9014859893</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Firm Type</Td>
+                    <Td>Distributor</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Zone</Td>
+                    <Td>South</Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Address Of Business</Td>
+                    <Td>
+                      17-2-1198/8, Jawawhar pura, Charminar, Yakulpura,
+                      Hyderabad, Telangana, 500023
+                    </Td>
+                  </Tr>
+                  <Tr>
+                    <Td>Email Id</Td>
+                    <Td>mirmubashirali333@gmail.com</Td>
+                  </Tr>
+                </Details>
+              </>
             )}
           </>
         )}
