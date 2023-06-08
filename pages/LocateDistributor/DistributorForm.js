@@ -418,7 +418,10 @@ const DistributorForm = () => {
                   </Tr>
                   <Tr>
                     <Td>Address Of Business</Td>
-                    <Td>Dabeerpura, Nagabowli, Telangana, Hyderabad 500023</Td>
+                    <Td>
+                      17-3-199/36, Dabeerpura, Nagabowli, Telangana, Hyderabad
+                      500023
+                    </Td>
                   </Tr>
                   <Tr>
                     <Td>Email Id</Td>
