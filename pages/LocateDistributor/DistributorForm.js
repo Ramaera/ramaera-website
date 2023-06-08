@@ -560,7 +560,7 @@ const DistributorForm = () => {
                   </Tr>
                   <Tr>
                     <Td>Firm Type</Td>
-                    <Td>Distributor</Td>
+                    <Td>Super Stockist</Td>
                   </Tr>
                   <Tr>
                     <Td>Zone</Td>
@@ -569,8 +569,8 @@ const DistributorForm = () => {
                   <Tr>
                     <Td>Address Of Business</Td>
                     <Td>
-                      17-2-1198/8, Jawawhar pura, Charminar, Yakutpura,
-                      Hyderabad, Telangana, 500023
+                      17-2-1198/8, Jawawhar pura, Yakutpura, Behind Apple
+                      Hospital, Charminar, Hyderabad, Telangana, 500023
                     </Td>
                   </Tr>
                   <Tr>
