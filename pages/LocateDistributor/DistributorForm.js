@@ -381,8 +381,8 @@ const DistributorForm = () => {
                   <Tr>
                     <Td>Address Of Business</Td>
                     <Td>
-                      9-10-391/1, Banjari Darwaza, Golconda, Hyderabad,
-                      Telangana, 500008
+                      9-4-62/85, Near Diamond Jublee School, Nizam Colony,
+                      Tolichowki, Hyderabad, 500008
                     </Td>
                   </Tr>
                   <Tr>
@@ -418,10 +418,7 @@ const DistributorForm = () => {
                   </Tr>
                   <Tr>
                     <Td>Address Of Business</Td>
-                    <Td>
-                      17-2-1198/8, Yakulpura, Behind Apple Hospital, Hyderabad,
-                      500053
-                    </Td>
+                    <Td>Dabeerpura, Nagabowli, Telangana, Hyderabad 500023</Td>
                   </Tr>
                   <Tr>
                     <Td>Email Id</Td>
@@ -569,7 +566,7 @@ const DistributorForm = () => {
                   <Tr>
                     <Td>Address Of Business</Td>
                     <Td>
-                      17-2-1198/8, Jawawhar pura, Charminar, Yakulpura,
+                      17-2-1198/8, Jawawhar pura, Charminar, Yakutpura,
                       Hyderabad, Telangana, 500023
                     </Td>
                   </Tr>
