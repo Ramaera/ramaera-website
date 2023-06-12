@@ -91,6 +91,12 @@ const VisitUsApplicationInfo = () => {
     },
 
     {
+      field: "status",
+      headerName: "Status",
+      minWidth: 120,
+      flex: 1,
+    },
+    {
       field: "createdAt",
       headerName: "Ceated At",
       minWidth: 150,
@@ -183,6 +189,10 @@ const VisitUsApplicationInfo = () => {
     dataPush()
 
     data.findAllVisitorsList.forEach((item, index) => {
+      console.log(item.name)
+      if (item.name.slice(0, 12) === "Board Member") {
+        return
+      }
       //console.log("SDffd", item)
       rows.unshift({
         id: index,
@@ -192,7 +202,7 @@ const VisitUsApplicationInfo = () => {
         mobileNumber: item.mobileNumber,
         reason: item.reason,
         // remarks: item.email.split("%_%")[1],
-        // status: item.email.split("%_%")[1],
+        status: item.email.split("%*%")[1] || "Pending",
         numberOfPeople: item.numberOfPeople,
         pwId: item.pwId,
         typeOfVisit: item.typeOfVisit,

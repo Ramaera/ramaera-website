@@ -13,12 +13,13 @@ const ApplicationDetail = ({ VisitUsData }) => {
   const [email, setEmail] = useState("")
   const [isRead, setRead] = useState(false)
   const [status, setStatus] = useState("")
-
+  const [visitStatus, setVisitStatus] = useState("")
   useEffect(() => {
     try {
       setEmail(VisitUsData.email.split("%_%")[0])
       setRead(VisitUsData.email.split("%_%")[1].split("%~%")[0])
-      setStatus(VisitUsData.email.split("%_%")[1].split("%~%")[1])
+      setStatus(VisitUsData.email.split("%~%")[1].split("%*%")[0])
+      setVisitStatus(VisitUsData.email.split("%*%")[1])
     } catch {
       setEmail(VisitUsData.email)
     }
@@ -28,7 +29,7 @@ const ApplicationDetail = ({ VisitUsData }) => {
     await UpdateVisitorForm({
       variables: {
         visitorID: VisitUsData.id,
-        email: email + "%_%" + true + "%~%" + status,
+        email: email + "%_%" + true + "%~%" + status + "%*%" + visitStatus,
       },
     })
     clearForm()
@@ -97,12 +98,12 @@ const ApplicationDetail = ({ VisitUsData }) => {
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>Date</label>
               <br />
-              <p>{VisitUsData.date} </p>
+              <p>{VisitUsData.date.slice(0, 10)} </p>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Time</label>
               <br />
-              <p>{VisitUsData.time} </p>
+              <p>{VisitUsData.date.slice(11)} </p>
             </div>
             <div className="divResponsive" style={{ width: "500px" }}>
               <label>PWID </label>
@@ -118,12 +119,21 @@ const ApplicationDetail = ({ VisitUsData }) => {
               <label>Phone Number </label>
               <br />
               <p>{VisitUsData.mobileNumber} </p>
-              {/*  <br />
-
+              <br />
               <label>Status </label>
               <br />
-              <input 
-                type="text" /> */}
+              <select
+                value={visitStatus}
+                onChange={(e) => {
+                  setVisitStatus(e.target.value)
+                  console.log(e.target.value)
+                }}
+              >
+                <option selected>Pending</option>
+                <option>Cancelled</option>
+                <option>Postponed</option>
+                <option>Completed</option>
+              </select>
             </div>
             <div className="divResponsive" style={{ width: "450px" }}>
               <label>Remarks </label>
