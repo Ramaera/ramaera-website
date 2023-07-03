@@ -3928,12 +3928,61 @@ export default {
       },
 
       { isDisabled: true, locationValue: "", locationName: "" },
-      /* 
+
       {
         isDisabled: true,
         locationValue: "Koch Bihar",
         locationName: "Koch Bihar (District)",
       },
+      {
+        locationValue: "Haldibari",
+        locationName: "Haldibari",
+      },
+      {
+        locationValue: "Mekliganj",
+        locationName: "Mekliganj",
+      },
+      {
+        locationValue: "Mathabhanga - I",
+        locationName: "Mathabhanga - I",
+      },
+      {
+        locationValue: "Mathabhanga - II",
+        locationName: "Mathabhanga - II",
+      },
+      {
+        locationValue: "Cooch Behar - I",
+        locationName: "Cooch Behar - I",
+      },
+      {
+        locationValue: "Cooch Behar - II",
+        locationName: "Cooch Behar - II",
+      },
+      {
+        locationValue: "Tufanganj - I",
+        locationName: "Tufanganj - I",
+      },
+      {
+        locationValue: "Tufanganj - II",
+        locationName: "Tufanganj - II",
+      },
+      {
+        locationValue: "Dinhata - I",
+        locationName: "Dinhata - I",
+      },
+      {
+        locationValue: "Dinhata - II",
+        locationName: "Dinhata - II",
+      },
+      {
+        locationValue: "Sitai",
+        locationName: "Sitai",
+      },
+      {
+        locationValue: "Sitalkuchi",
+        locationName: "Sitalkuchi",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -3941,6 +3990,43 @@ export default {
         locationValue: "Uttar Dinajpur",
         locationName: "Uttar Dinajpur (District)",
       },
+      {
+        locationValue: "Chopra",
+        locationName: "Chopra",
+      },
+      {
+        locationValue: "Islampur",
+        locationName: "Islampur",
+      },
+      {
+        locationValue: "Goalpokhar - I",
+        locationName: "Goalpokhar - I",
+      },
+      {
+        locationValue: "Goalpokhar - II",
+        locationName: "Goalpokhar - II",
+      },
+      {
+        locationValue: "Karandighi",
+        locationName: "Karandighi",
+      },
+      {
+        locationValue: "Raiganj",
+        locationName: "Raiganj",
+      },
+      {
+        locationValue: "Hemtabad",
+        locationName: "Hemtabad",
+      },
+      {
+        locationValue: "Kaliaganj",
+        locationName: "Kaliaganj",
+      },
+      {
+        locationValue: "Itahar",
+        locationName: "Itahar",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -3948,6 +4034,39 @@ export default {
         locationValue: "Dakshin Dinajpur",
         locationName: "Dakshin Dinajpur (District)",
       },
+      {
+        locationValue: "Kushmundi",
+        locationName: "Kushmundi",
+      },
+      {
+        locationValue: "Gangarampur",
+        locationName: "Gangarampur",
+      },
+      {
+        locationValue: "Kumarganj",
+        locationName: "Kumarganj",
+      },
+      {
+        locationValue: "Hilli",
+        locationName: "Hilli",
+      },
+      {
+        locationValue: "Balurghat",
+        locationName: "Balurghat",
+      },
+      {
+        locationValue: "Tapan",
+        locationName: "Tapan",
+      },
+      {
+        locationValue: "Bansihari",
+        locationName: "Bansihari",
+      },
+      {
+        locationValue: "Harirampur",
+        locationName: "Harirampur",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -3955,13 +4074,79 @@ export default {
         locationValue: "Maldah",
         locationName: "Maldah (District)",
       },
-      { isDisabled: true, locationValue: "", locationName: "" },
+      {
+        locationValue: "Harishchandrapur - I",
+        locationName: "Harishchandrapur - I",
+      },
+      {
+        locationValue: "Harishchandrapur - II",
+        locationName: "Harishchandrapur - II",
+      },
+      {
+        locationValue: "Chanchal - I",
+        locationName: "Chanchal - I",
+      },
+      {
+        locationValue: "Chanchal - II",
+        locationName: "Chanchal - II",
+      },
+      {
+        locationValue: "Ratua - I",
+        locationName: "Ratua - I",
+      },
+      {
+        locationValue: "Ratua - II",
+        locationName: "Ratua - II",
+      },
+      {
+        locationValue: "Gazole",
+        locationName: "Gazole",
+      },
+      {
+        locationValue: "Bamangola",
+        locationName: "Bamangola",
+      },
+      {
+        locationValue: "Habibpur",
+        locationName: "Habibpur",
+      },
+      {
+        locationValue: "Maldah (old)",
+        locationName: "Maldah (old)",
+      },
+      {
+        locationValue: "English Bazar",
+        locationName: "English Bazar",
+      },
+      {
+        locationValue: "Manikchak",
+        locationName: "Manikchak",
+      },
+      {
+        locationValue: "Kaliachak - I",
+        locationName: "Kaliachak - I",
+      },
+      {
+        locationValue: "Kaliachak - II",
+        locationName: "Kaliachak - II",
+      },
+      {
+        locationValue: "Kaliachak - III",
+        locationName: "Kaliachak - III",
+      },
 
+      { isDisabled: true, locationValue: "", locationName: "" },
+      //////HERER
       {
         isDisabled: true,
         locationValue: "Murshidabad ",
         locationName: "Murshidabad (District)",
       },
+      {
+        locationValue: "",
+        locationName: "",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -4037,31 +4222,36 @@ export default {
         isDisabled: true,
         locationValue: "South Twenty Four Parganas ",
         locationName: "South Twenty Four Parganas (District)",
-      }, */
+      },
     ],
     /* 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
+Farakka
+Samserganj
+Suti - I
+Suti - II
+Raghunathganj - I
+Raghunathganj - II
+Lalgola
+Sagardighi
+Bhagawangola - I
+Bhagawangola - II
+Raninagar - II
+Jalangi
+Domkal
+Raninagar - I
+Murshidabad Jiaganj
+Nabagram
+Khargram
+Kandi
+Berhampore
+Hariharpara
+Nawda
+Beldanga - I
+Beldanga - II
+Bharatpur - II
+Bharatpur - I
+Burwan
+Birbhum
  */
   },
   distributorAreaCoverage: {
