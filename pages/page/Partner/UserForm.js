@@ -14,6 +14,9 @@ import {
 } from "../../../state/slice/applicationSlice"
 import distributionData from "config/distributionData"
 
+const pdfLink =
+  "https://drive.google.com/file/d/1aG8pYUr5AB4PYgHqWYa7AEq5D30bfIUp/view?usp=sharing"
+
 export function UserForm({}) {
   const [partner, setPartner] = useState("")
   const [stateIndia, setStateIndia] = useState("")
@@ -25,6 +28,7 @@ export function UserForm({}) {
   const changeHandler = (val) => {
     setPartner(val)
     setDistrict("")
+    setStateIndia("")
   }
   const changeStateIndia = (val) => {
     setStateIndia(val)
@@ -37,11 +41,11 @@ export function UserForm({}) {
     setIsFirm(!isFirm)
   }
   const setRetailLocation = (val) => {
-    setLocation(distributionData.distributorAreaCoverage[val])
+    setLocation(distributionData.distributorAreaCoverage[val] || [])
   }
 
   const setStokistLocation = (val) => {
-    setLocationStock(distributionData.stockistAreaCoverage[val])
+    setLocationStock(distributionData.stockistAreaCoverage[val] || [])
   }
 
   return (
@@ -241,7 +245,10 @@ export function UserForm({}) {
             </option>
             {distributionData[partner][stateIndia].map((location) => {
               return (
-                <option value={location.locationValue}>
+                <option
+                  disabled={location.isDisabled || false}
+                  value={location.locationValue}
+                >
                   {location.locationName}
                 </option>
               )
@@ -258,6 +265,13 @@ export function UserForm({}) {
               Terms and Conditions
             </strong>
             <br />
+            <a href={pdfLink} target="_blank" rel="noopener noreferrer">
+              <img
+                style={{ height: 40, marginTop: 10 }}
+                src="/pdf.png"
+                alt="terms pdf"
+              />
+            </a>
             <br />
             <strong> Expected Charges:</strong>
             <br />
@@ -314,6 +328,13 @@ export function UserForm({}) {
               Terms and Conditions
             </strong>
             <br />
+            <a href={pdfLink} target="_blank" rel="noopener noreferrer">
+              <img
+                style={{ height: 40, marginTop: 10 }}
+                src="/pdf.png"
+                alt="terms pdf"
+              />
+            </a>
             <br />
             <strong> Expected Charges:</strong>
             <br />

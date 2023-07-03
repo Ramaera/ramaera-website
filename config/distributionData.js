@@ -9,17 +9,27 @@ export default {
       stateName: "Uttar Pradesh (UP)",
     },
     {
+      stateValue: "Telangana",
+      stateName: "Telangana",
+    },
+    {
+      stateValue: "Jharkhand",
+      stateName: "Jharkhand",
+    },
+    {
       stateValue: "Gujarat",
       stateName: "Gujarat",
     },
     {
-      stateValue: "Telangana",
-      stateName: "Telangana",
+      stateValue: "Chhattisgarh",
+      stateName: "Chhattisgarh",
+    },
+    {
+      stateValue: "WB",
+      stateName: "West Bengal",
     },
   ],
   STOCKIST: {
-    Gujarat: [{}],
-    Telangana: [{}],
     UP: [
       {
         locationValue: "Aligarh",
@@ -136,10 +146,545 @@ export default {
         locationName: "Siwan (District)",
       },
     ],
+    Telangana: [
+      {
+        locationValue: "ADILABAD",
+        locationName: "ADILABAD (District)",
+      },
+      {
+        locationValue: "BHADRADRI KOTHAGUDEM",
+        locationName: "BHADRADRI KOTHAGUDEM (District)",
+      },
+      {
+        locationValue: "HANUMAKONDA",
+        locationName: "HANUMAKONDA (District)",
+      },
+      {
+        locationValue: "HYDERABAD",
+        locationName: "HYDERABAD (District)",
+      },
+      {
+        locationValue: "JAGTIAL",
+        locationName: "JAGTIAL (District)",
+      },
+      {
+        locationValue: "JANGOAN",
+        locationName: "JANGOAN (District)",
+      },
+      {
+        locationValue: "JAYASHANKAR BHOOPALPALLY",
+        locationName: "JAYASHANKAR BHOOPALPALLY (District)",
+      },
+      {
+        locationValue: "JOGULAMBA GADWAL",
+        locationName: "JOGULAMBA GADWAL (District)",
+      },
+      {
+        locationValue: "KAMAREDDY",
+        locationName: "KAMAREDDY (District)",
+      },
+      {
+        locationValue: "KARIMNAGAR",
+        locationName: "KARIMNAGAR (District)",
+      },
+      {
+        locationValue: "KHAMMAM",
+        locationName: "KHAMMAM (District)",
+      },
+      {
+        locationValue: "KOMARAM BHEEM ASIFABAD",
+        locationName: "KOMARAM BHEEM ASIFABAD (District)",
+      },
+      {
+        locationValue: "MAHABUBABAD",
+        locationName: "MAHABUBABAD (District)",
+      },
+      {
+        locationValue: "MAHABUBNAGAR",
+        locationName: "MAHABUBNAGAR (District)",
+      },
+      {
+        locationValue: "MANCHERIAL",
+        locationName: "MANCHERIAL (District)",
+      },
+      {
+        locationValue: "MEDAK",
+        locationName: "MEDAK (District)",
+      },
+      {
+        locationValue: "MEDCHAL-MALKAJGIRI",
+        locationName: "MEDCHAL-MALKAJGIRI (District)",
+      },
+      {
+        locationValue: "MULUG",
+        locationName: "MULUG (District)",
+      },
+      {
+        locationValue: "NAGARKURNOOL",
+        locationName: "NAGARKURNOOL (District)",
+      },
+      {
+        locationValue: "NALGONDA",
+        locationName: "NALGONDA (District)",
+      },
+      {
+        locationValue: "NARAYANPET",
+        locationName: "NARAYANPET (District)",
+      },
+      {
+        locationValue: "NIRMAL",
+        locationName: "NIRMAL (District)",
+      },
+      {
+        locationValue: "NIZAMABAD",
+        locationName: "NIZAMABAD (District)",
+      },
+      {
+        locationValue: "PEDDAPALLI",
+        locationName: "PEDDAPALLI (District)",
+      },
+      {
+        locationValue: "RAJANNA SIRCILLA",
+        locationName: "RAJANNA SIRCILLA (District)",
+      },
+      {
+        locationValue: "RANGAREDDY",
+        locationName: "RANGAREDDY (District)",
+      },
+      {
+        locationValue: "SANGAREDDY",
+        locationName: "SANGAREDDY (District)",
+      },
+      {
+        locationValue: "SIDDIPET",
+        locationName: "SIDDIPET (District)",
+      },
+      {
+        locationValue: "SURYAPET",
+        locationName: "SURYAPET (District)",
+      },
+      {
+        locationValue: "VIKARABAD",
+        locationName: "VIKARABAD (District)",
+      },
+      {
+        locationValue: "WANAPARTHY",
+        locationName: "WANAPARTHY (District)",
+      },
+      {
+        locationValue: "WARANGAL",
+        locationName: "WARANGAL (District)",
+      },
+      {
+        locationValue: "YADADRI BHUVANAGIRI",
+        locationName: "YADADRI BHUVANAGIRI (District)",
+      },
+    ],
+    Jharkhand: [
+      {
+        locationValue: "Garhwa",
+        locationName: "Garhwa (District)",
+      },
+      {
+        locationValue: "Palamu",
+        locationName: "Palamu (District)",
+      },
+      {
+        locationValue: "Chatra",
+        locationName: "Chatra (District)",
+      },
+      {
+        locationValue: "Hazaribag",
+        locationName: "Hazaribag (District)",
+      },
+      {
+        locationValue: "Kodarma",
+        locationName: "Kodarma (District)",
+      },
+      {
+        locationValue: "Giridih",
+        locationName: "Giridih (District)",
+      },
+      {
+        locationValue: "Deoghar",
+        locationName: "Deoghar (District)",
+      },
+      {
+        locationValue: "Godda",
+        locationName: "Godda (District)",
+      },
+      {
+        locationValue: "Sahibganj",
+        locationName: "Sahibganj (District)",
+      },
+      {
+        locationValue: "Pakaur",
+        locationName: "Pakaur (District)",
+      },
+      {
+        locationValue: "Dumka",
+        locationName: "Dumka (District)",
+      },
+      {
+        locationValue: "Dhanbad",
+        locationName: "Dhanbad (District)",
+      },
+      {
+        locationValue: "Bokaro",
+        locationName: "Bokaro (District)",
+      },
+      {
+        locationValue: "Ranchi",
+        locationName: "Ranchi (District)",
+      },
+      {
+        locationValue: "Lohardaga",
+        locationName: "Lohardaga (District)",
+      },
+      {
+        locationValue: "Gumla",
+        locationName: "Gumla (District)",
+      },
+      {
+        locationValue: "Pashchimi Singhbhum",
+        locationName: "Pashchimi Singhbhum (District)",
+      },
+      {
+        locationValue: "Purbi Singhbhum",
+        locationName: "Purbi Singhbhum (District)",
+      },
+    ],
+    Gujarat: [
+      {
+        locationValue: "Ahmedabad",
+        locationName: "Ahmedabad (District)",
+      },
+      {
+        locationValue: "Amreli",
+        locationName: "Amreli (District)",
+      },
+      {
+        locationValue: "Aravalli",
+        locationName: "Aravalli (District)",
+      },
+      {
+        locationValue: "Anand",
+        locationName: "Anand (District)",
+      },
+      {
+        locationValue: "Kutch",
+        locationName: "Kutch (District)",
+      },
+      {
+        locationValue: "Kheda",
+        locationName: "Kheda (District)",
+      },
+      {
+        locationValue: "Gandhinagar",
+        locationName: "Gandhinagar (District)",
+      },
+      {
+        locationValue: "Gir Somnath",
+        locationName: "Gir Somnath (District)",
+      },
+      {
+        locationValue: "Chhotaudepur",
+        locationName: "Chhotaudepur (District)",
+      },
+      {
+        locationValue: "Jamnagar",
+        locationName: "Jamnagar (District)",
+      },
+      {
+        locationValue: "Junagadh",
+        locationName: "Junagadh (District)",
+      },
+      {
+        locationValue: "Dang",
+        locationName: "Dang (District)",
+      },
+      {
+        locationValue: "Tapi",
+        locationName: "Tapi (District)",
+      },
+      {
+        locationValue: "Dahod",
+        locationName: "Dahod (District)",
+      },
+      {
+        locationValue: "Devbhoomi Dwarka",
+        locationName: "Devbhoomi Dwarka (District)",
+      },
+      {
+        locationValue: "Narmada",
+        locationName: "Narmada (District)",
+      },
+      {
+        locationValue: "Navsari",
+        locationName: "Navsari (District)",
+      },
+      {
+        locationValue: "Panchmahal",
+        locationName: "Panchmahal (District)",
+      },
+      {
+        locationValue: "Patan",
+        locationName: "Patan (District)",
+      },
+      {
+        locationValue: "Porbandar",
+        locationName: "Porbandar (District)",
+      },
+      {
+        locationValue: "Banaskantha",
+        locationName: "Banaskantha (District)",
+      },
+      {
+        locationValue: "Botad",
+        locationName: "Botad (District)",
+      },
+      {
+        locationValue: "Bharuch",
+        locationName: "Bharuch (District)",
+      },
+      {
+        locationValue: "Bhavnagar",
+        locationName: "Bhavnagar (District)",
+      },
+      {
+        locationValue: "Ocean",
+        locationName: "Ocean (District)",
+      },
+      {
+        locationValue: "Mehsana",
+        locationName: "Mehsana (District)",
+      },
+      {
+        locationValue: "Morbi",
+        locationName: "Morbi (District)",
+      },
+      {
+        locationValue: "Rajkot",
+        locationName: "Rajkot (District)",
+      },
+      {
+        locationValue: "Vadodara",
+        locationName: "Vadodara (District)",
+      },
+      {
+        locationValue: "Valsad",
+        locationName: "Valsad (District)",
+      },
+      {
+        locationValue: "Sabarkantha",
+        locationName: "Sabarkantha (District)",
+      },
+      {
+        locationValue: "Surat",
+        locationName: "Surat (District)",
+      },
+      {
+        locationValue: "Surendranagar",
+        locationName: "Surendranagar (District)",
+      },
+    ],
+    Chhattisgarh: [
+      {
+        locationValue: "Balod",
+        locationName: "Balod (District)",
+      },
+      {
+        locationValue: "Baloda Bazar",
+        locationName: "Baloda Bazar (District)",
+      },
+      {
+        locationValue: "Baloda Bazar",
+        locationName: "Baloda Bazar (District)",
+      },
+      {
+        locationValue: "Bastar",
+        locationName: "Bastar (District)",
+      },
+      {
+        locationValue: "Bemetara",
+        locationName: "Bemetara (District)",
+      },
+      {
+        locationValue: "Bijapur",
+        locationName: "Bijapur (District)",
+      },
+      {
+        locationValue: "Bilaspur",
+        locationName: "Bilaspur (District)",
+      },
+      {
+        locationValue: "Dantewada",
+        locationName: "Dantewada (District)",
+      },
+      {
+        locationValue: "Dhamtari",
+        locationName: "Dhamtari (District)",
+      },
+      {
+        locationValue: "Durg",
+        locationName: "Durg (District)",
+      },
+      {
+        locationValue: "Gariaband",
+        locationName: "Gariaband (District)",
+      },
+      {
+        locationValue: "Gaurella-Pendra-Marwahi",
+        locationName: "Gaurella-Pendra-Marwahi (District)",
+      },
+      {
+        locationValue: "Janjgir-Champa",
+        locationName: "Janjgir-Champa (District)",
+      },
+      {
+        locationValue: "Jashpur",
+        locationName: "Jashpur (District)",
+      },
+      {
+        locationValue: "Kabirdham",
+        locationName: "Kabirdham (District)",
+      },
+      {
+        locationValue: "Kanker",
+        locationName: "Kanker (District)",
+      },
+      {
+        locationValue: "Kondagaon",
+        locationName: "Kondagaon (District)",
+      },
+      {
+        locationValue: "Khairagarh-Chhuikhadan-Gandai",
+        locationName: "Khairagarh-Chhuikhadan-Gandai (District)",
+      },
+      {
+        locationValue: "Korba",
+        locationName: "Korba (District)",
+      },
+      {
+        locationValue: "Koriya",
+        locationName: "Koriya (District)",
+      },
+      {
+        locationValue: "Mahasamund",
+        locationName: "Mahasamund (District)",
+      },
+      {
+        locationValue: "Manendragarh-Chirmiri-Bharatpur",
+        locationName: "Manendragarh-Chirmiri-Bharatpur (District)",
+      },
+      {
+        locationValue: "Mohla-Manpur-Chowki",
+        locationName: "Mohla-Manpur-Chowki (District)",
+      },
+      {
+        locationValue: "Mungeli",
+        locationName: "Mungeli (District)",
+      },
+      {
+        locationValue: "Narayanpur",
+        locationName: "Narayanpur (District)",
+      },
+      {
+        locationValue: "Raigarh",
+        locationName: "Raigarh (District)",
+      },
+      {
+        locationValue: "Raipur",
+        locationName: "Raipur (District)",
+      },
+      {
+        locationValue: "Rajnandgaon",
+        locationName: "Rajnandgaon (District)",
+      },
+      {
+        locationValue: "Sarangarh-Bilaigarh",
+        locationName: "Sarangarh-Bilaigarh (District)",
+      },
+      {
+        locationValue: "Shakti",
+        locationName: "Shakti (District)",
+      },
+      {
+        locationValue: "Sukma",
+        locationName: "Sukma (District)",
+      },
+      {
+        locationValue: "Surajpur",
+        locationName: "Surajpur (District)",
+      },
+      {
+        locationValue: "Surguja",
+        locationName: "Surguja (District)",
+      },
+    ],
+    WB: [
+      { locationValue: "Darjiling", locationName: "Darjiling (District)" },
+      { locationValue: "Jalpaiguri", locationName: "Jalpaiguri (District)" },
+      { locationValue: "Koch Bihar", locationName: "Koch Bihar (District)" },
+      {
+        locationValue: "Uttar Dinajpur",
+        locationName: "Uttar Dinajpur (District)",
+      },
+      {
+        locationValue: "Dakshin Dinajpur",
+        locationName: "Dakshin Dinajpur (District)",
+      },
+      {
+        locationValue: "Maldah",
+        locationName: "Maldah (District)",
+      },
+      {
+        locationValue: "Murshidabad ",
+        locationName: "Murshidabad (District)",
+      },
+      {
+        locationValue: "Murarai - I",
+        locationName: "Murarai - I (District)",
+      },
+      {
+        locationValue: "Barddhaman ",
+        locationName: "Barddhaman (District)",
+      },
+      {
+        locationValue: "Nadia",
+        locationName: "Nadia (District)",
+      },
+      {
+        locationValue: "North Twenty Four Parganas",
+        locationName: "North Twenty Four Parganas (District)",
+      },
+      {
+        locationValue: "Hugli",
+        locationName: "Hugli (District)",
+      },
+      {
+        locationValue: "Bankura",
+        locationName: "Bankura (District)",
+      },
+      {
+        locationValue: "Puruliya",
+        locationName: "Puruliya (District)",
+      },
+      {
+        locationValue: "Medinipur",
+        locationName: "Medinipur (District)",
+      },
+      {
+        locationValue: "Haora ",
+        locationName: "Haora (District)",
+      },
+      {
+        locationValue: "South  Twenty Four Parganas ",
+        locationName: "South  Twenty Four Parganas (District)",
+      },
+    ],
   },
   DISTRIBUTOR: {
-    Gujarat: [{}],
-    Telangana: [{}],
     UP: [
       {
         locationValue: "Aligarh",
@@ -459,7 +1004,6 @@ export default {
         locationValue: "Paliganj",
         locationName: "Paliganj",
       },
-
       {
         locationValue: "Gaya",
         locationName: "Gaya (District)",
@@ -484,7 +1028,6 @@ export default {
         locationValue: "Arrah",
         locationName: "Arrah(Bhojpur) (District)",
       },
-
       {
         locationValue: "Biharsharif",
         locationName: "Biharsharif/Nalanda (District)",
@@ -493,7 +1036,6 @@ export default {
         locationValue: "Sheikhpura",
         locationName: "Sheikhpura (District)",
       },
-
       {
         locationValue: "Lakhisarai",
         locationName: "Lakhisarai (District)",
@@ -506,12 +1048,10 @@ export default {
         locationValue: "Begusarai",
         locationName: "Begusarai (District)",
       },
-
       {
         locationValue: "Bhagalpur",
         locationName: "Bhagalpur (District)",
       },
-
       {
         locationValue: "Katihar",
         locationName: "Katihar (District)",
@@ -520,7 +1060,6 @@ export default {
         locationValue: "Banka",
         locationName: "Banka (District)",
       },
-
       {
         locationValue: "Muzaffarpur",
         locationName: "Muzaffarpur (District)",
@@ -554,7 +1093,6 @@ export default {
         locationValue: "East Champaran",
         locationName: "East Champaran (District)",
       },
-
       {
         locationValue: "Saharsa",
         locationName: "Saharsa (District)",
@@ -597,6 +1135,2934 @@ export default {
         locationName: "Chapra (District)",
       },
     ],
+    Telangana: [
+      {
+        locationValue: "ADILABAD",
+        locationName: "ADILABAD (District)",
+      },
+      {
+        locationValue: "BHADRADRI KOTHAGUDEM",
+        locationName: "BHADRADRI KOTHAGUDEM (District)",
+      },
+      {
+        locationValue: "HANUMAKONDA",
+        locationName: "HANUMAKONDA (District)",
+      },
+      {
+        locationValue: "HYDERABAD",
+        locationName: "HYDERABAD (District)",
+      },
+      {
+        locationValue: "JAGTIAL",
+        locationName: "JAGTIAL (District)",
+      },
+      {
+        locationValue: "JANGOAN",
+        locationName: "JANGOAN (District)",
+      },
+      {
+        locationValue: "JAYASHANKAR BHOOPALPALLY",
+        locationName: "JAYASHANKAR BHOOPALPALLY (District)",
+      },
+      {
+        locationValue: "JOGULAMBA GADWAL",
+        locationName: "JOGULAMBA GADWAL (District)",
+      },
+      {
+        locationValue: "KAMAREDDY",
+        locationName: "KAMAREDDY (District)",
+      },
+      {
+        locationValue: "KARIMNAGAR",
+        locationName: "KARIMNAGAR (District)",
+      },
+      {
+        locationValue: "KHAMMAM",
+        locationName: "KHAMMAM (District)",
+      },
+      {
+        locationValue: "KOMARAM BHEEM ASIFABAD",
+        locationName: "KOMARAM BHEEM ASIFABAD (District)",
+      },
+      {
+        locationValue: "MAHABUBABAD",
+        locationName: "MAHABUBABAD (District)",
+      },
+      {
+        locationValue: "MAHABUBNAGAR",
+        locationName: "MAHABUBNAGAR (District)",
+      },
+      {
+        locationValue: "MANCHERIAL",
+        locationName: "MANCHERIAL (District)",
+      },
+      {
+        locationValue: "MEDAK",
+        locationName: "MEDAK (District)",
+      },
+      {
+        locationValue: "MEDCHAL-MALKAJGIRI",
+        locationName: "MEDCHAL-MALKAJGIRI (District)",
+      },
+      {
+        locationValue: "MULUG",
+        locationName: "MULUG (District)",
+      },
+      {
+        locationValue: "NAGARKURNOOL",
+        locationName: "NAGARKURNOOL (District)",
+      },
+      {
+        locationValue: "NALGONDA",
+        locationName: "NALGONDA (District)",
+      },
+      {
+        locationValue: "NARAYANPET",
+        locationName: "NARAYANPET (District)",
+      },
+      {
+        locationValue: "NIRMAL",
+        locationName: "NIRMAL (District)",
+      },
+      {
+        locationValue: "NIZAMABAD",
+        locationName: "NIZAMABAD (District)",
+      },
+      {
+        locationValue: "PEDDAPALLI",
+        locationName: "PEDDAPALLI (District)",
+      },
+      {
+        locationValue: "RAJANNA SIRCILLA",
+        locationName: "RAJANNA SIRCILLA (District)",
+      },
+      {
+        locationValue: "RANGAREDDY",
+        locationName: "RANGAREDDY (District)",
+      },
+      {
+        locationValue: "SANGAREDDY",
+        locationName: "SANGAREDDY (District)",
+      },
+      {
+        locationValue: "SIDDIPET",
+        locationName: "SIDDIPET (District)",
+      },
+      {
+        locationValue: "SURYAPET",
+        locationName: "SURYAPET (District)",
+      },
+      {
+        locationValue: "VIKARABAD",
+        locationName: "VIKARABAD (District)",
+      },
+      {
+        locationValue: "WANAPARTHY",
+        locationName: "WANAPARTHY (District)",
+      },
+      {
+        locationValue: "WARANGAL",
+        locationName: "WARANGAL (District)",
+      },
+      {
+        locationValue: "YADADRI BHUVANAGIRI",
+        locationName: "YADADRI BHUVANAGIRI (District)",
+      },
+    ],
+    Jharkhand: [
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Garhwa",
+        locationName: "Garhwa (District)",
+      },
+      {
+        locationValue: "Kharaundhi",
+        locationName: "Kharaundhi",
+      },
+      {
+        locationValue: "Bhawnathpur",
+        locationName: "Bhawnathpur",
+      },
+      {
+        locationValue: "Kandi",
+        locationName: "Kandi",
+      },
+      {
+        locationValue: "Majhiaon",
+        locationName: "Majhiaon",
+      },
+      {
+        locationValue: "Ramna",
+        locationName: "Ramna",
+      },
+      {
+        locationValue: "Nagaruntari",
+        locationName: "Nagaruntari",
+      },
+      {
+        locationValue: "Dhurki",
+        locationName: "Dhurki",
+      },
+      {
+        locationValue: "Dandai",
+        locationName: "Dandai",
+      },
+      {
+        locationValue: "Chinia",
+        locationName: "Chinia",
+      },
+      {
+        locationValue: "Meral (Pipra Kalan)",
+        locationName: "Meral (Pipra Kalan)",
+      },
+      {
+        locationValue: "Garhwa",
+        locationName: "Garhwa",
+      },
+      {
+        locationValue: "Ranka",
+        locationName: "Ranka",
+      },
+      {
+        locationValue: "Ramkanda",
+        locationName: "Ramkanda",
+      },
+      {
+        locationValue: "Bhandaria",
+        locationName: "Bhandaria",
+      },
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Palamu",
+        locationName: "Palamu (District)",
+      },
+      {
+        locationValue: "Hussainabad",
+        locationName: "Hussainabad",
+      },
+      {
+        locationValue: "Hariharganj",
+        locationName: "Hariharganj",
+      },
+      {
+        locationValue: "Chhatarpur",
+        locationName: "Chhatarpur",
+      },
+      {
+        locationValue: "Pandu",
+        locationName: "Pandu",
+      },
+      {
+        locationValue: "Bishrampur",
+        locationName: "Bishrampur",
+      },
+      {
+        locationValue: "Patan",
+        locationName: "Patan",
+      },
+      {
+        locationValue: "Manatu",
+        locationName: "Manatu",
+      },
+      {
+        locationValue: "Panki",
+        locationName: "Panki",
+      },
+      {
+        locationValue: "Manika",
+        locationName: "Manika",
+      },
+      {
+        locationValue: "Satbarwa",
+        locationName: "Satbarwa",
+      },
+      {
+        locationValue: "Leslieganj",
+        locationName: "Leslieganj",
+      },
+      {
+        locationValue: "Daltonganj",
+        locationName: "Daltonganj",
+      },
+      {
+        locationValue: "Chainpur",
+        locationName: "Chainpur",
+      },
+      {
+        locationValue: "Barwadih",
+        locationName: "Barwadih",
+      },
+      {
+        locationValue: "Mahuadanr",
+        locationName: "Mahuadanr",
+      },
+      {
+        locationValue: "Garu",
+        locationName: "Garu",
+      },
+      {
+        locationValue: "Latehar",
+        locationName: "Latehar",
+      },
+      {
+        locationValue: "Balumath",
+        locationName: "Balumath",
+      },
+      {
+        locationValue: "Chandwa",
+        locationName: "Chandwa",
+      },
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Chatra",
+        locationName: "Chatra (District)",
+      },
+
+      {
+        locationValue: "Hunterganj",
+        locationName: "Hunterganj",
+      },
+
+      {
+        locationValue: "Pratappur",
+        locationName: "Pratappur",
+      },
+      {
+        locationValue: "Kunda",
+        locationName: "Kunda",
+      },
+      {
+        locationValue: "Lawalaung",
+        locationName: "Lawalaung",
+      },
+      {
+        locationValue: "Chatra",
+        locationName: "Chatra",
+      },
+      {
+        locationValue: "Itkhori",
+        locationName: "Itkhori",
+      },
+      {
+        locationValue: "Gidhaur",
+        locationName: "Gidhaur",
+      },
+      {
+        locationValue: "Pathalgora",
+        locationName: "Pathalgora",
+      },
+      {
+        locationValue: "Simaria",
+        locationName: "Simaria",
+      },
+      {
+        locationValue: "Tandwa",
+        locationName: "Tandwa",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Hazaribag",
+        locationName: "Hazaribag (District)",
+      },
+      {
+        locationValue: "Chauparan",
+        locationName: "Chauparan",
+      },
+      {
+        locationValue: "Barhi",
+        locationName: "Barhi",
+      },
+      {
+        locationValue: "Padma",
+        locationName: "Padma",
+      },
+      {
+        locationValue: "Ichak",
+        locationName: "Ichak",
+      },
+      {
+        locationValue: "Barkatha",
+        locationName: "Barkatha",
+      },
+      {
+        locationValue: "Bishungarh",
+        locationName: "Bishungarh",
+      },
+      {
+        locationValue: "Hazaribag",
+        locationName: "Hazaribag",
+      },
+      {
+        locationValue: "Katkamsandi",
+        locationName: "Katkamsandi",
+      },
+      {
+        locationValue: "Keredari",
+        locationName: "Keredari",
+      },
+      {
+        locationValue: "Barkagaon",
+        locationName: "Barkagaon",
+      },
+      {
+        locationValue: "Patratu",
+        locationName: "Patratu",
+      },
+      {
+        locationValue: "Churchu",
+        locationName: "Churchu",
+      },
+      {
+        locationValue: "Mandu",
+        locationName: "Mandu",
+      },
+      {
+        locationValue: "Ramgarh",
+        locationName: "Ramgarh",
+      },
+      {
+        locationValue: "Gola",
+        locationName: "Gola",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Kodarma",
+        locationName: "Kodarma (District)",
+      },
+
+      {
+        locationValue: "Satgawan",
+        locationName: "Satgawan",
+      },
+      {
+        locationValue: "Kodarma",
+        locationName: "Kodarma",
+      },
+      {
+        locationValue: "Jainagar",
+        locationName: "Jainagar",
+      },
+
+      {
+        locationValue: "Markacho",
+        locationName: "Markacho",
+      },
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Giridih",
+        locationName: "Giridih (District)",
+      },
+
+      {
+        locationValue: "Gawan",
+        locationName: "Gawan",
+      },
+      {
+        locationValue: "Tisri",
+        locationName: "Tisri",
+      },
+      {
+        locationValue: "Deori",
+        locationName: "Deori",
+      },
+      {
+        locationValue: "Dhanwar",
+        locationName: "Dhanwar",
+      },
+      {
+        locationValue: "Jamua",
+        locationName: "Jamua",
+      },
+      {
+        locationValue: "Bengabad",
+        locationName: "Bengabad",
+      },
+      {
+        locationValue: "Gande",
+        locationName: "Gande",
+      },
+      {
+        locationValue: "Giridih",
+        locationName: "Giridih",
+      },
+      {
+        locationValue: "Birni",
+        locationName: "Birni",
+      },
+      {
+        locationValue: "Bagodar",
+        locationName: "Bagodar",
+      },
+      {
+        locationValue: "Dumri",
+        locationName: "Dumri",
+      },
+      {
+        locationValue: "Pirtanr",
+        locationName: "Pirtanr",
+      },
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Deoghar",
+        locationName: "Deoghar (District)",
+      },
+
+      {
+        locationValue: "Deoghar",
+        locationName: "Deoghar",
+      },
+      {
+        locationValue: "Mohanpur",
+        locationName: "Mohanpur",
+      },
+      {
+        locationValue: "Sarwan",
+        locationName: "Sarwan",
+      },
+      {
+        locationValue: "Devipur",
+        locationName: "Devipur",
+      },
+      {
+        locationValue: "Madhupur",
+        locationName: "Madhupur",
+      },
+      {
+        locationValue: "Karon",
+        locationName: "Karon",
+      },
+      {
+        locationValue: "Sarath",
+        locationName: "Sarath",
+      },
+      {
+        locationValue: "Palojori",
+        locationName: "Palojori",
+      },
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Godda",
+        locationName: "Godda (District)",
+      },
+
+      {
+        locationValue: "Meherma",
+        locationName: "Meherma",
+      },
+      {
+        locationValue: "Thakur Gangti",
+        locationName: "Thakur Gangti",
+      },
+      {
+        locationValue: "Boarijor",
+        locationName: "Boarijor",
+      },
+      {
+        locationValue: "Mahagama",
+        locationName: "Mahagama",
+      },
+      {
+        locationValue: "Pathargama",
+        locationName: "Pathargama",
+      },
+      {
+        locationValue: "Godda",
+        locationName: "Godda",
+      },
+      {
+        locationValue: "Poreyahat",
+        locationName: "Poreyahat",
+      },
+      {
+        locationValue: "Sundar Pahari",
+        locationName: "Sundar Pahari",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Sahibganj",
+        locationName: "Sahibganj (District)",
+      },
+      {
+        locationValue: "Sahibganj",
+        locationName: "Sahibganj",
+      },
+      {
+        locationValue: "Mandro",
+        locationName: "Mandro",
+      },
+      {
+        locationValue: "Borio",
+        locationName: "Borio",
+      },
+      {
+        locationValue: "Barhait",
+        locationName: "Barhait",
+      },
+      {
+        locationValue: "Taljhari",
+        locationName: "Taljhari",
+      },
+      {
+        locationValue: "Rajmahal",
+        locationName: "Rajmahal",
+      },
+      {
+        locationValue: "Udhwa",
+        locationName: "Udhwa",
+      },
+      {
+        locationValue: "Pathna",
+        locationName: "Pathna",
+      },
+      {
+        locationValue: "Barharwa",
+        locationName: "Barharwa",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Pakaur",
+        locationName: "Pakaur (District)",
+      },
+      {
+        locationValue: "Litipara",
+        locationName: "Litipara",
+      },
+      {
+        locationValue: "Amrapara",
+        locationName: "Amrapara",
+      },
+      {
+        locationValue: "Hiranpur",
+        locationName: "Hiranpur",
+      },
+      {
+        locationValue: "Pakaur",
+        locationName: "Pakaur",
+      },
+      {
+        locationValue: "Maheshpur",
+        locationName: "Maheshpur",
+      },
+      {
+        locationValue: "Pakuria",
+        locationName: "Pakuria",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Dumka",
+        locationName: "Dumka (District)",
+      },
+      {
+        locationValue: "Saraiyahat",
+        locationName: "Saraiyahat",
+      },
+      {
+        locationValue: "Jarmundi",
+        locationName: "Jarmundi",
+      },
+      {
+        locationValue: "Ramgarh",
+        locationName: "Ramgarh",
+      },
+      {
+        locationValue: "Gopikandar",
+        locationName: "Gopikandar",
+      },
+      {
+        locationValue: "Kathikund",
+        locationName: "Kathikund",
+      },
+      {
+        locationValue: "Shikaripara",
+        locationName: "Shikaripara",
+      },
+      {
+        locationValue: "Ranishwar",
+        locationName: "Ranishwar",
+      },
+      {
+        locationValue: "Dumka",
+        locationName: "Dumka",
+      },
+      {
+        locationValue: "Jama",
+        locationName: "Jama",
+      },
+      {
+        locationValue: "Masalia",
+        locationName: "Masalia",
+      },
+      {
+        locationValue: "Narayanpur",
+        locationName: "Narayanpur",
+      },
+      {
+        locationValue: "Jamtara",
+        locationName: "Jamtara",
+      },
+      {
+        locationValue: "Nala",
+        locationName: "Nala",
+      },
+      {
+        locationValue: "Kundhit",
+        locationName: "Kundhit",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Dhanbad",
+        locationName: "Dhanbad (District)",
+      },
+      {
+        locationValue: "Tundi",
+        locationName: "Tundi",
+      },
+      {
+        locationValue: "Topchanchi",
+        locationName: "Topchanchi",
+      },
+      {
+        locationValue: "Baghmara-Cum-Katras",
+        locationName: "Baghmara-Cum-Katras",
+      },
+      {
+        locationValue: "Gobindpur",
+        locationName: "Gobindpur",
+      },
+      {
+        locationValue: "Dhanbad-Cum-Ken-duadih-Cum-Jagta",
+        locationName: "Dhanbad-Cum-Ken-duadih-Cum-Jagta",
+      },
+      {
+        locationValue: "Jharia-Cum-Jorap-okhar-Cum-Sindri",
+        locationName: "Jharia-Cum-Jorap-okhar-Cum-Sindri",
+      },
+      {
+        locationValue: "Baliapur",
+        locationName: "Baliapur",
+      },
+      {
+        locationValue: "Nirsa-Cum-Chirkunda",
+        locationName: "Nirsa-Cum-Chirkunda",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Bokaro",
+        locationName: "Bokaro (District)",
+      },
+      {
+        locationValue: "Nawadih",
+        locationName: "Nawadih",
+      },
+      {
+        locationValue: "Bermo",
+        locationName: "Bermo",
+      },
+      {
+        locationValue: "Gumia",
+        locationName: "Gumia",
+      },
+      {
+        locationValue: "Peterwar",
+        locationName: "Peterwar",
+      },
+      {
+        locationValue: "Kasmar",
+        locationName: "Kasmar",
+      },
+      {
+        locationValue: "Jaridih",
+        locationName: "Jaridih",
+      },
+      {
+        locationValue: "Chas",
+        locationName: "Chas",
+      },
+      {
+        locationValue: "Chandankiyari",
+        locationName: "Chandankiyari",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Ranchi",
+        locationName: "Ranchi (District)",
+      },
+      {
+        locationValue: "Kisko",
+        locationName: "Kisko",
+      },
+      {
+        locationValue: "Kuru",
+        locationName: "Kuru",
+      },
+      {
+        locationValue: "Lohardaga",
+        locationName: "Lohardaga",
+      },
+      {
+        locationValue: "Senha",
+        locationName: "Senha",
+      },
+      {
+        locationValue: "Bhandra",
+        locationName: "Bhandra",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Lohardaga",
+        locationName: "Lohardaga (District)",
+      },
+      {
+        locationValue: "Burmu",
+        locationName: "Burmu",
+      },
+      {
+        locationValue: "Kanke",
+        locationName: "Kanke",
+      },
+      {
+        locationValue: "Ormanjhi",
+        locationName: "Ormanjhi",
+      },
+      {
+        locationValue: "Angara",
+        locationName: "Angara",
+      },
+      {
+        locationValue: "Silli",
+        locationName: "Silli",
+      },
+      {
+        locationValue: "Sonahatu",
+        locationName: "Sonahatu",
+      },
+      {
+        locationValue: "Namkum",
+        locationName: "Namkum",
+      },
+      {
+        locationValue: "Ratu",
+        locationName: "Ratu",
+      },
+      {
+        locationValue: "Mandar",
+        locationName: "Mandar",
+      },
+      {
+        locationValue: "Chanho",
+        locationName: "Chanho",
+      },
+      {
+        locationValue: "Bero",
+        locationName: "Bero",
+      },
+      {
+        locationValue: "Lapung",
+        locationName: "Lapung",
+      },
+      {
+        locationValue: "Karra",
+        locationName: "Karra",
+      },
+      {
+        locationValue: "Torpa",
+        locationName: "Torpa",
+      },
+      {
+        locationValue: "Rania",
+        locationName: "Rania",
+      },
+      {
+        locationValue: "Murhu",
+        locationName: "Murhu",
+      },
+      {
+        locationValue: "Khunti",
+        locationName: "Khunti",
+      },
+      {
+        locationValue: "Bundu",
+        locationName: "Bundu",
+      },
+      {
+        locationValue: "Erki (Tamar II)",
+        locationName: "Erki (Tamar II)",
+      },
+      {
+        locationValue: "Tamar I",
+        locationName: "Tamar I",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Gumla",
+        locationName: "Gumla (District)",
+      },
+      {
+        locationValue: "Bishunpur",
+        locationName: "Bishunpur",
+      },
+      {
+        locationValue: "Ghaghra",
+        locationName: "Ghaghra",
+      },
+      {
+        locationValue: "Sisai",
+        locationName: "Sisai",
+      },
+      {
+        locationValue: "Verno",
+        locationName: "Verno",
+      },
+      {
+        locationValue: "Kamdara",
+        locationName: "Kamdara",
+      },
+      {
+        locationValue: "Basia",
+        locationName: "Basia",
+      },
+      {
+        locationValue: "Gumla",
+        locationName: "Gumla",
+      },
+      {
+        locationValue: "Chainpur",
+        locationName: "Chainpur",
+      },
+      {
+        locationValue: "Dumri",
+        locationName: "Dumri",
+      },
+      {
+        locationValue: "Raidih",
+        locationName: "Raidih",
+      },
+      {
+        locationValue: "Palkot",
+        locationName: "Palkot",
+      },
+      {
+        locationValue: "Simdega",
+        locationName: "Simdega",
+      },
+      {
+        locationValue: "Kurdeg",
+        locationName: "Kurdeg",
+      },
+      {
+        locationValue: "Bolba",
+        locationName: "Bolba",
+      },
+      {
+        locationValue: "Thethaitangar",
+        locationName: "Thethaitangar",
+      },
+      {
+        locationValue: "Kolebira",
+        locationName: "Kolebira",
+      },
+      {
+        locationValue: "Jaldega",
+        locationName: "Jaldega",
+      },
+      {
+        locationValue: "Bano",
+        locationName: "Bano",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Pashchimi Singhbhum",
+        locationName: "Pashchimi Singhbhum (District)",
+      },
+      {
+        locationValue: "Sonua",
+        locationName: "Sonua",
+      },
+      {
+        locationValue: "Bandgaon",
+        locationName: "Bandgaon",
+      },
+      {
+        locationValue: "Chakradharpur",
+        locationName: "Chakradharpur",
+      },
+      {
+        locationValue: "Kuchai",
+        locationName: "Kuchai",
+      },
+      {
+        locationValue: "Kharsawan",
+        locationName: "Kharsawan",
+      },
+      {
+        locationValue: "Chandil",
+        locationName: "Chandil",
+      },
+      {
+        locationValue: "Ichagarh",
+        locationName: "Ichagarh",
+      },
+      {
+        locationValue: "Nimdih",
+        locationName: "Nimdih",
+      },
+      {
+        locationValue: "Adityapur",
+        locationName: "Adityapur",
+      },
+      {
+        locationValue: "Seraikela",
+        locationName: "Seraikela",
+      },
+      {
+        locationValue: "Gobindpur",
+        locationName: "Gobindpur",
+      },
+      {
+        locationValue: "Khuntpani",
+        locationName: "Khuntpani",
+      },
+      {
+        locationValue: "Goilkera",
+        locationName: "Goilkera",
+      },
+      {
+        locationValue: "Manoharpur",
+        locationName: "Manoharpur",
+      },
+      {
+        locationValue: "Noamundi",
+        locationName: "Noamundi",
+      },
+      {
+        locationValue: "Tonto",
+        locationName: "Tonto",
+      },
+      {
+        locationValue: "Chaibasa",
+        locationName: "Chaibasa",
+      },
+      {
+        locationValue: "Tantnagar",
+        locationName: "Tantnagar",
+      },
+      {
+        locationValue: "Manjhari",
+        locationName: "Manjhari",
+      },
+      {
+        locationValue: "Jhinkpani",
+        locationName: "Jhinkpani",
+      },
+      {
+        locationValue: "Jagannathpur",
+        locationName: "Jagannathpur",
+      },
+      {
+        locationValue: "Kumardungi",
+        locationName: "Kumardungi",
+      },
+      {
+        locationValue: "Majhgaon",
+        locationName: "Majhgaon",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Purbi Singhbhum",
+        locationName: "Purbi Singhbhum (District)",
+      },
+      {
+        locationValue: "Patamda",
+        locationName: "Patamda",
+      },
+      {
+        locationValue: "Golmuri-Cum-Jugsalai",
+        locationName: "Golmuri-Cum-Jugsalai",
+      },
+      {
+        locationValue: "Ghatshila",
+        locationName: "Ghatshila",
+      },
+      {
+        locationValue: "Potka",
+        locationName: "Potka",
+      },
+      {
+        locationValue: "Musabani",
+        locationName: "Musabani",
+      },
+      {
+        locationValue: "Dumaria",
+        locationName: "Dumaria",
+      },
+      {
+        locationValue: "Dhalbhumgarh",
+        locationName: "Dhalbhumgarh",
+      },
+      {
+        locationValue: "Chakulia",
+        locationName: "Chakulia",
+      },
+      {
+        locationValue: "Baharagora",
+        locationName: "Baharagora",
+      },
+    ],
+    Gujarat: [
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Ahmedabad",
+        locationName: "Ahmedabad (District)",
+      },
+      {
+        locationValue: "Ahmedabad City",
+        locationName: "Ahmedabad City",
+      },
+      {
+        locationValue: "Bavala",
+        locationName: "Bavala",
+      },
+      {
+        locationValue: "Sanand",
+        locationName: "Sanand",
+      },
+      {
+        locationValue: "Dholera",
+        locationName: "Dholera",
+      },
+      {
+        locationValue: "Dhandhuka",
+        locationName: "Dhandhuka",
+      },
+      {
+        locationValue: "Dholka",
+        locationName: "Dholka",
+      },
+      {
+        locationValue: "Daskroi",
+        locationName: "Daskroi",
+      },
+      {
+        locationValue: "Detroj-Rampura",
+        locationName: "Detroj-Rampura",
+      },
+      {
+        locationValue: "Mandal",
+        locationName: "Mandal",
+      },
+      {
+        locationValue: "Viramgam",
+        locationName: "Viramgam",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Amreli",
+        locationName: "Amreli (District)",
+      },
+      {
+        locationValue: "Amreli",
+        locationName: "Amreli",
+      },
+      {
+        locationValue: "Bagasara",
+        locationName: "Bagasara",
+      },
+      {
+        locationValue: "Babra",
+        locationName: "Babra",
+      },
+      {
+        locationValue: "Jafarabad",
+        locationName: "Jafarabad",
+      },
+      {
+        locationValue: "Rajula",
+        locationName: "Rajula",
+      },
+      {
+        locationValue: "Khambha",
+        locationName: "Khambha",
+      },
+      {
+        locationValue: "Dhari",
+        locationName: "Dhari",
+      },
+      {
+        locationValue: "Lathi",
+        locationName: "Lathi",
+      },
+      {
+        locationValue: "Savarkundla",
+        locationName: "Savarkundla",
+      },
+      {
+        locationValue: "Liliya",
+        locationName: "Liliya",
+      },
+      {
+        locationValue: "kukavav",
+        locationName: "kukavav",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Aravalli",
+        locationName: "Aravalli (District)",
+      },
+      {
+        locationValue: "Modasa",
+        locationName: "Modasa",
+      },
+      {
+        locationValue: "Bhiloda",
+        locationName: "Bhiloda",
+      },
+      {
+        locationValue: "Dhansura",
+        locationName: "Dhansura",
+      },
+      {
+        locationValue: "Byad",
+        locationName: "Byad",
+      },
+      {
+        locationValue: "Meghraj",
+        locationName: "Meghraj",
+      },
+      {
+        locationValue: "Malpura",
+        locationName: "Malpura",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Anand",
+        locationName: "Anand (District)",
+      },
+      {
+        locationValue: "Anand",
+        locationName: "Anand",
+      },
+      {
+        locationValue: "Khambhat",
+        locationName: "Khambhat",
+      },
+      {
+        locationValue: "Borsad",
+        locationName: "Borsad",
+      },
+      {
+        locationValue: "Petlad",
+        locationName: "Petlad",
+      },
+      {
+        locationValue: "Tarapur",
+        locationName: "Tarapur",
+      },
+      {
+        locationValue: "Sojitra",
+        locationName: "Sojitra",
+      },
+      {
+        locationValue: "Anklav",
+        locationName: "Anklav",
+      },
+      {
+        locationValue: "Umreth",
+        locationName: "Umreth",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Kutch",
+        locationName: "Kutch (District)",
+      },
+      {
+        locationValue: "Bhuj",
+        locationName: "Bhuj",
+      },
+      {
+        locationValue: "Bhachau",
+        locationName: "Bhachau",
+      },
+      {
+        locationValue: "Anjar",
+        locationName: "Anjar",
+      },
+      {
+        locationValue: "Abadsa (Naliya)",
+        locationName: "Abadsa (Naliya)",
+      },
+      {
+        locationValue: "Mandvi",
+        locationName: "Mandvi",
+      },
+      {
+        locationValue: "Mundra",
+        locationName: "Mundra",
+      },
+      {
+        locationValue: "Rapar",
+        locationName: "Rapar",
+      },
+      {
+        locationValue: "Gandhidham",
+        locationName: "Gandhidham",
+      },
+      {
+        locationValue: "Lakhpat",
+        locationName: "Lakhpat",
+      },
+      {
+        locationValue: "Nakhtrana",
+        locationName: "Nakhtrana",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Kheda",
+        locationName: "Kheda (District)",
+      },
+      {
+        locationValue: "Kheda",
+        locationName: "Kheda",
+      },
+      {
+        locationValue: "Nadiad",
+        locationName: "Nadiad",
+      },
+      {
+        locationValue: "Kathlal",
+        locationName: "Kathlal",
+      },
+      {
+        locationValue: "Mahemdavad",
+        locationName: "Mahemdavad",
+      },
+      {
+        locationValue: "Kapadvanj",
+        locationName: "Kapadvanj",
+      },
+      {
+        locationValue: "Thasra",
+        locationName: "Thasra",
+      },
+      {
+        locationValue: "Mahudha",
+        locationName: "Mahudha",
+      },
+      {
+        locationValue: "Galteshwar",
+        locationName: "Galteshwar",
+      },
+      {
+        locationValue: "Matar",
+        locationName: "Matar",
+      },
+      {
+        locationValue: "Vaso",
+        locationName: "Vaso",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Gandhinagar",
+        locationName: "Gandhinagar (District)",
+      },
+      {
+        locationValue: "Gandhinagar",
+        locationName: "Gandhinagar",
+      },
+      {
+        locationValue: "Kalol",
+        locationName: "Kalol",
+      },
+      {
+        locationValue: "Dahegam",
+        locationName: "Dahegam",
+      },
+      {
+        locationValue: "Mansa",
+        locationName: "Mansa",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Gir Somnath",
+        locationName: "Gir Somnath (District)",
+      },
+      {
+        locationValue: "Veraval",
+        locationName: "Veraval",
+      },
+      {
+        locationValue: "Kodinar",
+        locationName: "Kodinar",
+      },
+      {
+        locationValue: "Una",
+        locationName: "Una",
+      },
+      {
+        locationValue: "Sutrapada",
+        locationName: "Sutrapada",
+      },
+      {
+        locationValue: "Gir Gadha",
+        locationName: "Gir Gadha",
+      },
+      {
+        locationValue: "Talala",
+        locationName: "Talala",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Chhotaudepur",
+        locationName: "Chhotaudepur (District)",
+      },
+      {
+        locationValue: "Chhotaudepur",
+        locationName: "Chhotaudepur",
+      },
+      {
+        locationValue: "Sankheda",
+        locationName: "Sankheda",
+      },
+      {
+        locationValue: "Jetpur-Pavi",
+        locationName: "Jetpur-Pavi",
+      },
+      {
+        locationValue: "Kwat",
+        locationName: "Kwat",
+      },
+      {
+        locationValue: "Bodeli",
+        locationName: "Bodeli",
+      },
+      {
+        locationValue: "Naswadi",
+        locationName: "Naswadi",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Jamnagar",
+        locationName: "Jamnagar (District)",
+      },
+      {
+        locationValue: "Jamnagar",
+        locationName: "Jamnagar",
+      },
+      {
+        locationValue: "Jamjodhpur",
+        locationName: "Jamjodhpur",
+      },
+      {
+        locationValue: "Jodia",
+        locationName: "Jodia",
+      },
+      {
+        locationValue: "Lalpur",
+        locationName: "Lalpur",
+      },
+      {
+        locationValue: "Dhrol",
+        locationName: "Dhrol",
+      },
+      {
+        locationValue: "Kalawad",
+        locationName: "Kalawad",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Junagadh",
+        locationName: "Junagadh (District)",
+      },
+      {
+        locationValue: "Junagadh City",
+        locationName: "Junagadh City",
+      },
+      {
+        locationValue: "Junagadh Rural",
+        locationName: "Junagadh Rural",
+      },
+      {
+        locationValue: "Bhesan",
+        locationName: "Bhesan",
+      },
+      {
+        locationValue: "Keshod",
+        locationName: "Keshod",
+      },
+      {
+        locationValue: "Manavadar",
+        locationName: "Manavadar",
+      },
+      {
+        locationValue: "Mendarda",
+        locationName: "Mendarda",
+      },
+      {
+        locationValue: "Mangrol",
+        locationName: "Mangrol",
+      },
+      {
+        locationValue: "Visavadar",
+        locationName: "Visavadar",
+      },
+      {
+        locationValue: "Vanthali",
+        locationName: "Vanthali",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Dang",
+        locationName: "Dang (District)",
+      },
+      {
+        locationValue: "Ahwa",
+        locationName: "Ahwa",
+      },
+      {
+        locationValue: "congratulations",
+        locationName: "congratulations",
+      },
+      {
+        locationValue: "Subir",
+        locationName: "Subir",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Tapi",
+        locationName: "Tapi (District)",
+      },
+      {
+        locationValue: "Vyara",
+        locationName: "Vyara",
+      },
+      {
+        locationValue: "Dolvan",
+        locationName: "Dolvan",
+      },
+      {
+        locationValue: "Kukarmunda",
+        locationName: "Kukarmunda",
+      },
+      {
+        locationValue: "Songadh",
+        locationName: "Songadh",
+      },
+      {
+        locationValue: "Nizar",
+        locationName: "Nizar",
+      },
+      {
+        locationValue: "Valod",
+        locationName: "Valod",
+      },
+      {
+        locationValue: "Uchhal",
+        locationName: "Uchhal",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Dahod",
+        locationName: "Dahod (District)",
+      },
+      {
+        locationValue: "Dahod",
+        locationName: "Dahod",
+      },
+      {
+        locationValue: "Zhalod",
+        locationName: "Zhalod",
+      },
+      {
+        locationValue: "Dhanpur",
+        locationName: "Dhanpur",
+      },
+      {
+        locationValue: "Singwad",
+        locationName: "Singwad",
+      },
+      {
+        locationValue: "Fatehpura",
+        locationName: "Fatehpura",
+      },
+      {
+        locationValue: "Garbada",
+        locationName: "Garbada",
+      },
+      {
+        locationValue: "Devgarh Baria",
+        locationName: "Devgarh Baria",
+      },
+      {
+        locationValue: "Limkheda",
+        locationName: "Limkheda",
+      },
+      {
+        locationValue: "Sanjeli",
+        locationName: "Sanjeli",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Devbhoomi Dwarka",
+        locationName: "Devbhoomi Dwarka (District)",
+      },
+      {
+        locationValue: "Dwarka",
+        locationName: "Dwarka",
+      },
+      {
+        locationValue: "Kalyanpur",
+        locationName: "Kalyanpur",
+      },
+      {
+        locationValue: "Bhanwad",
+        locationName: "Bhanwad",
+      },
+      {
+        locationValue: "Khambhaliya",
+        locationName: "Khambhaliya",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Narmada",
+        locationName: "Narmada (District)",
+      },
+      {
+        locationValue: "Nandod",
+        locationName: "Nandod",
+      },
+      {
+        locationValue: "Sagbara",
+        locationName: "Sagbara",
+      },
+      {
+        locationValue: "Dadiapada",
+        locationName: "Dadiapada",
+      },
+      {
+        locationValue: "Garudeshwar",
+        locationName: "Garudeshwar",
+      },
+      {
+        locationValue: "Tilakwada",
+        locationName: "Tilakwada",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Navsari",
+        locationName: "Navsari (District)",
+      },
+      {
+        locationValue: "Navsari",
+        locationName: "Navsari",
+      },
+      {
+        locationValue: "Gandevi",
+        locationName: "Gandevi",
+      },
+      {
+        locationValue: "Chikhli",
+        locationName: "Chikhli",
+      },
+      {
+        locationValue: "Vasanda",
+        locationName: "Vasanda",
+      },
+      {
+        locationValue: "Jalalpore",
+        locationName: "Jalalpore",
+      },
+      {
+        locationValue: "Khergam",
+        locationName: "Khergam",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Panchmahal",
+        locationName: "Panchmahal (District)",
+      },
+      {
+        locationValue: "Godhra",
+        locationName: "Godhra",
+      },
+      {
+        locationValue: "Halol",
+        locationName: "Halol",
+      },
+      {
+        locationValue: "Kalol",
+        locationName: "Kalol",
+      },
+      {
+        locationValue: "Ghoghamba",
+        locationName: "Ghoghamba",
+      },
+      {
+        locationValue: "Jambughoda",
+        locationName: "Jambughoda",
+      },
+      {
+        locationValue: "Shehra",
+        locationName: "Shehra",
+      },
+      {
+        locationValue: "Morwa-Hadaf",
+        locationName: "Morwa-Hadaf",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Patan",
+        locationName: "Patan (District)",
+      },
+      {
+        locationValue: "Patan",
+        locationName: "Patan",
+      },
+      {
+        locationValue: "Radhanpur",
+        locationName: "Radhanpur",
+      },
+      {
+        locationValue: "Siddhpur",
+        locationName: "Siddhpur",
+      },
+      {
+        locationValue: "Chanasma",
+        locationName: "Chanasma",
+      },
+      {
+        locationValue: "Santalpur",
+        locationName: "Santalpur",
+      },
+      {
+        locationValue: "Harij",
+        locationName: "Harij",
+      },
+      {
+        locationValue: "Sami",
+        locationName: "Sami",
+      },
+      {
+        locationValue: "Saraswati",
+        locationName: "Saraswati",
+      },
+      {
+        locationValue: "Shankheshwar",
+        locationName: "Shankheshwar",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Porbandar",
+        locationName: "Porbandar (District)",
+      },
+      {
+        locationValue: "Porbandar",
+        locationName: "Porbandar",
+      },
+      {
+        locationValue: "Ranavav",
+        locationName: "Ranavav",
+      },
+      {
+        locationValue: "Kutiana",
+        locationName: "Kutiana",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Banaskantha",
+        locationName: "Banaskantha (District)",
+      },
+      {
+        locationValue: "Palanpur",
+        locationName: "Palanpur",
+      },
+      {
+        locationValue: "Tharad",
+        locationName: "Tharad",
+      },
+      {
+        locationValue: "Dhanera",
+        locationName: "Dhanera",
+      },
+      {
+        locationValue: "Vav",
+        locationName: "Vav",
+      },
+      {
+        locationValue: "Diodar",
+        locationName: "Diodar",
+      },
+      {
+        locationValue: "Deesa",
+        locationName: "Deesa",
+      },
+      {
+        locationValue: "Kankraj",
+        locationName: "Kankraj",
+      },
+      {
+        locationValue: "Danta",
+        locationName: "Danta",
+      },
+      {
+        locationValue: "Dantiwada",
+        locationName: "Dantiwada",
+      },
+      {
+        locationValue: "Vadgam",
+        locationName: "Vadgam",
+      },
+      {
+        locationValue: "Lakhni",
+        locationName: "Lakhni",
+      },
+      {
+        locationValue: "Bhabhar",
+        locationName: "Bhabhar",
+      },
+      {
+        locationValue: "Suigam",
+        locationName: "Suigam",
+      },
+      {
+        locationValue: "Amirgarh",
+        locationName: "Amirgarh",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Botad",
+        locationName: "Botad (District)",
+      },
+      {
+        locationValue: "Botad",
+        locationName: "Botad",
+      },
+      {
+        locationValue: "Gadha",
+        locationName: "Gadha",
+      },
+      {
+        locationValue: "Barwala",
+        locationName: "Barwala",
+      },
+      {
+        locationValue: "Ranpur",
+        locationName: "Ranpur",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Bharuch",
+        locationName: "Bharuch (District)",
+      },
+      {
+        locationValue: "Bharuch",
+        locationName: "Bharuch",
+      },
+      {
+        locationValue: "Ankleshwar",
+        locationName: "Ankleshwar",
+      },
+      {
+        locationValue: "Amod",
+        locationName: "Amod",
+      },
+      {
+        locationValue: "Wagra",
+        locationName: "Wagra",
+      },
+      {
+        locationValue: "Hansot",
+        locationName: "Hansot",
+      },
+      {
+        locationValue: "Jambusar",
+        locationName: "Jambusar",
+      },
+      {
+        locationValue: "Netrang",
+        locationName: "Netrang",
+      },
+      {
+        locationValue: "Walia",
+        locationName: "Walia",
+      },
+      {
+        locationValue: "Jagadia",
+        locationName: "Jagadia",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Bhavnagar",
+        locationName: "Bhavnagar (District)",
+      },
+      {
+        locationValue: "Bhavnagar",
+        locationName: "Bhavnagar",
+      },
+      {
+        locationValue: "Ghogha",
+        locationName: "Ghogha",
+      },
+      {
+        locationValue: "Mahuva",
+        locationName: "Mahuva",
+      },
+      {
+        locationValue: "Gariadhar",
+        locationName: "Gariadhar",
+      },
+      {
+        locationValue: "Umrala",
+        locationName: "Umrala",
+      },
+      {
+        locationValue: "Jessar",
+        locationName: "Jessar",
+      },
+      {
+        locationValue: "Palitana",
+        locationName: "Palitana",
+      },
+      {
+        locationValue: "Shihor",
+        locationName: "Shihor",
+      },
+      {
+        locationValue: "Talaja",
+        locationName: "Talaja",
+      },
+      {
+        locationValue: "Valabhipur",
+        locationName: "Valabhipur",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Ocean",
+        locationName: "Ocean (District)",
+      },
+      {
+        locationValue: "Lunavada",
+        locationName: "Lunavada",
+      },
+      {
+        locationValue: "Kadana",
+        locationName: "Kadana",
+      },
+      {
+        locationValue: "Khanpur",
+        locationName: "Khanpur",
+      },
+      {
+        locationValue: "Balasinor",
+        locationName: "Balasinor",
+      },
+      {
+        locationValue: "Virpur",
+        locationName: "Virpur",
+      },
+      {
+        locationValue: "Santrampur",
+        locationName: "Santrampur",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Mehsana",
+        locationName: "Mehsana (District)",
+      },
+      {
+        locationValue: "Mehsana",
+        locationName: "Mehsana",
+      },
+      {
+        locationValue: "Kadi",
+        locationName: "Kadi",
+      },
+      {
+        locationValue: "Kheralu",
+        locationName: "Kheralu",
+      },
+      {
+        locationValue: "Becharaji",
+        locationName: "Becharaji",
+      },
+      {
+        locationValue: "Vadnagar",
+        locationName: "Vadnagar",
+      },
+      {
+        locationValue: "Visnagar",
+        locationName: "Visnagar",
+      },
+      {
+        locationValue: "Vijapur",
+        locationName: "Vijapur",
+      },
+      {
+        locationValue: "Unjha",
+        locationName: "Unjha",
+      },
+      {
+        locationValue: "Jotana",
+        locationName: "Jotana",
+      },
+      {
+        locationValue: "Satlasana",
+        locationName: "Satlasana",
+      },
+      {
+        locationValue: "Gojariya",
+        locationName: "Gojariya",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Morbi",
+        locationName: "Morbi (District)",
+      },
+      {
+        locationValue: "Morbi",
+        locationName: "Morbi",
+      },
+      {
+        locationValue: "Maliya Miyana",
+        locationName: "Maliya Miyana",
+      },
+      {
+        locationValue: "Halwad",
+        locationName: "Halwad",
+      },
+      {
+        locationValue: "Wankaner",
+        locationName: "Wankaner",
+      },
+      {
+        locationValue: "Tankara",
+        locationName: "Tankara",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Rajkot",
+        locationName: "Rajkot (District)",
+      },
+      {
+        locationValue: "Rajkot",
+        locationName: "Rajkot",
+      },
+      {
+        locationValue: "Gondal",
+        locationName: "Gondal",
+      },
+      {
+        locationValue: "Dhoraji",
+        locationName: "Dhoraji",
+      },
+      {
+        locationValue: "Jamkandora",
+        locationName: "Jamkandora",
+      },
+      {
+        locationValue: "Jetpur",
+        locationName: "Jetpur",
+      },
+      {
+        locationValue: "Jasdan",
+        locationName: "Jasdan",
+      },
+      {
+        locationValue: "Kotdasangani",
+        locationName: "Kotdasangani",
+      },
+      {
+        locationValue: "Paddhari",
+        locationName: "Paddhari",
+      },
+      {
+        locationValue: "Upleta",
+        locationName: "Upleta",
+      },
+      {
+        locationValue: "Lodhika",
+        locationName: "Lodhika",
+      },
+      {
+        locationValue: "Vichhiya",
+        locationName: "Vichhiya",
+      },
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Vadodara",
+        locationName: "Vadodara (District)",
+      },
+      {
+        locationValue: "Vadodara",
+        locationName: "Vadodara",
+      },
+      {
+        locationValue: "Karjan",
+        locationName: "Karjan",
+      },
+      {
+        locationValue: "Padra",
+        locationName: "Padra",
+      },
+      {
+        locationValue: "Dabhoi",
+        locationName: "Dabhoi",
+      },
+      {
+        locationValue: "Savli",
+        locationName: "Savli",
+      },
+      {
+        locationValue: "Shinor",
+        locationName: "Shinor",
+      },
+      {
+        locationValue: "Dassar",
+        locationName: "Dassar",
+      },
+      {
+        locationValue: "Vaghodia",
+        locationName: "Vaghodia",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Valsad",
+        locationName: "Valsad (District)",
+      },
+      {
+        locationValue: "Valsad",
+        locationName: "Valsad",
+      },
+      {
+        locationValue: "Kaprada",
+        locationName: "Kaprada",
+      },
+      {
+        locationValue: "Pardi",
+        locationName: "Pardi",
+      },
+      {
+        locationValue: "Vapi",
+        locationName: "Vapi",
+      },
+      {
+        locationValue: "Dharampur",
+        locationName: "Dharampur",
+      },
+      {
+        locationValue: "Umragam",
+        locationName: "Umragam",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Sabarkantha",
+        locationName: "Sabarkantha (District)",
+      },
+      {
+        locationValue: "Himmatnagar",
+        locationName: "Himmatnagar",
+      },
+      {
+        locationValue: "Khedbrahma",
+        locationName: "Khedbrahma",
+      },
+      {
+        locationValue: "Prantij",
+        locationName: "Prantij",
+      },
+      {
+        locationValue: "Idar",
+        locationName: "Idar",
+      },
+      {
+        locationValue: "Talod",
+        locationName: "Talod",
+      },
+      {
+        locationValue: "Poshina",
+        locationName: "Poshina",
+      },
+      {
+        locationValue: "Vijaynagar",
+        locationName: "Vijaynagar",
+      },
+      {
+        locationValue: "Wadali",
+        locationName: "Wadali",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Surat",
+        locationName: "Surat (District)",
+      },
+      {
+        locationValue: "Surat City",
+        locationName: "Surat City",
+      },
+      {
+        locationValue: "Kamarej",
+        locationName: "Kamarej",
+      },
+      {
+        locationValue: "Bardoli",
+        locationName: "Bardoli",
+      },
+      {
+        locationValue: "Mangrol",
+        locationName: "Mangrol",
+      },
+      {
+        locationValue: "Mahuva",
+        locationName: "Mahuva",
+      },
+      {
+        locationValue: "Olpad",
+        locationName: "Olpad",
+      },
+      {
+        locationValue: "Mandvi",
+        locationName: "Mandvi",
+      },
+      {
+        locationValue: "Choryasi",
+        locationName: "Choryasi",
+      },
+      {
+        locationValue: "Palsana",
+        locationName: "Palsana",
+      },
+      {
+        locationValue: "Umarpada",
+        locationName: "Umarpada",
+      },
+
+      {
+        isDisabled: true,
+        locationValue: "",
+        locationName: "",
+      },
+      {
+        isDisabled: true,
+        locationValue: "Surendranagar",
+        locationName: "Surendranagar (District)",
+      },
+      {
+        locationValue: "Wadhwan",
+        locationName: "Wadhwan",
+      },
+      {
+        locationValue: "Patdi",
+        locationName: "Patdi",
+      },
+      {
+        locationValue: "Chotila",
+        locationName: "Chotila",
+      },
+      {
+        locationValue: "Dasada",
+        locationName: "Dasada",
+      },
+      {
+        locationValue: "Lakhtar",
+        locationName: "Lakhtar",
+      },
+      {
+        locationValue: "Dhrangadhra",
+        locationName: "Dhrangadhra",
+      },
+      {
+        locationValue: "Limbdi",
+        locationName: "Limbdi",
+      },
+      {
+        locationValue: "Thangarh",
+        locationName: "Thangarh",
+      },
+      {
+        locationValue: "Sayla",
+        locationName: "Sayla",
+      },
+      {
+        locationValue: "Chuda",
+        locationName: "Chuda",
+      },
+    ],
+    Chhattisgarh: [
+      {
+        locationValue: "Balod",
+        locationName: "Balod (District)",
+      },
+      {
+        locationValue: "Baloda Bazar",
+        locationName: "Baloda Bazar (District)",
+      },
+      {
+        locationValue: "Baloda Bazar",
+        locationName: "Baloda Bazar (District)",
+      },
+      {
+        locationValue: "Bastar",
+        locationName: "Bastar (District)",
+      },
+      {
+        locationValue: "Bemetara",
+        locationName: "Bemetara (District)",
+      },
+      {
+        locationValue: "Bijapur",
+        locationName: "Bijapur (District)",
+      },
+      {
+        locationValue: "Bilaspur",
+        locationName: "Bilaspur (District)",
+      },
+      {
+        locationValue: "Dantewada",
+        locationName: "Dantewada (District)",
+      },
+      {
+        locationValue: "Dhamtari",
+        locationName: "Dhamtari (District)",
+      },
+      {
+        locationValue: "Durg",
+        locationName: "Durg (District)",
+      },
+      {
+        locationValue: "Gariaband",
+        locationName: "Gariaband (District)",
+      },
+      {
+        locationValue: "Gaurella-Pendra-Marwahi",
+        locationName: "Gaurella-Pendra-Marwahi (District)",
+      },
+      {
+        locationValue: "Janjgir-Champa",
+        locationName: "Janjgir-Champa (District)",
+      },
+      {
+        locationValue: "Jashpur",
+        locationName: "Jashpur (District)",
+      },
+      {
+        locationValue: "Kabirdham",
+        locationName: "Kabirdham (District)",
+      },
+      {
+        locationValue: "Kanker",
+        locationName: "Kanker (District)",
+      },
+      {
+        locationValue: "Kondagaon",
+        locationName: "Kondagaon (District)",
+      },
+      {
+        locationValue: "Khairagarh-Chhuikhadan-Gandai",
+        locationName: "Khairagarh-Chhuikhadan-Gandai (District)",
+      },
+      {
+        locationValue: "Korba",
+        locationName: "Korba (District)",
+      },
+      {
+        locationValue: "Koriya",
+        locationName: "Koriya (District)",
+      },
+      {
+        locationValue: "Mahasamund",
+        locationName: "Mahasamund (District)",
+      },
+      {
+        locationValue: "Manendragarh-Chirmiri-Bharatpur",
+        locationName: "Manendragarh-Chirmiri-Bharatpur (District)",
+      },
+      {
+        locationValue: "Mohla-Manpur-Chowki",
+        locationName: "Mohla-Manpur-Chowki (District)",
+      },
+      {
+        locationValue: "Mungeli",
+        locationName: "Mungeli (District)",
+      },
+      {
+        locationValue: "Narayanpur",
+        locationName: "Narayanpur (District)",
+      },
+      {
+        locationValue: "Raigarh",
+        locationName: "Raigarh (District)",
+      },
+      {
+        locationValue: "Raipur",
+        locationName: "Raipur (District)",
+      },
+      {
+        locationValue: "Rajnandgaon",
+        locationName: "Rajnandgaon (District)",
+      },
+      {
+        locationValue: "Sarangarh-Bilaigarh",
+        locationName: "Sarangarh-Bilaigarh (District)",
+      },
+      {
+        locationValue: "Shakti",
+        locationName: "Shakti (District)",
+      },
+      {
+        locationValue: "Sukma",
+        locationName: "Sukma (District)",
+      },
+      {
+        locationValue: "Surajpur",
+        locationName: "Surajpur (District)",
+      },
+      {
+        locationValue: "Surguja",
+        locationName: "Surguja (District)",
+      },
+    ],
+    WB: [
+      { isDisabled: true, locationValue: "", locationName: "" },
+      {
+        isDisabled: true,
+        locationValue: "Darjiling",
+        locationName: "Darjiling (District)",
+      },
+      {
+        locationValue: "Darjeeling Pulbazar",
+        locationName: "Darjeeling Pulbazar",
+      },
+      {
+        locationValue: "Rangli Rangliot",
+        locationName: "Rangli Rangliot",
+      },
+      {
+        locationValue: "Kalimpong -I",
+        locationName: "Kalimpong -I",
+      },
+      {
+        locationValue: "Kalimpong -II",
+        locationName: "Kalimpong -II",
+      },
+      {
+        locationValue: "Gorubathan",
+        locationName: "Gorubathan",
+      },
+      {
+        locationValue: "Jorebunglow Sukiapokhri",
+        locationName: "Jorebunglow Sukiapokhri",
+      },
+      {
+        locationValue: "Mirik",
+        locationName: "Mirik",
+      },
+      {
+        locationValue: "Kurseong",
+        locationName: "Kurseong",
+      },
+      {
+        locationValue: "Matigara",
+        locationName: "Matigara",
+      },
+      {
+        locationValue: "Naxalbari",
+        locationName: "Naxalbari",
+      },
+      {
+        locationValue: "Phansidewa",
+        locationName: "Phansidewa",
+      },
+      {
+        locationValue: "Kharibari",
+        locationName: "Kharibari",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Jalpaiguri",
+        locationName: "Jalpaiguri (District)",
+      },
+
+      {
+        locationValue: "Rajganj",
+        locationName: "Rajganj",
+      },
+      {
+        locationValue: "Mal",
+        locationName: "Mal",
+      },
+      {
+        locationValue: "Matiali",
+        locationName: "Matiali",
+      },
+      {
+        locationValue: "Nagrakata",
+        locationName: "Nagrakata",
+      },
+      {
+        locationValue: "Madarihat",
+        locationName: "Madarihat",
+      },
+      {
+        locationValue: "Kalchini",
+        locationName: "Kalchini",
+      },
+      {
+        locationValue: "Kumargram",
+        locationName: "Kumargram",
+      },
+      {
+        locationValue: "Alipurduar - I",
+        locationName: "Alipurduar - I",
+      },
+      {
+        locationValue: "Alipurduar - II",
+        locationName: "Alipurduar - II",
+      },
+      {
+        locationValue: "Falakata",
+        locationName: "Falakata",
+      },
+      {
+        locationValue: "Dhupguri",
+        locationName: "Dhupguri",
+      },
+      {
+        locationValue: "Maynaguri",
+        locationName: "Maynaguri",
+      },
+      {
+        locationValue: "Jalpaiguri",
+        locationName: "Jalpaiguri",
+      },
+
+      { isDisabled: true, locationValue: "", locationName: "" },
+      /* 
+      {
+        isDisabled: true,
+        locationValue: "Koch Bihar",
+        locationName: "Koch Bihar (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Uttar Dinajpur",
+        locationName: "Uttar Dinajpur (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Dakshin Dinajpur",
+        locationName: "Dakshin Dinajpur (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Maldah",
+        locationName: "Maldah (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Murshidabad ",
+        locationName: "Murshidabad (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Murarai - I",
+        locationName: "Murarai - I (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Barddhaman ",
+        locationName: "Barddhaman (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Nadia",
+        locationName: "Nadia (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "North Twenty Four Parganas",
+        locationName: "North Twenty Four Parganas (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Hugli",
+        locationName: "Hugli (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Bankura",
+        locationName: "Bankura (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Puruliya",
+        locationName: "Puruliya (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Medinipur",
+        locationName: "Medinipur (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "Haora ",
+        locationName: "Haora (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        locationValue: "Kolkata",
+        locationName: "Kolkata (District)",
+      },
+      { isDisabled: true, locationValue: "", locationName: "" },
+
+      {
+        isDisabled: true,
+        locationValue: "South Twenty Four Parganas ",
+        locationName: "South Twenty Four Parganas (District)",
+      }, */
+    ],
+    /* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ */
   },
   distributorAreaCoverage: {
     Danapur: [

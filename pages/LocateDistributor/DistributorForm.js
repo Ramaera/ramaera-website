@@ -118,7 +118,7 @@ const DistributorForm = () => {
                 </option>
               )}
               <option value="Stockist">Super Stockist</option>
-              <option value="Distribitor">Distribitor</option>
+              <option value="Distributor">Distributor</option>
             </select>
           </FlexCol>
           <FlexCol>
@@ -177,7 +177,7 @@ const DistributorForm = () => {
         ) : (
           <div style={{ height: "50px" }}></div>
         )}
-        {type === "Distribitor" && (
+        {type === "Distributor" && (
           <>
             {district === "Gopalganj" && (
               <Details>
