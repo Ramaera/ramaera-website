@@ -234,6 +234,7 @@ export function UserForm({}) {
           <br />
           <select
             required
+            value={district}
             onChange={(e) => {
               setStokistLocation(e.target.value)
               setRetailLocation(e.target.value)
@@ -293,32 +294,34 @@ export function UserForm({}) {
       )}
       {partner === "STOCKIST" && district && (
         <div style={{ width: "450px" }}>
-          <p style={{ padding: " 10px 0" }}>
-            Area Coverage:
-            <br />
-            <br />
-            <p
-              style={{
-                width: "350px",
-                padding: "0px",
-                textTransform: "capitalize",
-              }}
-            >
-              {locationStock.map((loc) => {
-                return (
-                  <>
-                    <strong
-                      style={{
-                        overflowWrap: "wrap",
-                      }}
-                    >
-                      {loc},{" "}
-                    </strong>
-                  </>
-                )
-              })}
+          {locationStock[0] && (
+            <p style={{ padding: " 10px 0" }}>
+              Area Coverage:
+              <br />
+              <br />
+              <p
+                style={{
+                  width: "350px",
+                  padding: "0px",
+                  textTransform: "capitalize",
+                }}
+              >
+                {locationStock.map((loc) => {
+                  return (
+                    <>
+                      <strong
+                        style={{
+                          overflowWrap: "wrap",
+                        }}
+                      >
+                        {loc},{" "}
+                      </strong>
+                    </>
+                  )
+                })}
+              </p>
             </p>
-          </p>
+          )}
         </div>
       )}
       {partner === "DISTRIBUTOR" && district && (
@@ -356,32 +359,34 @@ export function UserForm({}) {
       )}
       {partner === "DISTRIBUTOR" && district && (
         <div style={{ width: "450px" }}>
-          <p style={{ padding: " 10px 0" }}>
-            Area Coverage:
-            <br />
-            <br />
-            <p
-              style={{
-                width: "350px",
-                padding: "0px",
-                textTransform: "capitalize",
-              }}
-            >
-              {location.map((loc) => {
-                return (
-                  <>
-                    <strong
-                      style={{
-                        overflowWrap: "wrap",
-                      }}
-                    >
-                      {loc},{" "}
-                    </strong>
-                  </>
-                )
-              })}
+          {location[0] && (
+            <p style={{ padding: " 10px 0" }}>
+              Area Coverage:
+              <br />
+              <br />
+              <p
+                style={{
+                  width: "350px",
+                  padding: "0px",
+                  textTransform: "capitalize",
+                }}
+              >
+                {location.map((loc) => {
+                  return (
+                    <>
+                      <strong
+                        style={{
+                          overflowWrap: "wrap",
+                        }}
+                      >
+                        {loc},{" "}
+                      </strong>
+                    </>
+                  )
+                })}
+              </p>
             </p>
-          </p>
+          )}
         </div>
       )}
       <div
