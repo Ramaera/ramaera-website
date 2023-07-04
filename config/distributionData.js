@@ -4143,8 +4143,112 @@ export default {
         locationName: "Murshidabad (District)",
       },
       {
-        locationValue: "",
-        locationName: "",
+        locationValue: "Farakka",
+        locationName: "Farakka",
+      },
+      {
+        locationValue: "Samserganj",
+        locationName: "Samserganj",
+      },
+      {
+        locationValue: "Suti - I",
+        locationName: "Suti - I",
+      },
+      {
+        locationValue: "Suti - II",
+        locationName: "Suti - II",
+      },
+      {
+        locationValue: "Raghunathganj - I",
+        locationName: "Raghunathganj - I",
+      },
+      {
+        locationValue: "Raghunathganj - II",
+        locationName: "Raghunathganj - II",
+      },
+      {
+        locationValue: "Lalgola",
+        locationName: "Lalgola",
+      },
+      {
+        locationValue: "Sagardighi",
+        locationName: "Sagardighi",
+      },
+      {
+        locationValue: "Bhagawangola - I",
+        locationName: "Bhagawangola - I",
+      },
+      {
+        locationValue: "Bhagawangola - II",
+        locationName: "Bhagawangola - II",
+      },
+      {
+        locationValue: "Raninagar - I",
+        locationName: "Raninagar - I",
+      },
+      {
+        locationValue: "Raninagar - II",
+        locationName: "Raninagar - II",
+      },
+      {
+        locationValue: "Jalangi",
+        locationName: "Jalangi",
+      },
+      {
+        locationValue: "Domkal",
+        locationName: "Domkal",
+      },
+      {
+        locationValue: "Murshidabad Jiaganj",
+        locationName: "Murshidabad Jiaganj",
+      },
+      {
+        locationValue: "Nabagram",
+        locationName: "Nabagram",
+      },
+      {
+        locationValue: "Khargram",
+        locationName: "Khargram",
+      },
+      {
+        locationValue: "Kandi",
+        locationName: "Kandi",
+      },
+      {
+        locationValue: "Berhampore",
+        locationName: "Berhampore",
+      },
+      {
+        locationValue: "Hariharpara",
+        locationName: "Hariharpara",
+      },
+      {
+        locationValue: "Nawda",
+        locationName: "Nawda",
+      },
+      {
+        locationValue: "Beldanga - I",
+        locationName: "Beldanga - I",
+      },
+      {
+        locationValue: "Beldanga - II",
+        locationName: "Beldanga - II",
+      },
+      {
+        locationValue: "Bharatpur - I",
+        locationName: "Bharatpur - I",
+      },
+      {
+        locationValue: "Bharatpur - II",
+        locationName: "Bharatpur - II",
+      },
+      {
+        locationValue: "Burwan",
+        locationName: "Burwan",
+      },
+      {
+        locationValue: "Birbhum",
+        locationName: "Birbhum",
       },
 
       { isDisabled: true, locationValue: "", locationName: "" },
@@ -4154,6 +4258,79 @@ export default {
         locationValue: "Murarai - I",
         locationName: "Murarai - I (District)",
       },
+      {
+        locationValue: "Murarai - II",
+        locationName: "Murarai - II",
+      },
+      {
+        locationValue: "Nalhati - I",
+        locationName: "Nalhati - I",
+      },
+      {
+        locationValue: "Nalhati - II",
+        locationName: "Nalhati - II",
+      },
+      {
+        locationValue: "Rampurhat - I",
+        locationName: "Rampurhat - I",
+      },
+      {
+        locationValue: "Rampurhat - II",
+        locationName: "Rampurhat - II",
+      },
+      {
+        locationValue: "Mayureswar - I",
+        locationName: "Mayureswar - I",
+      },
+      {
+        locationValue: "Mayureswar - II",
+        locationName: "Mayureswar - II",
+      },
+      {
+        locationValue: "Mohammad Bazar",
+        locationName: "Mohammad Bazar",
+      },
+      {
+        locationValue: "Rajnagar",
+        locationName: "Rajnagar",
+      },
+      {
+        locationValue: "Suri - I",
+        locationName: "Suri - I",
+      },
+      {
+        locationValue: "Suri - II",
+        locationName: "Suri - II",
+      },
+      {
+        locationValue: "Sainthia",
+        locationName: "Sainthia",
+      },
+      {
+        locationValue: "Labpur",
+        locationName: "Labpur",
+      },
+      {
+        locationValue: "Nanoor",
+        locationName: "Nanoor",
+      },
+      {
+        locationValue: "Bolpur Sriniketan",
+        locationName: "Bolpur Sriniketan",
+      },
+      {
+        locationValue: "Illambazar",
+        locationName: "Illambazar",
+      },
+      {
+        locationValue: "Dubrajpur",
+        locationName: "Dubrajpur",
+      },
+      {
+        locationValue: "Khoyrasol",
+        locationName: "Khoyrasol",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -4161,6 +4338,131 @@ export default {
         locationValue: "Barddhaman ",
         locationName: "Barddhaman (District)",
       },
+      {
+        locationValue: "Salanpur ",
+        locationName: "Salanpur",
+      },
+      {
+        locationValue: "Barabani",
+        locationName: "Barabani",
+      },
+      {
+        locationValue: "Jamuria",
+        locationName: "Jamuria",
+      },
+      {
+        locationValue: "Raniganj",
+        locationName: "Raniganj",
+      },
+      {
+        locationValue: "Ondal",
+        locationName: "Ondal",
+      },
+      {
+        locationValue: "Pandabeswa",
+        locationName: "Pandabeswar",
+      },
+      {
+        locationValue: "Faridpur Durgapur",
+        locationName: "Faridpur Durgapur",
+      },
+      {
+        locationValue: "Kanksa",
+        locationName: "Kanksa",
+      },
+      {
+        locationValue: "Ausgram - I",
+        locationName: "Ausgram - I",
+      },
+      {
+        locationValue: "Ausgram - II",
+        locationName: "Ausgram - II",
+      },
+      {
+        locationValue: "Mangolkote",
+        locationName: "Mangolkote",
+      },
+      {
+        locationValue: "Ketugram - I",
+        locationName: "Ketugram - I",
+      },
+      {
+        locationValue: "Ketugram - II",
+        locationName: "Ketugram - II",
+      },
+      {
+        locationValue: "Katwa - I",
+        locationName: "Katwa - I",
+      },
+      {
+        locationValue: "Katwa - II",
+        locationName: "Katwa - II",
+      },
+      {
+        locationValue: "Purbasthali - I",
+        locationName: "Purbasthali - I",
+      },
+      {
+        locationValue: "Purbasthali - II",
+        locationName: "Purbasthali - II",
+      },
+      {
+        locationValue: "Manteswar",
+        locationName: "Manteswar",
+      },
+      {
+        locationValue: "Bhatar",
+        locationName: "Bhatar",
+      },
+      {
+        locationValue: "Galsi - I",
+        locationName: "Galsi - I",
+      },
+      {
+        locationValue: "Galsi - II",
+        locationName: "Galsi - II",
+      },
+      {
+        locationValue: "Burdwan - I",
+        locationName: "Burdwan - I",
+      },
+      {
+        locationValue: "Burdwan - II",
+        locationName: "Burdwan - II",
+      },
+      {
+        locationValue: "Memari - I",
+        locationName: "Memari - I",
+      },
+      {
+        locationValue: "Memari - II",
+        locationName: "Memari - II",
+      },
+      {
+        locationValue: "Kalna - I",
+        locationName: "Kalna - I",
+      },
+      {
+        locationValue: "Kalna - II",
+        locationName: "Kalna - II",
+      },
+      {
+        locationValue: "Raina - I",
+        locationName: "Raina - I",
+      },
+      {
+        locationValue: "Raina - II",
+        locationName: "Raina - II",
+      },
+      {
+        locationValue: "Jamalpur",
+        locationName: "Jamalpur",
+      },
+      {
+        locationValue: "Khandaghosh",
+        locationName: "Khandaghosh",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -4168,6 +4470,75 @@ export default {
         locationValue: "Nadia",
         locationName: "Nadia (District)",
       },
+      {
+        locationValue: "Karimpur - I",
+        locationName: "Karimpur - I",
+      },
+      {
+        locationValue: "Karimpur - II",
+        locationName: "Karimpur - II",
+      },
+      {
+        locationValue: "Tehatta - I",
+        locationName: "Tehatta - I",
+      },
+      {
+        locationValue: "Tehatta - II",
+        locationName: "Tehatta - II",
+      },
+      {
+        locationValue: "Kaliganj",
+        locationName: "Kaliganj",
+      },
+      {
+        locationValue: "Nakashipara",
+        locationName: "Nakashipara",
+      },
+      {
+        locationValue: "Chapra",
+        locationName: "Chapra",
+      },
+      {
+        locationValue: "Krishnagar - I",
+        locationName: "Krishnagar - I",
+      },
+      {
+        locationValue: "Krishnagar - II",
+        locationName: "Krishnagar - II",
+      },
+      {
+        locationValue: "Nabadwip",
+        locationName: "Nabadwip",
+      },
+      {
+        locationValue: "Krishnaganj",
+        locationName: "Krishnaganj",
+      },
+      {
+        locationValue: "Hanskhali",
+        locationName: "Hanskhali",
+      },
+      {
+        locationValue: "Santipur",
+        locationName: "Santipur",
+      },
+      {
+        locationValue: "Ranaghat - I",
+        locationName: "Ranaghat - I",
+      },
+      {
+        locationValue: "Ranaghat - II",
+        locationName: "Ranaghat - II",
+      },
+      {
+        locationValue: "Chakdah",
+        locationName: "Chakdah",
+      },
+      {
+        locationValue: "Haringhata",
+        locationName: "Haringhata",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -4175,6 +4546,95 @@ export default {
         locationValue: "North Twenty Four Parganas",
         locationName: "North Twenty Four Parganas (District)",
       },
+      {
+        locationValue: "Bagda",
+        locationName: "Bagda",
+      },
+      {
+        locationValue: "Bongaon",
+        locationName: "Bongaon",
+      },
+      {
+        locationValue: "Gaighata",
+        locationName: "Gaighata",
+      },
+      {
+        locationValue: "Swarupnagar",
+        locationName: "Swarupnagar",
+      },
+      {
+        locationValue: "Habra - I",
+        locationName: "Habra - I",
+      },
+      {
+        locationValue: "Habra - II",
+        locationName: "Habra - II",
+      },
+      {
+        locationValue: "Amdanga",
+        locationName: "Amdanga",
+      },
+      {
+        locationValue: "Barrackpur - I",
+        locationName: "Barrackpur - I",
+      },
+      {
+        locationValue: "Barrackpur - II",
+        locationName: "Barrackpur - II",
+      },
+      {
+        locationValue: "Barasat - I",
+        locationName: "Barasat - I",
+      },
+      {
+        locationValue: "Barasat - II",
+        locationName: "Barasat - II",
+      },
+      {
+        locationValue: "Deganga",
+        locationName: "Deganga",
+      },
+      {
+        locationValue: "Baduria",
+        locationName: "Baduria",
+      },
+      {
+        locationValue: "Basirhat - I",
+        locationName: "Basirhat - I",
+      },
+      {
+        locationValue: "Basirhat - II",
+        locationName: "Basirhat - II",
+      },
+      {
+        locationValue: "Haroa",
+        locationName: "Haroa",
+      },
+      {
+        locationValue: "Rajarhat",
+        locationName: "Rajarhat",
+      },
+      {
+        locationValue: "Minakhan",
+        locationName: "Minakhan",
+      },
+      {
+        locationValue: "Sandeskhali - I",
+        locationName: "Sandeskhali - I",
+      },
+      {
+        locationValue: "Sandeskhali - II",
+        locationName: "Sandeskhali - II",
+      },
+      {
+        locationValue: "Hasnabad",
+        locationName: "Hasnabad",
+      },
+      {
+        locationValue: "Hingalganj",
+        locationName: "Hingalganj",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -4182,13 +4642,174 @@ export default {
         locationValue: "Hugli",
         locationName: "Hugli (District)",
       },
-      { isDisabled: true, locationValue: "", locationName: "" },
+      {
+        locationValue: "Goghat - I",
+        locationName: "Goghat - I",
+      },
+      {
+        locationValue: "Goghat - II",
+        locationName: "Goghat - II",
+      },
+      {
+        locationValue: "Arambag",
+        locationName: "Arambag",
+      },
+      {
+        locationValue: "Pursura",
+        locationName: "Pursura",
+      },
+      {
+        locationValue: "Tarakeswar",
+        locationName: "Tarakeswar",
+      },
+      {
+        locationValue: "Dhaniakhali",
+        locationName: "Dhaniakhali",
+      },
+      {
+        locationValue: "Pandua",
+        locationName: "Pandua",
+      },
+      {
+        locationValue: "Balagarh",
+        locationName: "Balagarh",
+      },
+      {
+        locationValue: "Chinsurah - Magra",
+        locationName: "Chinsurah - Magra",
+      },
+      {
+        locationValue: "Polba - Dadpur",
+        locationName: "Polba - Dadpur",
+      },
+      {
+        locationValue: "Haripal",
+        locationName: "Haripal",
+      },
+      {
+        locationValue: "Singur",
+        locationName: "Singur",
+      },
+      {
+        locationValue: "Serampur Uttarpara",
+        locationName: "Serampur Uttarpara",
+      },
+      {
+        locationValue: "Chanditala - I",
+        locationName: "Chanditala - I",
+      },
+      {
+        locationValue: "Chanditala - II",
+        locationName: "Chanditala - II",
+      },
+      {
+        locationValue: "Jangipara",
+        locationName: "Jangipara",
+      },
+      {
+        locationValue: "Khanakul - I",
+        locationName: "Khanakul - I",
+      },
+      {
+        locationValue: "Khanakul - II",
+        locationName: "Khanakul - II",
+      },
 
+      { isDisabled: true, locationValue: "", locationName: "" },
       {
         isDisabled: true,
         locationValue: "Bankura",
         locationName: "Bankura (District)",
       },
+      {
+        locationValue: "Saltora",
+        locationName: "Saltora",
+      },
+      {
+        locationValue: "Mejhia",
+        locationName: "Mejhia",
+      },
+      {
+        locationValue: "Gangajalghati",
+        locationName: "Gangajalghati",
+      },
+      {
+        locationValue: "Chhatna",
+        locationName: "Chhatna",
+      },
+      {
+        locationValue: "Indpur",
+        locationName: "Indpur",
+      },
+      {
+        locationValue: "Bankura - I",
+        locationName: "Bankura - I",
+      },
+      {
+        locationValue: "Bankura - II",
+        locationName: "Bankura - II",
+      },
+      {
+        locationValue: "Barjora",
+        locationName: "Barjora",
+      },
+      {
+        locationValue: "Sonamukhi",
+        locationName: "Sonamukhi",
+      },
+      {
+        locationValue: "Patrasayer",
+        locationName: "Patrasayer",
+      },
+      {
+        locationValue: "Indus",
+        locationName: "Indus",
+      },
+      {
+        locationValue: "Kotulpur",
+        locationName: "Kotulpur",
+      },
+      {
+        locationValue: "Jaypur",
+        locationName: "Jaypur",
+      },
+      {
+        locationValue: "Vishnupur",
+        locationName: "Vishnupur",
+      },
+      {
+        locationValue: "Onda",
+        locationName: "Onda",
+      },
+      {
+        locationValue: "Taldangra",
+        locationName: "Taldangra",
+      },
+      {
+        locationValue: "Simlapal",
+        locationName: "Simlapal",
+      },
+      {
+        locationValue: "Khatra",
+        locationName: "Khatra",
+      },
+      {
+        locationValue: "Hirbandh",
+        locationName: "Hirbandh",
+      },
+      {
+        locationValue: "Ranibundh",
+        locationName: "Ranibundh",
+      },
+      {
+        locationValue: "Raipur",
+        locationName: "Raipur",
+      },
+      {
+        locationValue: "Sarenga",
+        locationName: "Sarenga",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -4196,6 +4817,87 @@ export default {
         locationValue: "Puruliya",
         locationName: "Puruliya (District)",
       },
+      {
+        locationValue: "Jaipur",
+        locationName: "Jaipur",
+      },
+      {
+        locationValue: "Purulia - II",
+        locationName: "Purulia - II",
+      },
+      {
+        locationValue: "Para",
+        locationName: "Para",
+      },
+      {
+        locationValue: "Raghunathpur - I",
+        locationName: "Raghunathpur - I",
+      },
+      {
+        locationValue: "Raghunathpur - II",
+        locationName: "Raghunathpur - II",
+      },
+      {
+        locationValue: "Neturia",
+        locationName: "Neturia",
+      },
+      {
+        locationValue: "Santuri",
+        locationName: "Santuri",
+      },
+      {
+        locationValue: "Kashipur",
+        locationName: "Kashipur",
+      },
+      {
+        locationValue: "Hura",
+        locationName: "Hura",
+      },
+      {
+        locationValue: "Purulia - I",
+        locationName: "Purulia - I",
+      },
+      {
+        locationValue: "Puncha",
+        locationName: "Puncha",
+      },
+      {
+        locationValue: "Arsha",
+        locationName: "Arsha",
+      },
+      {
+        locationValue: "Jhalda - I",
+        locationName: "Jhalda - I",
+      },
+      {
+        locationValue: "Jhalda - II",
+        locationName: "Jhalda - II",
+      },
+      {
+        locationValue: "Bagmundi",
+        locationName: "Bagmundi",
+      },
+      {
+        locationValue: "Balarampur",
+        locationName: "Balarampur",
+      },
+      {
+        locationValue: "Barabazar",
+        locationName: "Barabazar",
+      },
+      {
+        locationValue: "Manbazar - I",
+        locationName: "Manbazar - I",
+      },
+      {
+        locationValue: "Manbazar - II",
+        locationName: "Manbazar - II",
+      },
+      {
+        locationValue: "Bundwan",
+        locationName: "Bundwan",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -4203,6 +4905,223 @@ export default {
         locationValue: "Medinipur",
         locationName: "Medinipur (District)",
       },
+      {
+        locationValue: "Binpur - I",
+        locationName: "Binpur - I",
+      },
+      {
+        locationValue: "Binpur - II",
+        locationName: "Binpur - II",
+      },
+      {
+        locationValue: "Garbeta - I",
+        locationName: "Garbeta - I",
+      },
+      {
+        locationValue: "Garbeta - II",
+        locationName: "Garbeta - II",
+      },
+      {
+        locationValue: "Garbeta - III",
+        locationName: "Garbeta - III",
+      },
+      {
+        locationValue: "Chandrakona - I",
+        locationName: "Chandrakona - I",
+      },
+      {
+        locationValue: "Chandrakona - II",
+        locationName: "Chandrakona - II",
+      },
+      {
+        locationValue: "Ghatal",
+        locationName: "Ghatal",
+      },
+      {
+        locationValue: "Daspur - I",
+        locationName: "Daspur - I",
+      },
+      {
+        locationValue: "Daspur - II",
+        locationName: "Daspur - II",
+      },
+      {
+        locationValue: "Keshpur",
+        locationName: "Keshpur",
+      },
+      {
+        locationValue: "Salbani",
+        locationName: "Salbani",
+      },
+      {
+        locationValue: "Midnapore",
+        locationName: "Midnapore",
+      },
+      {
+        locationValue: "Jhargram",
+        locationName: "Jhargram",
+      },
+      {
+        locationValue: "Jamboni",
+        locationName: "Jamboni",
+      },
+      {
+        locationValue: "Gopiballavpur - I",
+        locationName: "Gopiballavpur - I",
+      },
+      {
+        locationValue: "Gopiballavpur - II",
+        locationName: "Gopiballavpur - II",
+      },
+      {
+        locationValue: "Nayagram",
+        locationName: "Nayagram",
+      },
+      {
+        locationValue: "Sankrail",
+        locationName: "Sankrail",
+      },
+      {
+        locationValue: "Kharagpur - I",
+        locationName: "Kharagpur - I",
+      },
+      {
+        locationValue: "Kharagpur - II",
+        locationName: "Kharagpur - II",
+      },
+      {
+        locationValue: "Debra",
+        locationName: "Debra",
+      },
+      {
+        locationValue: "Panskura - I",
+        locationName: "Panskura - I",
+      },
+      {
+        locationValue: "Panskura - II",
+        locationName: "Panskura - II",
+      },
+      {
+        locationValue: "Tamluk",
+        locationName: "Tamluk",
+      },
+      {
+        locationValue: "Sahid Matangini",
+        locationName: "Sahid Matangini",
+      },
+      {
+        locationValue: "Nanda Kumar",
+        locationName: "Nanda Kumar",
+      },
+      {
+        locationValue: "Mahisadal",
+        locationName: "Mahisadal",
+      },
+      {
+        locationValue: "Moyna",
+        locationName: "Moyna",
+      },
+      {
+        locationValue: "Pingla",
+        locationName: "Pingla",
+      },
+      {
+        locationValue: "Sabang",
+        locationName: "Sabang",
+      },
+      {
+        locationValue: "Narayangarh",
+        locationName: "Narayangarh",
+      },
+      {
+        locationValue: "Keshiary",
+        locationName: "Keshiary",
+      },
+      {
+        locationValue: "Dantan - I",
+        locationName: "Dantan - I",
+      },
+      {
+        locationValue: "Dantan - II",
+        locationName: "Dantan - II",
+      },
+      {
+        locationValue: "Potashpur - I",
+        locationName: "Potashpur - I",
+      },
+      {
+        locationValue: "Potashpur - II",
+        locationName: "Potashpur - II",
+      },
+      {
+        locationValue: "Bhagawanpur - I",
+        locationName: "Bhagawanpur - I",
+      },
+      {
+        locationValue: "Bhagawanpur - II",
+        locationName: "Bhagawanpur - II",
+      },
+      {
+        locationValue: "Nandigram - I",
+        locationName: "Nandigram - I",
+      },
+      {
+        locationValue: "Nandigram - II",
+        locationName: "Nandigram - II",
+      },
+      {
+        locationValue: "Nandigram - III",
+        locationName: "Nandigram - III",
+      },
+      {
+        locationValue: "Sutahata - I",
+        locationName: "Sutahata - I",
+      },
+      {
+        locationValue: "Sutahata - II",
+        locationName: "Sutahata - II",
+      },
+      {
+        locationValue: "Khejuri - I",
+        locationName: "Khejuri - I",
+      },
+      {
+        locationValue: "Khejuri - II",
+        locationName: "Khejuri - II",
+      },
+      {
+        locationValue: "Contai - I",
+        locationName: "Contai - I",
+      },
+      {
+        locationValue: "Contai - II",
+        locationName: "Contai - II",
+      },
+      {
+        locationValue: "Contai - III",
+        locationName: "Contai - III",
+      },
+      {
+        locationValue: "Egra - I",
+        locationName: "Egra - I",
+      },
+      {
+        locationValue: "Egra - II",
+        locationName: "Egra - II",
+      },
+      {
+        locationValue: "Mohanpur",
+        locationName: "Mohanpur",
+      },
+      {
+        locationValue: "Ramnagar - I",
+        locationName: "Ramnagar - I",
+      },
+      {
+        locationValue: "Ramnagar - II",
+        locationName: "Ramnagar - II",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -4210,6 +5129,63 @@ export default {
         locationValue: "Haora ",
         locationName: "Haora (District)",
       },
+      {
+        locationValue: "Udaynarayanpur",
+        locationName: "Udaynarayanpur",
+      },
+      {
+        locationValue: "Amta - I",
+        locationName: "Amta - I",
+      },
+      {
+        locationValue: "Amta - II",
+        locationName: "Amta - II",
+      },
+      {
+        locationValue: "Jagatballavpur",
+        locationName: "Jagatballavpur",
+      },
+      {
+        locationValue: "Domjur",
+        locationName: "Domjur",
+      },
+      {
+        locationValue: "Bally Jagachha",
+        locationName: "Bally Jagachha",
+      },
+      {
+        locationValue: "Sankrail",
+        locationName: "Sankrail",
+      },
+      {
+        locationValue: "Panchla",
+        locationName: "Panchla",
+      },
+      {
+        locationValue: "Uluberia - I",
+        locationName: "Uluberia - I",
+      },
+      {
+        locationValue: "Uluberia - II",
+        locationName: "Uluberia - II",
+      },
+      {
+        locationValue: "Bagnan - I",
+        locationName: "Bagnan - I",
+      },
+      {
+        locationValue: "Bagnan - II",
+        locationName: "Bagnan - II",
+      },
+      {
+        locationValue: "Shyampur - I",
+        locationName: "Shyampur - I",
+      },
+      {
+        locationValue: "Shyampur - II",
+        locationName: "Shyampur - II",
+      },
+
       { isDisabled: true, locationValue: "", locationName: "" },
 
       {
@@ -4223,36 +5199,123 @@ export default {
         locationValue: "South Twenty Four Parganas ",
         locationName: "South Twenty Four Parganas (District)",
       },
+      {
+        locationValue: "Thakurpukur Mahestola",
+        locationName: "Thakurpukur Mahestola",
+      },
+      {
+        locationValue: "Budge Budge - I",
+        locationName: "Budge Budge - I",
+      },
+      {
+        locationValue: "Budge Budge - II",
+        locationName: "Budge Budge - II",
+      },
+      {
+        locationValue: "Bishnupur - I",
+        locationName: "Bishnupur - I",
+      },
+      {
+        locationValue: "Bishnupur - II",
+        locationName: "Bishnupur - II",
+      },
+      {
+        locationValue: "Sonarpur",
+        locationName: "Sonarpur",
+      },
+      {
+        locationValue: "Bhangar - I",
+        locationName: "Bhangar - I",
+      },
+      {
+        locationValue: "Bhangar - II",
+        locationName: "Bhangar - II",
+      },
+      {
+        locationValue: "Canning - I",
+        locationName: "Canning - I",
+      },
+      {
+        locationValue: "Canning - II",
+        locationName: "Canning - II",
+      },
+      {
+        locationValue: "Baruipur",
+        locationName: "Baruipur",
+      },
+      {
+        locationValue: "Magrahat - I",
+        locationName: "Magrahat - I",
+      },
+      {
+        locationValue: "Magrahat - II",
+        locationName: "Magrahat - II",
+      },
+      {
+        locationValue: "Falta",
+        locationName: "Falta",
+      },
+      {
+        locationValue: "Diamond Harbour - I",
+        locationName: "Diamond Harbour - I",
+      },
+      {
+        locationValue: "Diamond Harbour - II",
+        locationName: "Diamond Harbour - II",
+      },
+      {
+        locationValue: "Kulpi",
+        locationName: "Kulpi",
+      },
+      {
+        locationValue: "Mandirbazar",
+        locationName: "Mandirbazar",
+      },
+      {
+        locationValue: "Mathurapur - I",
+        locationName: "Mathurapur - I",
+      },
+      {
+        locationValue: "Mathurapur - II",
+        locationName: "Mathurapur - II",
+      },
+      {
+        locationValue: "Jaynagar - I",
+        locationName: "Jaynagar - I",
+      },
+      {
+        locationValue: "Jaynagar - II",
+        locationName: "Jaynagar - II",
+      },
+      {
+        locationValue: "Kultali",
+        locationName: "Kultali",
+      },
+      {
+        locationValue: "Basanti",
+        locationName: "Basanti",
+      },
+      {
+        locationValue: "Gosaba",
+        locationName: "Gosaba",
+      },
+      {
+        locationValue: "Kakdwip",
+        locationName: "Kakdwip",
+      },
+      {
+        locationValue: "Sagar",
+        locationName: "Sagar",
+      },
+      {
+        locationValue: "Namkhana",
+        locationName: "Namkhana",
+      },
+      {
+        locationValue: "Patharpratima",
+        locationName: "Patharpratima",
+      },
     ],
-    /* 
-Farakka
-Samserganj
-Suti - I
-Suti - II
-Raghunathganj - I
-Raghunathganj - II
-Lalgola
-Sagardighi
-Bhagawangola - I
-Bhagawangola - II
-Raninagar - II
-Jalangi
-Domkal
-Raninagar - I
-Murshidabad Jiaganj
-Nabagram
-Khargram
-Kandi
-Berhampore
-Hariharpara
-Nawda
-Beldanga - I
-Beldanga - II
-Bharatpur - II
-Bharatpur - I
-Burwan
-Birbhum
- */
   },
   distributorAreaCoverage: {
     Danapur: [
