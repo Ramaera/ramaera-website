@@ -26,9 +26,9 @@ export function UserForm({}) {
   const [locationStock, setLocationStock] = useState([])
   const dispatch = useDispatch()
   const changeHandler = (val) => {
+    setStateIndia("")
     setPartner(val)
     setDistrict("")
-    setStateIndia("")
   }
   const changeStateIndia = (val) => {
     setStateIndia(val)
@@ -211,6 +211,7 @@ export function UserForm({}) {
           <br />
           <select
             required
+            value={stateIndia}
             onChange={(e) => {
               changeStateIndia(e.target.value)
               setLocation("")
