@@ -137,6 +137,7 @@ const DistributorForm = () => {
                 </option>
               )}
               <option value="Bihar">Bihar</option>
+              <option value="UP">Uttar Pradesh</option>
               <option value="Telangana">Telangana</option>
             </select>
           </FlexCol>
@@ -161,12 +162,18 @@ const DistributorForm = () => {
                   <option value="Mahua">Mahua (Vaishali)</option>
                   <option value="Mahnar">Mahnar (Vaishali)</option>
                   <option value="WestChamparan">West Champaran</option>
+                  <option value="Gaya">Gaya</option>
                   <option value="Patna">Patna</option>
                 </>
               )}
               {aState === "Telangana" && (
                 <>
                   <option value="Hyderabad">Hyderabad</option>
+                </>
+              )}
+              {aState === "UP" && (
+                <>
+                  <option value="Sadar Tehsil">Sadar Tehsil</option>
                 </>
               )}
             </select>
@@ -209,6 +216,41 @@ const DistributorForm = () => {
                 <Tr>
                   <Td>Email Id</Td>
                   <Td>prabhakart774@gmail.com</Td>
+                </Tr>
+              </Details>
+            )}
+            {district === "Sadar Tehsil" && (
+              <Details>
+                <Tr>
+                  <Td>Name of Business</Td>
+                  <Td>S.K.Traders</Td>
+                </Tr>
+                <Tr>
+                  <Td>Name Of the Proprietor</Td>
+                  <Td>Mr.Suresh Kumar Yadav</Td>
+                </Tr>
+
+                <Tr>
+                  <Td>Mobile No.</Td>
+                  <Td>9839824335</Td>
+                </Tr>
+                <Tr>
+                  <Td>Firm Type</Td>
+                  <Td>Distributor</Td>
+                </Tr>
+                <Tr>
+                  <Td>Zone</Td>
+                  <Td>Prayagraj Division</Td>
+                </Tr>
+                <Tr>
+                  <Td>Address Of Business</Td>
+                  <Td>
+                    902/667, Krishna Nagar, Kidganj, Prayagraj, Pin Code-211003
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Email Id</Td>
+                  <Td>skumaryadav088@gmail.com</Td>
                 </Tr>
               </Details>
             )}
@@ -539,6 +581,77 @@ const DistributorForm = () => {
                 <Tr>
                   <Td>Email Id</Td>
                   <Td>vnshpthk@gmail.com</Td>
+                </Tr>
+              </Details>
+            )}
+            {district === "Patna" && (
+              <Details>
+                <Tr>
+                  <Td>Name of Business</Td>
+                  <Td>Sushil Enterprises</Td>
+                </Tr>
+
+                <Tr>
+                  <Td>Name Of the Proprietor</Td>
+                  <Td>Mr. Sushil Kumar</Td>
+                </Tr>
+                <Tr>
+                  <Td>Mobile No.</Td>
+                  <Td>6200262714</Td>
+                </Tr>
+                <Tr>
+                  <Td>Firm Type</Td>
+                  <Td>Super Stockist</Td>
+                </Tr>
+                <Tr>
+                  <Td>Zone</Td>
+                  <Td>Zone 2 </Td>
+                </Tr>
+                <Tr>
+                  <Td>Address Of Business</Td>
+                  <Td>
+                    Vishwarkarma Market, Opp-Eden Apartment, Urja Nagar,
+                    Danapur, Khrgaul Road, Patna- 801503
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Email Id</Td>
+                  <Td>sushil.kunkun@gmail.com</Td>
+                </Tr>
+              </Details>
+            )}
+            {district === "Gaya" && (
+              <Details>
+                <Tr>
+                  <Td>Name of Business</Td>
+                  <Td>Shree Balaji Traders</Td>
+                </Tr>
+
+                <Tr>
+                  <Td>Name Of the Proprietor</Td>
+                  <Td>Mr. Rajeev Ranjan</Td>
+                </Tr>
+                <Tr>
+                  <Td>Mobile No.</Td>
+                  <Td>9934629530</Td>
+                </Tr>
+                <Tr>
+                  <Td>Firm Type</Td>
+                  <Td>Super Stockist</Td>
+                </Tr>
+                <Tr>
+                  <Td>Zone</Td>
+                  <Td>Zone 1 </Td>
+                </Tr>
+                <Tr>
+                  <Td>Address Of Business</Td>
+                  <Td>
+                    Bara Guraru, Po+Ps- Guraru, Distt- Gaya, Pin code-824118
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>Email Id</Td>
+                  <Td>rajivpk89@gmail.com</Td>
                 </Tr>
               </Details>
             )}
