@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Text from "../../../../../components/Text/Text";
+import styled from "styled-components"
+import Text from "../../../../../components/Text/Text"
 
 const Txt = styled.div`
   height: 100%;
@@ -10,7 +10,7 @@ const Txt = styled.div`
     padding-top: 0;
     height: unset;
   }
-`;
+`
 const Bg = styled.div`
   display: flex;
   background-image: url("/background/bg-tech.png");
@@ -30,7 +30,7 @@ const Bg = styled.div`
     background: transparent;
     flex-direction: column-reverse;
   }
-`;
+`
 const AgriPos = styled.video`
   margin-top: -10px;
   height: 78vh;
@@ -41,19 +41,22 @@ const AgriPos = styled.video`
     height: 50vh;
     min-height: unset;
   }
-`;
+`
 
 const PolyBg = styled.div`
+  @media only screen and (min-width: 1700px) {
+    display: none;
+  }
   @media only screen and (max-width: 1000px) {
     opacity: 50%;
   }
   @media only screen and (max-width: 786px) {
     display: none;
   }
-`;
+`
 const Image = styled.img`
   height: 70vh;
-`;
+`
 const CustomBg = () => {
   return (
     <div id="technology">
@@ -114,7 +117,7 @@ const CustomBg = () => {
         </PolyBg>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CustomBg;
+export default CustomBg

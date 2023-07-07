@@ -4,6 +4,9 @@ const nextConfig = {
 }
 
 module.exports = {
+  devIndicators: {
+    buildActivity: false,
+  },
   ...nextConfig,
   images: {
     unoptimized: true,
