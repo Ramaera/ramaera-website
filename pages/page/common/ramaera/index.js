@@ -7,6 +7,7 @@ import SocialMedia from "./components/SocialMedia/SocialMedia"
 import MobileSocials from "./components/MobileSocials/MobileSocials"
 import MobileTab from "./components/MobileTab/MobileTab"
 import { Fragment } from "react"
+import disableScroll from "disable-scroll"
 
 import {
   images,
@@ -37,12 +38,40 @@ const RotateTab = styled.div`
     display: none;
   }
 `
+const FullFloating = styled.div`
+  position: fixed;
+  z-index: 101;
+  height: 100vh;
+  width: 100vw;
+  right: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  @media only screen and (max-width: 768px) {
+  }
+`
+const FloatingProject = styled.div`
+  z-index: 100;
+  position: fixed;
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  margin-right: 50px;
+  background: #000;
+  @media only screen and (max-width: 768px) {
+  }
+`
 const TabsWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     transform: scale(0.7);
   }
 `
-
 const RotateSocials = styled.div`
   @media only screen and (max-width: 768px) {
     /*  transform: rotateZ(90deg);
@@ -61,8 +90,13 @@ const pageNo = [images, images2, images3, images4]
 const textNo = [text, text2, text3, text4]
 const index = ({ imageIndex = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isFloating, showFloating] = useState(false)
   const [imageNo, setImageNo] = useState(pageNo[imageIndex])
   const [contextNo, setContextNo] = useState(textNo[imageIndex])
+
+  useEffect(() => {
+    isFloating ? disableScroll.on() : disableScroll.off()
+  }, [isFloating])
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -78,6 +112,54 @@ const index = ({ imageIndex = 0 }) => {
 
   return (
     <Fragment>
+      {isFloating ? (
+        <FullFloating
+          onClick={() => {
+            showFloating(false)
+          }}
+        >
+          <Text
+            Text="Upcoming Projects"
+            lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+            font
+            size="24px"
+            lh="20px"
+            width="fit"
+            mwidth="100vw"
+            fw="500"
+            mlh="80px"
+            align="center"
+            xmsize="6rem"
+            xssize="10vw"
+            msize="13vmin"
+            mmargin=" 0 0 2rem 0"
+          />
+        </FullFloating>
+      ) : (
+        <FloatingProject
+          onClick={() => {
+            showFloating(true)
+          }}
+        >
+          <Text
+            Text="Upcoming Projects"
+            lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+            font
+            size="24px"
+            lh="20px"
+            width="fit"
+            mwidth="100vw"
+            fw="500"
+            mlh="80px"
+            align="center"
+            xmsize="6rem"
+            xssize="10vw"
+            msize="13vmin"
+            mmargin=" 0 0 2rem 0"
+          />
+        </FloatingProject>
+      )}
+
       <PageLayout bgColor="#fff">
         <div>
           <Image
@@ -134,9 +216,10 @@ const index = ({ imageIndex = 0 }) => {
           <RotateSocials>
             <SocialMedia />
           </RotateSocials>
-          <RotateTab>
+
+          {/* <RotateTab>
             <Tab currentIndex={currentIndex} />
-          </RotateTab>
+          </RotateTab> */}
         </div>
       </PageLayout>
       <MobileSocials />

@@ -448,6 +448,11 @@ a {
 .fixed-position {
   position: fixed;
 }
+.fixed-float {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
 
 .tablist {
   width: 22vw;
