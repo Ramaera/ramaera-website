@@ -38,7 +38,14 @@ const RotateTab = styled.div`
     display: none;
   }
 `
+const FullFloatingInside = styled.div`
+  border-radius: 20px;
+  background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
+  height: 100%;
+  width: 100%;
+`
 const FullFloating = styled.div`
+  padding: 200px;
   position: fixed;
   z-index: 101;
   height: 100vh;
@@ -53,6 +60,7 @@ const FullFloating = styled.div`
   }
 `
 const FloatingProject = styled.div`
+  cursor: pointer;
   z-index: 100;
   position: fixed;
   height: 200px;
@@ -118,22 +126,54 @@ const index = ({ imageIndex = 0 }) => {
             showFloating(false)
           }}
         >
-          <Text
-            Text="Upcoming Projects"
-            lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-            font
-            size="24px"
-            lh="20px"
-            width="fit"
-            mwidth="100vw"
-            fw="500"
-            mlh="80px"
-            align="center"
-            xmsize="6rem"
-            xssize="10vw"
-            msize="13vmin"
-            mmargin=" 0 0 2rem 0"
-          />
+          <FullFloatingInside>
+            <Text
+              Text="Upcoming Projects"
+              lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+              font
+              size="44px"
+              lh="20px"
+              width="fit"
+              fw="500"
+              mlh="80px"
+              align="center"
+              xmsize="32px"
+              xssize="24px"
+              msize="13vmin"
+              mmargin=" 0 0 2rem 0"
+            />
+            <Text
+              Text="AGRA MART"
+              lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+              font
+              size="36px"
+              lh="20px"
+              width="fit"
+              fw="500"
+              mlh="80px"
+              align="center"
+              xmsize="28px"
+              xssize="22px"
+              msize="13vmin"
+              mmargin=" 0 0 2rem 0"
+            />
+            <Text
+              Text="We are aiming to be a part of the major industrialisation drive in India and embarking our presence in every significant industrial domain, including IT."
+              padding="0 10vw "
+              color="#FFF"
+              size="2rem"
+              lh="50px"
+              fw="400"
+              m="1rem 0 3rem 0"
+              align="center"
+              xmsize="2.2rem"
+              xssize="2rem"
+              msize="1.3rem"
+              mta="center"
+              mwidth="100vw"
+              mlh="40px"
+            />
+          </FullFloatingInside>
         </FullFloating>
       ) : (
         <FloatingProject
