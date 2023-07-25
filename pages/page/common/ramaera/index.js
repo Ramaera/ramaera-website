@@ -4,6 +4,7 @@ import PageWidth from "../../../../components/Width/PageWidth"
 import Text from "../../../../components/Text/Text"
 import Button from "../../../../components/Button/Button"
 import SocialMedia from "./components/SocialMedia/SocialMedia"
+import UpcomingProject from "./components/UpcomingProject/UpcomingProject"
 import MobileSocials from "./components/MobileSocials/MobileSocials"
 import MobileTab from "./components/MobileTab/MobileTab"
 import { Fragment } from "react"
@@ -46,7 +47,7 @@ const TabsWrapper = styled.div`
 const RotateSocials = styled.div`
   @media only screen and (max-width: 768px) {
     /*  transform: rotateZ(90deg);
-    margin-left: 50%;
+    margin-right: 50%;
     margin-top: 0vh; */
     display: none;
   }
@@ -134,9 +135,12 @@ const index = ({ imageIndex = 0 }) => {
           <RotateSocials>
             <SocialMedia />
           </RotateSocials>
-          <RotateTab>
+          {/* <RotateTab>
             <Tab currentIndex={currentIndex} />
-          </RotateTab>
+          </RotateTab> */}
+          <RotateSocials>
+            <UpcomingProject />
+          </RotateSocials>
         </div>
       </PageLayout>
       <MobileSocials />
