@@ -23,6 +23,7 @@ import Tab from "./components/Tab/Tab"
 import styled from "styled-components"
 import Image from "next/image"
 import Link from "next/link"
+import UpcomingProject from "./components/UpcomingProjects"
 const SmallSize = styled.div`
   transform: scale(0.8);
 `
@@ -63,14 +64,11 @@ const FloatingProject = styled.div`
   cursor: pointer;
   z-index: 100;
   position: fixed;
-  height: 200px;
-  width: 200px;
   border-radius: 20px;
   right: 0;
   top: 0;
   bottom: 0;
   margin: auto 0;
-  margin-right: 50px;
   background: #000;
   @media only screen and (max-width: 768px) {
   }
@@ -181,22 +179,7 @@ const index = ({ imageIndex = 0 }) => {
             showFloating(true)
           }}
         >
-          <Text
-            Text="Upcoming Projects"
-            lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-            font
-            size="24px"
-            lh="20px"
-            width="fit"
-            mwidth="100vw"
-            fw="500"
-            mlh="80px"
-            align="center"
-            xmsize="6rem"
-            xssize="10vw"
-            msize="13vmin"
-            mmargin=" 0 0 2rem 0"
-          />
+          <UpcomingProject />
         </FloatingProject>
       )}
 
