@@ -43,7 +43,7 @@ export default function Home() {
       <Leader />
       {/* <Trust /> */}
       <Promoting />
-      <Tomorrow />
+      {/* <Tomorrow /> */}
       {/* <Faqs /> */}
       <Transforming />
       <Footer />
