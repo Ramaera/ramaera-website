@@ -71,8 +71,8 @@ const index = () => {
             <Text
               Text="Ramaera abides by the principles of sustainability nation orientation and excellence prioritising to create a majestic difference in the field of industrialisation and has become one of the most trustworthy enterprises of India."
               color="#FFF"
-              size="42px"
-              lh="55px"
+              size="28px"
+              lh="42px"
               fw="390"
               align="center"
               width="100%"
