@@ -156,7 +156,7 @@ const index = ({ imageIndex = 0 }) => {
               mmargin=" 0 0 2rem 0"
             />
             <Text
-              Text="We are aiming to be a part of the major industrialisation drive in India and embarking our presence in every significant industrial domain, including IT."
+              Text="Agra Mart offer a wide range of basic home and personal products under one roof. Our core objective is to offer customers good products at great value."
               padding="0 10vw "
               color="#FFF"
               size="2rem"
