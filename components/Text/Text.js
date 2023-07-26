@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
 const Text = (props) => {
   const StyledText = styled.p`
@@ -42,7 +42,7 @@ const Text = (props) => {
     @media only screen and (max-width: 1200px) {
       font-size: ${props.xmsize ? props.xmsize : "20px"};
       width: ${props.miwidth ? props.miwidth : ""};
-    //  margin: ${props.mimargin ? props.mimargin : ""};
+      //  margin: ${props.mimargin ? props.mimargin : ""};
     }
     @media only screen and (max-width: 1000px) {
       font-size: ${props.xssize ? props.xssize : "18px"};
@@ -62,8 +62,8 @@ const Text = (props) => {
       font-size: ${props.mmsize ? props.mmsize : ""};
       margin: ${props.mm ? props.mm : ""};
     }
-  `;
-  return <StyledText>{props.Text ? props.Text : "Default Text"}</StyledText>;
-};
+  `
+  return <StyledText>{props.Text ? props.Text : "Default Text"}</StyledText>
+}
 
-export default Text;
+export default Text

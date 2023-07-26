@@ -140,11 +140,11 @@ const index = ({ imageIndex = 0 }) => {
               width="fit"
               fw="500"
               mlh="80px"
-              mwidth="70vw"
+              mwidth="100vw"
               align="center"
               xmsize="32px"
               xssize="24px"
-              msize="20px"
+              msize="22px"
               mpadding="0 10% 0 0 "
             />
             <Text
@@ -154,12 +154,12 @@ const index = ({ imageIndex = 0 }) => {
               size="36px"
               lh="20px"
               width="fit"
-              mwidth="fit"
+              mwidth="100vw"
               fw="500"
               mlh="30px"
               align="center"
               xmsize="28px"
-              xssize="22px"
+              xssize="24px"
               msize="24px"
               mpadding="0 10% 0 0 "
             />
