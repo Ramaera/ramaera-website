@@ -44,6 +44,9 @@ const FullFloatingInside = styled.div`
   background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 `
 const FullFloating = styled.div`
   padding: 200px;
@@ -58,7 +61,7 @@ const FullFloating = styled.div`
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   @media only screen and (max-width: 768px) {
-    padding: 5%;
+    padding: 25% 5%;
   }
 `
 const FloatingProject = styled.div`
@@ -141,8 +144,8 @@ const index = ({ imageIndex = 0 }) => {
               align="center"
               xmsize="32px"
               xssize="24px"
-              msize="16px"
-              mpadding="0 5% 0 0 "
+              msize="20px"
+              mpadding="0 10% 0 0 "
             />
             <Text
               Text="AGRA MART"
@@ -151,13 +154,14 @@ const index = ({ imageIndex = 0 }) => {
               size="36px"
               lh="20px"
               width="fit"
+              mwidth="fit"
               fw="500"
-              mlh="80px"
+              mlh="30px"
               align="center"
               xmsize="28px"
               xssize="22px"
-              msize="13vmin"
-              mmargin=" 0 0 2rem 0"
+              msize="24px"
+              mpadding="0 10% 0 0 "
             />
             <Text
               Text="Agra Mart offer a wide range of basic home and personal products under one roof. Our core objective is to offer customers good products at great value."
@@ -172,7 +176,7 @@ const index = ({ imageIndex = 0 }) => {
               xssize="2rem"
               msize="1.3rem"
               mta="center"
-              mwidth="100vw"
+              mpadding="0 20% 0 10% "
               mlh="40px"
             />
           </FullFloatingInside>
