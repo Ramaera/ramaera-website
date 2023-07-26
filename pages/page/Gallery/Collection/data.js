@@ -4,185 +4,161 @@ export const images = [
     heading: "Our Leader",
     details:
       "With extensive industry experience, our leader leads from the front.",
-    imageName:
-      "https://images.unsplash.com/photo-1581014023865-4209099f2b71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80",
-    name: "Director1",
-    title: "Director",
+    imageName: "/galleryPhoto/dev-sir.jpg",
+    name: "Mr. Devendra Mishra",
+    title: "Founder",
     tag: "lead",
-    about:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    // about:
+    //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
     id: "2",
-
-    imageName:
-      "https://images.unsplash.com/photo-1581017601156-b4e8e53df291?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80",
-    name: "Director2",
-    title: "Director",
+    imageName: "/galleryPhoto/Co-Founder-1.jpg",
+    name: "Mr. Sanjay Kumar Dwivedi",
+    title: "Co-Founder",
     tag: "lead",
-    about:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    // about:
+    //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
+  // 
   {
     id: "3",
-    imageName:
-      "https://images.unsplash.com/photo-1580842579866-b985411b5bd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-    name: "Director3",
-    title: "Director",
+    imageName: "/galleryPhoto/Co-Founder-2.jpg",
+    name: "Mr. Shisupal Yadav ",
+    title: "Co-Founder",
     tag: "lead",
-    about:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    // about:
+    //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
     id: "4",
-    imageName:
-      "https://images.pexels.com/photos/87477/winter-snow-tree-den-87477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    name: "Director4",
-    title: "Director4",
+    imageName: "/galleryPhoto/Co-Founder-3.jpg",
+    name: "Dr. Manoj Yadav",
+    title: "Co-Founder",
     tag: "lead",
-    about:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    // about:
+    //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
-  {
-    id: "5",
-    imageName:
-      "https://images.unsplash.com/photo-1580986475035-f0778c60f5ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjc5NjV9&auto=format&fit=crop&w=633&q=80",
-    name: "Director5",
-    title: "Director5",
-    tag: "lead",
-    about:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  },
-
+  
   {
     id: "11",
     heading: "Team",
     details:
-      "This is our team, a lot of smiling happy people who work hard to empower your teams ",
-    imageName:
-      "https://images.unsplash.com/photo-1588676247761-be44a0265858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTcxfHxkaXdhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+      "This is our team, a lot of smiling happy face who work hard to empower our teams.",
+    imageName: "/galleryPhoto/team-5.jpg",
     tag: "team",
   },
   {
     id: "12",
-    imageName:
-      "https://images.unsplash.com/photo-1554224116-a159ee9c504f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODZ8fGhvbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    imageName: "/galleryPhoto/team-6.jpg",
     tag: "team",
   },
   {
     id: "13",
-    imageName:
-      "https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    imageName: "/galleryPhoto/team-7.jpg",
     tag: "team",
   },
   {
     id: "14",
-    imageName:
-      "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    imageName: "/galleryPhoto/team-8.jpg",
     tag: "team",
   },
   {
     id: "15",
-    imageName:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZhY3Rvcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    imageName: "/galleryPhoto/team-1.jpg",
     tag: "team",
   },
   {
     id: "16",
-    imageName:
-      "https://images.pexels.com/photos/6806085/pexels-photo-6806085.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    imageName: "/galleryPhoto/team-2.jpg",
     tag: "team",
   },
   {
     id: "17",
-    imageName:
-      "https://images.pexels.com/photos/7889239/pexels-photo-7889239.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    imageName: "/galleryPhoto/team-3.jpg",
     tag: "team",
   },
   {
     id: "18",
-    imageName:
-      "https://images.unsplash.com/photo-1521898284481-a5ec348cb555?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHRlYW0lMjBmZXN0dGl2YWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    imageName: "/galleryPhoto/team-4.jpg",
     tag: "team",
   },
-
+  {
+    id: "19",
+    imageName: "/galleryPhoto/team-9.jpg",
+    tag: "team",
+  },
+  {
+    id: "20",
+    imageName: "/galleryPhoto/team-10.jpg",
+    tag: "team",
+  },
   {
     id: "21",
-    heading: "Our Industry",
-    details:
-      "This is our team, a lot of smiling happy people who work hard to empower your teams ",
-    imageName:
-      "https://images.pexels.com/photos/264512/pexels-photo-264512.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    tag: "industry",
+    imageName: "/galleryPhoto/team-11.jpg",
+    tag: "team",
   },
   {
     id: "22",
-    imageName:
-      "https://images.pexels.com/photos/753331/pexels-photo-753331.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    tag: "industry",
+    imageName: "/galleryPhoto/team-12.jpg",
+    tag: "team",
   },
   {
     id: "23",
-    imageName:
-      "https://plus.unsplash.com/premium_photo-1670315264837-3152c387b71d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGluZHVzdHJpYWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-    tag: "industry",
+    imageName: "/galleryPhoto/team-13.jpg",
+    tag: "team",
   },
-  {
-    id: "24",
-    imageName:
-      "https://images.pexels.com/photos/1058141/pexels-photo-1058141.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    tag: "industry",
-  },
-  {
-    id: "25",
-    imageName:
-      "https://images.pexels.com/photos/3105242/pexels-photo-3105242.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    tag: "industry",
-  },
-  {
-    id: "26",
-    imageName:
-      "https://images.pexels.com/photos/532006/pexels-photo-532006.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    tag: "industry",
-  },
-  {
-    id: "27",
-    imageName:
-      "https://images.unsplash.com/photo-1546185058-592ead754d27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fGZhY3Rvcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-    tag: "industry",
-  },
-  {
-    id: "28",
-    imageName:
-      "https://images.unsplash.com/photo-1580088899613-487c4051af31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fGZhY3Rvcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-    tag: "industry",
-  },
-  {
-    id: "29",
-    imageName:
-      "https://images.pexels.com/photos/257770/pexels-photo-257770.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    tag: "industry",
-  },
+ 
+  // {
+  //   id: "301",
+  //   heading: "Our Industry",
+  //   details:
+  //     "This is our team, a lot of smiling happy people who work hard to empower your teams ",
+  //   imageName:
+  //     "https://images.pexels.com/photos/264512/pexels-photo-264512.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  //   tag: "industry",
+  // },
+  // {
+  //   id: "302",
+  //   imageName:
+  //     "https://images.pexels.com/photos/753331/pexels-photo-753331.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  //   tag: "industry",
+  // },
+  // {
+  //   id: "303",
+  //   imageName:
+  //     "https://plus.unsplash.com/premium_photo-1670315264837-3152c387b71d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGluZHVzdHJpYWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+  //   tag: "industry",
+  // },
+  // {
+  //   id: "304",
+  //   imageName:
+  //     "https://images.pexels.com/photos/1058141/pexels-photo-1058141.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  //   tag: "industry",
+  // },
+
 
   {
-    id: "31",
+    id: "401",
     heading: "We Celebrated",
     details:
-      "This is our team, a lot of smiling happy people who work hard to empower your teams ",
-    imageName:
-      "https://images.pexels.com/photos/264512/pexels-photo-264512.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "Look at life as one big family and grand festival.",
+    imageName: "/galleryPhoto/fest-1.jpg",
     tag: "fest",
   },
   {
-    id: "32",
-    imageName:
-      "https://images.pexels.com/photos/753331/pexels-photo-753331.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    id: "402",
+    imageName: "/galleryPhoto/fest-2.jpg",
     tag: "fest",
   },
   {
-    id: "33",
-    imageName:
-      "https://images.pexels.com/photos/532006/pexels-photo-532006.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    id: "403",
+    imageName: "/galleryPhoto/fest-3.jpg",
+    tag: "fest",
+  },
+  {
+    id: "404",
+    imageName: "/galleryPhoto/fest-4.jpg",
     tag: "fest",
   },
 ]

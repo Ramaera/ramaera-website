@@ -18,6 +18,7 @@ import {
 import { images } from "./../Collection/data"
 import { SRLWrapper } from "simple-react-lightbox"
 import Card from "./../Card/index"
+import Navbar from "@/components/Navbar/Navbar"
 
 const options = {
   // settings: {
@@ -44,6 +45,7 @@ const index = () => {
     <>
       <Gallery>
         <ContainerTop>
+          <Navbar />
           <Image></Image>
           <Heading>
             <Text
@@ -71,11 +73,11 @@ const index = () => {
               tagActive={tag === "team" ? true : false}
               handleSetTag={setTag}
             />
-            <TagButton
+            {/* <TagButton
               name="industry"
               tagActive={tag === "industry" ? true : false}
               handleSetTag={setTag}
-            />
+            /> */}
             <TagButton
               name="fest"
               tagActive={tag === "fest" ? true : false}

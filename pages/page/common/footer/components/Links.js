@@ -142,6 +142,7 @@ const Links = () => {
         </Div> */}
         <Div>
           <Heading href="">Links</Heading>
+          <Linked href="/Gallery">Gallery</Linked>
           <Linked href="/PrivacyPolicy">Privacy Policy</Linked>
           <Linked href="/TermsAndConditions">Terms & Conditions</Linked>
           <Linked href="/Legal">Legal</Linked>
