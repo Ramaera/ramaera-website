@@ -43,11 +43,11 @@ const Card = ({ image = [] }) => {
         <Cards
           style={{
             backgroundImage: `url(${image.imageName})`,
-            backgroundPosition: "center",
+            backgroundPosition: "top",
             backgroundSize: "cover",
             opacity: "0.8",
           }}
-          shineStrength={0.75}
+          shineStrength={0.25}
         >
           <CardImg key={image.id}>
             <CardDetails>
@@ -69,13 +69,12 @@ const Card = ({ image = [] }) => {
             <Modal>
               <ModalContent>
                 <ZoomImage title={image.title}>
-                  <img
-                    style={{ objectFit: "cover" }}
+                  <Image
+                    style={{ objectFit: "contain" }}
                     src={image.imageName}
                     alt={image.title}
                     layout="fill"
                     objectFit="cover"
-                    
                   />
                 </ZoomImage>
                 <ZoomDetails
@@ -86,9 +85,9 @@ const Card = ({ image = [] }) => {
                 >
                   {image.title ? (
                     <>
-                      <ZoomName>{image.name}</ZoomName>
-                      <ZoomTitle>{image.title}</ZoomTitle>
-                      <ZoomAbout>{image.about}</ZoomAbout>
+                      {/* <ZoomName>{image.name}</ZoomName> */}
+                      {/* <ZoomTitle>{image.title}</ZoomTitle> */}
+                      {/* <ZoomAbout>{image.about}</ZoomAbout> */}
                     </>
                   ) : null}
                 </ZoomDetails>

@@ -24,7 +24,7 @@ export const CardImg = styled.div`
     width: 100%;
     height: 100%;
     // vertical-align: top;
-    object-position:center top;
+    object-position: center top;
   }
 `
 
@@ -47,8 +47,8 @@ export const CardDetails = styled.div`
 `
 
 export const Name = styled.div`
-  color: #a58e7c;
-  font-weight: 400;
+  color: #fda751;
+  font-weight: 700;
   line-height: 1;
   letter-spacing: 1px;
   margin: 3px 0;
