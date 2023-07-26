@@ -13,7 +13,7 @@ const UpcomingProject = () => {
     top: 50%; /* position the top  edge of the element at the middle of the parent */
     right: 6.5rem; /* position the left edge of the element at the middle of the parent */
     transform: translate(0, -50%);
-    animation: BALL 3s ease-in-out 1s infinite;
+    animation: BALL 4s ease-in-out 1s infinite;
 
     @keyframes BALL {
       0% {
@@ -25,6 +25,9 @@ const UpcomingProject = () => {
       50% {
         top: 50%;
       }
+      75% {
+        top: 55%;
+      }
       100% {
         top: 60%;
       }
@@ -34,7 +37,8 @@ const UpcomingProject = () => {
     }
     @media (max-width: 768px) {
       transform: scale(0.8);
-      right: 20vw;
+      top: 80%;
+      animation: 4s ease-in-out 1s infinite;
     }
   `;
 
