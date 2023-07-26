@@ -23,7 +23,8 @@ export const CardImg = styled.div`
   img {
     width: 100%;
     height: 100%;
-    vertical-align: top;
+    // vertical-align: top;
+    object-position:center top;
   }
 `
 

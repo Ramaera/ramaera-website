@@ -71,11 +71,11 @@ const index = () => {
               tagActive={tag === "team" ? true : false}
               handleSetTag={setTag}
             />
-            <TagButton
+            {/* <TagButton
               name="industry"
               tagActive={tag === "industry" ? true : false}
               handleSetTag={setTag}
-            />
+            /> */}
             <TagButton
               name="fest"
               tagActive={tag === "fest" ? true : false}

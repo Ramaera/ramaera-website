@@ -75,7 +75,7 @@ const Card = ({ image = [] }) => {
                     alt={image.title}
                     layout="fill"
                     objectFit="cover"
-                    objectPosition="center"
+                    
                   />
                 </ZoomImage>
                 <ZoomDetails
