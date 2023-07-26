@@ -87,7 +87,7 @@ const TabsWrapper = styled.div`
 const RotateSocials = styled.div`
   @media only screen and (max-width: 768px) {
     /*  transform: rotateZ(90deg);
-    margin-left: 50%;
+    margin-right: 50%;
     margin-top: 0vh; */
     display: none;
   }
@@ -249,7 +249,6 @@ const index = ({ imageIndex = 0 }) => {
           <RotateSocials>
             <SocialMedia />
           </RotateSocials>
-
           {/* <RotateTab>
             <Tab currentIndex={currentIndex} />
           </RotateTab> */}

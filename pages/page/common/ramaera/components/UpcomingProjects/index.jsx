@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import Text from "@/components/Text/Text"
+import React from "react";
+import styled from "styled-components";
+import Text from "@/components/Text/Text";
 
 const UpcomingProject = () => {
   const StyledSocialMedia = styled.div`
@@ -38,11 +38,11 @@ const UpcomingProject = () => {
     @media (max-width: 768px) {
       transform: scale(0.8);
     }
-  `
+  `;
 
   const LinkTo = styled.a`
     cursor: pointer;
-  `
+  `;
 
   return (
     <StyledSocialMedia>
@@ -52,7 +52,7 @@ const UpcomingProject = () => {
           borderRadius: "50%",
           width: "200px",
           height: "200px",
-          background: "linear-gradient(90deg,#E65C00 0%,#F9D423 100%)",
+          // background: "linear-gradient(90deg,#E65C00 0%,#F9D423 100%)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -62,8 +62,7 @@ const UpcomingProject = () => {
           padding: "10px",
           fontSize: "20px",
           flexDirection: "column",
-        }}
-      >
+        }}>
         Upcoming Project
         <div
           style={{
@@ -76,13 +75,12 @@ const UpcomingProject = () => {
             color: "white",
             padding: "10px",
             fontSize: "20px",
-          }}
-        >
+          }}>
           Agra Mart
         </div>
       </div>
     </StyledSocialMedia>
-  )
-}
+  );
+};
 
-export default UpcomingProject
+export default UpcomingProject;

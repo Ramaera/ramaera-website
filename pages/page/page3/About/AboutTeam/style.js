@@ -4,7 +4,7 @@ export const TeamContainer = styled.div`
   width: 70%;
   margin: 10% auto;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
-    url("/content/hajipur1.JPG");
+    url("/content/team.jpg");
   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("/background/Team.jpeg"); */
   /* height: 60vh; */
