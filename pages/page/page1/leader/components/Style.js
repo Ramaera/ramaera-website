@@ -26,6 +26,17 @@ export const Responsive = styled.div`
   justify-content: space-between;
   margin: 4rem 0 0 0;
 `
+export const ResponsiveLeader = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4rem 0 0 0;
+  flex-direction: row-reverse;
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
+`
 
 const Style = () => {
   return <div>StyleImage</div>

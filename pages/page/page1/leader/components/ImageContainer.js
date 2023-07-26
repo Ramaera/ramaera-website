@@ -80,6 +80,10 @@ const HoverImage = styled.div`
     width: 38rem;
     height: 50rem;
   }
+  @media (max-width: 600px) {
+    width: 30rem;
+    height: 40rem;
+  }
 `
 
 const HoverImageTeam = styled.div`
@@ -98,8 +102,9 @@ const HoverImageTeam = styled.div`
     height: 28rem;
   }
   @media (max-width: 768px) {
-    width: 150%;
-    height: 55%;
+    width: 130%;
+    height: 45%;
+    left: 45%;
   }
 `
 const Img = styled.div`
