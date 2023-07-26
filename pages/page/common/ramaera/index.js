@@ -72,8 +72,8 @@ const FloatingProject = styled.div`
   margin: auto 0;
   background: #000;
   @media only screen and (max-width: 768px) {
-    margin: 0 0 auto 0;
-    scale: 0.75;
+    scale: 0.7;
+    margin: 300px -10% 0 0;
   }
 `
 const TabsWrapper = styled.div`
@@ -137,12 +137,12 @@ const index = ({ imageIndex = 0 }) => {
               width="fit"
               fw="500"
               mlh="80px"
-              mwidth="70%"
+              mwidth="70vw"
               align="center"
               xmsize="32px"
               xssize="24px"
               msize="16px"
-              mmargin=" 0 0 2rem 0"
+              mpadding="0 5% 0 0 "
             />
             <Text
               Text="AGRA MART"
@@ -160,7 +160,7 @@ const index = ({ imageIndex = 0 }) => {
               mmargin=" 0 0 2rem 0"
             />
             <Text
-              Text="We are aiming to be a part of the major industrialisation drive in India and embarking our presence in every significant industrial domain, including IT."
+              Text="Agra Mart offer a wide range of basic home and personal products under one roof. Our core objective is to offer customers good products at great value."
               padding="0 10vw "
               color="#FFF"
               size="2rem"
