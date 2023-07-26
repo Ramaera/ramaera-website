@@ -72,8 +72,8 @@ const FloatingProject = styled.div`
   margin: auto 0;
   background: #000;
   @media only screen and (max-width: 768px) {
-    margin: 0 0 auto 0;
-    scale: 0.75;
+    scale: 0.7;
+    margin: 300px -10% 0 0;
   }
 `
 const TabsWrapper = styled.div`
@@ -137,12 +137,12 @@ const index = ({ imageIndex = 0 }) => {
               width="fit"
               fw="500"
               mlh="80px"
-              mwidth="70%"
+              mwidth="70vw"
               align="center"
               xmsize="32px"
               xssize="24px"
               msize="16px"
-              mmargin=" 0 0 2rem 0"
+              mpadding="0 5% 0 0 "
             />
             <Text
               Text="AGRA MART"

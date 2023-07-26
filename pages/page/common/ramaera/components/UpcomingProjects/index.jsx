@@ -37,8 +37,6 @@ const UpcomingProject = () => {
     }
     @media (max-width: 768px) {
       transform: scale(0.8);
-      top: 80%;
-      animation: 4s ease-in-out 1s infinite;
     }
   `;
 
@@ -49,7 +47,7 @@ const UpcomingProject = () => {
   return (
     <StyledSocialMedia>
       <div
-        class="glow_button"
+        className="glow_button"
         style={{
           borderRadius: "50%",
           width: "200px",
