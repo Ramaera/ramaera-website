@@ -67,7 +67,7 @@ const FullFloating = styled.div`
 const FloatingProject = styled.div`
   cursor: pointer;
   z-index: 100;
-  position: fixed;
+  position: absolute;
   border-radius: 20px;
   right: 0;
   top: 0;
@@ -75,6 +75,7 @@ const FloatingProject = styled.div`
   margin: auto 0;
   background: #000;
   @media only screen and (max-width: 768px) {
+    position: fixed;
     scale: 0.7;
     margin: 300px -10% 0 0;
   }
@@ -132,7 +133,7 @@ const index = ({ imageIndex = 0 }) => {
         >
           <FullFloatingInside>
             <Text
-              Text="Upcoming Projects"
+              Text="Upcoming Project"
               lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
               font
               size="44px"
@@ -255,9 +256,9 @@ const index = ({ imageIndex = 0 }) => {
         </div>
       </PageLayout>
       <MobileSocials />
-      <TabsWrapper>
+      {/*  <TabsWrapper>
         <MobileTab currentIndex={currentIndex} />
-      </TabsWrapper>
+      </TabsWrapper> */}
     </Fragment>
   )
 }
