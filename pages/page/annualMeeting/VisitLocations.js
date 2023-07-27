@@ -137,7 +137,7 @@ const VisitLocations = () => {
           },
         })
         toast.success(
-          `Your Response has been submitted, Welcome to the Board Meeting`,
+          `Your Response has been submitted, Welcome to the Anniversary Meet`,
           {
             position: "top-center",
             autoClose: 3500,
@@ -185,12 +185,12 @@ const VisitLocations = () => {
       </CounterDivMobile> */}
 
       <Container>
-        <CounterDiv>
+        {/* <CounterDiv>
           <div style={{}}>
             Registration has been closed for Annual General Meet
           </div>
-        </CounterDiv>
-        {/*  <div
+        </CounterDiv> */}
+         <div
           style={{
             display: "flex ",
             justifyContent: "center",
@@ -240,7 +240,7 @@ const VisitLocations = () => {
               />
             </button>
           </ButtonContainer>
-        </form> */}
+        </form>
       </Container>
     </>
   )

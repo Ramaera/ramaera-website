@@ -20,14 +20,15 @@ export function VisitForm({}) {
     UpperId = UpperId.split(/ /)[0].replace(/[^\d]/g, "")
     const check = PwId.includes(UpperId)
     if (check) {
-      dispatch(changepwId("Board Member's Pw_Id : " + id))
+      dispatch(changepwId("Anniversary Meet Pw_Id : " + id))
     } else {
       dispatch(changepwId(""))
     }
   }
   return (
-    <FormWrapper title="FIRST ANNUAL GENERAL MEET RAMAERA INDUSTRIES LIMITED">
-      <div style={{ width: "500px", marginTop: "30px" }}>
+    <FormWrapper title="FIRST ANNIVERSARY MEET RAMAERA INDUSTRIES LIMITED">       
+      <div style={{ width: "500px", marginTop: "0px" }}>
+      <div style={{marginBottom:"40px"}}>Date : <span style={{fontWeight:"bold"}}>1 / August / 2023</span></div>
         <label
           style={{
             fontSize: "1.3rem",
@@ -50,7 +51,7 @@ export function VisitForm({}) {
           required
           text
           onChange={(e) => {
-            dispatch(changename("Board Member : " + e.target.value))
+            dispatch(changename("Anniversary Meet: " + e.target.value))
           }}
         />
       </div>
@@ -106,23 +107,9 @@ export function VisitForm({}) {
           placeholder="Coming From"
         />
       </div>
-      <div style={{ width: "450px" }}>
+      {/* <div style={{ width: "450px" }}>
         <label>Date Of Visit</label>
-        {/* <label style={{ marginLeft: "10px", paddingTop: "60px" }}>
-          Please Select an option
-        </label> */}
-        <br />
-        {/*  <input
-          style={{ width: "20px" }}
-          type="radio"
-          id="7"
-          name="date"
-          value="7th and 8th May"
-        />
-        <label style={{ position: "absolute", marginLeft: "10px" }} for="7">
-          7th and 8th May 2023
-        </label>
-        <br />*/}
+       
         <input
           style={{ width: "20px" }}
           type="checkbox"
@@ -155,8 +142,8 @@ export function VisitForm({}) {
           8th May 2023
         </label>
 
-        {/* <input style={{ display: "none" }} required={!isDateChecked} /> */}
-      </div>
+       
+      </div> */}
     </FormWrapper>
   )
 }
