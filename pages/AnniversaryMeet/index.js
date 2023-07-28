@@ -8,6 +8,7 @@ import Text from "@/components/Text/Text";
 import Button from "@/components/Button/Button";
 import { useState } from "react";
 import SouthIcon from "@mui/icons-material/South";
+import CounterPage from "./timmer";
 
 const HeightDiv = styled.div`
   height: 150px;
@@ -99,7 +100,9 @@ const JobPost = () => {
                 mta="center"
                 mlh="unset"
               />
+              <CounterPage />
             </div>
+
             <CardDiv>
               <ImgDiv data-aos="slide-right" data-aos-duration="1200">
                 <img

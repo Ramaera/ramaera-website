@@ -17,7 +17,7 @@ const Br = styled.br`
 `;
 const CounterDiv = styled.div`
   font-size: 1.6rem;
-  padding: 8rem;
+  padding: 2rem 8rem;
   @media only screen and (max-width: 768px) {
     text-align: center;
     font-size: 1.2rem;
@@ -33,56 +33,56 @@ const CounterDivMobile = styled.div`
     display: flex;
   }
 `;
-const Countdown = () => {
-  const [countdownDate, setCountdownDate] = useState(
-    new Date("05/04/2023").getTime()
-  );
-  const [state, setState] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+// const Countdown = () => {
+//   const [countdownDate, setCountdownDate] = useState(
+//     new Date("07/30/2023").getTime()
+//   );
+//   const [state, setState] = useState({
+//     days: 0,
+//     hours: 0,
+//     minutes: 0,
+//     seconds: 0,
+//   });
 
-  useEffect(() => {
-    setInterval(() => setNewTime(), 1000);
-  }, []);
+//   useEffect(() => {
+//     setInterval(() => setNewTime(), 1000);
+//   }, []);
 
-  const setNewTime = () => {
-    if (countdownDate) {
-      const currentTime = new Date().getTime();
+//   const setNewTime = () => {
+//     if (countdownDate) {
+//       const currentTime = new Date().getTime();
 
-      const distanceToDate = countdownDate - currentTime;
+//       const distanceToDate = countdownDate - currentTime;
 
-      let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24));
-      let hours = Math.floor(
-        (distanceToDate % (1000 * 60 * 60 * 24 * 12)) / (1000 * 60 * 60) + 12
-      );
-      let minutes = Math.floor(
-        (distanceToDate % (1000 * 60 * 60)) / (1000 * 60)
-      );
-      let seconds = Math.floor((distanceToDate % (1000 * 60)) / 1000);
+//       let days = Math.floor(distanceToDate / (1000 * 60 * 60 * 24));
+//       let hours = Math.floor(
+//         (distanceToDate % (1000 * 60 * 60 * 24 * 16)) / (1000 * 60 * 60) + 16
+//       );
+//       let minutes = Math.floor(
+//         (distanceToDate % (1000 * 60 * 60)) / (1000 * 60)
+//       );
+//       let seconds = Math.floor((distanceToDate % (1000 * 60)) / 1000);
 
-      const numbersToAddZeroTo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//       const numbersToAddZeroTo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-      days = `${days}`;
-      setState({ days: days, hours: hours, minutes, seconds });
-    }
-  };
-  state.hours >= 0 ? state.hours : (state.hours = 0);
-  state.minutes >= 0 ? state.minutes : (state.minutes = 0);
-  state.seconds >= 0 ? state.seconds : (state.seconds = 0);
+//       days = `${days}`;
+//       setState({ days: days, hours: hours, minutes, seconds });
+//     }
+//   };
+//   state.hours >= 0 ? state.hours : (state.hours = 0);
+//   state.minutes >= 0 ? state.minutes : (state.minutes = 0);
+//   state.seconds >= 0 ? state.seconds : (state.seconds = 0);
 
-  return (
-    <div>
-      <div>
-        <span> Registration will close in </span> : <Br />{" "}
-        {state.hours || " 00"} Hours {state.minutes || "00"} Minutes{" "}
-        {state.seconds || "00"} Seconds
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <div style={{ color: "white" }}>
+//         <span> Registration will close in </span> : <Br />{" "}
+//         {state.hours || " 00"} Hours {state.minutes || "00"} Minutes{" "}
+//         {state.seconds || "00"} Seconds
+//       </div>
+//     </div>
+//   );
+// };
 
 const VisitLocations = () => {
   const [clickOnce, setClickOnce] = useState(0);
@@ -95,15 +95,20 @@ const VisitLocations = () => {
     (state) => state.visitingInfo.mobileNumber
   );
   const nameVar = useSelector((state) => state.visitingInfo.name);
+  const nameMore = useSelector((state) => state.visitingInfo.namemore);
   const numberOfPeopleVar = useSelector(
     (state) => state.visitingInfo.numberOfPeople
   );
+
   const plantNameVar = useSelector((state) => state.visitingInfo.plantName);
   const pwIdVar = useSelector((state) => state.visitingInfo.pwId);
   const reasonVar = useSelector((state) => state.visitingInfo.reason);
   const typeOfVisitVar = useSelector((state) => state.visitingInfo.typeOfVisit);
   const addressVar = useSelector((state) => state.visitingInfo.address);
   const theDate = fromDateVar + " " + toDateVar;
+
+  const addMoreName = nameVar + nameMore;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // if (!pwIdVar) {
@@ -128,14 +133,17 @@ const VisitLocations = () => {
         emailVar,
         mobileNumberVar,
         addressVar,
-        pwIdVar
+        pwIdVar,
+        numberOfPeopleVar,
+        addMoreName
       );
       await createGeneralMeetingVisitorForm({
         variables: {
           date: theDate,
           email: emailVar,
           mobileNumber: mobileNumberVar,
-          name: nameVar,
+          // name: nameVar,
+          name: addMoreName,
           numberOfPeople: numberOfPeopleVar,
           plantName: plantNameVar,
           pwId: pwIdVar,
@@ -144,6 +152,7 @@ const VisitLocations = () => {
           address: addressVar,
         },
       });
+
       toast.success(
         `Your Response has been submitted, Welcome to the Anniversary Meet`,
         {
@@ -160,7 +169,7 @@ const VisitLocations = () => {
         }
       );
       //setClickOnce(2)
-      //clearForm()
+      // clearForm();
     } catch (error) {
       toast.error(error.message, {
         position: "bottom-center",
@@ -184,19 +193,20 @@ const VisitLocations = () => {
 
   return (
     <>
-      {/*  <CounterDiv>
+      {/* <CounterDiv>
         <Countdown />
-      </CounterDiv>
-      <CounterDivMobile>
+      </CounterDiv> */}
+      {/* <CounterDivMobile>
         <Countdown />
       </CounterDivMobile> */}
 
       <Container>
         {/* <CounterDiv>
           <div style={{}}>
-            Registration has been closed for Annual General Meet
+            Registration has been closed for 1st Anniversary Meet.
           </div>
         </CounterDiv> */}
+
         <div
           style={{
             display: "flex ",
