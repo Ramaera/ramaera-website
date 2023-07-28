@@ -1,5 +1,5 @@
-import { FormWrapper } from "./FormWrapper"
-import { useDispatch } from "react-redux"
+import { FormWrapper } from "./FormWrapper";
+import { useDispatch } from "react-redux";
 import {
   changeemail,
   changemobileNumber,
@@ -8,35 +8,36 @@ import {
   changefromDate,
   changetoDate,
   changeaddress,
-} from "state/slice/visitingInfoSlice"
-import { PwId } from "@/pages/VisitUs/pw_id"
-import { useState } from "react"
+} from "state/slice/visitingInfoSlice";
+import { PwId } from "@/pages/VisitUs/pw_id";
+import { useState } from "react";
 
 export function VisitForm({}) {
-  const [isDateChecked, setDateChecked] = useState(false)
-  const dispatch = useDispatch()
+  const [isDateChecked, setDateChecked] = useState(false);
+  const dispatch = useDispatch();
   const checkPwId = (id) => {
-    let UpperId = id.toUpperCase()
-    UpperId = UpperId.split(/ /)[0].replace(/[^\d]/g, "")
-    const check = PwId.includes(UpperId)
+    let UpperId = id.toUpperCase();
+    UpperId = UpperId.split(/ /)[0].replace(/[^\d]/g, "");
+    const check = PwId.includes(UpperId);
     if (check) {
-      dispatch(changepwId("Anniversary Meet Pw_Id : " + id))
+      dispatch(changepwId("Anniversary Meet Pw_Id : " + id));
     } else {
-      dispatch(changepwId(""))
+      dispatch(changepwId(""));
     }
-  }
+  };
   return (
-    <FormWrapper title="FIRST ANNIVERSARY MEET RAMAERA INDUSTRIES LIMITED">       
+    <FormWrapper title="FIRST ANNIVERSARY MEET RAMAERA INDUSTRIES LIMITED">
       <div style={{ width: "500px", marginTop: "0px" }}>
-      <div style={{marginBottom:"40px"}}>Date : <span style={{fontWeight:"bold"}}>1 / August / 2023</span></div>
+        <div style={{ marginBottom: "40px" }}>
+          Date : <span style={{ fontWeight: "bold" }}>1 / August / 2023</span>
+        </div>
         <label
           style={{
             fontSize: "1.3rem",
             opacity: ".9",
             fontWeight: "600",
             color: "#5a5a5a",
-          }}
-        >
+          }}>
           Details
         </label>
       </div>
@@ -51,7 +52,7 @@ export function VisitForm({}) {
           required
           text
           onChange={(e) => {
-            dispatch(changename("Anniversary Meet: " + e.target.value))
+            dispatch(changename("Anniversary Meet: " + e.target.value));
           }}
         />
       </div>
@@ -63,7 +64,7 @@ export function VisitForm({}) {
           placeholder="Email"
           type="email"
           onChange={(e) => {
-            dispatch(changeemail(e.target.value))
+            dispatch(changeemail(e.target.value));
           }}
         />
       </div>
@@ -75,7 +76,7 @@ export function VisitForm({}) {
           required
           type="number"
           onChange={(e) => {
-            dispatch(changemobileNumber(e.target.value))
+            dispatch(changemobileNumber(e.target.value));
           }}
         />
       </div>
@@ -88,8 +89,8 @@ export function VisitForm({}) {
           placeholder="PW ID"
           type="text"
           onChange={(e) => {
-            checkPwId(e.target.value)
-            // dispatch(changepwId(e.target.value))
+            dispatch(changepwId(e.target.value));
+            // checkPwId(e.target.value)
           }}
         />
       </div>
@@ -102,7 +103,7 @@ export function VisitForm({}) {
           cols={80}
           type="text"
           onChange={(e) => {
-            dispatch(changeaddress(e.target.value))
+            dispatch(changeaddress(e.target.value));
           }}
           placeholder="Coming From"
         />
@@ -145,11 +146,11 @@ export function VisitForm({}) {
        
       </div> */}
     </FormWrapper>
-  )
+  );
 }
 
 const StyleImage = () => {
-  return <div>StyleImage</div>
-}
+  return <div>StyleImage</div>;
+};
 
-export default StyleImage
+export default StyleImage;

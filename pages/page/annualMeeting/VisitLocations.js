@@ -106,55 +106,47 @@ const VisitLocations = () => {
   const theDate = fromDateVar + " " + toDateVar;
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!pwIdVar) {
-      toast.error("Your PW ID is not Approved or invalid PW ID", {
-        position: "top-center",
-        autoClose: 3500,
-        width: "600px",
-        fontFamily: "monospace",
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
+    // if (!pwIdVar) {
+    //   toast.error("Your PW ID is not Approved or invalid PW ID", {
+    //     position: "top-center",
+    //     autoClose: 3500,
+    //     width: "600px",
+    //     fontFamily: "monospace",
+    //     hideProgressBar: true,
+    //     closeOnClick: true,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: "dark",
+    //   });
+    // }
+    // if (clickOnce === 0) {
+    try {
+      console.log(
+        "pwiddd",
+        nameVar,
+        emailVar,
+        mobileNumberVar,
+        addressVar,
+        pwIdVar
+      );
+      await createGeneralMeetingVisitorForm({
+        variables: {
+          date: theDate,
+          email: emailVar,
+          mobileNumber: mobileNumberVar,
+          name: nameVar,
+          numberOfPeople: numberOfPeopleVar,
+          plantName: plantNameVar,
+          pwId: pwIdVar,
+          reason: reasonVar,
+          typeOfVisit: typeOfVisitVar,
+          address: addressVar,
+        },
       });
-    }
-    if (clickOnce === 0 && pwIdVar) {
-      try {
-        await createGeneralMeetingVisitorForm({
-          variables: {
-            date: theDate,
-            email: emailVar,
-            mobileNumber: mobileNumberVar,
-            name: nameVar,
-            numberOfPeople: numberOfPeopleVar,
-            plantName: plantNameVar,
-            pwId: pwIdVar,
-            reason: reasonVar,
-            typeOfVisit: typeOfVisitVar,
-            address: addressVar,
-          },
-        });
-        toast.success(
-          `Your Response has been submitted, Welcome to the Anniversary Meet`,
-          {
-            position: "top-center",
-            autoClose: 3500,
-            width: "600px",
-            fontFamily: "monospace",
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          }
-        );
-        //setClickOnce(2)
-        //clearForm()
-      } catch (error) {
-        toast.error(error.message, {
+      toast.success(
+        `Your Response has been submitted, Welcome to the Anniversary Meet`,
+        {
           position: "top-center",
           autoClose: 3500,
           width: "600px",
@@ -165,8 +157,23 @@ const VisitLocations = () => {
           draggable: true,
           progress: undefined,
           theme: "light",
-        });
-      }
+        }
+      );
+      //setClickOnce(2)
+      //clearForm()
+    } catch (error) {
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 3500,
+        width: "600px",
+        fontFamily: "monospace",
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
   const clearForm = () => {
