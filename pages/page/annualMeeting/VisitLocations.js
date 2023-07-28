@@ -147,9 +147,9 @@ const VisitLocations = () => {
       toast.success(
         `Your Response has been submitted, Welcome to the Anniversary Meet`,
         {
-          position: "top-center",
+          position: "bottom-center",
           autoClose: 3500,
-          width: "600px",
+          style: { width: "350px", margin: "25px" },
           fontFamily: "monospace",
           hideProgressBar: true,
           closeOnClick: true,
@@ -163,9 +163,9 @@ const VisitLocations = () => {
       //clearForm()
     } catch (error) {
       toast.error(error.message, {
-        position: "top-center",
+        position: "bottom-center",
         autoClose: 3500,
-        width: "600px",
+        style: { width: "350px", margin: "25px" },
         fontFamily: "monospace",
         hideProgressBar: true,
         closeOnClick: true,
