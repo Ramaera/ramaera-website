@@ -73,7 +73,10 @@ const Countdown = () => {
 const CounterPage = () => {
   return (
     <CounterDiv>
-      <Countdown />
+      {/* <Countdown /> */}
+      <h4 style={{ color: "white" }}>
+        Registration has been closed for 1st Anniversary Meet.
+      </h4>
     </CounterDiv>
   );
 };

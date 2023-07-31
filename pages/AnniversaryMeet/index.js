@@ -121,7 +121,8 @@ const JobPost = () => {
               </ImgDiv>
             </CardDiv>
           </div>
-          <div
+          {/* --------form fill button ------------*/}
+          {/* <div
             style={{
               display: "flex",
               flexDirection: "column",
@@ -130,7 +131,7 @@ const JobPost = () => {
             }}>
             <h3>Click here to register for the 1st anniversary meeting.</h3>
             <SouthIcon style={{ fontSize: "50px", color: "orange" }} />
-          </div>
+          </div> 
           <a href="#register">
             <ButtonContainer onClick={() => setShow(true)}>
               <button
@@ -146,6 +147,8 @@ const JobPost = () => {
               </button>
             </ButtonContainer>
           </a>
+          */}
+          {/* --------form fill div end ------------*/}
         </div>
         <div id="register">
           <PageWidth full scale={"95%"} width="1500px" position="relative">
