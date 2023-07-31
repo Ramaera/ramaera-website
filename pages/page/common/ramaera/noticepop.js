@@ -8,7 +8,7 @@ import MobileSocials from "./components/MobileSocials/MobileSocials";
 import MobileTab from "./components/MobileTab/MobileTab";
 import { Fragment } from "react";
 import disableScroll from "disable-scroll";
-import NoticePopup from "./noticepop";
+import CancelPresentationIcon from "@mui/icons-material/CancelPresentation";
 
 import {
   images,
@@ -25,6 +25,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import UpcomingProject from "./components/UpcomingProjects";
+import position from "../../page4/common/position";
 const SmallSize = styled.div`
   transform: scale(0.8);
 `;
@@ -47,10 +48,14 @@ const FullFloatingInside = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  @media only screen and (max-width: 768px) {
+    height: unset;
+    padding: 13% 0;
+  }
 `;
 const FullFloating = styled.div`
-  padding: 200px;
+  padding: 100px;
   position: fixed;
   z-index: 101;
   height: 100vh;
@@ -62,7 +67,10 @@ const FullFloating = styled.div`
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   @media only screen and (max-width: 768px) {
-    padding: 25% 5%;
+    padding: 20% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 const FloatingProject = styled.div`
@@ -102,12 +110,12 @@ const ImageHide = styled.div`
 
 const pageNo = [images, images2, images3, images4];
 const textNo = [text, text2, text3, text4];
-const index = ({ imageIndex = 0 }) => {
+const NoticePopup = ({ imageIndex = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isFloating, showFloating] = useState(false);
+  const [isFloating, showFloating] = useState(true);
   const [imageNo, setImageNo] = useState(pageNo[imageIndex]);
   const [contextNo, setContextNo] = useState(textNo[imageIndex]);
-  const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     isFloating ? disableScroll.on() : disableScroll.off();
   }, [isFloating]);
@@ -124,79 +132,121 @@ const index = ({ imageIndex = 0 }) => {
     return () => clearInterval(intervalId);
   }, [imageNo[currentIndex]]);
   console.log(imageIndex);
-
-  useEffect(() => {
-    setTimeout(() => setShowModal(true), 1000);
-  }, []);
-
   return (
     <Fragment>
-      {imageIndex === 0 && showModal ? <NoticePopup /> : null}
       {isFloating ? (
         <FullFloating
-          onClick={() => {
-            showFloating(false);
-          }}>
-          <FullFloatingInside>
-            <Text
-              Text="Upcoming Project"
-              lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-              font
-              size="44px"
-              lh="20px"
-              width="fit"
-              fw="500"
-              mlh="80px"
-              mwidth="100vw"
-              align="center"
-              xmsize="32px"
-              xssize="24px"
-              msize="22px"
-              mpadding="0 10% 0 0 "
+        //   onClick={() => {
+        //     showFloating(false);
+        //   }}
+        >
+          <div
+            onClick={() => {
+              showFloating(false);
+            }}
+            style={{ position: "relative" }}>
+            <CancelPresentationIcon
+              sx={{
+                position: "absolute",
+                right: 0,
+                margin: 1,
+                fontSize: 50,
+                color: "orange",
+                cursor: "pointer",
+                zIndex: 10,
+                pb: 1,
+              }}
             />
-            <Text
-              Text="AGRA MART"
-              lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-              font
-              size="36px"
-              lh="20px"
-              width="fit"
-              mwidth="100vw"
-              fw="500"
-              mlh="30px"
-              align="center"
-              xmsize="28px"
-              xssize="24px"
-              msize="24px"
-              mpadding="0 10% 0 0 "
-            />
-            <Text
-              Text="Agra Mart offer a wide range of basic home and personal products under one roof. Our core objective is to offer customers good products at great value."
-              padding="0 10vw "
-              color="#FFF"
-              size="2rem"
-              lh="50px"
-              fw="400"
-              m="1rem 0 3rem 0"
-              align="center"
-              xmsize="2.2rem"
-              xssize="2rem"
-              msize="1.3rem"
-              mta="center"
-              mpadding="0 20% 0 10% "
-              mlh="40px"
-            />
-          </FullFloatingInside>
+          </div>
+          {isFloating ? (
+            <FullFloatingInside>
+              <Text
+                Text="First Anniversary Celebration"
+                lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+                font
+                size="44px"
+                lh="20px"
+                width="fit"
+                fw="500"
+                mlh="30px"
+                mwidth="100vw"
+                align="center"
+                xmsize="32px"
+                xssize="24px"
+                msize="22px"
+                mpadding="0 10% 0 0 "
+              />
+
+              <Text
+                // Text="Ramaera is celebrating its first anniversary join us on 1st August 2023 at 11:30am to 05:30pm"
+                Text="Ramaera Industries Ltd. Completing one year of incredible growth and success It fills us with immense pride to see how far we have come and the remarkable achievements we have accomplished."
+                padding="0 10vw "
+                color="#FFF"
+                size="2rem"
+                lh="50px"
+                fw="400"
+                m="1rem 0 3rem 0"
+                align="center"
+                xmsize="2rem"
+                xssize="2rem"
+                msize="1.1rem"
+                mta="center"
+                mpadding="0 15% 0 5% "
+                mlh="30px"
+              />
+              <Text
+                Text="Kindly join us"
+                lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+                font
+                size="33px"
+                lh="20px"
+                width="fit"
+                mwidth="100vw"
+                fw="500"
+                mlh="30px"
+                align="center"
+                xmsize="28px"
+                xssize="24px"
+                msize="22px"
+                mpadding="0 10% 0 0 "
+              />
+              <Text
+                Text="on"
+                padding="0 10vw "
+                color="#FFF"
+                size="2rem"
+                lh="10px"
+                fw="400"
+                align="center"
+                xmsize="2.2rem"
+                xssize="2rem"
+                msize="1.1rem"
+                mta="center"
+                mpadding="0 20% 0 10% "
+                mlh="20px"
+              />
+              <Text
+                Text="1st August 2023"
+                padding="0 10vw "
+                color="#FFF"
+                size="2rem"
+                lh="60px"
+                fw="400"
+                align="center"
+                xmsize="2.2rem"
+                xssize="2rem"
+                msize="1.3rem"
+                mta="center"
+                mpadding="0 20% 0 10% "
+                mlh="40px"
+              />
+            </FullFloatingInside>
+          ) : (
+            ""
+          )}
         </FullFloating>
       ) : (
-        imageIndex === 0 && (
-          <FloatingProject
-            onClick={() => {
-              showFloating(true);
-            }}>
-            <UpcomingProject />
-          </FloatingProject>
-        )
+        ""
       )}
 
       <PageLayout bgColor="#fff">
@@ -268,4 +318,4 @@ const index = ({ imageIndex = 0 }) => {
   );
 };
 
-export default index;
+export default NoticePopup;
