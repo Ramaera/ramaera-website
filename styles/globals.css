@@ -262,6 +262,11 @@ a {
     width: 83vw;
   }
 }
+
+.right-nav-font {
+  display: block;
+  font-size: 0.9rem;
+}
 @media (max-width: 1400px) {
   .list {
     margin: 0 1rem 0 0;
@@ -1165,4 +1170,12 @@ a:hover {
 }
 .custom-row-color-unread {
   background: #848484;
+}
+
+
+.MuiTooltip-tooltip {
+  background:linear-gradient(to right,#ffa73d,gold) !important;
+  color: white!important;
+  font-size: 0.8rem !important;
+  font-family: "personal" !important;
 }

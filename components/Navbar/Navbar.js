@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react";
 //import './Navbar.css';
-import styled from "styled-components"
-import { Burger, Menu } from "./components"
-import FocusLock from "react-focus-lock"
-import Link from "next/link"
-import Button from "../Button/Button"
+import styled from "styled-components";
+import { Burger, Menu } from "./components";
+import FocusLock from "react-focus-lock";
+import Link from "next/link";
+import Button from "../Button/Button";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { ButtonGroup, IconButton, Tooltip, Typography } from "@mui/material";
 
 const ImageHolder = styled.img`
   transform: scale(0.9);
@@ -24,7 +26,7 @@ const ImageHolder = styled.img`
   @media (max-width: 400px) {
     transform: scale(0.5);
   }
-`
+`;
 const LinkTo = styled.div`
   font-weight: 300;
   line-height: 20px;
@@ -32,7 +34,7 @@ const LinkTo = styled.div`
   @media (min-width: 1200px) {
     width: 11vw;
   }
-`
+`;
 const LinkDrop = styled(Link)`
   font-weight: 300;
   color: black;
@@ -42,7 +44,7 @@ const LinkDrop = styled(Link)`
   &:hover {
     font-weight: 400;
   }
-`
+`;
 const ADrop = styled.a`
   font-weight: 300;
   color: black;
@@ -52,7 +54,7 @@ const ADrop = styled.a`
   &:hover {
     font-weight: 400;
   }
-`
+`;
 const Dropdown = styled.div`
   position: absolute;
   background: rgba(255, 255, 255, 0.85);
@@ -69,7 +71,7 @@ const Dropdown = styled.div`
   @media (min-width: 768px) {
     display: none;
   }
-`
+`;
 const Link2 = styled.div`
   display: flex;
   margin: 0 10px;
@@ -92,27 +94,27 @@ const Link2 = styled.div`
 
     text-transform: uppercase;
   }
-`
+`;
 
-const logo = "/logo/logo.png"
+const logo = "/logo/logo.png";
 const Navbar = ({ selectedTab }) => {
-  const [open, setOpen] = useState(false)
-  const node = useRef()
-  const menuId = "main-menu"
+  const [open, setOpen] = useState(false);
+  const node = useRef();
+  const menuId = "main-menu";
 
-  const [navbar, setNavbar] = useState(false)
+  const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
     if (window.scrollY >= 50) {
-      setNavbar(true)
+      setNavbar(true);
     } else {
-      setNavbar(false)
+      setNavbar(false);
     }
-  }
+  };
 
   useEffect(() => {
-    changeBackground()
-    window.addEventListener("scroll", changeBackground)
-  })
+    changeBackground();
+    window.addEventListener("scroll", changeBackground);
+  });
 
   return (
     <nav className="nav">
@@ -128,8 +130,7 @@ const Navbar = ({ selectedTab }) => {
               <Link
                 href="/"
                 className="left-nav-font"
-                style={{ color: "white" }}
-              >
+                style={{ color: "white" }}>
                 HOME
                 <div
                   className="Line"
@@ -144,8 +145,7 @@ const Navbar = ({ selectedTab }) => {
               <Link
                 href="/Industries"
                 className="left-nav-font"
-                style={{ color: "white" }}
-              >
+                style={{ color: "white" }}>
                 OUR INDUSTRIES
                 <div
                   className="Line"
@@ -160,8 +160,7 @@ const Navbar = ({ selectedTab }) => {
               <Link
                 href="/Companies"
                 className="left-nav-font"
-                style={{ color: "white" }}
-              >
+                style={{ color: "white" }}>
                 OUR COMPANIES &#x25BE;
                 <div
                   className="Line"
@@ -206,23 +205,61 @@ const Navbar = ({ selectedTab }) => {
           </Link>
           <Link2>
             <Link
-              href="/Career"
+              href="/LocateDistributor"
               className="right-nav-font"
-              style={{ fontWeight: "300", color: "white" }}
-            >
-              Career
+              style={{
+                fontWeight: "300",
+                color: "white",
+              }}>
+              <Tooltip
+                title="Locate a Stockist or Distributor"
+                arrow
+                // placement="bottom-end"
+                PopperProps={{
+                  sx: {
+                    top: "25px !important",
+                    // "& .MuiTooltip-arrow": {
+                    //   top: "-3px !important",
+                    // },
+                  },
+                }}>
+                <ButtonGroup variant="text" sx={{ alignItems: "center" }}>
+                  <LocationOnIcon sx={{ color: "white" }} />
+                  <LinkTo
+                    className="right-nav-font "
+                    style={{
+                      color: "white",
+                      textAlign: "left",
+                    }}>
+                    Stockist & Distributor
+                    <div />
+                  </LinkTo>
+                </ButtonGroup>
+              </Tooltip>
+              {/* Career */}
             </Link>
           </Link2>
+          {/* <Link
+            href="/LocateDistributor"
+            style={{ textAlign: "left", marginLeft: "-20px" }}>
+            <Link2>
+              <LinkTo
+                className="right-nav-font "
+                style={{ color: "white", textAlign: "left" }}>
+                Stockist & Distributor
+                <div />
+              </LinkTo>
+            </Link2>
+          </Link> */}
 
-          <Link2>
+          {/* <Link2>
             <Link
               href="/ContactUs"
               className="right-nav-font"
-              style={{ fontWeight: "300", color: "white", minWidth: "90px" }}
-            >
+              style={{ fontWeight: "300", color: "white", minWidth: "90px" }}>
               Contact Us
             </Link>
-          </Link2>
+          </Link2> */}
 
           <Link href="/">
             {/* <Link2>
@@ -266,7 +303,7 @@ const Navbar = ({ selectedTab }) => {
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

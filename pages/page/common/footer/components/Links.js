@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import Link from "next/link"
+import styled from "styled-components";
+import Link from "next/link";
 const Container = styled.div`
   display: flex;
   gap: 4rem;
@@ -12,7 +12,7 @@ const Container = styled.div`
     gap: 0;
     text-align: center;
   }
-`
+`;
 const Div = styled.div`
   margin: auto;
   display: flex;
@@ -23,7 +23,7 @@ const Div = styled.div`
   @media only screen and (max-width: 1000px) {
     padding-bottom: 20px;
   }
-`
+`;
 const Linked = styled(Link)`
   font-size: 14px;
   margin-bottom: 1rem;
@@ -36,7 +36,7 @@ const Linked = styled(Link)`
   @media only screen and (max-width: 1000px) {
     font-size: 0.8rem;
   }
-`
+`;
 
 const Heading = styled.h3`
   border-bottom: solid white 2px;
@@ -45,17 +45,17 @@ const Heading = styled.h3`
   font-size: 18px;
   color: white;
   margin-bottom: 2rem;
-`
+`;
 export const SubHeading = styled.h3`
   color: white;
   margin-bottom: 1rem;
-`
+`;
 export const SubText = styled.h3`
   color: white;
   font-weight: 100;
   font-size: 8px;
   line-height: 16px;
-`
+`;
 export const Input = styled.input`
   margin-bottom: 1rem;
   height: 35px;
@@ -66,7 +66,7 @@ export const Input = styled.input`
     padding-left: 0;
     width: 100%;
   }
-`
+`;
 const MobileDiv = styled.div`
   display: flex;
   gap: 4rem;
@@ -75,7 +75,7 @@ const MobileDiv = styled.div`
     display: flex;
     gap: 20vw;
   }
-`
+`;
 export const Sub = styled.div`
   color: white;
   padding: 2rem;
@@ -95,7 +95,7 @@ export const Sub = styled.div`
     margin: 0 0 20px 0;
     padding-bottom: 50px;
   }
-`
+`;
 
 export const DispFlex = styled.div`
   display: flex;
@@ -108,7 +108,7 @@ export const DispFlex = styled.div`
   }
   @media only screen and (max-width: 768px) {
   }
-`
+`;
 
 const Links = () => {
   return (
@@ -148,9 +148,12 @@ const Links = () => {
           <Linked href="/Legal">Legal</Linked>
           <Linked href="/Login">Login</Linked>
           <Linked href="/VisitUs">Visit Us</Linked>
-          <Linked href="/LocateDistributor">
+          <Linked href="/Career">Career</Linked>
+          <Linked href="/ContactUs">Contact Us</Linked>
+
+          {/* <Linked href="/LocateDistributor">
             Locate a Stockist or Distributor
-          </Linked>
+          </Linked> */}
         </Div>
         {/* <Div>
           <Heading href="#">Company</Heading>
@@ -162,7 +165,7 @@ const Links = () => {
         </Div> */}
       </MobileDiv>
     </Container>
-  )
-}
+  );
+};
 
-export default Links
+export default Links;

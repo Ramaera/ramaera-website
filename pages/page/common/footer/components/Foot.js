@@ -1,9 +1,9 @@
-import styled from "styled-components"
-import Text from "../../../../../components/Text/Text"
-import NextLink from "next/link"
+import styled from "styled-components";
+import Text from "../../../../../components/Text/Text";
+import NextLink from "next/link";
 
-const d = new Date()
-let year = d.getFullYear()
+const d = new Date();
+let year = d.getFullYear();
 const FootContainer = styled.div`
   position: absolute;
   bottom: 100px;
@@ -33,7 +33,7 @@ const FootContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
   }
-`
+`;
 const Link = styled(NextLink)`
   font-size: 10px;
   margin-bottom: 1rem;
@@ -43,7 +43,7 @@ const Link = styled(NextLink)`
   @media only screen and (max-width: 450px) {
     margin: 1rem;
   }
-`
+`;
 const Hr = styled.hr`
   position: absolute;
   bottom: 160px;
@@ -55,7 +55,7 @@ const Hr = styled.hr`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-`
+`;
 const CopyRight = styled.div`
   position: absolute;
   font-weight: 100;
@@ -74,7 +74,7 @@ const CopyRight = styled.div`
     right: auto;
     bottom: 80px;
   }
-`
+`;
 const Foot = () => {
   return (
     <>
@@ -94,7 +94,7 @@ const Foot = () => {
             />
           </div>
         </Link>
-        <Link href={"/AnniversaryMeet"}>
+        {/* <Link href={"/AnniversaryMeet"}>
           <div class="glow_button">
             <Text
               Text="First Anniversary Meet Registration"
@@ -107,7 +107,7 @@ const Foot = () => {
               mpadding="1vw"
             />
           </div>
-        </Link>
+        </Link> */}
         {/* <Link href="/PrivacyPolicy">Privacy Policy</Link>
         <Link href="/TermsAndConditions">Terms & Conditions</Link>
         <Link href="/Legal">Legal</Link> */}
@@ -116,7 +116,7 @@ const Foot = () => {
       </FootContainer>
       <CopyRight>© 2023 All Rights Reserved</CopyRight>
     </>
-  )
-}
+  );
+};
 
-export default Foot
+export default Foot;
