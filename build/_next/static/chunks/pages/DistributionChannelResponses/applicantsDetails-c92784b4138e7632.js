@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[5995],{56478:function(n,_,i){(window.__NEXT_P=window.__NEXT_P||[]).push(["/DistributionChannelResponses/applicantsDetails",function(){return i(58188)}])}},function(n){n.O(0,[1502,3838,1664,2249,8188,9774,567,179],function(){return n(n.s=56478)}),_N_E=n.O()}]);
