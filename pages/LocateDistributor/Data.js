@@ -231,3 +231,9 @@ export const data = [
   //     address: " ",
   //   },
 ];
+
+const Style = () => {
+  return <div>StyleImage</div>;
+};
+
+export default Style;
