@@ -1,15 +1,15 @@
-import Ramaera from "../page/common/ramaera"
-import Navbar from "../../components/Navbar/Navbar"
-import Footer from "../page/common/footer"
-import Innovation from "../page/page3/Innovation/Innovation"
-import Innitiatives from "../page/page3/Innitiatives/Innitiatives"
-import Plantsera from "../page/Brands/Plantsera"
-import Values from "../page/page3/Values/Values"
-import Contribution from "../page/page3/Contribution/Contribution"
-import Partner from "../page/page3/Partner/Partner"
-import Vision from "../page/page3/Vision/Vision"
-import About from "../page/page3/About/About"
-import Head from "next/head"
+import Ramaera from "../page/common/ramaera";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../page/common/footer";
+import Innovation from "../page/page3/Innovation/Innovation";
+import Innitiatives from "../page/page3/Innitiatives/Innitiatives";
+import Brands from "../page/Brands";
+import Values from "../page/page3/Values/Values";
+import Contribution from "../page/page3/Contribution/Contribution";
+import Partner from "../page/page3/Partner/Partner";
+import Vision from "../page/page3/Vision/Vision";
+import About from "../page/page3/About/About";
+import Head from "next/head";
 
 const companies = () => {
   return (
@@ -21,7 +21,7 @@ const companies = () => {
       <Ramaera imageIndex={2} />
       <Innovation />
       <Innitiatives />
-      {/* <Plantsera /> */}
+      {/* <Brands /> */}
       <Values />
       <Contribution />
       <Partner />
@@ -29,7 +29,7 @@ const companies = () => {
       <About />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default companies
+export default companies;

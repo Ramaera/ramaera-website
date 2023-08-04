@@ -1,28 +1,36 @@
-import Text from "../../../components/Text/Text"
-import styled from "styled-components"
+import Text from "@/components/Text/Text";
+import styled from "styled-components";
+import Button from "@/components/Button/Button";
+
 export const ValueContainer = styled.div`
   width: 50%;
   @media (max-width: 768px) {
     height: auto;
     width: 100%;
   }
-`
+`;
 export const Wrapper = styled.div`
   margin: 10% auto 0 auto;
-`
+`;
+export const BlockDiv = styled.div`
+  display: block;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
 export const MainContainer = styled.div`
   width: 100%;
   display: flex;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
   }
-`
+`;
 export const TextContainer = styled.div`
   width: 50%;
   @media (max-width: 768px) {
     width: 100%;
   }
-`
+`;
 export const ImageTag = styled.img`
   transform: scale(90%);
   width: 100%;
@@ -37,8 +45,8 @@ export const ImageTag = styled.img`
     object-fit: contain;
     height: auto;
   }
-`
-const Plantsera = () => {
+`;
+const Planetsera = () => {
   return (
     <Wrapper>
       <Text
@@ -61,7 +69,7 @@ const Plantsera = () => {
         <ValueContainer>
           <div data-aos="fade-right">
             <Text
-              Text="Plantsera masala"
+              Text="Planetsera masala"
               lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
               font
               size="30px"
@@ -79,7 +87,7 @@ const Plantsera = () => {
             />
           </div>
           <div data-aos="fade-up">
-            <a href="https://www.ramaera.com" target="_blank">
+            <a href="https://planetsera.com" target="_blank">
               <ImageTag src="/content/plantseraNew.png" alt="plantsera" />
               {/*           <ImageTag src="/content/plantsera.webp" alt="plantsera" />
                */}{" "}
@@ -87,26 +95,29 @@ const Plantsera = () => {
           </div>
         </ValueContainer>
         <TextContainer>
-          <Text
-            Text=" ."
-            lg="none"
-            font
-            size="30px"
-            lh="110%"
-            width="100%"
-            mwidth="100%"
-            fw="500"
-            mlh="50px"
-            align="center"
-            xmsize="1rem"
-            xssize="2vw"
-            msize="1rem"
-            mpadding="0"
-            mmargin=" 0 0 0rem 0"
-          />
+          <BlockDiv>
+            <Text
+              Text=""
+              lg="none"
+              font
+              size="30px"
+              lh="110%"
+              width="100%"
+              mwidth="100%"
+              fw="500"
+              mlh="50px"
+              align="center"
+              xmsize="1rem"
+              xssize="2vw"
+              msize="1rem"
+              mpadding="0"
+              mmargin=" 0 0 0rem 0"
+            />
+          </BlockDiv>
           <Text
             Text="Producing the treasures of the Indian cuisines"
-            lg="linear-gradient(72.44deg, #67E453 0%, #0D6B16 100%)"
+            lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
+            // lg="linear-gradient(72.44deg, #67E453 0%, #0D6B16 100%)"
             size="32px"
             lh="40px"
             width="100%"
@@ -117,7 +128,7 @@ const Plantsera = () => {
             xmsize="1rem"
             xssize="2vw"
             msize="1rem"
-            mpadding="0"
+            mpadding="0 1%"
             mmargin=" 0 0 0rem 0"
           />
           <Text
@@ -132,13 +143,33 @@ const Plantsera = () => {
             xmsize="1rem"
             xssize="2vw"
             msize="1rem"
-            mpadding="0"
+            mpadding="0 1%"
             mmargin=" 0 0 0rem 0"
           />
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}>
+            <Text Text=" Click here" mmwidth="110px" />
+            <a href="https://planetsera.com" target="_blank">
+              <Button
+                Text="Buy Now"
+                secondary
+                lightborder
+                width="130px"
+                height="40px"
+                m="0 0"
+                bborder="2px solid white"
+              />
+            </a>
+          </div>
         </TextContainer>
       </MainContainer>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Plantsera
+export default Planetsera;
