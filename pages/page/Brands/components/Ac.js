@@ -1,5 +1,7 @@
 import Text from "@/components/Text/Text";
 import styled from "styled-components";
+import Button from "@/components/Button/Button";
+import { AcData } from "./data";
 
 export const ValueContainer = styled.div`
   width: 50%;
@@ -48,6 +50,27 @@ export const ImageTag = styled.img`
     height: auto;
   }
 `;
+
+export const BtnDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  // @media (max-width: 768px) {
+  //   margin: 1rem auto auto auto;
+  // }
+`;
+
+export const Th = styled.div`
+  padding: 8px 13rem 8px 6rem;
+  display: flex;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  @media (max-width: 768px) {
+    padding: 8px 8px 8px 1.5rem;
+  }
+`;
+
 const Ac = () => {
   return (
     <Wrapper>
@@ -73,7 +96,7 @@ const Ac = () => {
             />
           </div>
           <div data-aos="fade-up">
-            <ImageTag src="/content/ac.jpeg" alt="Ac" />
+            <ImageTag src="/content/ac.png" alt="Ac" />
           </div>
         </ValueContainer>
         <TextContainer>
@@ -112,21 +135,40 @@ const Ac = () => {
             mpadding="0 1%"
             mmargin=" 0 0 0rem 0"
           />
-          <Text
-            Text="Capacity : 2Ton / 1.5Ton / 1Ton || Volatge : 230 Volts ||Body Material : Metal ,Plastic || Usage : Home/Office || Uninterrupted Cooling || Prevent from Rust and Corrosion || Cost Saving || Designed To detect low gas levels"
-            size="24px"
-            lh="32px"
-            width="100%"
-            mwidth="100vw"
-            fw="500"
-            mlh="50px"
-            align="center"
-            xmsize="1rem"
-            xssize="2vw"
-            msize="1rem"
-            mpadding="0 1%"
-            mmargin=" 0 0 0rem 0"
-          />
+          <div style={{ overflowX: "auto" }}>
+            <table
+              style={{
+                borderCollapse: "collapse",
+                borderSpacing: 0,
+                width: "100%",
+                textAlign: "left",
+                color: "white",
+              }}>
+              {AcData?.map((list) => (
+                <tr>
+                  <Th>{list.title}</Th>
+                  <th
+                    style={{
+                      padding: "8px",
+                      fontFamily: "Arial, Helvetica, sans-serif",
+                    }}>
+                    {list.detail}
+                  </th>
+                </tr>
+              ))}
+            </table>
+          </div>
+          <BtnDiv>
+            <Button
+              Text="Enquiry Now"
+              secondary
+              lightborder
+              width="155px"
+              height="40px"
+              m="0 0"
+              bborder="2px solid white"
+            />
+          </BtnDiv>
         </TextContainer>
       </MainContainer>
     </Wrapper>

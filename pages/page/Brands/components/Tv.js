@@ -1,5 +1,7 @@
 import Text from "@/components/Text/Text";
 import styled from "styled-components";
+import Button from "@/components/Button/Button";
+import { TvData } from "./data";
 
 export const ValueContainer = styled.div`
   width: 50%;
@@ -48,6 +50,17 @@ export const ImageTag = styled.img`
     height: auto;
   }
 `;
+
+export const Th = styled.div`
+  padding: 8px 13rem 8px 6rem;
+  display: flex;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  @media (max-width: 768px) {
+    padding: 8px 8px 8px 1.5rem;
+  }
+`;
+
 const Tv = () => {
   return (
     <Wrapper>
@@ -55,7 +68,7 @@ const Tv = () => {
         <ValueContainer>
           <div data-aos="fade-right">
             <Text
-              Text="LED TV"
+              Text="LED SMART TV"
               lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
               font
               size="30px"
@@ -97,7 +110,7 @@ const Tv = () => {
             />
           </BlockDiv>
           <Text
-            Text="LED TV"
+            Text="LED SMART TV"
             lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
             size="32px"
             lh="40px"
@@ -112,21 +125,46 @@ const Tv = () => {
             mpadding="0 1%"
             mmargin=" 0 0 0rem 0"
           />
-          <Text
-            Text="Screen Size : 75/65/60/55/ inches ||  A+ Grade Panel || 4K Ultra Hd|| 8gb RAM/8gb ROM || Android TV || SRS Surround Sound || Graphic Equalizer || 16 Million+ Colours || Eye Care Technology || High Definition || Wide Colour Enhancer || HDMI Port ||  USB Port || Digital Noise Reduction || 1 Year Warranty"
-            size="24px"
-            lh="32px"
-            width="100%"
-            mwidth="100vw"
-            fw="500"
-            mlh="50px"
-            align="center"
-            xmsize="1rem"
-            xssize="2vw"
-            msize="1rem"
-            mpadding="0 1%"
-            mmargin=" 0 0 0rem 0"
-          />
+          <div style={{ overflowX: "auto" }}>
+            <table
+              style={{
+                borderCollapse: "collapse",
+                borderSpacing: 0,
+                width: "100%",
+                textAlign: "left",
+                color: "white",
+              }}>
+              {TvData?.map((list) => (
+                <tr>
+                  <Th>{list.title}</Th>
+                  <th
+                    style={{
+                      padding: "8px",
+                      fontFamily: "Arial, Helvetica, sans-serif",
+                    }}>
+                    {list.detail}
+                  </th>
+                </tr>
+              ))}
+            </table>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: "1rem",
+            }}>
+            <Button
+              Text="Enquiry Now"
+              secondary
+              lightborder
+              width="155px"
+              height="40px"
+              m="0 0"
+              bborder="2px solid white"
+            />
+          </div>
         </TextContainer>
       </MainContainer>
     </Wrapper>

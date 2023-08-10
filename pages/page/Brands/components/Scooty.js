@@ -1,5 +1,26 @@
 import Text from "@/components/Text/Text";
 import styled from "styled-components";
+import Button from "@/components/Button/Button";
+import { scootyData } from "./data";
+import Enquiry from "./enquiry";
+import { useState } from "react";
+
+const FloatingProject = styled.div`
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  border-radius: 20px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background: #000;
+  @media only screen and (max-width: 768px) {
+    position: fixed;
+    scale: 0.7;
+    margin: 300px -10% 0 0;
+  }
+`;
 
 export const ValueContainer = styled.div`
   width: 50%;
@@ -48,14 +69,26 @@ export const ImageTag = styled.img`
     height: auto;
   }
 `;
+
+export const Th = styled.div`
+  padding: 8px 8px 8px 8rem;
+  display: flex;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  @media (max-width: 768px) {
+    padding: 8px 8px 8px 1.5rem;
+  }
+`;
+
 const Scooty = () => {
+  const [isFloating, showFloating] = useState(false);
   return (
     <Wrapper>
       <MainContainer>
         <ValueContainer>
           <div data-aos="fade-right">
             <Text
-              Text="E Scooty"
+              Text="Electric Scooty"
               lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
               font
               size="30px"
@@ -98,7 +131,7 @@ const Scooty = () => {
             />
           </BlockDiv>
           <Text
-            Text="E Scooty"
+            Text="Electric Scooty Specification"
             lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
             size="32px"
             lh="40px"
@@ -113,21 +146,65 @@ const Scooty = () => {
             mpadding="0 1%"
             mmargin=" 0 0 0rem 0"
           />
-          <Text
-            Text="Dimensions : 1803*712*1068mm || Seat Height: 788mm || Charge : 85-95 KM/Charge || Battery : LFP 60V 30AH || Weight : 66.5kg* || Loading Capicity : 170kg || Climbing : 20 Degree || Brake System : Front & Rear Disc Brake || Gear : 3 Forword & 1 Reverse || Tyre Size : 3.0-10 || Tyre Type : Tubeless || Headlight : LED  || Remote Locking System || Zero Maintenance || Reverse Gear || Anti Theft Alarm"
-            size="24px"
-            lh="32px"
-            width="100%"
-            mwidth="100vw"
-            fw="500"
-            mlh="50px"
-            align="center"
-            xmsize="1rem"
-            xssize="2vw"
-            msize="1rem"
-            mpadding="0 1%"
-            mmargin=" 0 0 0rem 0"
-          />
+          <div style={{ overflowX: "auto" }}>
+            <table
+              style={{
+                borderCollapse: "collapse",
+                borderSpacing: 0,
+                width: "100%",
+                textAlign: "left",
+                color: "white",
+              }}>
+              {scootyData?.map((list) => (
+                <tr>
+                  <Th
+                  // style={{
+                  //   padding: "8px 8px 8px 8rem ",
+                  //   display: "flex",
+                  // }}
+                  >
+                    {list.title}
+                  </Th>
+                  <th
+                    style={{
+                      padding: "8px",
+                      fontFamily: "Arial, Helvetica, sans-serif",
+                    }}>
+                    {list.detail}
+                  </th>
+                </tr>
+              ))}
+            </table>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: "1rem",
+            }}>
+            {/* <Text Text=" Click here" mmwidth="110px" /> */}
+
+            <Button
+              Text="Enquiry Now"
+              secondary
+              lightborder
+              width="155px"
+              height="40px"
+              m="0 0"
+              bborder="2px solid white"
+              onClick={() => {
+                showFloating(true);
+              }}
+            />
+
+            {isFloating && (
+              <div style={{ zIndex: 999 }}>
+                <Enquiry />
+              </div>
+            )}
+            {/* <Enquiry /> */}
+          </div>
         </TextContainer>
       </MainContainer>
     </Wrapper>
