@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import Spinner from "../Spinner";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import React from "react"
+import styled from "styled-components"
+import { motion } from "framer-motion"
+import Spinner from "../Spinner"
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"
 
 const StyledButton = styled(motion.div)`
   color: ${(props) => (props.color ? props.color : "#FFFFFF")};
@@ -21,7 +21,9 @@ const StyledButton = styled(motion.div)`
   width: ${(props) => (props.width ? props.width : "100px")};
 
   background: ${(props) =>
-    props.bg
+    props.disabled
+      ? "#acacac"
+      : props.bg
       ? props.bg
       : "linear-gradient(90deg, #F9D423 0%, #E65C00 100%),linear-gradient(0deg, #FFFFFF, #FFFFFF)"};
   margin: ${(props) => (props.m ? props.m : "")};
@@ -45,7 +47,7 @@ const StyledButton = styled(motion.div)`
   @media (max-width: 450px) {
     margin: ${(props) => (props.sm ? props.sm : "")};
   }
-`;
+`
 const ButtonInside = styled.div`
   background: ${(props) => (props.secondaryBg ? props.secondaryBg : "#13132F")};
   display: flex;
@@ -65,16 +67,16 @@ const ButtonInside = styled.div`
         ? props.secondaryP
         : "0 2rem"};
   }
-`;
+`
 
 const Button = (props) => {
   const renderContent = () => {
     if (props.loading) {
-      return <Spinner />;
+      return <Spinner />
     }
 
-    return props.Text;
-  };
+    return props.Text
+  }
 
   return (
     <StyledButton
@@ -90,6 +92,6 @@ const Button = (props) => {
             : */}
       {renderContent()}
     </StyledButton>
-  );
-};
-export default Button;
+  )
+}
+export default Button
