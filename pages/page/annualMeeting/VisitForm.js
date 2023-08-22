@@ -1,5 +1,5 @@
-import { FormWrapper } from "./FormWrapper"
-import { useDispatch } from "react-redux"
+import { FormWrapper } from "./FormWrapper";
+import { useDispatch } from "react-redux";
 import {
   changeemail,
   changemobileNumber,
@@ -8,34 +8,66 @@ import {
   changefromDate,
   changetoDate,
   changeaddress,
-} from "state/slice/visitingInfoSlice"
-import { PwId } from "@/pages/VisitUs/pw_id"
-import { useState } from "react"
+  changenumberOfPeople,
+  changenamemore,
+} from "state/slice/visitingInfoSlice";
+import { PwId } from "@/pages/VisitUs/pw_id";
+import { useEffect, useState } from "react";
+
+const noOfMember = () => {
+  const dispatch = useDispatch();
+  return (
+    <>
+      <div style={{ width: "500px" }}>
+        <label>Enter All Name Separted by comma</label>
+        <br />
+        <textarea
+          rows={1}
+          cols={10}
+          placeholder="Enter All Name, Separted by comma"
+          text
+          onChange={(e) => {
+            dispatch(changenamemore("," + e.target.value));
+          }}
+        />
+      </div>
+      {/* <div style={{ width: "450px" }}>
+        <label>City</label>
+        <br />
+        <input
+          required
+          placeholder="City"
+          text
+          onChange={(e) => {
+            dispatch(changeaddress(" +" + e.target.value));
+          }}
+        />
+      </div> */}
+    </>
+  );
+};
 
 export function VisitForm({}) {
-  const [isDateChecked, setDateChecked] = useState(false)
-  const dispatch = useDispatch()
-  const checkPwId = (id) => {
-    let UpperId = id.toUpperCase()
-    UpperId = UpperId.split(/ /)[0].replace(/[^\d]/g, "")
-    const check = PwId.includes(UpperId)
-    if (check) {
-      dispatch(changepwId("Board Member's Pw_Id : " + id))
-    } else {
-      dispatch(changepwId(""))
-    }
-  }
+  const [noOfPeople, setNoOfPeople] = useState(0);
+  const [isDateChecked, setDateChecked] = useState(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(changenamemore(""));
+  }, []);
   return (
-    <FormWrapper title="FIRST ANNUAL GENERAL MEET RAMAERA INDUSTRIES LIMITED">
-      <div style={{ width: "500px", marginTop: "30px" }}>
+    <FormWrapper title="FIRST ANNIVERSARY MEET RAMAERA INDUSTRIES LIMITED">
+      <div style={{ width: "500px", marginTop: "0px" }}>
+        <div style={{ marginBottom: "40px" }}>
+          Date : <span style={{ fontWeight: "bold" }}>1 / August / 2023</span>
+        </div>
         <label
           style={{
             fontSize: "1.3rem",
             opacity: ".9",
             fontWeight: "600",
             color: "#5a5a5a",
-          }}
-        >
+          }}>
           Details
         </label>
       </div>
@@ -50,7 +82,7 @@ export function VisitForm({}) {
           required
           text
           onChange={(e) => {
-            dispatch(changename("Board Member : " + e.target.value))
+            dispatch(changename("Anniversary Meet: " + e.target.value));
           }}
         />
       </div>
@@ -62,7 +94,7 @@ export function VisitForm({}) {
           placeholder="Email"
           type="email"
           onChange={(e) => {
-            dispatch(changeemail(e.target.value))
+            dispatch(changeemail(e.target.value));
           }}
         />
       </div>
@@ -74,11 +106,10 @@ export function VisitForm({}) {
           required
           type="number"
           onChange={(e) => {
-            dispatch(changemobileNumber(e.target.value))
+            dispatch(changemobileNumber(e.target.value));
           }}
         />
       </div>
-
       <div style={{ width: "450px" }}>
         <label>PW ID</label>
         <br />
@@ -87,8 +118,8 @@ export function VisitForm({}) {
           placeholder="PW ID"
           type="text"
           onChange={(e) => {
-            checkPwId(e.target.value)
-            // dispatch(changepwId(e.target.value))
+            dispatch(changepwId(e.target.value));
+            // checkPwId(e.target.value)
           }}
         />
       </div>
@@ -101,28 +132,72 @@ export function VisitForm({}) {
           cols={80}
           type="text"
           onChange={(e) => {
-            dispatch(changeaddress(e.target.value))
+            dispatch(changeaddress(e.target.value));
           }}
           placeholder="Coming From"
         />
       </div>
       <div style={{ width: "450px" }}>
-        <label>Date Of Visit</label>
-        {/* <label style={{ marginLeft: "10px", paddingTop: "60px" }}>
-          Please Select an option
-        </label> */}
+        <label>Number Of People</label>
         <br />
-        {/*  <input
-          style={{ width: "20px" }}
-          type="radio"
-          id="7"
-          name="date"
-          value="7th and 8th May"
-        />
-        <label style={{ position: "absolute", marginLeft: "10px" }} for="7">
-          7th and 8th May 2023
-        </label>
-        <br />*/}
+        <select
+          required
+          onChange={(e) => {
+            dispatch(changenumberOfPeople(e.target.value));
+            setNoOfPeople(e.target.value);
+          }}>
+          <option value={""} disabled selected>
+            Number Of People
+          </option>
+          <option value={"1"}>1</option>
+          <option value={"2"}>2</option>
+          <option value={"3"}>3</option>
+          <option value={"4"}>4</option>
+          <option value={"5"}>5</option>
+          <option value={"6"}>6</option>
+          <option value={"7"}>7</option>
+          <option value={"8"}>8</option>
+          <option value={"9"}>9</option>
+          <option value={"10"}>10</option>
+          <option value={"11"}>11</option>
+          <option value={"12"}>12</option>
+          <option value={"13"}>13</option>
+          <option value={"14"}>14</option>
+          <option value={"15"}>15</option>
+          <option value={"16"}>16</option>
+          <option value={"17"}>17</option>
+          <option value={"18"}>18</option>
+          <option value={"19"}>19</option>
+          <option value={"20"}>20</option>
+        </select>
+        <br />
+        {noOfPeople >= 1 && noOfMember()}
+      </div>
+
+      {/* {noOfPeople >= 1 && noOfMember()}
+      {noOfPeople >= 2 && noOfMember()}
+      {noOfPeople >= 3 && noOfMember()}
+      {noOfPeople >= 4 && noOfMember()}
+      {noOfPeople >= 5 && noOfMember()}
+      {noOfPeople >= 6 && noOfMember()}
+      {noOfPeople >= 7 && noOfMember()}
+      {noOfPeople >= 8 && noOfMember()}
+      {noOfPeople >= 9 && noOfMember()}
+      {noOfPeople >= 10 && noOfMember()}
+      {noOfPeople >= 11 && noOfMember()}
+      {noOfPeople >= 12 && noOfMember()}
+      {noOfPeople >= 13 && noOfMember()}
+      {noOfPeople >= 14 && noOfMember()}
+      {noOfPeople >= 15 && noOfMember()}
+      {noOfPeople >= 16 && noOfMember()}
+      {noOfPeople >= 17 && noOfMember()}
+      {noOfPeople >= 18 && noOfMember()}
+      {noOfPeople >= 19 && noOfMember()}
+      {noOfPeople >= 20 && noOfMember()} */}
+
+      {/* <div style={{ width: "450px" }}>
+        <label>Date Of Visit</label>
+       
         <input
           style={{ width: "20px" }}
           type="checkbox"
@@ -155,14 +230,14 @@ export function VisitForm({}) {
           8th May 2023
         </label>
 
-        {/* <input style={{ display: "none" }} required={!isDateChecked} /> */}
-      </div>
+       
+      </div> */}
     </FormWrapper>
-  )
+  );
 }
 
 const StyleImage = () => {
-  return <div>StyleImage</div>
-}
+  return <div>StyleImage</div>;
+};
 
-export default StyleImage
+export default StyleImage;

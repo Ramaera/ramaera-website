@@ -190,9 +190,9 @@ const VisitUsApplicationInfo = () => {
 
     data.findAllVisitorsList.forEach((item, index) => {
       console.log(item.name)
-      if (item.name.slice(0, 12) === "Board Member") {
-        return
-      }
+      // if (item.name.slice(0, 12) === "Board Member") {
+      //   return
+      // }
       //console.log("SDffd", item)
       rows.unshift({
         id: index,

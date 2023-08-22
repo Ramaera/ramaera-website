@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   visitingInfo: [],
@@ -13,50 +13,54 @@ const initialState = {
   reason: "",
   typeOfVisit: "",
   address: "",
-}
+  namemore: "",
+};
 
 export const visitingInfoSlice = createSlice({
   name: "visitingInfo",
   initialState,
   reducers: {
     changeVisitingInfo: (state, action) => {
-      state.visitingInfo = action.payload
+      state.visitingInfo = action.payload;
     },
     changetoDate: (state, action) => {
-      state.toDate = action.payload
+      state.toDate = action.payload;
     },
     changefromDate: (state, action) => {
-      state.fromDate = action.payload
+      state.fromDate = action.payload;
     },
     changeemail: (state, action) => {
-      state.email = action.payload
+      state.email = action.payload;
     },
     changemobileNumber: (state, action) => {
-      state.mobileNumber = action.payload
+      state.mobileNumber = action.payload;
     },
     changename: (state, action) => {
-      state.name = action.payload
+      state.name = action.payload;
     },
     changenumberOfPeople: (state, action) => {
-      state.numberOfPeople = action.payload
+      state.numberOfPeople = action.payload;
     },
     changeplantName: (state, action) => {
-      state.plantName = action.payload
+      state.plantName = action.payload;
     },
     changepwId: (state, action) => {
-      state.pwId = action.payload
+      state.pwId = action.payload;
     },
     changereason: (state, action) => {
-      state.reason = action.payload
+      state.reason = action.payload;
     },
     changetypeOfVisit: (state, action) => {
-      state.typeOfVisit = action.payload
+      state.typeOfVisit = action.payload;
     },
     changeaddress: (state, action) => {
-      state.address = action.payload
+      state.address = action.payload;
+    },
+    changenamemore: (state, action) => {
+      state.namemore = action.payload;
     },
   },
-})
+});
 
 export const {
   changeaddress,
@@ -71,6 +75,7 @@ export const {
   changepwId,
   changereason,
   changetypeOfVisit,
-} = visitingInfoSlice.actions
+  changenamemore,
+} = visitingInfoSlice.actions;
 
-export default visitingInfoSlice.reducer
+export default visitingInfoSlice.reducer;

@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react"
-import PageLayout from "../../../../components/PageLayout/PageLayout"
-import PageWidth from "../../../../components/Width/PageWidth"
-import Text from "../../../../components/Text/Text"
-import Button from "../../../../components/Button/Button"
-import SocialMedia from "./components/SocialMedia/SocialMedia"
-import MobileSocials from "./components/MobileSocials/MobileSocials"
-import MobileTab from "./components/MobileTab/MobileTab"
-import { Fragment } from "react"
-import disableScroll from "disable-scroll"
+import React, { useState, useEffect } from "react";
+import PageLayout from "../../../../components/PageLayout/PageLayout";
+import PageWidth from "../../../../components/Width/PageWidth";
+import Text from "../../../../components/Text/Text";
+import Button from "../../../../components/Button/Button";
+import SocialMedia from "./components/SocialMedia/SocialMedia";
+import MobileSocials from "./components/MobileSocials/MobileSocials";
+import MobileTab from "./components/MobileTab/MobileTab";
+import { Fragment } from "react";
+import disableScroll from "disable-scroll";
+import NoticePopup from "./noticepop";
 
 import {
   images,
@@ -18,18 +19,18 @@ import {
   text3,
   images4,
   text4,
-} from "./components/Style"
-import Tab from "./components/Tab/Tab"
-import styled from "styled-components"
-import Image from "next/image"
-import Link from "next/link"
-import UpcomingProject from "./components/UpcomingProjects"
+} from "./components/Style";
+import Tab from "./components/Tab/Tab";
+import styled from "styled-components";
+import Image from "next/image";
+import Link from "next/link";
+import UpcomingProject from "./components/UpcomingProjects";
 const SmallSize = styled.div`
   transform: scale(0.8);
-`
+`;
 const LinkTo = styled.a`
   cursor: pointer;
-`
+`;
 const RotateTab = styled.div`
   @media only screen and (max-width: 768px) {
     /*  transform: scale(1);
@@ -38,7 +39,7 @@ const RotateTab = styled.div`
     margin-left: auto; */
     display: none;
   }
-`
+`;
 const FullFloatingInside = styled.div`
   border-radius: 20px;
   background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
@@ -47,7 +48,7 @@ const FullFloatingInside = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-`
+`;
 const FullFloating = styled.div`
   padding: 200px;
   position: fixed;
@@ -63,7 +64,7 @@ const FullFloating = styled.div`
   @media only screen and (max-width: 768px) {
     padding: 25% 5%;
   }
-`
+`;
 const FloatingProject = styled.div`
   cursor: pointer;
   z-index: 100;
@@ -79,12 +80,12 @@ const FloatingProject = styled.div`
     scale: 0.7;
     margin: 300px -10% 0 0;
   }
-`
+`;
 const TabsWrapper = styled.div`
   @media only screen and (max-width: 768px) {
     transform: scale(0.7);
   }
-`
+`;
 const RotateSocials = styled.div`
   @media only screen and (max-width: 768px) {
     /*  transform: rotateZ(90deg);
@@ -92,45 +93,50 @@ const RotateSocials = styled.div`
     margin-top: 0vh; */
     display: none;
   }
-`
+`;
 const ImageHide = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-`
+`;
 
-const pageNo = [images, images2, images3, images4]
-const textNo = [text, text2, text3, text4]
+const pageNo = [images, images2, images3, images4];
+const textNo = [text, text2, text3, text4];
 const index = ({ imageIndex = 0 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isFloating, showFloating] = useState(false)
-  const [imageNo, setImageNo] = useState(pageNo[imageIndex])
-  const [contextNo, setContextNo] = useState(textNo[imageIndex])
-
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFloating, showFloating] = useState(false);
+  const [imageNo, setImageNo] = useState(pageNo[imageIndex]);
+  const [contextNo, setContextNo] = useState(textNo[imageIndex]);
+  const [showModal, setShowModal] = useState(false);
   useEffect(() => {
-    isFloating ? disableScroll.on() : disableScroll.off()
-  }, [isFloating])
+    isFloating ? disableScroll.on() : disableScroll.off();
+  }, [isFloating]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (currentIndex === imageNo.length - 1) {
-        setCurrentIndex(0)
+        setCurrentIndex(0);
       } else {
-        setCurrentIndex(currentIndex + 1)
+        setCurrentIndex(currentIndex + 1);
       }
-    }, 3000)
+    }, 3000);
 
-    return () => clearInterval(intervalId)
-  }, [imageNo[currentIndex]])
-  console.log(imageIndex)
+    return () => clearInterval(intervalId);
+  }, [imageNo[currentIndex]]);
+  console.log(imageIndex);
+
+  useEffect(() => {
+    setTimeout(() => setShowModal(true), 1000);
+  }, []);
+
   return (
     <Fragment>
+      {/* {imageIndex === 0 && showModal ? <NoticePopup /> : null} */}
       {isFloating ? (
         <FullFloating
           onClick={() => {
-            showFloating(false)
-          }}
-        >
+            showFloating(false);
+          }}>
           <FullFloatingInside>
             <Text
               Text="Upcoming Project"
@@ -186,9 +192,8 @@ const index = ({ imageIndex = 0 }) => {
         imageIndex === 0 && (
           <FloatingProject
             onClick={() => {
-              showFloating(true)
-            }}
-          >
+              showFloating(true);
+            }}>
             <UpcomingProject />
           </FloatingProject>
         )
@@ -260,7 +265,7 @@ const index = ({ imageIndex = 0 }) => {
         <MobileTab currentIndex={currentIndex} />
       </TabsWrapper> */}
     </Fragment>
-  )
-}
+  );
+};
 
-export default index
+export default index;
