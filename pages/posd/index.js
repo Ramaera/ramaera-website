@@ -11,7 +11,7 @@ const index = () => {
         <Navbar />
         <div className="navSpace"></div>
         <PageWidth full scale={"95%"} width="1500px" position="relative">
-          <FormPos title={"POSD"} />
+          <FormPos />
         </PageWidth>
         <hr style={{ borderBottom: "1px solid white", width: "80vw" }} />
         <Footer />

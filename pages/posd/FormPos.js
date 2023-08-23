@@ -111,7 +111,26 @@ const FormPos = ({ title }) => {
           mlh="unset"
         />
         <Text
-          Text={title}
+          Text={"Apply for POSD"}
+          lg="linear-gradient(to right, #000, #000)"
+          font
+          size="clamp(2.4rem, 1.5vw, 2rem)"
+          fw="200"
+          align="center"
+          lh="50px"
+          m="0 0 0.2rem 0"
+          xmsize="clamp(2.4rem, 1.5vw, 2rem)"
+          xssize="clamp(2.4rem, 1.5vw, 2rem)"
+          msize="2rem"
+          mwidth="100%"
+          mmwidth="100%"
+          padding="0"
+          mpadding="0"
+          mta="center"
+          mlh="unset"
+        />
+        <Text
+          Text={"Point of Sale Distributor"}
           lg="linear-gradient(to right, #000, #000)"
           font
           size="clamp(2.4rem, 1.5vw, 2rem)"
