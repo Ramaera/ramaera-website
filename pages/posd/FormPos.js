@@ -1,11 +1,11 @@
-import styled from "styled-components"
-import Text from "../../components/Text/Text"
-import Button from "../../components/Button/SubmitButton"
-import { useState } from "react"
-import { useMutation } from "@apollo/client"
-import { CREATE_POS_ENQUIRY } from "apollo/queries"
-import { ToastContainer, toast } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
+import styled from "styled-components";
+import Text from "../../components/Text/Text";
+import Button from "../../components/Button/SubmitButton";
+import { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { CREATE_POS_ENQUIRY } from "apollo/queries";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const ButtonContainer = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ export const ButtonContainer = styled.div`
     justify-content: center;
     width: 90%;
   }
-`
+`;
 export const Container = styled.div`
   background: white;
   width: 80vw;
@@ -28,7 +28,7 @@ export const Container = styled.div`
     width: 100vw;
     padding: 1.5rem;
   }
-`
+`;
 export const Form = styled.form`
   display: flex;
   flex-wrap: wrap;
@@ -36,16 +36,16 @@ export const Form = styled.form`
   @media (max-width: 768px) {
     flex-direction: column;
   }
-`
+`;
 export const FormInput = styled.div`
   width: 45%;
   @media (max-width: 768px) {
     width: 90%;
   }
-`
+`;
 
 const FormPos = ({ title }) => {
-  const [createPosenquiry] = useMutation(CREATE_POS_ENQUIRY)
+  const [createPosenquiry] = useMutation(CREATE_POS_ENQUIRY);
   const [posData, setPosData] = useState({
     name: "",
     number: "",
@@ -53,7 +53,7 @@ const FormPos = ({ title }) => {
     pwid: "",
     persons: "",
     city: "",
-  })
+  });
 
   const handleSubmit = async () => {
     await createPosenquiry({
@@ -65,7 +65,7 @@ const FormPos = ({ title }) => {
         pwid: posData.pwid,
         CityName: posData.city,
       },
-    })
+    });
 
     toast.success("Form Submitted", {
       position: "bottom-center",
@@ -76,7 +76,7 @@ const FormPos = ({ title }) => {
       draggable: true,
       progress: undefined,
       theme: "light",
-    })
+    });
 
     setPosData({
       name: "",
@@ -85,8 +85,8 @@ const FormPos = ({ title }) => {
       pwid: "",
       persons: "",
       city: "",
-    })
-  }
+    });
+  };
 
   return (
     <>
@@ -220,10 +220,9 @@ const FormPos = ({ title }) => {
                 !posData.pwid
               }
               onClick={(e) => {
-                e.preventDefault()
-                handleSubmit()
-              }}
-            >
+                e.preventDefault();
+                handleSubmit();
+              }}>
               <Button
                 disabled={
                   !posData.city ||
@@ -256,7 +255,7 @@ const FormPos = ({ title }) => {
         theme="dark"
       />
     </>
-  )
-}
+  );
+};
 
-export default FormPos
+export default FormPos;

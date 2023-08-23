@@ -94,11 +94,11 @@ const Foot = () => {
             />
           </div>
         </Link>
-        <Link href={"/pos"}>
+        <Link href={"/posd"}>
           {/* <div class="glow_button"> */}
           <div class="">
             <Text
-              Text="Become a Pos Subscriber"
+              Text="Become a Posd Subscriber"
               lg="linear-gradient(90deg, white 0%, white 100%)"
               font
               padding=" 0 "
