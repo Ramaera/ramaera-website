@@ -149,7 +149,7 @@ const FormPos = ({ title }) => {
             <input
               required
               value={posData.number}
-              type="text"
+              type="number"
               onChange={(e) =>
                 setPosData((val) => ({ ...val, number: e.target.value }))
               }
@@ -188,7 +188,7 @@ const FormPos = ({ title }) => {
             <input
               required
               value={posData.persons}
-              type="text"
+              type="number"
               onChange={(e) =>
                 setPosData((val) => ({ ...val, persons: e.target.value }))
               }
