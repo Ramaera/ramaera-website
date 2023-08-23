@@ -50,7 +50,7 @@ const FullFloatingInside = styled.div`
   justify-content: space-evenly;
 `;
 const FullFloating = styled.div`
-  padding: 200px;
+  padding: 10%;
   position: fixed;
   z-index: 101;
   height: 100vh;
@@ -64,6 +64,9 @@ const FullFloating = styled.div`
   @media only screen and (max-width: 768px) {
     padding: 25% 5%;
   }
+  // @media only screen and (max-width: 1200px) {
+  //   padding: 5% 10%;
+  // }
 `;
 const FloatingProject = styled.div`
   cursor: pointer;

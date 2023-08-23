@@ -94,10 +94,11 @@ const Foot = () => {
             />
           </div>
         </Link>
-        {/* <Link href={"/AnniversaryMeet"}>
-          <div class="glow_button">
+        <Link href={"/pos"}>
+          {/* <div class="glow_button"> */}
+          <div class="">
             <Text
-              Text="First Anniversary Meet Registration"
+              Text="Become a Pos Subscriber"
               lg="linear-gradient(90deg, white 0%, white 100%)"
               font
               padding=" 0 "
@@ -107,7 +108,7 @@ const Foot = () => {
               mpadding="1vw"
             />
           </div>
-        </Link> */}
+        </Link>
         {/* <Link href="/PrivacyPolicy">Privacy Policy</Link>
         <Link href="/TermsAndConditions">Terms & Conditions</Link>
         <Link href="/Legal">Legal</Link> */}

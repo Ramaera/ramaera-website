@@ -149,7 +149,7 @@ const Links = () => {
           <Linked href="/Login">Login</Linked>
           <Linked href="/VisitUs">Visit Us</Linked>
           <Linked href="/Career">Career</Linked>
-          <Linked href="/ContactUs">Contact Us</Linked>
+          <Linked href="/SubmitProject">Submit Your Idea</Linked>
 
           {/* <Linked href="/LocateDistributor">
             Locate a Stockist or Distributor
