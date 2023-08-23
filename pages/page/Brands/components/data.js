@@ -100,3 +100,9 @@ export const RoData = [
   { title: "Min. Inlet Pressure / Temp", detail: "0.3 kg/cm³, 10°c" },
   { title: "Max. Inlet Pressure /Temp", detail: "3.5 kg/cm', 35°c" },
 ];
+
+const Style = () => {
+  return <div>StyleImage</div>;
+};
+
+export default Style;
