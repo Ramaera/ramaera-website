@@ -2,7 +2,7 @@ import Text from "@/components/Text/Text";
 import styled from "styled-components";
 import Button from "@/components/Button/Button";
 import { scootyData } from "./data";
-import Enquiry from "./enquiry";
+import Enquiry from "./Enquiry";
 import { useState } from "react";
 
 const FloatingProject = styled.div`
@@ -185,7 +185,7 @@ const Scooty = () => {
             }}>
             {/* <Text Text=" Click here" mmwidth="110px" /> */}
 
-            <Button
+            {/* <Button
               Text="Enquiry Now"
               secondary
               lightborder
@@ -196,14 +196,10 @@ const Scooty = () => {
               onClick={() => {
                 showFloating(true);
               }}
-            />
+            /> */}
 
-            {isFloating && (
-              <div style={{ zIndex: 999 }}>
-                <Enquiry />
-              </div>
-            )}
-            {/* <Enquiry /> */}
+            {/* {isFloating && <Enquiry />} */}
+            <Enquiry />
           </div>
         </TextContainer>
       </MainContainer>
