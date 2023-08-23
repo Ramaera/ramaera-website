@@ -13,6 +13,36 @@ $email: String!,
       email
     }
 }`)
+
+export const CREATE_POS_ENQUIRY = gql(`
+mutation createPosenquiry(
+  $name: String!
+  $email: String!
+  $Number_of_persons_in_POS_City: String!
+  $mobileNumber: String!
+  $pwid: String!
+  $CityName: String!
+) {
+  createPosenquiry(
+    createPosenquiryInput: {
+      name: $name
+      email: $email
+      Number_of_persons_in_POS_City: $Number_of_persons_in_POS_City
+      mobileNumber: $mobileNumber
+      pwid: $pwid
+      CityName: $CityName
+    }
+  ) {
+    email
+    name
+    CityName
+    mobileNumber
+    Number_of_persons_in_POS_City
+    pwid
+  }
+}
+`)
+
 export const UPDATE_APPLICATIONS = gql(`
 mutation UpdateApplication (
 $applicationId: String!,
