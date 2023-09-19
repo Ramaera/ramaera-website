@@ -11,13 +11,23 @@ const FullFloatingInside = styled.div`
   border-radius: 20px;
   background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
   height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: 1600px) {
+    justify-content: start;
+  }
+  @media only screen and (max-width: 768px) {
+    justify-content: start;
+    padding-top: 0px;
+  }
 `;
 const FullFloating = styled.div`
-  padding: 200px;
+  padding: 3% 10%;
   position: fixed;
   z-index: 101;
   height: 100vh;
@@ -28,17 +38,20 @@ const FullFloating = styled.div`
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  @media only screen and (max-width: 1300px) {
+    padding: 3% 5%;
+  }
   @media only screen and (max-width: 768px) {
-    padding: 25% 5%;
+    padding: 10% 2%;
   }
 `;
 
-const Enquiry = ({}) => {
+const Enquiry = ({ ProImg, ProName }) => {
   const [isFloating, showFloating] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    isFloating ? disableScroll.on() : disableScroll.off();
+    // isFloating ? disableScroll.on() : disableScroll.off();
   }, [isFloating]);
 
   return (
@@ -65,23 +78,7 @@ const Enquiry = ({}) => {
           </div>
 
           <FullFloatingInside>
-            {/* <Text
-              Text="Enquiry Form"
-              lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-              font
-              size="44px"
-              lh="20px"
-              width="fit"
-              fw="500"
-              mlh="80px"
-              mwidth="100vw"
-              align="center"
-              xmsize="32px"
-              xssize="24px"
-              msize="22px"
-              mpadding="0 10% 0 0 "
-            /> */}
-            <EnquiryForm />
+            <EnquiryForm ProName={ProName} ProImg={ProImg} />
           </FullFloatingInside>
         </FullFloating>
       ) : (

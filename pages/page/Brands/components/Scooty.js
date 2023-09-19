@@ -80,7 +80,7 @@ export const Th = styled.div`
   }
 `;
 
-const Scooty = () => {
+const Scooty = ({ ProImg, ProName }) => {
   const [isFloating, showFloating] = useState(false);
   return (
     <Wrapper>
@@ -131,7 +131,7 @@ const Scooty = () => {
             />
           </BlockDiv>
           <Text
-            Text="Electric Scooty Specification"
+            Text="Electric Scooty"
             lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
             size="32px"
             lh="40px"
@@ -157,14 +157,7 @@ const Scooty = () => {
               }}>
               {scootyData?.map((list) => (
                 <tr>
-                  <Th
-                  // style={{
-                  //   padding: "8px 8px 8px 8rem ",
-                  //   display: "flex",
-                  // }}
-                  >
-                    {list.title}
-                  </Th>
+                  <Th>{list.title}</Th>
                   <th
                     style={{
                       padding: "8px",
@@ -183,23 +176,7 @@ const Scooty = () => {
               justifyContent: "center",
               marginTop: "1rem",
             }}>
-            {/* <Text Text=" Click here" mmwidth="110px" /> */}
-
-            {/* <Button
-              Text="Enquiry Now"
-              secondary
-              lightborder
-              width="155px"
-              height="40px"
-              m="0 0"
-              bborder="2px solid white"
-              onClick={() => {
-                showFloating(true);
-              }}
-            /> */}
-
-            {/* {isFloating && <Enquiry />} */}
-            <Enquiry />
+            <Enquiry ProImg="/content/scooty.png" ProName="Electric Scooty" />
           </div>
         </TextContainer>
       </MainContainer>

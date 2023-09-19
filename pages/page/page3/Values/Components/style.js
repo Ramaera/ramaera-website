@@ -1,15 +1,18 @@
-import styled from "styled-components"
+import styled from "styled-components";
 export const ValueContainer = styled.div`
   width: 100%;
-  margin: 20% auto;
-`
+  margin: 10% auto;
+  @media (max-width: 600px) {
+    margin: 20% auto;
+  }
+`;
 export const ValParaContainer = styled.div`
   width: 100%;
   margin: 20px auto;
   @media (max-width: 600px) {
     width: 80%;
   }
-`
+`;
 
 export const InnovationDiv = styled.div`
   width: 85%;
@@ -23,7 +26,7 @@ export const InnovationDiv = styled.div`
     align-items: center;
     height: 100vh;
   }
-`
+`;
 
 export const Img = styled.video`
   width: 100%;
@@ -31,7 +34,7 @@ export const Img = styled.video`
   object-fit: contain;
   @media (max-width: 600px) {
   }
-`
+`;
 export const InnovationLeft = styled.div`
   width: 40%;
   display: flex;
@@ -42,7 +45,7 @@ export const InnovationLeft = styled.div`
   @media (max-width: 600px) {
     width: 100%;
   }
-`
+`;
 export const InnoParaContainer = styled.div`
   width: 50%;
   border-left: 2px solid white;
@@ -50,13 +53,13 @@ export const InnoParaContainer = styled.div`
     width: 100%;
     margin-bottom: 20px;
   }
-`
+`;
 export const CarouselWrapper = styled.div`
   @media (max-width: 600px) {
     /* height: 70vh;
     overflow: hidden; */
   }
-`
+`;
 export const InnovatinRight = styled.div`
   width: 50%;
   display: flex;
@@ -66,7 +69,7 @@ export const InnovatinRight = styled.div`
   @media (max-width: 600px) {
     width: 80%;
   }
-`
+`;
 
 export const Arrow = styled.img`
   width: 70px;
@@ -80,10 +83,10 @@ export const Arrow = styled.img`
     left: -20%;
     display: none;
   }
-`
+`;
 
 const StyleImage = () => {
-  return <div>StyleImage</div>
-}
+  return <div>StyleImage</div>;
+};
 
-export default StyleImage
+export default StyleImage;

@@ -2,6 +2,7 @@ import Text from "@/components/Text/Text";
 import styled from "styled-components";
 import Button from "@/components/Button/Button";
 import { TvData } from "./data";
+import Enquiry from "./Enquiry";
 
 export const ValueContainer = styled.div`
   width: 50%;
@@ -155,15 +156,7 @@ const Tv = () => {
               justifyContent: "center",
               marginTop: "1rem",
             }}>
-            <Button
-              Text="Enquiry Now"
-              secondary
-              lightborder
-              width="155px"
-              height="40px"
-              m="0 0"
-              bborder="2px solid white"
-            />
+            <Enquiry ProImg="/content/ledTv.png" ProName="Led TV" />
           </div>
         </TextContainer>
       </MainContainer>

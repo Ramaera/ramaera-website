@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
@@ -10,8 +10,9 @@ export const Container = styled.div`
   @media (max-width: 500px) {
     width: 100vw;
     padding: 1.5rem;
+    margin: 0;
   }
-`
+`;
 
 export const ButtonContainer = styled.div`
   margin-top: 1rem;
@@ -21,10 +22,10 @@ export const ButtonContainer = styled.div`
   @media (max-width: 450px) {
     justify-content: center;
   }
-`
+`;
 
 const StyleImage = () => {
-  return <div>StyleImage</div>
-}
+  return <div>StyleImage</div>;
+};
 
-export default StyleImage
+export default StyleImage;
