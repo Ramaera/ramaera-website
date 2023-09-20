@@ -55,16 +55,16 @@ export function VisitForm({ ProImg, ProName }) {
     e.preventDefault();
 
     try {
-      console.log(
-        "sales output",
-        email,
-        mobile,
-        name,
-        address,
-        product,
-        remarks,
-        product
-      );
+      // console.log(
+      //   "sales output",
+      //   email,
+      //   mobile,
+      //   name,
+      //   address,
+      //   product,
+      //   remarks,
+      //   product
+      // );
 
       await createSalesEnquiryForm({
         variables: {
@@ -235,7 +235,7 @@ export function VisitForm({ ProImg, ProName }) {
           <label>Remarks</label>
           <br />
           <textarea
-            required
+            // required
             rows={6}
             cols={80}
             type="text"

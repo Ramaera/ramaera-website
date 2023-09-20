@@ -69,7 +69,7 @@ const Tv = () => {
         <ValueContainer>
           <div data-aos="fade-right">
             <Text
-              Text="LED SMART TV"
+              Text="LED ANDROID SMART TV"
               lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
               font
               size="30px"
@@ -111,7 +111,7 @@ const Tv = () => {
             />
           </BlockDiv>
           <Text
-            Text="LED SMART TV"
+            Text="LED Android Smart TV"
             lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
             size="32px"
             lh="40px"

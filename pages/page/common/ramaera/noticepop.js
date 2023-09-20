@@ -51,11 +51,12 @@ const FullFloatingInside = styled.div`
   justify-content: center;
   @media only screen and (max-width: 768px) {
     height: unset;
-    padding: 13% 0;
+    max-height: 100%;
+    padding: 13% 0 5% 0;
   }
 `;
 const FullFloating = styled.div`
-  padding: 100px;
+  padding: 5% 8%;
   position: fixed;
   z-index: 101;
   height: 100vh;
@@ -66,8 +67,14 @@ const FullFloating = styled.div`
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  @media only screen and (max-width: 1600px) {
+    padding: 2rem;
+  }
+  @media only screen and (max-width: 1400px) {
+    padding: 0.5rem;
+  }
   @media only screen and (max-width: 768px) {
-    padding: 20% 5%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,6 +113,20 @@ const ImageHide = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
+`;
+
+const ProductDiv = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const ProductsImg = styled.img`
+  width: 92%;
+  margin: auto;
+  border-radius: 10px;
+  // @media only screen and (max-width: 768px) {
+  //   height: 20vh;
+  // }
 `;
 
 const pageNo = [images, images2, images3, images4];
@@ -161,7 +182,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
           {isFloating ? (
             <FullFloatingInside>
               <Text
-                Text="First Anniversary Celebration"
+                Text="Ramaera Newly Launch  Products"
                 lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
                 font
                 size="44px"
@@ -174,72 +195,43 @@ const NoticePopup = ({ imageIndex = 0 }) => {
                 xmsize="32px"
                 xssize="24px"
                 msize="22px"
-                mpadding="0 10% 0 0 "
+                mpadding="0 10% 0 0"
               />
-
+              <ProductDiv>
+                <ProductsImg src="/background/ramaeraProducts.jpg" />
+              </ProductDiv>
               <Text
                 // Text="Ramaera is celebrating its first anniversary join us on 1st August 2023 at 11:30am to 05:30pm"
-                Text="Ramaera Industries Ltd. Completing one year of incredible growth and success It fills us with immense pride to see how far we have come and the remarkable achievements we have accomplished."
-                padding="0 10vw "
+                Text="Welcome to the future of technology at Ramaera Electronics! We are delighted to introduce you to our latest lineup of groundbreaking products, each designed to elevate your lifestyle and meet the demands of modern living. Explore the future with Ramaera TV, Ramaera Air Conditioner, Ramaera's Electronic Scooty, Ramaera Smart Immersion Rod, and Ramaera 8 Stage RO with Cooling."
+                padding="0 2vw "
                 color="#FFF"
-                size="2rem"
-                lh="50px"
+                size="1.5rem"
+                lh="30px"
                 fw="400"
-                m="1rem 0 3rem 0"
+                m="1rem 0"
+                mmargin="0"
                 align="center"
-                xmsize="2rem"
+                xmsize="1.1rem"
                 xssize="2rem"
-                msize="1.1rem"
-                mta="center"
-                mpadding="0 15% 0 5% "
+                msize="0.8rem"
+                mta="left"
+                mpadding="5% 15% 3% 5% "
                 mlh="30px"
               />
-              <Text
-                Text="Kindly join us"
-                lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-                font
-                size="33px"
-                lh="20px"
-                width="fit"
-                mwidth="100vw"
-                fw="500"
-                mlh="30px"
-                align="center"
-                xmsize="28px"
-                xssize="24px"
-                msize="22px"
-                mpadding="0 10% 0 0 "
-              />
-              <Text
-                Text="on"
-                padding="0 10vw "
-                color="#FFF"
-                size="2rem"
-                lh="10px"
-                fw="400"
-                align="center"
-                xmsize="2.2rem"
-                xssize="2rem"
-                msize="1.1rem"
-                mta="center"
-                mpadding="0 20% 0 10% "
-                mlh="20px"
-              />
-              <Text
-                Text="1st August 2023"
-                padding="0 10vw "
-                color="#FFF"
-                size="2rem"
-                lh="60px"
-                fw="400"
-                align="center"
-                xmsize="2.2rem"
-                xssize="2rem"
-                msize="1.3rem"
-                mta="center"
-                mpadding="0 20% 0 10% "
-                mlh="40px"
-              />
+
+              <Link
+                href="/Companies#Products"
+                style={{ display: "flex", justifyContent: "center" }}>
+                <Button
+                  Text="More Info"
+                  secondary
+                  lightborder
+                  height="45px"
+                  m="0 0 0.5rem 0"
+                  bborder="2px solid white"
+                  secondaryWidth="9rem"
+                />
+              </Link>
             </FullFloatingInside>
           ) : (
             ""

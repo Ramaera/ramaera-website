@@ -83,7 +83,23 @@ export const Th = styled.div`
 const Scooty = ({ ProImg, ProName }) => {
   const [isFloating, showFloating] = useState(false);
   return (
-    <Wrapper>
+    <Wrapper id="Products">
+      <Text
+        Text="Our Products"
+        lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
+        font
+        size="50px"
+        lh="110%"
+        width="100%"
+        mwidth="100vw"
+        fw="500"
+        mlh="50px"
+        align="center"
+        xmsize="2rem"
+        xssize="4vw"
+        msize="2rem"
+        mpadding="0"
+      />
       <MainContainer>
         <ValueContainer>
           <div data-aos="fade-right">

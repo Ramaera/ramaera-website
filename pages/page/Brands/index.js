@@ -1,4 +1,4 @@
-import Planetsera from "./components/Planetsera";
+// import Planetsera from "./components/Planetsera";
 import Scooty from "./components/Scooty";
 import Tv from "./components/Tv";
 import Ac from "./components/Ac";
@@ -8,7 +8,7 @@ import Rod from "./components/Rod";
 const Brands = () => {
   return (
     <>
-      <Planetsera />
+      {/* <Planetsera /> */}
       <Scooty />
       <Tv />
       <Ac />
