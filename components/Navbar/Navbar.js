@@ -188,7 +188,7 @@ const Navbar = ({ selectedTab }) => {
                   GROCERYWORLD
                 </ADrop>
                 <br />
-                <LinkDrop href="/VisitUs">VISIT US</LinkDrop>
+                {/* <LinkDrop href="/VisitUs">VISIT US</LinkDrop> */}
               </Dropdown>
             </Link2>
           </ul>
