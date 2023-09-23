@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2742],{15830:function(n,_,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/page/Brands/components/Scooty",function(){return o(39465)}])}},function(n){n.O(0,[1502,7285,273,559,3210,3741,4014,9465,9774,2888,179],function(){return n(n.s=15830)}),_N_E=n.O()}]);
