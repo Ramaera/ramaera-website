@@ -12,7 +12,7 @@ export const ValueContainer = styled.div`
   }
 `;
 export const Wrapper = styled.div`
-  margin: 2% auto 0 auto;
+  margin: 5% auto 0 auto;
   @media only screen and (max-width: 768px) {
     margin: 10% auto 0 auto;
   }
@@ -53,12 +53,29 @@ export const ImageTag = styled.img`
 `;
 
 export const Th = styled.div`
-  padding: 8px 13rem 8px 6rem;
+  padding: 8px 8px 8px 8rem;
   display: flex;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   @media (max-width: 768px) {
     padding: 8px 8px 8px 1.5rem;
+  }
+`;
+
+const Heading = styled.h3`
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  @media only screen and (max-width: 768px) {
+    margin: 0 10px;
   }
 `;
 
@@ -68,50 +85,15 @@ const Tv = () => {
       <MainContainer>
         <ValueContainer>
           <div data-aos="fade-right">
-            <Text
-              Text="ANDROID SMART LED TV"
-              lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
-              font
-              size="30px"
-              lh="110%"
-              width="100%"
-              mwidth="100vw"
-              fw="500"
-              mlh="50px"
-              align="center"
-              xmsize="1rem"
-              xssize="2vw"
-              msize="1rem"
-              mpadding="0"
-              mmargin=" 0 0 0rem 0"
-            />
+            <Heading>Android Smart LED TV</Heading>
           </div>
           <div data-aos="fade-up">
             <ImageTag src="/content/ledTv.png" alt="Led TV" />
           </div>
         </ValueContainer>
         <TextContainer>
-          <BlockDiv>
-            <Text
-              Text=" "
-              lg="none"
-              font
-              size="30px"
-              lh="110%"
-              width="100%"
-              mwidth="100%"
-              fw="500"
-              mlh="50px"
-              align="center"
-              xmsize="1rem"
-              xssize="2vw"
-              msize="1rem"
-              mpadding="0"
-              mmargin=" 0 0 0rem 0"
-            />
-          </BlockDiv>
           <Text
-            Text="Android Smart LED TV"
+            Text="Specification"
             lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
             size="32px"
             lh="40px"
@@ -119,10 +101,11 @@ const Tv = () => {
             mwidth="100%"
             fw="500"
             mlh="50px"
-            align="center"
-            xmsize="1rem"
+            align="left"
+            xmsize="1.5rem"
             xssize="2vw"
-            msize="1rem"
+            msize="1.8rem"
+            padding="0 0 2vw 8rem"
             mpadding="0 1%"
             mmargin=" 0 0 0rem 0"
           />

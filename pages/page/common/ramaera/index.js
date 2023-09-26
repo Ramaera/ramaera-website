@@ -134,7 +134,7 @@ const index = ({ imageIndex = 0 }) => {
 
   return (
     <Fragment>
-      {/* {imageIndex === 0 && showModal ? <NoticePopup /> : null} */}
+      {imageIndex === 0 && showModal ? <NoticePopup /> : null}
       {isFloating ? (
         <FullFloating
           onClick={() => {

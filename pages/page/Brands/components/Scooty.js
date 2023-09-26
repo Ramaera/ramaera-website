@@ -80,6 +80,23 @@ export const Th = styled.div`
   }
 `;
 
+const Heading = styled.h3`
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  @media only screen and (max-width: 768px) {
+    margin: 20px 10px 0 10px;
+  }
+`;
+
 const Scooty = ({ ProImg, ProName }) => {
   const [isFloating, showFloating] = useState(false);
   return (
@@ -103,23 +120,7 @@ const Scooty = ({ ProImg, ProName }) => {
       <MainContainer>
         <ValueContainer>
           <div data-aos="fade-right">
-            <Text
-              Text="Electric Scooty"
-              lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
-              font
-              size="30px"
-              lh="110%"
-              width="100%"
-              mwidth="100vw"
-              fw="500"
-              mlh="50px"
-              align="center"
-              xmsize="1rem"
-              xssize="2vw"
-              msize="1rem"
-              mpadding="0"
-              mmargin=" 0 0 0rem 0"
-            />
+            <Heading>Electric Scooty</Heading>
           </div>
           <div data-aos="fade-up">
             <ImageTag src="/content/scooty.png" alt="E-Scooty" />
@@ -127,7 +128,7 @@ const Scooty = ({ ProImg, ProName }) => {
         </ValueContainer>
 
         <TextContainer>
-          <BlockDiv>
+          {/* <BlockDiv>
             <Text
               Text=" ."
               lg="none"
@@ -142,12 +143,13 @@ const Scooty = ({ ProImg, ProName }) => {
               xmsize="1rem"
               xssize="2vw"
               msize="1rem"
+              padding="1vw"
               mpadding="0"
               mmargin=" 0 0 0rem 0"
             />
-          </BlockDiv>
+          </BlockDiv> */}
           <Text
-            Text="Electric Scooty"
+            Text="Specification"
             lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
             size="32px"
             lh="40px"
@@ -155,10 +157,11 @@ const Scooty = ({ ProImg, ProName }) => {
             mwidth="100%"
             fw="500"
             mlh="50px"
-            align="center"
-            xmsize="1rem"
+            align="left"
+            xmsize="1.5rem"
             xssize="2vw"
-            msize="1rem"
+            msize="1.8rem"
+            padding="0 0 2vw 8rem"
             mpadding="0 1%"
             mmargin=" 0 0 0rem 0"
           />

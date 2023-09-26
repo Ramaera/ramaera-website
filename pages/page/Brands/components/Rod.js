@@ -12,7 +12,7 @@ export const ValueContainer = styled.div`
   }
 `;
 export const Wrapper = styled.div`
-  margin: 2% auto 0 auto;
+  margin: 5% auto 0 auto;
   @media only screen and (max-width: 768px) {
     margin: 10% auto 0 auto;
   }
@@ -36,16 +36,18 @@ export const TextContainer = styled.div`
     width: 100%;
   }
 `;
+
 export const ImageTag = styled.img`
   transform: scale(90%);
   width: 100%;
-  object-fit: cover;
-  object-position: 0 0;
+  object-fit: contain;
+  // object-position: 0 0;
   border-radius: 20px;
   border: solid white 1px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   //background: #000;
   background: #fff;
+  max-height: 500px;
   @media (max-width: 768px) {
     object-fit: contain;
     height: auto;
@@ -62,56 +64,38 @@ export const Th = styled.div`
   }
 `;
 
+const Heading = styled.h3`
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  @media only screen and (max-width: 768px) {
+    margin: 0 10px;
+  }
+`;
+
 const Rod = () => {
   return (
     <Wrapper>
       <MainContainer>
         <ValueContainer>
           <div data-aos="fade-right">
-            <Text
-              Text="Smart Immersion Rod"
-              lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
-              font
-              size="30px"
-              lh="110%"
-              width="100%"
-              mwidth="100vw"
-              fw="500"
-              mlh="50px"
-              align="center"
-              xmsize="1rem"
-              xssize="2vw"
-              msize="1rem"
-              mpadding="0"
-              mmargin=" 0 0 0rem 0"
-            />
+            <Heading>Smart Immersion Rod</Heading>
           </div>
           <div data-aos="fade-up">
-            <ImageTag src="/content/rod.png" alt="Ac" />
+            <ImageTag src="/content/rod.png" alt="rod" />
           </div>
         </ValueContainer>
         <TextContainer>
-          <BlockDiv>
-            <Text
-              Text=""
-              lg="none"
-              font
-              size="30px"
-              lh="110%"
-              width="100%"
-              mwidth="100%"
-              fw="500"
-              mlh="50px"
-              align="center"
-              xmsize="1rem"
-              xssize="2vw"
-              msize="1rem"
-              mpadding="0"
-              mmargin=" 0 0 0rem 0"
-            />
-          </BlockDiv>
           <Text
-            Text="Smart Immersion Rod"
+            Text="Specification"
             lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
             size="32px"
             lh="40px"
@@ -119,10 +103,11 @@ const Rod = () => {
             mwidth="100%"
             fw="500"
             mlh="50px"
-            align="center"
-            xmsize="1rem"
+            align="left"
+            xmsize="1.5rem"
             xssize="2vw"
-            msize="1rem"
+            msize="1.8rem"
+            padding="0 0 2vw 8rem"
             mpadding="0 1%"
             mmargin=" 0 0 0rem 0"
           />

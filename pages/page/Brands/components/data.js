@@ -53,7 +53,7 @@ export const AcData = [
   { title: "Voltage", detail: "230 Volts" },
   {
     title: "Manufaturer Warranty",
-    detail: "1year Product, 5year Condenser, 5year Compressor",
+    detail: "1 year Product, 5 year Condenser, 5 year Compressor",
   },
   { title: "Gas Filled", detail: "R32 Gas" },
   { title: "Coil Type", detail: "100% Copper" },

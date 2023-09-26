@@ -13,8 +13,9 @@ import { useEffect, useState } from "react";
 export const ImageEnq = styled.img`
   transform: scale(90%);
   width: 150px;
-  object-fit: cover;
-  object-position: 0 0;
+  object-fit: contain;
+  max-height: 160px;
+  // object-position: 0 0;
   border-radius: 20px;
   border: solid white 1px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;

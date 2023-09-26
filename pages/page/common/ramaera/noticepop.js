@@ -9,7 +9,8 @@ import MobileTab from "./components/MobileTab/MobileTab";
 import { Fragment } from "react";
 import disableScroll from "disable-scroll";
 import CancelPresentationIcon from "@mui/icons-material/CancelPresentation";
-
+import Confetti from "react-confetti";
+import useWindowSize from "react-use/lib/useWindowSize";
 import {
   images,
   text,
@@ -136,6 +137,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
   const [isFloating, showFloating] = useState(true);
   const [imageNo, setImageNo] = useState(pageNo[imageIndex]);
   const [contextNo, setContextNo] = useState(textNo[imageIndex]);
+  const { width, height } = useWindowSize();
 
   useEffect(() => {
     isFloating ? disableScroll.on() : disableScroll.off();
@@ -153,6 +155,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
     return () => clearInterval(intervalId);
   }, [imageNo[currentIndex]]);
   console.log(imageIndex);
+
   return (
     <Fragment>
       {isFloating ? (
@@ -161,6 +164,13 @@ const NoticePopup = ({ imageIndex = 0 }) => {
         //     showFloating(false);
         //   }}
         >
+          <Confetti
+            recycle={false}
+            numberOfPieces={300}
+            width={width}
+            height={height}
+          />
+
           <div
             onClick={() => {
               showFloating(false);
@@ -182,7 +192,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
           {isFloating ? (
             <FullFloatingInside>
               <Text
-                Text="Ramaera Newly Launch  Products"
+                Text="Newly Launched  Products"
                 lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
                 font
                 size="44px"
@@ -195,14 +205,14 @@ const NoticePopup = ({ imageIndex = 0 }) => {
                 xmsize="32px"
                 xssize="24px"
                 msize="22px"
-                mpadding="0 10% 0 0"
+                mpadding="2% 10% 2% 2%"
               />
               <ProductDiv>
                 <ProductsImg src="/background/ramaeraProducts.jpg" />
               </ProductDiv>
               <Text
                 // Text="Ramaera is celebrating its first anniversary join us on 1st August 2023 at 11:30am to 05:30pm"
-                Text="Welcome to the future of technology at Ramaera Electronics! We are delighted to introduce you to our latest lineup of groundbreaking products, each designed to elevate your lifestyle and meet the demands of modern living. Explore the future with Ramaera TV, Ramaera Air Conditioner, Ramaera's Electronic Scooty, Ramaera Smart Immersion Rod, and Ramaera 8 Stage RO with Cooling."
+                Text="Welcome to the future of technology at Ramaera Electronics! We are delighted to introduce you to our latest lineup of groundbreaking products, each designed to elevate your lifestyle and meet the demands of modern living. Explore the future with Ramaera TV, Oxiair AC, Ramaera's Electronic Scooty, Ramaera Smart Immersion Rod, and Ramaera 8 Stage RO with Cooling."
                 padding="0 2vw "
                 color="#FFF"
                 size="1.5rem"
@@ -223,13 +233,13 @@ const NoticePopup = ({ imageIndex = 0 }) => {
                 href="/Companies#Products"
                 style={{ display: "flex", justifyContent: "center" }}>
                 <Button
-                  Text="More Info"
+                  Text="Enquiry Now"
                   secondary
                   lightborder
                   height="45px"
                   m="0 0 0.5rem 0"
                   bborder="2px solid white"
-                  secondaryWidth="9rem"
+                  secondaryWidth="11rem"
                 />
               </Link>
             </FullFloatingInside>
