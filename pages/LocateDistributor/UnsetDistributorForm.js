@@ -287,75 +287,7 @@ const DistributorForm = () => {
                 </Tr>
               </Details>
             )}
-            {district === "Mahua" && (
-              <Details>
-                <Tr>
-                  <Td>Name of Business</Td>
-                  <Td>Vaishnavi Enterprises</Td>
-                </Tr>
 
-                <Tr>
-                  <Td>Name Of the Proprietor</Td>
-                  <Td>Mr. Lalan Kumar</Td>
-                </Tr>
-                <Tr>
-                  <Td>Mobile No.</Td>
-                  <Td>9491553215</Td>
-                </Tr>
-                <Tr>
-                  <Td>Firm Type</Td>
-                  <Td>Distributor</Td>
-                </Tr>
-                <Tr>
-                  <Td>Zone</Td>
-                  <Td>Zone 1</Td>
-                </Tr>
-                <Tr>
-                  <Td>Address Of Business</Td>
-                  <Td>Ward no-6, Chhatwara(Mahua), 844122</Td>
-                </Tr>
-                <Tr>
-                  <Td>Email Id</Td>
-                  <Td>lkumar94915@gmail.com</Td>
-                </Tr>
-              </Details>
-            )}
-            {district === "Mahnar" && (
-              <Details>
-                <Tr>
-                  <Td>Name of Business</Td>
-                  <Td>Shiv shakti Enterprises</Td>
-                </Tr>
-
-                <Tr>
-                  <Td>Name Of the Proprietor</Td>
-                  <Td>Mr. Santosh Kumar Singh</Td>
-                </Tr>
-                <Tr>
-                  <Td>Mobile No.</Td>
-                  <Td>7209438100</Td>
-                </Tr>
-                <Tr>
-                  <Td>Firm Type</Td>
-                  <Td>Distributor</Td>
-                </Tr>
-                <Tr>
-                  <Td>Zone</Td>
-                  <Td>Zone 1</Td>
-                </Tr>
-                <Tr>
-                  <Td>Address Of Business</Td>
-                  <Td>
-                    STATION ROAD, MAHNAR , VAISHALI , BIHAR Near Chuda mill,
-                    844506
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>Email Id</Td>
-                  <Td>sshakitenterprises97@gmail.com</Td>
-                </Tr>
-              </Details>
-            )}
             {district === "Hyderabad" && (
               <>
                 <h4>Distributor 1</h4>
