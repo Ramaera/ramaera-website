@@ -113,28 +113,6 @@ export const data = [
   {
     type: "Distributor",
     state: "Bihar",
-    area: "Mahnar (Vaishali)",
-    business: "Shiv shakti Enterprises",
-    name: "Mr. Santosh Kumar Singh",
-    mobile: "7209438100",
-    email: "sshakitenterprises97@gmail.com",
-    zone: "Zone 2",
-    address: "Station Road, Mahnar, Vaishali, Bihar Near Chuda Mill, 844506",
-  },
-  {
-    type: "Distributor",
-    state: "Bihar",
-    area: "Mahua (Vaishali)",
-    business: "Vaishnavi Enterprises",
-    name: "Mr. Lalan Kumar",
-    mobile: "9491553215",
-    email: "lkumar94915@gmail.com",
-    zone: "Zone 2",
-    address: "Ward no-6, Chhatwara(Mahua), 844122",
-  },
-  {
-    type: "Distributor",
-    state: "Bihar",
     area: "West Champaran",
     business: "Pallavi Traders",
     name: "Ms. Pallavi Kumari",
@@ -230,10 +208,10 @@ export const data = [
   //     zone: " ",
   //     address: " ",
   //   },
-];
+]
 
 const Style = () => {
-  return <div>StyleImage</div>;
-};
+  return <div>StyleImage</div>
+}
 
-export default Style;
+export default Style
