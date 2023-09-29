@@ -1,27 +1,27 @@
-import Link from "next/link"
-import { useEffect, useState } from "react"
-import { useSelector } from "react-redux"
-import Button from "../../../components/Button/SubmitButton"
-import Settings from "./Settings"
-import { useRouter } from "next/router"
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import Button from "../../../components/Button/SubmitButton";
+import Settings from "./Settings";
+import { useRouter } from "next/router";
 
 const DashSection = () => {
-  const router = useRouter()
+  const router = useRouter();
 
-  const roleVar = useSelector((state) => state.logInUser.role)
+  const roleVar = useSelector((state) => state.logInUser.role);
 
-  let ACCESSTOKEN
+  let ACCESSTOKEN;
   useEffect(() => {
     if (typeof window !== "undefined") {
-      ACCESSTOKEN = localStorage.getItem("accessToken")
+      ACCESSTOKEN = localStorage.getItem("accessToken");
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     if (!ACCESSTOKEN) {
-      router.push("/Login")
+      router.push("/Login");
     }
-  }, [ACCESSTOKEN])
+  }, [ACCESSTOKEN]);
 
   try {
     return (
@@ -55,8 +55,7 @@ const DashSection = () => {
                       >
                         <button
                           style={{ background: "none", border: "none" }}
-                          type="submit"
-                        >
+                          type="submit">
                           <Button
                             nav
                             width="auto"
@@ -82,8 +81,7 @@ const DashSection = () => {
                       >
                         <button
                           style={{ background: "none", border: "none" }}
-                          type="submit"
-                        >
+                          type="submit">
                           <Button
                             nav
                             width="auto"
@@ -109,8 +107,7 @@ const DashSection = () => {
                       >
                         <button
                           style={{ background: "none", border: "none" }}
-                          type="submit"
-                        >
+                          type="submit">
                           <Button
                             nav
                             width="auto"
@@ -138,8 +135,35 @@ const DashSection = () => {
                       >
                         <button
                           style={{ background: "none", border: "none" }}
-                          type="submit"
-                        >
+                          type="submit">
+                          <Button
+                            nav
+                            width="auto"
+                            height="auto"
+                            Text="Responses"
+                            inheight="auto"
+                            fontSize="auto"
+                            padding=" 15px 10px"
+                          />
+                        </button>
+                      </Link>
+                    </td>
+                  </tr>
+                ) : null}
+                {roleVar === "ADMIN" || roleVar === "EXECUTIVE" ? (
+                  <tr>
+                    <td>5</td>
+                    <td className="dashboardText">
+                      Sales Enquiry Responses Data
+                    </td>
+                    <td>
+                      <Link
+                        href="/SalesEnquiryResponses"
+                        // className="btn success"
+                      >
+                        <button
+                          style={{ background: "none", border: "none" }}
+                          type="submit">
                           <Button
                             nav
                             width="auto"
@@ -173,22 +197,21 @@ const DashSection = () => {
           <div className="basis-2/12 table-2"></div>
         </div>
       </>
-    )
+    );
   } catch (err) {
-    console.log(err.message)
+    console.log(err.message);
     return (
       <>
         <Link
           style={{
             color: "white",
           }}
-          href=" /Login"
-        >
+          href=" /Login">
           Login to continue
         </Link>
       </>
-    )
+    );
   }
-}
+};
 
-export default DashSection
+export default DashSection;

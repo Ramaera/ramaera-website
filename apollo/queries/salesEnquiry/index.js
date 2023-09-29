@@ -23,3 +23,14 @@ address: $address
       name
     }
 }`);
+
+export const GET_SALES_ENQUIRY = gql(`
+query salesEnquiry {
+  salesEnquiry{
+    name
+    email
+    product
+    mobileNumber
+    remarks
+  }
+}`);
