@@ -6,6 +6,7 @@ const initialState = {
   contactUsData: [],
   visitUsData: [],
   salesEnquiryData: [],
+  posdEnquiryData: [],
 };
 
 export const applicantDataSlice = createSlice({
@@ -27,6 +28,9 @@ export const applicantDataSlice = createSlice({
     changeSalesEnquiryData: (state, action) => {
       state.salesEnquiryData = action.payload;
     },
+    changePosdEnquiryData: (state, action) => {
+      state.posdEnquiryData = action.payload;
+    },
   },
 });
 
@@ -36,6 +40,7 @@ export const {
   changeContactData,
   changeVisitUsData,
   changeSalesEnquiryData,
+  changePosdEnquiryData,
 } = applicantDataSlice.actions;
 
 export default applicantDataSlice.reducer;

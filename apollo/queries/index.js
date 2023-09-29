@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client"
+import { gql } from "@apollo/client";
 
 export const UPDATE_VISIT_US = gql(`
 mutation UpdateVisitorForm (
@@ -12,7 +12,7 @@ $email: String!,
     {
       email
     }
-}`)
+}`);
 
 export const CREATE_POS_ENQUIRY = gql(`
 mutation createPosenquiry(
@@ -41,7 +41,7 @@ mutation createPosenquiry(
     pwid
   }
 }
-`)
+`);
 
 export const UPDATE_APPLICATIONS = gql(`
 mutation UpdateApplication (
@@ -55,7 +55,7 @@ $email: String!,
     {
       email
     }
-}`)
+}`);
 export const CREATE_APPLICATIONS = gql(`
 mutation creator ($District: String!,
 $State: String!,
@@ -81,7 +81,7 @@ $extraInfo: String!,
     {
       name
     }
-}`)
+}`);
 
 export const CREATE_CONTACT_RESPONSE = gql(`
 mutation createUs (
@@ -101,7 +101,7 @@ mutation createUs (
     {
       name
     }
-}`)
+}`);
 
 export const LOG_IN = gql(`
 mutation loginUser (
@@ -119,7 +119,7 @@ $password: String!,
       name
     }
     }
-}`)
+}`);
 
 export const GET_APPLICATIONS = gql(`
   query getAllApps{
@@ -137,7 +137,7 @@ export const GET_APPLICATIONS = gql(`
     createdAt
     updatedAt
   }
-}`)
+}`);
 
 export const GET_CONTACT_RESPONSES = gql(`
   query getContactResponses{
@@ -148,4 +148,16 @@ export const GET_CONTACT_RESPONSES = gql(`
       Subject
       message
   }
-}`)
+}`);
+
+export const GET_POSD_RESPONSES = gql(`
+query posenquiry {
+  posenquiry{
+    name
+    email
+    mobileNumber
+    pwid
+    CityName
+   Number_of_persons_in_POS_City
+  }
+}`);

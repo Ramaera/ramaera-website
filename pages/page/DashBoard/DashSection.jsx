@@ -178,6 +178,34 @@ const DashSection = () => {
                     </td>
                   </tr>
                 ) : null}
+                {roleVar === "ADMIN" || roleVar === "EXECUTIVE" ? (
+                  <tr>
+                    <td>6</td>
+                    <td className="dashboardText">
+                      POSD Enquiry Responses Data
+                    </td>
+                    <td>
+                      <Link
+                        href="/PosdEnquiryResponses"
+                        // className="btn success"
+                      >
+                        <button
+                          style={{ background: "none", border: "none" }}
+                          type="submit">
+                          <Button
+                            nav
+                            width="auto"
+                            height="auto"
+                            Text="Responses"
+                            inheight="auto"
+                            fontSize="auto"
+                            padding=" 15px 10px"
+                          />
+                        </button>
+                      </Link>
+                    </td>
+                  </tr>
+                ) : null}
                 <tr>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>
