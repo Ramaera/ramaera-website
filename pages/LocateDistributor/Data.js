@@ -74,29 +74,29 @@ export const data = [
     address: "Bagmail Hajipur Vaishali, 844101",
   },
 
-  {
-    type: "Distributor",
-    state: "Bihar",
-    area: "Gopalganj",
-    business: "Sonali Enterprises",
-    name: "Mr. Prabhakar Tiwari",
-    mobile: "9523038408",
-    email: "prabhakart774@gmail.com",
-    zone: "Zone 2",
-    address: "Bhore, Chaarmuhani near Chahat, 841426",
-  },
+  // {
+  //   type: "Distributor",
+  //   state: "Bihar",
+  //   area: "Gopalganj",
+  //   business: "Sonali Enterprises",
+  //   name: "Mr. Prabhakar Tiwari",
+  //   mobile: "9523038408",
+  //   email: "prabhakart774@gmail.com",
+  //   zone: "Zone 2",
+  //   address: "Bhore, Chaarmuhani near Chahat, 841426",
+  // },
 
-  {
-    type: "Distributor",
-    state: "Bihar",
-    area: "Patna",
-    business: "Kailash Enterprises",
-    name: "Mr. Sharwan Kumar",
-    mobile: "8581883417",
-    email: "sharwan9100@gmail.com",
-    zone: "Zone 1",
-    address: "Adarsh Colony, Near- Child hospital, 800001, Patna, Bihar",
-  },
+  // {
+  //   type: "Distributor",
+  //   state: "Bihar",
+  //   area: "Patna",
+  //   business: "Kailash Enterprises",
+  //   name: "Mr. Sharwan Kumar",
+  //   mobile: "8581883417",
+  //   email: "sharwan9100@gmail.com",
+  //   zone: "Zone 1",
+  //   address: "Adarsh Colony, Near- Child hospital, 800001, Patna, Bihar",
+  // },
 
   {
     type: "Distributor",
@@ -208,10 +208,10 @@ export const data = [
   //     zone: " ",
   //     address: " ",
   //   },
-]
+];
 
 const Style = () => {
-  return <div>StyleImage</div>
-}
+  return <div>StyleImage</div>;
+};
 
-export default Style
+export default Style;
