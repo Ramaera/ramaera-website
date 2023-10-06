@@ -88,7 +88,7 @@ const Tv = () => {
             <Heading>Android Smart LED TV</Heading>
           </div>
           <div data-aos="fade-up">
-            <ImageTag src="/content/ledTv.png" alt="Led TV" />
+            <ImageTag src="/content/TvFront.jpg" alt="Led TV" />
           </div>
         </ValueContainer>
         <TextContainer>

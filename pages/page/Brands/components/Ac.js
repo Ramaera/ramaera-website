@@ -88,7 +88,7 @@ const Ac = () => {
             <Heading>Oxiair AC</Heading>
           </div>
           <div data-aos="fade-up">
-            <ImageTag src="/content/ac.png" alt="Ac" />
+            <ImageTag src="/content/AcFront.jpg" alt="Ac" />
           </div>
         </ValueContainer>
         <TextContainer>

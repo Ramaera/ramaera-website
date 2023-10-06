@@ -208,7 +208,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
                 mpadding="2% 10% 2% 2%"
               />
               <ProductDiv>
-                <ProductsImg src="/background/ramaeraProducts.jpg" />
+                <ProductsImg src="/background/ramaeraProducts.webp" />
               </ProductDiv>
               <Text
                 // Text="Ramaera is celebrating its first anniversary join us on 1st August 2023 at 11:30am to 05:30pm"

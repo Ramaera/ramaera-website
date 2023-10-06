@@ -88,7 +88,7 @@ const Ro = () => {
             <Heading>8 Stage Water Purifier RO with Cooling</Heading>
           </div>
           <div data-aos="fade-up">
-            <ImageTag src="/content/ro.png" alt="Ac" />
+            <ImageTag src="/content/RoFront.jpg" alt="Ac" />
           </div>
         </ValueContainer>
         <TextContainer>

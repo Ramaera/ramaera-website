@@ -123,7 +123,7 @@ const Scooty = ({ ProImg, ProName }) => {
             <Heading>Electric Scooty</Heading>
           </div>
           <div data-aos="fade-up">
-            <ImageTag src="/content/scooty.png" alt="E-Scooty" />
+            <ImageTag src="/content/ScootyFront.jpg" alt="E-Scooty" />
           </div>
         </ValueContainer>
 

@@ -47,7 +47,7 @@ export const ImageTag = styled.img`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   //background: #000;
   background: #fff;
-  max-height: 500px;
+  // max-height: 500px;
   @media (max-width: 768px) {
     object-fit: contain;
     height: auto;
@@ -90,7 +90,7 @@ const Rod = () => {
             <Heading>Smart Immersion Rod</Heading>
           </div>
           <div data-aos="fade-up">
-            <ImageTag src="/content/rod.png" alt="rod" />
+            <ImageTag src="/content/RodFront.jpg" alt="rod" />
           </div>
         </ValueContainer>
         <TextContainer>
