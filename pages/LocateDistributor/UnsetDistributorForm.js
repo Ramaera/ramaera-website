@@ -1,7 +1,7 @@
-import Text from "@/components/Text/Text"
-import PageWidth from "@/components/Width/PageWidth"
-import { useEffect, useState } from "react"
-import styled from "styled-components"
+import Text from "@/components/Text/Text";
+import PageWidth from "@/components/Width/PageWidth";
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   position: relative;
@@ -14,22 +14,22 @@ const Container = styled.div`
     width: 100vw;
     padding: 1.5rem;
   }
-`
+`;
 const Form = styled.form`
   display: flex;
   gap: 20px;
   @media (max-width: 768px) {
     flex-direction: column;
   }
-`
+`;
 const FlexCol = styled.form`
   display: flex;
   flex-direction: column;
-`
+`;
 
 const H2 = styled.h2`
   margin: 50px 0;
-`
+`;
 const Details = styled.table`
   position: static;
   border-collapse: collapse;
@@ -37,10 +37,10 @@ const Details = styled.table`
   @media (max-width: 768px) {
     border: hidden;
   }
-`
+`;
 const Tr = styled.tr`
   width: 100px;
-`
+`;
 const Td = styled.td`
   border: 1px solid #dddddd;
   text-align: left;
@@ -49,15 +49,15 @@ const Td = styled.td`
     border: hidden;
     font-size: 15px;
   }
-`
+`;
 
 const DistributorForm = () => {
-  const [aState, setAState] = useState("")
-  const [type, setType] = useState("")
-  const [district, setDistrict] = useState("")
+  const [aState, setAState] = useState("");
+  const [type, setType] = useState("");
+  const [district, setDistrict] = useState("");
   useEffect(() => {
-    console.log(district)
-  }, [district])
+    console.log(district);
+  }, [district]);
   return (
     <PageWidth full scale={"95%"} width="1500px" position="relative">
       <Container>
@@ -107,11 +107,10 @@ const DistributorForm = () => {
               style={{ maxWidth: "300px" }}
               value={type}
               onChange={(e) => {
-                setType(e.target.value)
-                setAState("")
-                setDistrict("")
-              }}
-            >
+                setType(e.target.value);
+                setAState("");
+                setDistrict("");
+              }}>
               {!type && (
                 <option disabled value={""} selected={!type}>
                   Select type
@@ -127,10 +126,9 @@ const DistributorForm = () => {
               style={{ maxWidth: "300px" }}
               value={aState}
               onChange={(e) => {
-                setAState(e.target.value)
-                setDistrict("")
-              }}
-            >
+                setAState(e.target.value);
+                setDistrict("");
+              }}>
               {!aState && (
                 <option disabled value={""} selected={!aState}>
                   Select state
@@ -147,9 +145,8 @@ const DistributorForm = () => {
               style={{ maxWidth: "300px" }}
               value={district}
               onChange={(e) => {
-                setDistrict(e.target.value)
-              }}
-            >
+                setDistrict(e.target.value);
+              }}>
               {!district && (
                 <option disabled value={""} selected={!district}>
                   Select Area
@@ -188,10 +185,10 @@ const DistributorForm = () => {
           <>
             {district === "Gopalganj" && (
               <Details>
-                <Tr>
+                {/* <Tr>
                   <Td>Name of Business</Td>
                   <Td>Sonali Enterprises</Td>
-                </Tr>
+                </Tr> */}
                 <Tr>
                   <Td>Name Of the Proprietor</Td>
                   <Td>Prabhakar Tiwari</Td>
@@ -443,10 +440,10 @@ const DistributorForm = () => {
             )}
             {district === "Patna" && (
               <Details>
-                <Tr>
+                {/* <Tr>
                   <Td>Name of Business</Td>
                   <Td>Kailash Enterprises</Td>
-                </Tr>
+                </Tr> */}
 
                 <Tr>
                   <Td>Name Of the Proprietor</Td>
@@ -629,7 +626,7 @@ const DistributorForm = () => {
         )}
       </Container>
     </PageWidth>
-  )
-}
+  );
+};
 
-export default DistributorForm
+export default DistributorForm;
