@@ -60,6 +60,17 @@ export const data = [
     address: "91A/75C/2H, Malviya Nagar, MutthiGanj, Prayagraj, 211003",
   },
 
+  {
+    type: "Super Stockist",
+    state: "Bihar",
+    area: "Rohtas",
+    business: "Samee Enterprises",
+    name: "Mr. Arshad Aleem",
+    mobile: "7870104959",
+    email: "arshadaleem5653@gmail.com",
+    zone: "Zone 1",
+    address: "Nasheman, Ward no - 30, Neel kothi, Dehri, Rohtas, 821307",
+  },
   // -------------------------- Distributor -------------------------
 
   {
