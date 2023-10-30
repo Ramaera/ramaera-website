@@ -44,7 +44,7 @@ const About = () => {
             xssize="4vw"
             msize="2rem"
             mpadding="0"
-            mmargin="0 0 0 0"
+            mmargin="100px 0 0 0"
           />
         </div>
         <div data-aos="fade-left">

@@ -9,7 +9,7 @@ const Vision = () => {
       <VisionBG>
         <div data-aos="zoom-in">
           <Text
-            Text="ramaera vision"
+            Text="Ramaera Vision"
             lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
             font
             size="2.8rem"
@@ -32,7 +32,7 @@ const Vision = () => {
         <br />
         <div data-aos="fade-right">
           <Text
-            Text="“Ramaera Industries has begun with the primary motive of nation
+            Text="Ramaera Industries has begun with the primary motive of nation
         orientation and strengthening the vision of a sustainable and
         prosperous nation. With the idea of encompassing and emboldening our
         presence in industrial sectors such as FMCG, Hotels, Packaging,
@@ -59,7 +59,7 @@ const Vision = () => {
         <br />
         <div data-aos="fade-left">
           <Text
-            Text="“Ramaera Industries plans to redefine the existing industrial sector by
+            Text="Ramaera Industries plans to redefine the existing industrial sector by
           abiding on the principles of transparency, trusteeship and empowerment
           .We are dedicated not only to delivering the best quality products at
           the most reasonable prices in the comfort of your homes but also
@@ -83,7 +83,7 @@ const Vision = () => {
         <br />
         <div data-aos="fade-right">
           <Text
-            Text="“ Our belief of revolutionising the traditional industries by merging
+            Text="Our belief of revolutionising the traditional industries by merging
           them to the world of decentralisation keeps us a step further and
           hence, we are one of the most trusted and loved industrial enterprises
           in India."
@@ -105,7 +105,7 @@ const Vision = () => {
         <br />
         <div data-aos="fade-left">
           <Text
-            Text="“Keeping pace with the advancements of technology , we thrive to exceed
+            Text="Keeping pace with the advancements of technology , we thrive to exceed
           the expectations of our customer base on prices, delivery and
           convenience by our consistent improvement and efforts. Innovation and
           excellence are our guiding principles and the execution of these in
@@ -129,7 +129,7 @@ const Vision = () => {
         <br />
         <div data-aos="fade-right">
           <Text
-            Text="“ Ramaera Industries aims to make a mark in all of the most popular
+            Text="Ramaera Industries aims to make a mark in all of the most popular
           industrial sectors and provide employment to thousands of diligent
           youth striving to earn and secure their future under the shade of
           ethical corporate citizenship. We also ensure that our industrial

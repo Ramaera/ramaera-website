@@ -83,7 +83,7 @@ const txt6 = (
 
 const txt7 = (
   <CustomText>
-    Being a <span style={{ color: "#E65C00" }}>Devoted</span> to the nation by
+    Being <span style={{ color: "#E65C00" }}>Devoted</span> to the nation by
     promoting education, business modelling and financial stability, is our
     motto.{" "}
     {/* We are focused on nation orientation, ethical corporate values and
@@ -92,7 +92,7 @@ const txt7 = (
 )
 const txt8 = (
   <CustomText>
-    Being a <span style={{ color: "#E65C00" }}>Devoted</span> to the nation by
+    Being <span style={{ color: "#E65C00" }}>Devoted</span> to the nation by
     promoting education, business modelling and financial stability, is our
     motto.
     {/*  We are focused on nation orientation, ethical corporate values and
@@ -101,7 +101,7 @@ const txt8 = (
 )
 const txt9 = (
   <CustomText>
-    Being a <span style={{ color: "#E65C00" }}>Devoted</span> to the nation by
+    Being <span style={{ color: "#E65C00" }}>Devoted</span> to the nation by
     promoting education, business modelling and financial stability, is our
     motto.
     {/*  We are focused on nation orientation, ethical corporate values and

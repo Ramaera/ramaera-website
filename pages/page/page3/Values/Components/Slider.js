@@ -16,7 +16,12 @@ import {
 const Slider = () => {
   return (
     <CarouselWrapper>
-      <Carousel showThumbs={false} infiniteLoop={true}>
+      <Carousel
+        showThumbs={true}
+        infiniteLoop={true}
+        verticalSwipe={false}
+        swipeable={false}
+      >
         {SliderData.map((item) => (
           <InnovationDiv>
             <InnovationLeft>

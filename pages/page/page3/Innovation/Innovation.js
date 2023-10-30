@@ -21,6 +21,7 @@ export const ParaContainer = styled.div`
   }
 `
 const Polygon = styled.div`
+  z-index: -1;
   width: 100%;
   display: flex;
   position: absolute;

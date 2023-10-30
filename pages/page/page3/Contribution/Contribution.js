@@ -30,7 +30,7 @@ const Contribution = () => {
       <ValParaContainer>
         <div data-aos="fade-left">
           <Text
-            Text="“Ramaera Industry is thriving to protect and conserve the
+            Text="Ramaera Industry is thriving to protect and conserve the
         environment and hence most of its ventures are constructed on the
         principles of sustainability and conservation."
             fw="500"
