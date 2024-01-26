@@ -44,9 +44,11 @@ const RotateTab = styled.div`
 `;
 const FullFloatingInside = styled.div`
   border-radius: 20px;
-  background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
+  // background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
   height: 100%;
   width: 100%;
+  // margin-left: 100px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +59,7 @@ const FullFloatingInside = styled.div`
   }
 `;
 const FullFloating = styled.div`
-  padding: 5% 8%;
+  // padding: 5% 8%;
   position: fixed;
   z-index: 101;
   height: 100vh;
@@ -193,11 +195,11 @@ const NoticePopup = ({ imageIndex = 0 }) => {
           {isFloating ? (
             <FullFloatingInside>
               <Image
-                src="/content/republicDay.jpg"
+                src="/content/republic.png"
                 width={0}
                 height={0}
                 sizes="80vw"
-                style={{ width: "100%", height: "100%" }}
+                style={{ width: "80%", height: "100%" }}
                 alt="RepubliC Day"
               />
               {/* <Text
