@@ -175,7 +175,8 @@ const NoticePopup = ({ imageIndex = 0 }) => {
             onClick={() => {
               showFloating(false);
             }}
-            style={{ position: "relative" }}>
+            style={{ position: "relative" }}
+          >
             <CancelPresentationIcon
               sx={{
                 position: "absolute",
@@ -191,7 +192,15 @@ const NoticePopup = ({ imageIndex = 0 }) => {
           </div>
           {isFloating ? (
             <FullFloatingInside>
-              <Text
+              <Image
+                src="/content/republicDay.jpg"
+                width={0}
+                height={0}
+                sizes="80vw"
+                style={{ width: "100%", height: "100%" }}
+                alt="RepubliC Day"
+              />
+              {/* <Text
                 Text="Newly Launched  Products"
                 lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
                 font
@@ -241,7 +250,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
                   bborder="2px solid white"
                   secondaryWidth="11rem"
                 />
-              </Link>
+              </Link> */}
             </FullFloatingInside>
           ) : (
             ""
