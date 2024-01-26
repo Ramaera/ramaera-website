@@ -15,6 +15,9 @@ export const CustomText = styled.h1`
     padding: 0;
     margin: 0;
   }
+  @media only screen and (max-width: 450px) {
+    transform: scale(0.9);
+  }
 `
 export const Responsive = styled.div`
   width: 100%;
@@ -22,6 +25,17 @@ export const Responsive = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 4rem 0 0 0;
+`
+export const ResponsiveLeader = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4rem 0 0 0;
+  flex-direction: row-reverse;
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
 `
 
 const Style = () => {

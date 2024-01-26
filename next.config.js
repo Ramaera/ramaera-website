@@ -3,14 +3,24 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
-
 module.exports = {
+  devIndicators: {
+    buildActivity: false,
+  },
+  ...nextConfig,
+  images: {
+    unoptimized: true,
+  },
   async redirects() {
     return [
       {
         source: "/home",
         destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/Kyc-login.aspx",
+        destination: "https://kyc.ramaera.com/Kyc-login.aspx",
         permanent: true,
       },
     ]

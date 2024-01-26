@@ -4,6 +4,12 @@ import PageWidth from "../../../../components/Width/PageWidth"
 import Text from "../../../../components/Text/Text"
 import Button from "../../../../components/Button/Button"
 import SocialMedia from "./components/SocialMedia/SocialMedia"
+import MobileSocials from "./components/MobileSocials/MobileSocials"
+import MobileTab from "./components/MobileTab/MobileTab"
+import { Fragment } from "react"
+import disableScroll from "disable-scroll"
+import NoticePopup from "./noticepop"
+
 import {
   images,
   text,
@@ -17,22 +23,78 @@ import {
 import Tab from "./components/Tab/Tab"
 import styled from "styled-components"
 import Image from "next/image"
+import Link from "next/link"
+import UpcomingProject from "./components/UpcomingProjects"
 const SmallSize = styled.div`
-  transform: scale(80%);
+  transform: scale(0.8);
+`
+const LinkTo = styled.a`
+  cursor: pointer;
 `
 const RotateTab = styled.div`
   @media only screen and (max-width: 768px) {
-    transform: scale(100%);
+    /*  transform: scale(1);
     transform: rotateZ(90deg);
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto; */
+    display: none;
+  }
+`
+const FullFloatingInside = styled.div`
+  border-radius: 20px;
+  background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`
+const FullFloating = styled.div`
+  padding: 10%;
+  position: fixed;
+  z-index: 101;
+  height: 100vh;
+  width: 100vw;
+  right: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  @media only screen and (max-width: 768px) {
+    padding: 25% 5%;
+  }
+  // @media only screen and (max-width: 1200px) {
+  //   padding: 5% 10%;
+  // }
+`
+const FloatingProject = styled.div`
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  border-radius: 20px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background: #000;
+  @media only screen and (max-width: 768px) {
+    position: fixed;
+    scale: 0.7;
+    margin: 300px -10% 0 0;
+  }
+`
+const TabsWrapper = styled.div`
+  @media only screen and (max-width: 768px) {
+    transform: scale(0.7);
   }
 `
 const RotateSocials = styled.div`
   @media only screen and (max-width: 768px) {
-    transform: rotateZ(90deg);
-    margin-left: 50%;
-    margin-top: 0vh;
+    /*  transform: rotateZ(90deg);
+    margin-right: 50%;
+    margin-top: 0vh; */
+    display: none;
   }
 `
 const ImageHide = styled.div`
@@ -43,10 +105,15 @@ const ImageHide = styled.div`
 
 const pageNo = [images, images2, images3, images4]
 const textNo = [text, text2, text3, text4]
-const index = ({ imageIndex }) => {
+const index = ({ imageIndex = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isFloating, showFloating] = useState(false)
   const [imageNo, setImageNo] = useState(pageNo[imageIndex])
   const [contextNo, setContextNo] = useState(textNo[imageIndex])
+  const [showModal, setShowModal] = useState(false)
+  useEffect(() => {
+    isFloating ? disableScroll.on() : disableScroll.off()
+  }, [isFloating])
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -55,72 +122,90 @@ const index = ({ imageIndex }) => {
       } else {
         setCurrentIndex(currentIndex + 1)
       }
-    }, 2200)
+    }, 3000)
 
     return () => clearInterval(intervalId)
   }, [imageNo[currentIndex]])
+  console.log(imageIndex)
+
+  useEffect(() => {
+    setTimeout(() => setShowModal(true), 1000)
+  }, [])
 
   return (
-    <PageLayout bgColor="#fff" Zindex="-2">
-      <div style={{ zIndex: "-2" }}>
-        <Image
-          src={imageNo[currentIndex]}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-        />
-        <SmallSize>
-          <PageWidth width="1500px" padding="8rem 0 0 0" position="relative">
+    <Fragment>
+      {imageIndex === 0 && showModal ? <NoticePopup /> : null}
+      {isFloating ? (
+        <FullFloating
+          onClick={() => {
+            showFloating(false)
+          }}>
+          <FullFloatingInside>
             <Text
-              Text="Ramaera Industries"
+              Text="Upcoming Project"
               lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
               font
-              size="96px"
-              lh="125px"
-              width="50rem"
-              mwidth="100vw"
+              size="44px"
+              lh="20px"
+              width="fit"
               fw="500"
               mlh="80px"
+              mwidth="100vw"
               align="center"
-              xmsize="6rem"
-              xssize="10vw"
-              msize="3.8rem"
-              mpadding="0"
-              mmargin=" 0 0 2rem 0"
+              xmsize="32px"
+              xssize="24px"
+              msize="22px"
+              mpadding="0 10% 0 0 "
             />
-
-            {contextNo[currentIndex]}
-            <div>
-              <Button
-                Text="Explore more"
-                secondary
-                lightborder
-                height="60px"
-                m="2rem 0 0 0"
-              />
-            </div>
-            <ImageHide>
-              <img
-                loading="lazy"
-                src="/background/bottom.png"
-                alt=""
-                style={{
-                  height: "7rem",
-                  width: "9.5rem",
-                  margin: "1rem 0 0 0",
-                }}
-              />
-            </ImageHide>
-          </PageWidth>
-        </SmallSize>
-        <RotateSocials>
-          <SocialMedia />
-        </RotateSocials>
-        <RotateTab>
-          <Tab currentIndex={currentIndex} />
-        </RotateTab>
-      </div>
-    </PageLayout>
+            <Text
+              Text="AGRA MART"
+              lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+              font
+              size="36px"
+              lh="20px"
+              width="fit"
+              mwidth="100vw"
+              fw="500"
+              mlh="30px"
+              align="center"
+              xmsize="28px"
+              xssize="24px"
+              msize="24px"
+              mpadding="0 10% 0 0 "
+            />
+            <Text
+              Text="Agra Mart offer a wide range of basic home and personal products under one roof. Our core objective is to offer customers good products at great value."
+              padding="0 10vw "
+              color="#FFF"
+              size="2rem"
+              lh="50px"
+              fw="400"
+              m="1rem 0 3rem 0"
+              align="center"
+              xmsize="2.2rem"
+              xssize="2rem"
+              msize="1.3rem"
+              mta="center"
+              mpadding="0 20% 0 10% "
+              mlh="40px"
+            />
+          </FullFloatingInside>
+        </FullFloating>
+      ) : (
+        imageIndex === 0 && (
+          <FloatingProject
+            onClick={() => {
+              showFloating(true)
+            }}>
+            <UpcomingProject />
+          </FloatingProject>
+        )
+      )}
+      <MobileSocials />
+      {/*  <TabsWrapper>
+        <MobileTab currentIndex={currentIndex} />
+      </TabsWrapper> */}
+    </Fragment>
   )
 }
 

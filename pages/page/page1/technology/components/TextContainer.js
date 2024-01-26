@@ -1,63 +1,49 @@
 import React from "react"
 import styled from "styled-components"
-import Heading from "../../../../../components/Heading/Heading"
 import Flex from "../../../../../components/Styling/Flex"
 import Text from "../../../../../components/Text/Text"
+import Link from "next/link"
+import TransparentButton from "../../../../../components/TransparentButton/TransparentButton"
 
 const StyleTextContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-end;
   flex-direction: column;
-  position: absolute;
-  bottom: 0;
-  bottom: -10vh;
   width: 50rem;
-  margin: -6rem 0 4rem 0;
+  margin: 1rem 100px -7.5rem 0;
   @media only screen and (max-width: 768px) {
+    position: absolute;
     margin: 0;
+    margin-top: 50px;
     width: 100vw;
-    bottom: -50vh;
+    top: 0vh;
+    overflow: hidden;
+  }
+`
+const ButtonWrapper = styled.div`
+  padding: 2vh 0 0 0;
+  @media only screen and (max-width: 768px) {
+    padding: 2vh 30vw 2vh 30vw;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 2vh 25vw 2vh 25vw;
   }
 `
 const IconDiv = styled.div`
-  @media only screen and (max-width: 768px) {
-    transform: scale(100%);
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    right: -130px;
   }
 `
 
 const TextContainer = () => {
   return (
     <StyleTextContainer>
-      <Flex jc="flex-end" mrcolumn>
-        <div>
-          <Heading
-            Text="Unleashing the strength of"
-            align="right"
-            size="42px"
-            lh=""
-            color="#FFF"
-            xm="3vw"
-            mta="left"
-            ms="1.4rem"
-          />
-          <Text
-            Text="Technology"
-            align="right"
-            size="42px"
-            lg="linear-gradient(90deg, #BF5AE0 0%, #A811DA 100%),linear-gradient(0deg, #FFFFFF, #FFFFFF)"
-            lh="55px"
-            mlh="30px"
-            xmsize="2rem"
-            xssize="3vw"
-            msize="2rem"
-            mta="center"
-          />
-        </div>
+      <Flex jc="end" mcolumn>
         <IconDiv>
           <svg
-            width="155"
-            height="155"
+            width="120"
+            height="120"
             viewBox="0 0 155 155"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -147,20 +133,67 @@ const TextContainer = () => {
             </defs>
           </svg>
         </IconDiv>
+        <div>
+          <Text
+            Text="Unleashing the strength of"
+            align="right"
+            size="42px"
+            lh="55px"
+            mlh="30px"
+            xmsize="2rem"
+            xssize="3vw"
+            msize="2rem"
+            mta="center"
+            width="100%"
+            margin="0"
+            padding="0"
+          />
+          <Text
+            Text="Technology"
+            lg="linear-gradient(90deg, #bf5ae0 0%, #A811DA 100%)"
+            align="right"
+            size="42px"
+            lh="55px"
+            width="100%"
+            mlh="30px"
+            xmsize="2rem"
+            xssize="3vw"
+            msize="2rem"
+            margin="0"
+            mta="center"
+            padding="0"
+          />
+        </div>
       </Flex>
       <Text
-        Text="We believe in innovation and excellence hence , our approach in the field of technology is focused to relish incredible customer experience and stabilising business models for tomorrow."
-        align="right"
+        Text="We believe in innovation and excellence, hence our approach in the field of technology is focused to relish incredible customer experience and stabilising business models for tomorrow."
         fw="500"
-        size="23px"
+        align="right"
+        size="20px"
         lh="45px"
-        width="40rem"
+        width="32.5rem"
+        m=" 0"
         xssize="18px"
         mlh="30px"
         msize="18px"
         mwidth="100vw"
         mta="center"
+        padding="0 0 0 0vw"
       />
+      <ButtonWrapper>
+        <Link href="/Industries#technology">
+          <TransparentButton
+            Text="Read more"
+            border="solid #A811DA 1.6px"
+            bg="linear-gradient(180deg, #BF5AE0 0%, #A811DA 100%);"
+            height="48px"
+            m="2rem 0 0 0"
+            br="1.1rem"
+            fw="300"
+            fontSize="14px"
+          />
+        </Link>
+      </ButtonWrapper>
     </StyleTextContainer>
   )
 }

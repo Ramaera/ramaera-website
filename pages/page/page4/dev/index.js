@@ -7,7 +7,7 @@ const Heading = styled.h2``
 const index = () => {
   return (
     <>
-      <div
+      {/* <div
         style={{
           position: "absolute",
           height: "100%",
@@ -24,16 +24,17 @@ const index = () => {
           src={"/content/right-c1.png"}
           layout="fill"
           objectFit="contain"
+          alt="right c1"
           objectPosition="center"
         />
-      </div>
+      </div> */}
       <div
         style={{
-          padding: "15vh",
+          padding: "5vw",
         }}
         data-aos="fade-up"
-        data-aos-duration="500"
-        data-aos-anchor-placement="center-bottom"
+        data-aos-duration="1500"
+        data-aos-anchor-placement="top-bottom"
       >
         <Heading>
           <Text
@@ -47,11 +48,14 @@ const index = () => {
             xmsize="2rem"
             xssize="5vw"
             msize="1.4rem"
+            mta="center"
+            mwidth="100%"
+            mmwidth="100%"
           />
         </Heading>
         <Position
           role={"BACKEND DEVELOPER (NODE.JS) "}
-          place={"Noida, IN"}
+          place={"Noida,IN"}
           work={"Full Time"}
           description={
             "We are looking for an analytical, results-driven back-end developer who will work with team members to troubleshoot and improve current back-end applications and processes."
@@ -59,7 +63,7 @@ const index = () => {
         />
         <Position
           role={"FRONTEND DEVELOPER (REACT.JS)"}
-          place={"Remote"}
+          place={"Noida,IN"}
           work={"Full Time"}
           description={
             "We are looking for a skilled react.js developer to join our front-end development team. In this role, you will be responsible for developing and implementing user interface components using React.js concepts and workflows such as Redux and Webpack."
@@ -67,7 +71,7 @@ const index = () => {
         />
         <Position
           role={"DEVOPS ENGINEER"}
-          place={"Noida, IN"}
+          place={"Noida,IN"}
           work={"Full Time"}
           description={
             "Looking for a DevOps Engineers who can support developers with their code while also understanding engineering best practices like operating system design or database management systems software installation processes."

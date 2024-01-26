@@ -10,6 +10,7 @@ const index = () => (
     <div style={{ zIndex: "-2" }}>
       <Image
         src={factory}
+        alt="factory"
         layout="fill"
         objectFit="cover"
         objectPosition="center"
@@ -21,13 +22,15 @@ const index = () => (
             Text="transforming your dreams to reality"
             lg="linear-gradient(90deg, #FFE259 0%, #FFA751 100%)"
             font
+            mmwidth="100vw"
+            mmsize="2.2rem"
             size="105px"
             fw="400"
             align="center"
             lh="105px"
             xmsize="6rem"
             xssize="10vw"
-            msize="3.2rem"
+            msize="2.4rem"
             mmargin="0 0 10vh 0"
           />
         </div>

@@ -1,32 +1,43 @@
-import styled from "styled-components"
-import Text from "../../../../../components/Text/Text"
+import styled from "styled-components";
+import Text from "../../../../../components/Text/Text";
 
 const Txt = styled.div`
   height: 100%;
   text-transform: uppercase;
   margin-top: auto;
   margin-bottom: auto;
-`
+`;
 const Bg = styled.div`
   display: flex;
-  background-image: url("/background/bg1p2.png");
+  background-image: url("/background/bg-eco.png");
   background-repeat: no-repeat;
   background-size: 100vw;
-  height: 100%;
+  height: 1000px;
+  min-height: 500px;
   width: 100vw;
   margin-top: 20vh;
+  margin-bottom: -300px;
   z-index: -1;
   @media only screen and (max-width: 768px) {
+    height: auto;
+    margin-top: 0;
+    margin-bottom: unset;
+    width: 100%;
     background: transparent;
     flex-direction: column-reverse;
   }
-`
-const AgriPos = styled.img`
+`;
+const AgriPos = styled.video`
   height: 75vh;
+  transform: scale(0.9);
+  padding-bottom: 65px;
+  min-height: 450px;
   @media only screen and (max-width: 768px) {
     height: 50vh;
+    padding-bottom: 0px;
+    min-height: unset;
   }
-`
+`;
 
 const CustomBg = () => {
   return (
@@ -42,10 +53,17 @@ const CustomBg = () => {
           data-aos-anchor-placement="top-bottom"
         >
           <div>
-            <AgriPos loading="lazy" src="/content/e-commerce.gif" alt="" />
+            <AgriPos autoPlay loop muted>
+              <source src="/content/e-commerce.webm" type="video/webm" />
+            </AgriPos>
+            {/* <AgriPos
+              loading="lazy"
+              src="/content/e-commerce.gif"
+              alt="e commerce gif"
+            /> */}
           </div>
         </div>
-        <Txt>
+        <Txt className="mobText">
           <Text
             Text="E commerce"
             font
@@ -57,11 +75,12 @@ const CustomBg = () => {
             xmsize="2rem"
             xssize="3vw"
             msize="2.4rem"
+            mmwidth="100%"
           />
         </Txt>
       </Bg>
     </div>
-  )
-}
+  );
+};
 
-export default CustomBg
+export default CustomBg;

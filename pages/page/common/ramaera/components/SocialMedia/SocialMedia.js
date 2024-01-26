@@ -7,32 +7,39 @@ const SocialMedia = () => {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    justify-items: center;
     position: absolute;
     top: 50%; /* position the top  edge of the element at the middle of the parent */
-    left: 5rem; /* position the left edge of the element at the middle of the parent */
+    left: 3.5rem; /* position the left edge of the element at the middle of the parent */
     transform: translate(0, -50%);
 
     @media (max-width: 1350px) {
       left: 2rem;
     }
     @media (max-width: 768px) {
-      transform: scale(80%);
+      transform: scale(0.8);
       left: 20vw;
     }
   `
-  const RotateSvg = styled.a`
-    @media (max-width: 768px) {
-      transform: rotateZ(-90deg);
-    }
+
+  const LinkTo = styled.a`
+    cursor: pointer;
   `
 
   return (
     <StyledSocialMedia>
-      <RotateSvg>
+      <LinkTo href="https://www.linkedin.com/company/ramaera/" target="_blank">
+        <img
+          src="https://www.citypng.com/public/uploads/preview/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png"
+          width={32}
+          alt="facebook icon"
+        />
+      </LinkTo>
+      <LinkTo href="https://twitter.com/ramaeraltd" target="_blank">
         <svg
-          width="32"
-          height="26"
-          viewBox="0 0 32 26"
+          width="25"
+          height="22"
+          viewBox="0 0 26 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -41,12 +48,15 @@ const SocialMedia = () => {
             fill="#FFFDFD"
           />
         </svg>
-      </RotateSvg>
-      <RotateSvg>
+      </LinkTo>
+      <LinkTo
+        href="https://www.instagram.com/ramaeraindustries/"
+        target="_blank"
+      >
         <svg
           width="25"
-          height="26"
-          viewBox="0 0 25 26"
+          height="22"
+          viewBox="0 0 24 28"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -55,12 +65,12 @@ const SocialMedia = () => {
             fill="#FFFDFD"
           />
         </svg>
-      </RotateSvg>
-      <RotateSvg>
+      </LinkTo>
+      <LinkTo href="https://www.facebook.com/ramaeraindustries" target="_blank">
         <svg
-          width="15"
-          height="26"
-          viewBox="0 0 15 26"
+          width="28"
+          height="21"
+          viewBox="0 0 18 29"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -69,7 +79,7 @@ const SocialMedia = () => {
             fill="#FFFDFD"
           />
         </svg>
-      </RotateSvg>
+      </LinkTo>
     </StyledSocialMedia>
   )
 }

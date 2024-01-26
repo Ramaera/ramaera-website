@@ -1,16 +1,16 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const Image = styled.img`
   position: absolute;
-  height: 25vw;
-  top: 280px;
-  left: 100px;
+  height: 350px;
+  top: 340px;
+  left: 155px;
   @media only screen and (max-width: 768px) {
-    left: 20px;
+    display: none;
   }
-`
+`;
 const Circle = () => {
-  return <Image src="/content/promtCircle.png" alt="" />
-}
+  return <Image src="/content/promtCircle.png" alt="circle background" />;
+};
 
-export default Circle
+export default Circle;
