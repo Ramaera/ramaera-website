@@ -44,7 +44,7 @@ const RotateTab = styled.div`
 `;
 const FullFloatingInside = styled.div`
   border-radius: 20px;
-  // background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
+  background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
   height: 100%;
   width: 100%;
   // margin-left: 100px;
@@ -59,7 +59,7 @@ const FullFloatingInside = styled.div`
   }
 `;
 const FullFloating = styled.div`
-  // padding: 5% 8%;
+  padding: 5% 8%;
   position: fixed;
   z-index: 101;
   height: 100vh;
@@ -156,7 +156,6 @@ const NoticePopup = ({ imageIndex = 0 }) => {
 
     return () => clearInterval(intervalId);
   }, [imageNo[currentIndex]]);
-  console.log(imageIndex);
 
   return (
     <Fragment>
@@ -194,15 +193,15 @@ const NoticePopup = ({ imageIndex = 0 }) => {
           </div>
           {isFloating ? (
             <FullFloatingInside>
-              <Image
+              {/* <Image
                 src="/content/republic.png"
                 width={0}
                 height={0}
                 sizes="80vw"
                 style={{ width: "80%", height: "100%" }}
                 alt="RepubliC Day"
-              />
-              {/* <Text
+              /> */}
+              <Text
                 Text="Newly Launched  Products"
                 lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
                 font
@@ -242,7 +241,8 @@ const NoticePopup = ({ imageIndex = 0 }) => {
 
               <Link
                 href="/Companies#Products"
-                style={{ display: "flex", justifyContent: "center" }}>
+                style={{ display: "flex", justifyContent: "center" }}
+              >
                 <Button
                   Text="Enquiry Now"
                   secondary
@@ -252,7 +252,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
                   bborder="2px solid white"
                   secondaryWidth="11rem"
                 />
-              </Link> */}
+              </Link>
             </FullFloatingInside>
           ) : (
             ""
