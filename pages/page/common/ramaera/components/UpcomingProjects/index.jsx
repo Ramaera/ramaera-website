@@ -60,13 +60,13 @@ const UpcomingProject = () => {
           fontFamily: "personal",
           color: "white",
           padding: "10px",
-          fontSize: "20px",
+          fontSize: "16px",
           flexDirection: "column",
         }}>
         Upcoming Project
         <div
           style={{
-            marginTop: "10px",
+            marginTop: "5px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -74,9 +74,9 @@ const UpcomingProject = () => {
             fontFamily: "personal",
             color: "white",
             padding: "10px",
-            fontSize: "20px",
+            fontSize: "16px",
           }}>
-          Agra Mart
+          My Mart Hyper Market Hyderabad
         </div>
       </div>
     </StyledSocialMedia>

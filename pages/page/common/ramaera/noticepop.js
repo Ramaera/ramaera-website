@@ -176,8 +176,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
             onClick={() => {
               showFloating(false);
             }}
-            style={{ position: "relative" }}
-          >
+            style={{ position: "relative" }}>
             <CancelPresentationIcon
               sx={{
                 position: "absolute",
@@ -241,8 +240,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
 
               <Link
                 href="/Companies#Products"
-                style={{ display: "flex", justifyContent: "center" }}
-              >
+                style={{ display: "flex", justifyContent: "center" }}>
                 <Button
                   Text="Enquiry Now"
                   secondary
@@ -262,7 +260,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
         ""
       )}
 
-      <PageLayout bgColor="#fff">
+      {/* <PageLayout bgColor="#fff">
         <div>
           <Image
             src={imageNo[currentIndex]}
@@ -318,12 +316,9 @@ const NoticePopup = ({ imageIndex = 0 }) => {
           <RotateSocials>
             <SocialMedia />
           </RotateSocials>
-          {/* <RotateTab>
-            <Tab currentIndex={currentIndex} />
-          </RotateTab> */}
         </div>
       </PageLayout>
-      <MobileSocials />
+      <MobileSocials /> */}
       {/*  <TabsWrapper>
         <MobileTab currentIndex={currentIndex} />
       </TabsWrapper> */}
