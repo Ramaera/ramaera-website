@@ -1155,6 +1155,24 @@ a:hover {
   }
 }
 
+.boxGirdBilling {
+  height: 76vh;
+  width: 70%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 600px) {
+  .boxGirdBilling {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
 .termSpaceTop {
   height: 200px;
 }
