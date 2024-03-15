@@ -206,6 +206,29 @@ const DashSection = () => {
                     </td>
                   </tr>
                 ) : null}
+                {roleVar === "ADMIN" || roleVar === "AGRAMART" ? (
+                  <tr>
+                    <td>{roleVar === "ADMIN" ? "7" : "1"}</td>
+                    <td className="dashboardText">Billing Amount Agra Mart</td>
+                    <td>
+                      <Link href="/BillingAmountAgraMart">
+                        <button
+                          style={{ background: "none", border: "none" }}
+                          type="submit">
+                          <Button
+                            nav
+                            width="auto"
+                            height="auto"
+                            Text="Responses"
+                            inheight="auto"
+                            fontSize="auto"
+                            padding=" 15px 10px"
+                          />
+                        </button>
+                      </Link>
+                    </td>
+                  </tr>
+                ) : null}
                 <tr>
                   <td>&nbsp;</td>
                   <td>&nbsp;</td>

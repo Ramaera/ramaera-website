@@ -105,14 +105,18 @@ const BillingAmountAgraPage = () => {
         <Box className="boxGirdBilling">
           <Typography>Select Date</Typography>
           <Box display={"flex"} alignItems={"center"}>
-            <div style={{ marginRight: "20px" }}>
+            <div
+              style={{
+                position: "relative",
+                marginRight: "20px",
+                zIndex: 999,
+              }}>
               <DatePicker
                 selected={selectedDate}
                 onChange={handleDateChange}
-                dateFormat="MM/dd/yyyy"
+                dateFormat="dd/MM/yyyy"
               />
             </div>
-
             <div style={{}}>
               {selectedDate.getDate() === new Date().getDate() && (
                 <button
@@ -125,7 +129,7 @@ const BillingAmountAgraPage = () => {
                     Text="Edit"
                     inheight="auto"
                     fontSize="auto"
-                    padding=" 5px 20px"
+                    padding="5px 20px"
                   />
                 </button>
               )}
