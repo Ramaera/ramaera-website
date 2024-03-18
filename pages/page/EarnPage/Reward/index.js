@@ -1,0 +1,293 @@
+import React, { useState } from "react";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
+import { useMutation } from "@apollo/client";
+import { ToastContainer, toast } from "react-toastify";
+import { useSelector } from "react-redux";
+import "react-toastify/dist/ReactToastify.css";
+import styled from "styled-components";
+import Text from "@/components/Text/Text";
+import Button from "@/components/Button/Button";
+import { relative } from "path";
+
+const Container = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  margin: auto;
+  margin-top: 10rem;
+  width: 40%;
+  height: 70%;
+  background: white;
+  border-radius: 20px;
+  @media (max-width: 768px) {
+    margin-top: 8rem;
+    width: 90%;
+    height: 600px;
+  }
+`;
+
+const RewardFormContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  span {
+    font-size: 1rem;
+    color: white;
+    line-height: 2px;
+  }
+`;
+
+const FormWrapper = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const RewardForm = styled(FormWrapper)`
+  background-color: ${(props) => props.theme.color};
+  color: white;
+`;
+
+const Input = styled.input`
+  height: 48px;
+  width: 80%;
+  margin: 15px 0;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+`;
+
+const Index = ({ rewardCodeForm, setRewardCodeForm }) => {
+  //   const [createPlanetseraReward] = useMutation(CREATE_REWARD);
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [code, setCode] = useState("");
+  const [password, setPassword] = useState("");
+  const [confetti, setConfetti] = useState(false);
+
+  const { width, height } = useWindowSize();
+  const rewardHandler = (e) => {
+    e.preventDefault();
+    setConfetti(true);
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    // createPlanetseraReward({
+    //   variables: {
+    //     name: userName,
+    //     email: email,
+    //     password: password,
+    //     phone: number,
+    //     rewardCode: code,
+    //   },
+    // });
+    clearForm();
+  };
+  const clearForm = () => {
+    toast.success("Reward Code Received", {
+      position: "top-center",
+      autoClose: 2500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    setTimeout(() => {
+      setUserName("");
+      setEmail("");
+      setNumber("");
+      setPassword("");
+      setCode("");
+    }, 1500);
+    setTimeout(() => {
+      setConfetti(false);
+    }, 3400);
+  };
+
+  return (
+    <>
+      <Container>
+        <ToastContainer />
+
+        {confetti ? (
+          <RewardFormContent>
+            <Confetti numberOfPieces={600} width={width} height={height} />
+            <Text
+              Text="Thanks for completing your Registration"
+              lg="linear-gradient(to right, #ffa73d, gold)"
+              font
+              size="clamp(2.8rem, 2vw, 2.8rem)"
+              fw="400"
+              align="center"
+              lh="70px"
+              xmsize="clamp(2.5rem, 5vw, 4rem)"
+              xssize="clamp(2.5rem, 5vw, 4rem)"
+              msize="2.2rem"
+              mwidth="100%"
+              mmwidth="100%"
+              padding="0"
+              mpadding="0"
+              mta="center"
+              mlh="unset"
+            />
+
+            {/* <span
+              style={{ lineHeight: "2px", fontSize: "1rem", color: "black" }}>
+              we'll contact you with more details
+            </span> */}
+            <RewardForm onSubmit={(e) => submitHandler(e)}>
+              <label
+                htmlFor="reward"
+                style={{
+                  fontSize: "1.8rem",
+                  margin: "1rem 0 0.5rem 0",
+                  textAlign: "center",
+                }}>
+                Please Enter Reward Code
+              </label>
+              <Input
+                name="reward"
+                type="text"
+                placeholder="Reward Code"
+                value={code}
+                onChange={(e) => {
+                  setCode(e.target.value);
+                }}
+                required
+              />
+              <Button
+                Text="Submit"
+                type="submit"
+                secondary
+                lightborder
+                height="45px"
+                m="0 0 0.5rem 0"
+                bborder="2px solid white"
+                secondaryWidth="11rem"
+                onClick={rewardHandler}
+              />
+              <Button
+                Text="Cancel"
+                padding="0.85rem 1rem"
+                bg={"grey"}
+                br="1.2rem"
+                lightborder
+                height="45px"
+                m="0.5rem 0"
+                bborder="2px solid white"
+                secondaryWidth="11rem"
+                onClick={() => {
+                  setRewardCodeForm(false);
+                }}
+              />
+            </RewardForm>
+          </RewardFormContent>
+        ) : (
+          <FormWrapper>
+            <Text
+              Text=" Register Here"
+              lg="linear-gradient(to right, #ffa73d, gold)"
+              font
+              size="clamp(3rem, 2vw, 3rem)"
+              fw="400"
+              align="center"
+              lh="70px"
+              xmsize="clamp(2.5rem, 5vw, 4rem)"
+              xssize="clamp(2.5rem, 5vw, 4rem)"
+              msize="2.5rem"
+              mwidth="100%"
+              mmwidth="100%"
+              padding="0"
+              mpadding="0"
+              mta="center"
+              mlh="unset"
+            />
+            <Input
+              type="text"
+              placeholder="Name"
+              value={userName}
+              onChange={(e) => {
+                setUserName(e.target.value);
+              }}
+              required
+            />
+            <Input
+              type="number"
+              value={number}
+              placeholder="Mobile Number"
+              onChange={(e) => {
+                setNumber(e.target.value);
+              }}
+              required
+            />
+            <Input
+              type="email"
+              value={email}
+              placeholder="Email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              required
+            />
+            <Input
+              type="password"
+              value={password}
+              placeholder="Password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+              required
+            />
+            <Button
+              Text="Complete your Registration"
+              type="submit"
+              padding="0.85rem 1rem"
+              br="1.2rem"
+              //   secondary
+              lightborder
+              height="45px"
+              m="0.5rem 0"
+              bborder="2px solid white"
+              secondaryWidth="11rem"
+              navWidth
+              onClick={rewardHandler}
+            />
+            <Button
+              Text="Cancel"
+              padding="0.85rem 1rem"
+              bg={"grey"}
+              br="1.2rem"
+              lightborder
+              height="45px"
+              m="0.5rem 0"
+              bborder="2px solid white"
+              secondaryWidth="11rem"
+              onClick={() => {
+                setRewardCodeForm(false);
+              }}
+            />
+          </FormWrapper>
+        )}
+      </Container>
+    </>
+  );
+};
+
+export default Index;

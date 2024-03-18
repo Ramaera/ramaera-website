@@ -9,7 +9,7 @@ import Marketing from "../page/page4/marketing";
 import Talent from "../page/page4/talent";
 import Family from "../page/page4/family";
 import Head from "next/head";
-import EarnSection from "../page/earn/EarnSection";
+import EarnSection from "../page/EarnPage/EarnSection";
 const Earn = () => {
   return (
     <>
