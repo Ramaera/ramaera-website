@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import PageLayout from "../../components/PageLayout/PageLayout";
 import Footer from "../page/common/footer";
 import DistributorForm from "./DistributorForm";
-import Text from "@/components/Text/Text";
+import Text from "../../components/Text/Text";
 import styled from "styled-components";
 
 const BtnDiv = styled.div`

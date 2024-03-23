@@ -4,8 +4,7 @@ import PageWidth from "../../components/Width/PageWidth";
 import Footer from "../page/common/footer";
 import VisitLocations from "../page/annualMeeting/VisitLocations";
 import styled from "styled-components";
-import Text from "@/components/Text/Text";
-import Button from "@/components/Button/Button";
+import Text from "../../components/Text/Text";
 import { useState } from "react";
 import SouthIcon from "@mui/icons-material/South";
 import CounterPage from "./timmer";
@@ -59,7 +58,8 @@ const JobPost = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-          }}>
+          }}
+        >
           <div>
             <div data-aos="zoom-in-up" data-aos-duration="800">
               <Text

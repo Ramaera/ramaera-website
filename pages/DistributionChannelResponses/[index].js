@@ -1,18 +1,18 @@
-import PageLayout from "../../components/PageLayout/PageLayout"
-import PageWidth from "../../components/Width/PageWidth"
-import ApplicantsDetails from "./applicantsDetails"
-import { useSelector } from "react-redux"
-import Button from "@/components/Button/SubmitButton"
-import { useRouter } from "next/router"
-import Pdf from "react-to-pdf"
-import { createRef } from "react"
-import Link from "next/link"
+import PageLayout from "../../components/PageLayout/PageLayout";
+import PageWidth from "../../components/Width/PageWidth";
+import ApplicantsDetails from "./applicantsDetails";
+import { useSelector } from "react-redux";
+import Button from "../../components/Button/SubmitButton";
+import { useRouter } from "next/router";
+import Pdf from "react-to-pdf";
+import { createRef } from "react";
+import Link from "next/link";
 
 const applicantDetail = () => {
-  const router = useRouter()
-  const applicantdata = useSelector((state) => state.applicationData.appData)
-  const ref = createRef()
-  const { index } = router.query
+  const router = useRouter();
+  const applicantdata = useSelector((state) => state.applicationData.appData);
+  const ref = createRef();
+  const { index } = router.query;
   try {
     return (
       <>
@@ -45,7 +45,7 @@ const applicantDetail = () => {
           </PageWidth>
         </PageLayout>
       </>
-    )
+    );
   } catch {
     return (
       <>
@@ -58,7 +58,7 @@ const applicantDetail = () => {
           Login to continue
         </Link>
       </>
-    )
+    );
   }
-}
-export default applicantDetail
+};
+export default applicantDetail;

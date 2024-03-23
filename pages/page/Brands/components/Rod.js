@@ -1,6 +1,5 @@
-import Text from "@/components/Text/Text";
+import Text from "../../../../components/Text/Text";
 import styled from "styled-components";
-import Button from "@/components/Button/Button";
 import { RodData } from "./data";
 import Enquiry from "./Enquiry";
 
@@ -119,7 +118,8 @@ const Rod = () => {
                 width: "100%",
                 textAlign: "left",
                 color: "white",
-              }}>
+              }}
+            >
               {RodData?.map((list) => (
                 <tr>
                   <Th>{list.title}</Th>
@@ -127,7 +127,8 @@ const Rod = () => {
                     style={{
                       padding: "8px",
                       fontFamily: "Arial, Helvetica, sans-serif",
-                    }}>
+                    }}
+                  >
                     {list.detail}
                   </th>
                 </tr>
@@ -140,7 +141,8 @@ const Rod = () => {
               alignItems: "center",
               justifyContent: "center",
               marginTop: "1rem",
-            }}>
+            }}
+          >
             <Enquiry ProImg="/content/rod.png" ProName="Immersion Rod" />
           </div>
         </TextContainer>

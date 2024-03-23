@@ -1,6 +1,6 @@
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Box from "@mui/material/Box";
-import Text from "@/components/Text/Text";
+import Text from "../../components/Text/Text";
 import { data } from "./Data";
 
 const DistributorForm = () => {

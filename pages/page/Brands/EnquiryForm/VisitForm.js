@@ -2,7 +2,7 @@ import { FormWrapper } from "./FormWrapper";
 import { useDispatch } from "react-redux";
 import { useMutation } from "@apollo/client";
 import { SALES_ENQUIRY } from "apollo/queries/salesEnquiry";
-import Button from "@/components/Button/Button";
+import Button from "../../../../components/Button/Button.js";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ButtonContainer } from "./allJobStyle.js";
@@ -191,7 +191,8 @@ export function VisitForm({ ProImg, ProName }) {
             required
             onChange={(e) => {
               setQty(e.target.value);
-            }}>
+            }}
+          >
             <option value={""} disabled selected>
               Number Of Quantity
             </option>

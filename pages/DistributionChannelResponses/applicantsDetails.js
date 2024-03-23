@@ -1,28 +1,28 @@
-import Link from "next/link"
-import { FormWrapper } from "./FormWrapper"
-import { Container } from "./applicantsDetailsStyle.js"
-import { UPDATE_APPLICATIONS } from "../../apollo/queries/index"
-import { useEffect, useState } from "react"
-import { useMutation } from "@apollo/client"
-import Button from "@/components/Button/SubmitButton"
+import Link from "next/link";
+import { FormWrapper } from "./FormWrapper";
+import { Container } from "./applicantsDetailsStyle.js";
+import { UPDATE_APPLICATIONS } from "../../apollo/queries/index";
+import { useEffect, useState } from "react";
+import { useMutation } from "@apollo/client";
+import Button from "../../components/Button/SubmitButton.js";
 
 const applicantsDetails = ({ AppData }) => {
-  const [UpdateApplication] = useMutation(UPDATE_APPLICATIONS)
+  const [UpdateApplication] = useMutation(UPDATE_APPLICATIONS);
 
-  const [isSubmitted, setSubmitted] = useState(false)
-  const [email, setEmail] = useState("")
-  const [customOne, setCustomOne] = useState("")
-  const [customTwo, setCustomTwo] = useState("")
+  const [isSubmitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [customOne, setCustomOne] = useState("");
+  const [customTwo, setCustomTwo] = useState("");
 
   useEffect(() => {
     try {
-      setEmail(AppData.email.split("%_%")[0])
-      setCustomOne(AppData.email.split("%_%")[1].split("%~%")[0])
-      setCustomTwo(AppData.email.split("%_%")[1].split("%~%")[1])
+      setEmail(AppData.email.split("%_%")[0]);
+      setCustomOne(AppData.email.split("%_%")[1].split("%~%")[0]);
+      setCustomTwo(AppData.email.split("%_%")[1].split("%~%")[1]);
     } catch {
-      setEmail(AppData.email)
+      setEmail(AppData.email);
     }
-  }, [AppData])
+  }, [AppData]);
 
   const handleSubmit = async () => {
     await UpdateApplication({
@@ -30,15 +30,15 @@ const applicantsDetails = ({ AppData }) => {
         applicationId: AppData.id,
         email: email + "%_%" + customOne + "%~%" + customTwo,
       },
-    })
-    clearForm()
-  }
+    });
+    clearForm();
+  };
   const clearForm = () => {
-    setSubmitted(true)
+    setSubmitted(true);
     setTimeout(() => {
-      history.back()
-    }, "1500")
-  }
+      history.back();
+    }, "1500");
+  };
 
   try {
     return (
@@ -176,7 +176,7 @@ const applicantsDetails = ({ AppData }) => {
           </FormWrapper>
         </Container>
       </>
-    )
+    );
   } catch {
     return (
       <>
@@ -189,8 +189,8 @@ const applicantsDetails = ({ AppData }) => {
           Login to continue
         </Link>
       </>
-    )
+    );
   }
-}
+};
 
-export default applicantsDetails
+export default applicantsDetails;

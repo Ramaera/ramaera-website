@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Text from "../../../../components/Text/Text";
 import { Fragment } from "react";
 import disableScroll from "disable-scroll";
-import Button from "@/components/Button/Button";
+import Button from "../../../../components/Button/Button";
 import CancelPresentationIcon from "@mui/icons-material/CancelPresentation";
 import EnquiryForm from "../EnquiryForm/VisitLocations";
 import styled from "styled-components";
@@ -62,7 +62,8 @@ const Enquiry = ({ ProImg, ProName }) => {
             onClick={() => {
               showFloating(false);
             }}
-            style={{ position: "relative" }}>
+            style={{ position: "relative" }}
+          >
             <CancelPresentationIcon
               sx={{
                 position: "absolute",
@@ -85,7 +86,8 @@ const Enquiry = ({ ProImg, ProName }) => {
         <div
           onClick={() => {
             showFloating(true);
-          }}>
+          }}
+        >
           <Button
             Text="Enquiry Now"
             secondary

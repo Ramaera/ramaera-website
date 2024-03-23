@@ -1,5 +1,5 @@
-import { FormWrapper } from "./FormWrapper"
-import { useDispatch } from "react-redux"
+import { FormWrapper } from "./FormWrapper";
+import { useDispatch } from "react-redux";
 import {
   changefromDate,
   changetoDate,
@@ -12,23 +12,23 @@ import {
   changereason,
   changetypeOfVisit,
   changeaddress,
-} from "state/slice/visitingInfoSlice"
-import { useState } from "react"
-import { PwId } from "@/pages/VisitUs/pw_id"
+} from "state/slice/visitingInfoSlice";
+import { useState } from "react";
+import { PwId } from "../../VisitUs/pw_id";
 
 export function VisitForm({}) {
-  const [typeOfVisitor, setTypeOfVisitor] = useState("")
-  const dispatch = useDispatch()
+  const [typeOfVisitor, setTypeOfVisitor] = useState("");
+  const dispatch = useDispatch();
   const checkPwId = (id) => {
-    let UpperId = id.toUpperCase()
-    const check = PwId.includes(UpperId)
+    let UpperId = id.toUpperCase();
+    const check = PwId.includes(UpperId);
     if (check) {
-      dispatch(changepwId("Board Member's Pw_Id : " + UpperId))
+      dispatch(changepwId("Board Member's Pw_Id : " + UpperId));
     }
     if (!check) {
-      dispatch(changepwId(UpperId))
+      dispatch(changepwId(UpperId));
     }
-  }
+  };
 
   return (
     <FormWrapper title="Visit Us">
@@ -55,7 +55,7 @@ export function VisitForm({}) {
           required
           text
           onChange={(e) => {
-            dispatch(changename(e.target.value))
+            dispatch(changename(e.target.value));
           }}
         />
       </div>
@@ -67,7 +67,7 @@ export function VisitForm({}) {
           placeholder="Email"
           type="email"
           onChange={(e) => {
-            dispatch(changeemail(e.target.value))
+            dispatch(changeemail(e.target.value));
           }}
         />
       </div>
@@ -81,7 +81,7 @@ export function VisitForm({}) {
           cols={80}
           type="text"
           onChange={(e) => {
-            dispatch(changereason(e.target.value))
+            dispatch(changereason(e.target.value));
           }}
           placeholder="Reason for Visit"
         />
@@ -95,7 +95,7 @@ export function VisitForm({}) {
           cols={80}
           type="text"
           onChange={(e) => {
-            dispatch(changeaddress(e.target.value))
+            dispatch(changeaddress(e.target.value));
           }}
           placeholder="Address"
         />
@@ -106,7 +106,7 @@ export function VisitForm({}) {
         <select
           required
           onChange={(e) => {
-            dispatch(changeplantName(e.target.value))
+            dispatch(changeplantName(e.target.value));
           }}
         >
           <option value={""} disabled selected>
@@ -122,8 +122,8 @@ export function VisitForm({}) {
         <select
           required
           onChange={(e) => {
-            setTypeOfVisitor(e.target.value)
-            dispatch(changetypeOfVisit(e.target.value))
+            setTypeOfVisitor(e.target.value);
+            dispatch(changetypeOfVisit(e.target.value));
           }}
         >
           <option value={""} disabled selected>
@@ -147,7 +147,7 @@ export function VisitForm({}) {
               placeholder="Other"
               type="text"
               onChange={(e) => {
-                dispatch(changetypeOfVisit(e.target.value))
+                dispatch(changetypeOfVisit(e.target.value));
               }}
             />
           </>
@@ -160,7 +160,7 @@ export function VisitForm({}) {
           type="date"
           required
           onChange={(e) => {
-            dispatch(changefromDate(e.target.value))
+            dispatch(changefromDate(e.target.value));
           }}
         />
       </div>
@@ -171,7 +171,7 @@ export function VisitForm({}) {
           type="time"
           required
           onChange={(e) => {
-            dispatch(changetoDate(e.target.value))
+            dispatch(changetoDate(e.target.value));
           }}
         />
       </div>
@@ -189,7 +189,7 @@ export function VisitForm({}) {
           placeholder="PW id (Optional)"
           type="text"
           onChange={(e) => {
-            checkPwId(e.target.value)
+            checkPwId(e.target.value);
             // dispatch(changepwId(e.target.value))
           }}
         />
@@ -200,7 +200,7 @@ export function VisitForm({}) {
         <select
           required
           onChange={(e) => {
-            dispatch(changenumberOfPeople(e.target.value))
+            dispatch(changenumberOfPeople(e.target.value));
           }}
         >
           <option value={""} disabled selected>
@@ -220,16 +220,16 @@ export function VisitForm({}) {
           required
           type="number"
           onChange={(e) => {
-            dispatch(changemobileNumber(e.target.value))
+            dispatch(changemobileNumber(e.target.value));
           }}
         />
       </div>
     </FormWrapper>
-  )
+  );
 }
 
 const StyleImage = () => {
-  return <div>StyleImage</div>
-}
+  return <div>StyleImage</div>;
+};
 
-export default StyleImage
+export default StyleImage;

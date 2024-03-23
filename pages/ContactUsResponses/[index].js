@@ -1,20 +1,20 @@
-import { useRouter } from "next/router"
-import { useSelector } from "react-redux"
-import PageLayout from "../../components/PageLayout/PageLayout"
-import PageWidth from "../../components/Width/PageWidth"
-import ContactUsDetail from "../page/ContactDetail/ContactUsDetail"
-import Pdf from "react-to-pdf"
-import { createRef } from "react"
-import Link from "next/link"
-import Button from "@/components/Button/SubmitButton"
+import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
+import PageLayout from "../../components/PageLayout/PageLayout";
+import PageWidth from "../../components/Width/PageWidth";
+import ContactUsDetail from "../page/ContactDetail/ContactUsDetail";
+import Pdf from "react-to-pdf";
+import { createRef } from "react";
+import Link from "next/link";
+import Button from "../../components/Button/SubmitButton";
 
 const projectApplicationDetail = () => {
-  const router = useRouter()
+  const router = useRouter();
   const contactUsData = useSelector(
     (state) => state.applicationData.contactUsData
-  )
-  const ref = createRef()
-  const { index } = router.query
+  );
+  const ref = createRef();
+  const { index } = router.query;
   try {
     return (
       <>
@@ -47,7 +47,7 @@ const projectApplicationDetail = () => {
           </PageWidth>
         </PageLayout>
       </>
-    )
+    );
   } catch {
     return (
       <>
@@ -60,8 +60,8 @@ const projectApplicationDetail = () => {
           Login to continue
         </Link>
       </>
-    )
+    );
   }
-}
+};
 
-export default projectApplicationDetail
+export default projectApplicationDetail;

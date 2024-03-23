@@ -1,6 +1,5 @@
-import Text from "@/components/Text/Text";
+import Text from "../../../../components/Text/Text";
 import styled from "styled-components";
-import Button from "@/components/Button/Button";
 import { RoData } from "./data";
 import Enquiry from "./Enquiry";
 
@@ -117,7 +116,8 @@ const Ro = () => {
                 width: "100%",
                 textAlign: "left",
                 color: "white",
-              }}>
+              }}
+            >
               {RoData?.map((list) => (
                 <tr>
                   <Th>{list.title}</Th>
@@ -125,7 +125,8 @@ const Ro = () => {
                     style={{
                       padding: "8px",
                       fontFamily: "Arial, Helvetica, sans-serif",
-                    }}>
+                    }}
+                  >
                     {list.detail}
                   </th>
                 </tr>
@@ -138,7 +139,8 @@ const Ro = () => {
               alignItems: "center",
               justifyContent: "center",
               marginTop: "1rem",
-            }}>
+            }}
+          >
             <Enquiry ProImg="/content/ro.png" ProName="8 Stage RO" />
           </div>
         </TextContainer>

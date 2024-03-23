@@ -6,7 +6,7 @@ import PosdEnquiryDetail from "../page/PosdEnquiryDetail/PosdEnquiryDetail";
 import Pdf from "react-to-pdf";
 import { createRef } from "react";
 import Link from "next/link";
-import Button from "@/components/Button/SubmitButton";
+import Button from "../../components/Button/SubmitButton";
 
 const posdEnquiryDetail = () => {
   const router = useRouter();
@@ -26,7 +26,8 @@ const posdEnquiryDetail = () => {
                 posdEnquiryData[index - 1].name.split(" ").join("") +
                 "_PosdEnquiry.pdf"
               }
-              scale={0.8}>
+              scale={0.8}
+            >
               {({ toPdf }) => (
                 <button
                   style={{
@@ -34,7 +35,8 @@ const posdEnquiryDetail = () => {
                     background: "none",
                     border: "none",
                   }}
-                  onClick={toPdf}>
+                  onClick={toPdf}
+                >
                   <Button Text="Download PDF" width="fit-content" />
                 </button>
               )}
@@ -53,7 +55,8 @@ const posdEnquiryDetail = () => {
           style={{
             color: "white",
           }}
-          href=" /Login">
+          href=" /Login"
+        >
           Login to continue
         </Link>
       </>

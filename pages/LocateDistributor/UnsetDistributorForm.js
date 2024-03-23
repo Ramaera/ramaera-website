@@ -1,5 +1,5 @@
-import Text from "@/components/Text/Text";
-import PageWidth from "@/components/Width/PageWidth";
+import Text from "../../components/Text/Text";
+import PageWidth from "../../components/Width/PageWidth";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -110,7 +110,8 @@ const DistributorForm = () => {
                 setType(e.target.value);
                 setAState("");
                 setDistrict("");
-              }}>
+              }}
+            >
               {!type && (
                 <option disabled value={""} selected={!type}>
                   Select type
@@ -128,7 +129,8 @@ const DistributorForm = () => {
               onChange={(e) => {
                 setAState(e.target.value);
                 setDistrict("");
-              }}>
+              }}
+            >
               {!aState && (
                 <option disabled value={""} selected={!aState}>
                   Select state
@@ -146,7 +148,8 @@ const DistributorForm = () => {
               value={district}
               onChange={(e) => {
                 setDistrict(e.target.value);
-              }}>
+              }}
+            >
               {!district && (
                 <option disabled value={""} selected={!district}>
                   Select Area

@@ -1,6 +1,5 @@
-import Text from "@/components/Text/Text";
+import Text from "../../../../components/Text/Text";
 import styled from "styled-components";
-import Button from "@/components/Button/Button";
 import { scootyData } from "./data";
 import Enquiry from "./Enquiry";
 import { useState } from "react";
@@ -173,7 +172,8 @@ const Scooty = ({ ProImg, ProName }) => {
                 width: "100%",
                 textAlign: "left",
                 color: "white",
-              }}>
+              }}
+            >
               {scootyData?.map((list) => (
                 <tr>
                   <Th>{list.title}</Th>
@@ -181,7 +181,8 @@ const Scooty = ({ ProImg, ProName }) => {
                     style={{
                       padding: "8px",
                       fontFamily: "Arial, Helvetica, sans-serif",
-                    }}>
+                    }}
+                  >
                     {list.detail}
                   </th>
                 </tr>
@@ -194,7 +195,8 @@ const Scooty = ({ ProImg, ProName }) => {
               alignItems: "center",
               justifyContent: "center",
               marginTop: "1rem",
-            }}>
+            }}
+          >
             <Enquiry ProImg="/content/scooty.png" ProName="Electric Scooty" />
           </div>
         </TextContainer>

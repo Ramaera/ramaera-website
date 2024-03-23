@@ -1,29 +1,29 @@
-import Link from "next/link"
-import { FormWrapper } from "./FormWrapper"
-import { Container } from "./VisitUsDetailStyle.js"
-import { UPDATE_VISIT_US } from "../../../apollo/queries/index"
-import { useMutation } from "@apollo/client"
-import { useState, useEffect } from "react"
-import Button from "@/components/Button/SubmitButton"
+import Link from "next/link";
+import { FormWrapper } from "./FormWrapper";
+import { Container } from "./VisitUsDetailStyle.js";
+import { UPDATE_VISIT_US } from "../../../apollo/queries/index";
+import { useMutation } from "@apollo/client";
+import { useState, useEffect } from "react";
+import Button from "../../../components/Button/SubmitButton.js";
 
 const ApplicationDetail = ({ VisitUsData }) => {
-  const [UpdateVisitorForm] = useMutation(UPDATE_VISIT_US)
+  const [UpdateVisitorForm] = useMutation(UPDATE_VISIT_US);
 
-  const [isSubmitted, setSubmitted] = useState(false)
-  const [email, setEmail] = useState("")
-  const [isRead, setRead] = useState(false)
-  const [status, setStatus] = useState("")
-  const [visitStatus, setVisitStatus] = useState("")
+  const [isSubmitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [isRead, setRead] = useState(false);
+  const [status, setStatus] = useState("");
+  const [visitStatus, setVisitStatus] = useState("");
   useEffect(() => {
     try {
-      setEmail(VisitUsData.email.split("%_%")[0])
-      setRead(VisitUsData.email.split("%_%")[1].split("%~%")[0])
-      setStatus(VisitUsData.email.split("%~%")[1].split("%*%")[0])
-      setVisitStatus(VisitUsData.email.split("%*%")[1])
+      setEmail(VisitUsData.email.split("%_%")[0]);
+      setRead(VisitUsData.email.split("%_%")[1].split("%~%")[0]);
+      setStatus(VisitUsData.email.split("%~%")[1].split("%*%")[0]);
+      setVisitStatus(VisitUsData.email.split("%*%")[1]);
     } catch {
-      setEmail(VisitUsData.email)
+      setEmail(VisitUsData.email);
     }
-  }, [VisitUsData])
+  }, [VisitUsData]);
 
   const handleSubmit = async () => {
     await UpdateVisitorForm({
@@ -31,15 +31,15 @@ const ApplicationDetail = ({ VisitUsData }) => {
         visitorID: VisitUsData.id,
         email: email + "%_%" + true + "%~%" + status + "%*%" + visitStatus,
       },
-    })
-    clearForm()
-  }
+    });
+    clearForm();
+  };
   const clearForm = () => {
-    setSubmitted(true)
+    setSubmitted(true);
     setTimeout(() => {
-      history.back()
-    }, "1500")
-  }
+      history.back();
+    }, "1500");
+  };
 
   try {
     return (
@@ -125,8 +125,8 @@ const ApplicationDetail = ({ VisitUsData }) => {
               <select
                 value={visitStatus}
                 onChange={(e) => {
-                  setVisitStatus(e.target.value)
-                  console.log(e.target.value)
+                  setVisitStatus(e.target.value);
+                  console.log(e.target.value);
                 }}
               >
                 <option selected>Pending</option>
@@ -152,7 +152,7 @@ const ApplicationDetail = ({ VisitUsData }) => {
                 border: "none",
               }}
               onClick={() => {
-                handleSubmit()
+                handleSubmit();
               }}
             >
               <Button fontSize="16px" Text="Submit" width="fit-content" />
@@ -160,7 +160,7 @@ const ApplicationDetail = ({ VisitUsData }) => {
           </FormWrapper>
         </Container>
       </>
-    )
+    );
   } catch {
     return (
       <>
@@ -173,8 +173,8 @@ const ApplicationDetail = ({ VisitUsData }) => {
           Login to continue
         </Link>
       </>
-    )
+    );
   }
-}
+};
 
-export default ApplicationDetail
+export default ApplicationDetail;

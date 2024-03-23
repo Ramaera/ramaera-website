@@ -1,6 +1,6 @@
-import Text from "@/components/Text/Text";
+import Text from "../../../../components/Text/Text";
 import styled from "styled-components";
-import Button from "@/components/Button/Button";
+import Button from "../../../../components/Button/Button";
 
 export const ValueContainer = styled.div`
   width: 50%;
@@ -152,7 +152,8 @@ const Planetsera = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-            }}>
+            }}
+          >
             <Text Text=" Click here" mmwidth="110px" />
             <a href="https://planetsera.com" target="_blank">
               <Button

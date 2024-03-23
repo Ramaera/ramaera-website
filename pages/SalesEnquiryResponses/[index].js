@@ -6,7 +6,7 @@ import SalesEnquiryDetail from "../page/SalesEnquiryDetail/SalesEnquiryDetail";
 import Pdf from "react-to-pdf";
 import { createRef } from "react";
 import Link from "next/link";
-import Button from "@/components/Button/SubmitButton";
+import Button from "../../components/Button/SubmitButton";
 
 const salesEnquiryDetail = () => {
   const router = useRouter();
@@ -26,7 +26,8 @@ const salesEnquiryDetail = () => {
                 salesEnquiryData[index - 1].name.split(" ").join("") +
                 "_SalesEnquiry.pdf"
               }
-              scale={0.8}>
+              scale={0.8}
+            >
               {({ toPdf }) => (
                 <button
                   style={{
@@ -34,7 +35,8 @@ const salesEnquiryDetail = () => {
                     background: "none",
                     border: "none",
                   }}
-                  onClick={toPdf}>
+                  onClick={toPdf}
+                >
                   <Button Text="Download PDF" width="fit-content" />
                 </button>
               )}
@@ -55,7 +57,8 @@ const salesEnquiryDetail = () => {
           style={{
             color: "white",
           }}
-          href=" /Login">
+          href=" /Login"
+        >
           Login to continue
         </Link>
       </>

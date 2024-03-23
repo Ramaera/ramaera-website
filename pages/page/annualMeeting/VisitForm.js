@@ -11,7 +11,7 @@ import {
   changenumberOfPeople,
   changenamemore,
 } from "state/slice/visitingInfoSlice";
-import { PwId } from "@/pages/VisitUs/pw_id";
+import { PwId } from "../../VisitUs/pw_id";
 import { useEffect, useState } from "react";
 
 const noOfMember = () => {
@@ -67,7 +67,8 @@ export function VisitForm({}) {
             opacity: ".9",
             fontWeight: "600",
             color: "#5a5a5a",
-          }}>
+          }}
+        >
           Details
         </label>
       </div>
@@ -145,7 +146,8 @@ export function VisitForm({}) {
           onChange={(e) => {
             dispatch(changenumberOfPeople(e.target.value));
             setNoOfPeople(e.target.value);
-          }}>
+          }}
+        >
           <option value={""} disabled selected>
             Number Of People
           </option>

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Text from "@/components/Text/Text";
 
 const UpcomingProject = () => {
   const StyledSocialMedia = styled.div`
@@ -62,7 +61,8 @@ const UpcomingProject = () => {
           padding: "10px",
           fontSize: "16px",
           flexDirection: "column",
-        }}>
+        }}
+      >
         Upcoming Project
         <div
           style={{
@@ -75,7 +75,8 @@ const UpcomingProject = () => {
             color: "white",
             padding: "10px",
             fontSize: "16px",
-          }}>
+          }}
+        >
           My Mart Hyper Market Hyderabad
         </div>
       </div>
