@@ -21,6 +21,7 @@
     "@next/font": "13.1.1",
     "@reduxjs/toolkit": "^1.9.3",
     "aos": "^2.3.4",
+    "axios": "^1.6.8",
     "country-state-city": "^3.1.2",
     "disable-scroll": "^0.6.0",
     "eslint": "8.31.0",

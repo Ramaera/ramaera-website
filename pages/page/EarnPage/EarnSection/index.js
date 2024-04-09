@@ -71,7 +71,7 @@ const EarnSection = () => {
           />
 
           <ImageWrapper>
-            <img alt="EarnReward" src={EarnReward} width={400} />
+            <img alt="EarnReward" src={EarnReward} width={350} />
           </ImageWrapper>
 
           <div style={{ marginTop: "30px" }}>

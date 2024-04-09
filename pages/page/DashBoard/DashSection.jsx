@@ -18,7 +18,7 @@ const DashSection = () => {
   }, []);
 
   useEffect(() => {
-    if (!ACCESSTOKEN) {
+    if (!ACCESSTOKEN || roleVar !== "ADMIN") {
       router.push("/Login");
     }
   }, [ACCESSTOKEN]);

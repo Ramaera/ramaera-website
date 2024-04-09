@@ -2,8 +2,7 @@ import Text from "../../../components/Text/Text";
 import Button from "../../../components/Button/SubmitButton";
 import EmailIcon from "@mui/icons-material/Email";
 import LockIcon from "@mui/icons-material/Lock";
-import PersonIcon from "@mui/icons-material/Person";
-import CallIcon from "@mui/icons-material/Call";
+import { LOG_IN } from "../../../apollo/queries/index";
 import { useMutation } from "@apollo/client";
 import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
@@ -23,13 +22,12 @@ import { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 
-const SignUpForm = () => {
+const UserLoginForm = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
-  const [nameVar, setName] = useState("");
-  const [mobileVar, setMobile] = useState("");
   const [emailVar, setEmail] = useState("");
   const [passwordVar, setPassword] = useState("");
+  const [loginUser, { loading, data }] = useMutation(LOG_IN);
 
   const dispatch = useDispatch();
 
@@ -37,17 +35,15 @@ const SignUpForm = () => {
     e.preventDefault();
     try {
       const postData = {
-        name: nameVar,
         email: emailVar,
-        mobileNumber: mobileVar,
         password: passwordVar,
       };
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_PLANETSERA_URL}/rest-auth/signup`,
+        `${process.env.NEXT_PUBLIC_PLANETSERA_URL}/rest-auth/login`,
         postData
       );
       if (response?.data) {
-        toast.success("Register Successfully", {
+        toast.success("Login Successfully", {
           position: "top-center",
           autoClose: 3000,
           hideProgressBar: false,
@@ -81,18 +77,23 @@ const SignUpForm = () => {
     }
   };
 
+  /* function myStopFunction() {
+    router.push("Dashboard")
+  } */
   return (
-    <Container>
-      <FormBox onSubmit={(e) => handleSubmit(e)}>
+    <>
+      <form
+        onSubmit={(e) => handleSubmit(e)}
+        style={{ marginTop: "20px", marginBottom: "30px", width: "90%" }}>
         <Text
-          Text="REGISTER"
+          Text="USER"
           lg="linear-gradient(to right, #ffa73d, gold)"
           font
           size="clamp(2.2rem, 1.2vw, 1.5rem)"
           fw="400"
           align="center"
           lh="50px"
-          m="0 0 2rem 0"
+          m="10px 0 0 0"
           xmsize="clamp(2.4rem, 1.5vw, 2rem)"
           xssize="clamp(2.4rem, 1.5vw, 2rem)"
           msize="2rem"
@@ -103,7 +104,25 @@ const SignUpForm = () => {
           mta="center"
           mlh="unset"
         />
-
+        <Text
+          Text="LOGIN"
+          lg="linear-gradient(to right, #ffa73d, gold)"
+          font
+          size="clamp(2.2rem, 1.2vw, 1.5rem)"
+          fw="400"
+          align="center"
+          lh="50px"
+          m="0 0 1rem 0"
+          xmsize="clamp(2.4rem, 1.5vw, 2rem)"
+          xssize="clamp(2.4rem, 1.5vw, 2rem)"
+          msize="2rem"
+          mwidth="100%"
+          mmwidth="100%"
+          padding="0"
+          mpadding="0"
+          mta="center"
+          mlh="unset"
+        />
         <ToastContainer
           position="top-center"
           autoClose={5000}
@@ -117,60 +136,6 @@ const SignUpForm = () => {
           theme="dark"
         />
         <LoginContainer>
-          <LoginTitle>
-            <PersonIcon
-              style={{
-                position: "absolute",
-                transform: "translateX(1vmax)",
-                fontSize: "30px",
-                color: "#ff8800",
-                marginTop: "7px",
-              }}
-            />
-            <input
-              type="name"
-              placeholder="Name"
-              required
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
-              style={{
-                width: "380px",
-                height: "45px",
-                paddingLeft: "60px",
-                marginTop: "0",
-              }}
-              className="loginInput"
-            />
-          </LoginTitle>
-
-          <LoginTitle>
-            <CallIcon
-              style={{
-                position: "absolute",
-                transform: "translateX(1vmax)",
-                fontSize: "30px",
-                color: "#ff8800",
-                marginTop: "7px",
-              }}
-            />
-            <input
-              type="mobile"
-              placeholder="Mobile No"
-              required
-              onChange={(e) => {
-                setMobile(e.target.value);
-              }}
-              style={{
-                width: "380px",
-                height: "45px",
-                paddingLeft: "60px",
-                marginTop: "0",
-              }}
-              className="loginInput"
-            />
-          </LoginTitle>
-
           <LoginTitle>
             <EmailIcon
               style={{
@@ -187,6 +152,7 @@ const SignUpForm = () => {
               required
               onChange={(e) => {
                 setEmail(e.target.value);
+                //dispatch(getEmail(e.target.value))
               }}
               style={{
                 width: "380px",
@@ -197,7 +163,6 @@ const SignUpForm = () => {
               className="loginInput"
             />
           </LoginTitle>
-
           <LoginTitle>
             <LockIcon
               style={{
@@ -241,7 +206,7 @@ const SignUpForm = () => {
               width="150px"
               padding="0.85rem 1rem"
               height="2.75rem"
-              Text="Submit"
+              Text="Login"
               inheight="2rem"
               sh="none"
               m="30px 0 0 0"
@@ -249,15 +214,15 @@ const SignUpForm = () => {
           </button>
 
           <h5>
-            Already A User ?{" "}
-            <Link href={"/Login"}>
-              <span style={{ color: "orange" }}>Click Here For Login</span>{" "}
+            If not a User ?{" "}
+            <Link href={"/Register"}>
+              <span style={{ color: "orange" }}>Click Here For Register</span>{" "}
             </Link>
           </h5>
         </LoginContainer>
-      </FormBox>
-    </Container>
+      </form>
+    </>
   );
 };
 
-export default SignUpForm;
+export default UserLoginForm;

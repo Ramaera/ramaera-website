@@ -7,6 +7,11 @@ import Link from "next/link";
 import Button from "../Button/Button";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { ButtonGroup, IconButton, Tooltip, Typography } from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import MenuMui from "@mui/material/Menu";
+import MenuItemIcon from "@mui/material/MenuItem";
+import { logout } from "state/slice/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const ImageHolder = styled.img`
   transform: scale(0.9);
@@ -98,6 +103,9 @@ const Link2 = styled.div`
 
 const logo = "/logo/logo.png";
 const Navbar = ({ selectedTab }) => {
+  const dispatch = useDispatch();
+  const nameVar = useSelector((state) => state.logInUser.name);
+  const roleVar = useSelector((state) => state.logInUser.role);
   const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
@@ -115,6 +123,28 @@ const Navbar = ({ selectedTab }) => {
     changeBackground();
     window.addEventListener("scroll", changeBackground);
   });
+
+  const [anchorElUser, setAnchorElUser] = useState(null);
+
+  const handleLogout = () => {
+    dispatch(logout());
+    setAnchorElUser(null);
+  };
+
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+  let ACCESSTOKEN;
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      ACCESSTOKEN = localStorage.getItem("accessToken");
+    }
+  }, []);
 
   return (
     <nav className="nav">
@@ -239,6 +269,7 @@ const Navbar = ({ selectedTab }) => {
               {/* Career */}
             </Link>
           </Link2>
+
           {/* <Link
             href="/LocateDistributor"
             style={{ textAlign: "left", marginLeft: "-20px" }}>
@@ -293,6 +324,34 @@ const Navbar = ({ selectedTab }) => {
               />
             </Link>
           </Link2>
+          {ACCESSTOKEN && (
+            <div>
+              <AccountCircleIcon onClick={handleOpenUserMenu} style={{}} />
+              <MenuMui
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                }}
+                style={{ marginTop: 25 }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}>
+                <MenuItemIcon>
+                  <Typography textAlign="center"> Hi, {nameVar}</Typography>
+                </MenuItemIcon>
+
+                <Link onClick={() => handleLogout()} href="/Login">
+                  <MenuItemIcon>
+                    <Typography textAlign="center">Logout</Typography>
+                  </MenuItemIcon>
+                </Link>
+              </MenuMui>
+            </div>
+          )}
         </div>
 
         <div className="Mobile" ref={node}>
