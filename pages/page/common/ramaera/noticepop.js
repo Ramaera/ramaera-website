@@ -55,7 +55,8 @@ const FullFloatingInside = styled.div`
   @media only screen and (max-width: 768px) {
     height: unset;
     max-height: 100%;
-    padding: 13% 0 5% 0;
+    // padding: 13% 0 5% 0;
+    padding: 0;
   }
 `;
 const FullFloating = styled.div`
@@ -192,15 +193,16 @@ const NoticePopup = ({ imageIndex = 0 }) => {
           </div>
           {isFloating ? (
             <FullFloatingInside>
-              {/* <Image
-                src="/content/republic.png"
+              <Image
+                src="/content/RamaeraPost.jpg"
                 width={0}
                 height={0}
-                sizes="80vw"
-                style={{ width: "80%", height: "100%" }}
-                alt="RepubliC Day"
-              /> */}
-              <Text
+                // sizes="80vw"
+                style={{ width: "100%", height: "100%", borderRadius: "10px" }}
+                alt="Ramaera Post"
+              />
+
+              {/* <Text
                 Text="Newly Launched  Products"
                 lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
                 font
@@ -220,7 +222,6 @@ const NoticePopup = ({ imageIndex = 0 }) => {
                 <ProductsImg src="/background/ramaeraProducts.webp" />
               </ProductDiv>
               <Text
-                // Text="Ramaera is celebrating its first anniversary join us on 1st August 2023 at 11:30am to 05:30pm"
                 Text="Welcome to the future of technology at Ramaera Electronics! We are delighted to introduce you to our latest lineup of groundbreaking products, each designed to elevate your lifestyle and meet the demands of modern living. Explore the future with Ramaera TV, Oxiair AC, Ramaera's Electronic Scooty, Ramaera Smart Immersion Rod, and Ramaera 8 Stage RO with Cooling."
                 padding="0 2vw "
                 color="#FFF"
@@ -250,7 +251,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
                   bborder="2px solid white"
                   secondaryWidth="11rem"
                 />
-              </Link>
+              </Link> */}
             </FullFloatingInside>
           ) : (
             ""
