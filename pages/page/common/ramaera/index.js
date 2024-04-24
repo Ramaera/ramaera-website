@@ -131,16 +131,9 @@ const index = ({ imageIndex = 0 }) => {
     setTimeout(() => setShowModal(true), 1000);
   }, []);
 
-  const festivalDate = new Date("2024-04-23");
-  const currentDate = new Date();
-  const isFestivalDay =
-    currentDate.getDate() === festivalDate.getDate() &&
-    currentDate.getMonth() === festivalDate.getMonth() &&
-    currentDate.getFullYear() === festivalDate.getFullYear();
-
   return (
     <Fragment>
-      {imageIndex === 0 && showModal && isFestivalDay ? <NoticePopup /> : null}
+      {imageIndex === 0 && showModal ? <NoticePopup /> : null}
       {isFloating ? (
         <FullFloating
           onClick={() => {

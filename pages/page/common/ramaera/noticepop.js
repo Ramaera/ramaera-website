@@ -55,7 +55,22 @@ const FullFloatingInside = styled.div`
   @media only screen and (max-width: 768px) {
     height: unset;
     max-height: 100%;
-    // padding: 13% 0 5% 0;
+    padding: 13% 0 5% 0;
+  }
+`;
+
+const FestiveFloatingInside = styled.div`
+  border-radius: 20px;
+  background: linear-gradient(91deg, #000 0%, #3e3e3e 100%);
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (max-width: 768px) {
+    height: unset;
+    max-height: 100%;
     padding: 0;
   }
 `;
@@ -158,6 +173,13 @@ const NoticePopup = ({ imageIndex = 0 }) => {
     return () => clearInterval(intervalId);
   }, [imageNo[currentIndex]]);
 
+  const festivalDate = new Date("2024-04-23");
+  const currentDate = new Date();
+  const isFestivalDay =
+    currentDate.getDate() === festivalDate.getDate() &&
+    currentDate.getMonth() === festivalDate.getMonth() &&
+    currentDate.getFullYear() === festivalDate.getFullYear();
+
   return (
     <Fragment>
       {isFloating ? (
@@ -192,67 +214,77 @@ const NoticePopup = ({ imageIndex = 0 }) => {
             />
           </div>
           {isFloating ? (
-            <FullFloatingInside>
-              <Image
-                src="/content/RamaeraPost.jpg"
-                width={0}
-                height={0}
-                // sizes="80vw"
-                style={{ width: "100%", height: "100%", borderRadius: "10px" }}
-                alt="Ramaera Post"
-              />
+            <>
+              {isFestivalDay ? (
+                <FestiveFloatingInside>
+                  <Image
+                    src="/content/RamaeraPost.jpg"
+                    width={0}
+                    height={0}
+                    // sizes="80vw"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "10px",
+                    }}
+                    alt="Ramaera Post"
+                  />
+                </FestiveFloatingInside>
+              ) : (
+                <FullFloatingInside>
+                  <Text
+                    Text="Newly Launched  Products"
+                    lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
+                    font
+                    size="44px"
+                    lh="20px"
+                    width="fit"
+                    fw="500"
+                    mlh="30px"
+                    mwidth="100vw"
+                    align="center"
+                    xmsize="32px"
+                    xssize="24px"
+                    msize="22px"
+                    mpadding="2% 10% 2% 2%"
+                  />
+                  <ProductDiv>
+                    <ProductsImg src="/background/ramaeraProducts.webp" />
+                  </ProductDiv>
+                  <Text
+                    Text="Welcome to the future of technology at Ramaera Electronics! We are delighted to introduce you to our latest lineup of groundbreaking products, each designed to elevate your lifestyle and meet the demands of modern living. Explore the future with Ramaera TV, Oxiair AC, Ramaera's Electronic Scooty, Ramaera Smart Immersion Rod, and Ramaera 8 Stage RO with Cooling."
+                    padding="0 2vw "
+                    color="#FFF"
+                    size="1.5rem"
+                    lh="30px"
+                    fw="400"
+                    m="1rem 0"
+                    mmargin="0"
+                    align="center"
+                    xmsize="1.1rem"
+                    xssize="2rem"
+                    msize="0.8rem"
+                    mta="left"
+                    mpadding="5% 15% 3% 5% "
+                    mlh="30px"
+                  />
 
-              {/* <Text
-                Text="Newly Launched  Products"
-                lg="linear-gradient(90deg, #E65C00 0%, #F9D423 100%)"
-                font
-                size="44px"
-                lh="20px"
-                width="fit"
-                fw="500"
-                mlh="30px"
-                mwidth="100vw"
-                align="center"
-                xmsize="32px"
-                xssize="24px"
-                msize="22px"
-                mpadding="2% 10% 2% 2%"
-              />
-              <ProductDiv>
-                <ProductsImg src="/background/ramaeraProducts.webp" />
-              </ProductDiv>
-              <Text
-                Text="Welcome to the future of technology at Ramaera Electronics! We are delighted to introduce you to our latest lineup of groundbreaking products, each designed to elevate your lifestyle and meet the demands of modern living. Explore the future with Ramaera TV, Oxiair AC, Ramaera's Electronic Scooty, Ramaera Smart Immersion Rod, and Ramaera 8 Stage RO with Cooling."
-                padding="0 2vw "
-                color="#FFF"
-                size="1.5rem"
-                lh="30px"
-                fw="400"
-                m="1rem 0"
-                mmargin="0"
-                align="center"
-                xmsize="1.1rem"
-                xssize="2rem"
-                msize="0.8rem"
-                mta="left"
-                mpadding="5% 15% 3% 5% "
-                mlh="30px"
-              />
-
-              <Link
-                href="/Companies#Products"
-                style={{ display: "flex", justifyContent: "center" }}>
-                <Button
-                  Text="Enquiry Now"
-                  secondary
-                  lightborder
-                  height="45px"
-                  m="0 0 0.5rem 0"
-                  bborder="2px solid white"
-                  secondaryWidth="11rem"
-                />
-              </Link> */}
-            </FullFloatingInside>
+                  <Link
+                    href="/Companies#Products"
+                    style={{ display: "flex", justifyContent: "center" }}>
+                    <Button
+                      Text="Enquiry Now"
+                      secondary
+                      lightborder
+                      height="45px"
+                      m="0 0 0.5rem 0"
+                      bborder="2px solid white"
+                      secondaryWidth="11rem"
+                    />
+                  </Link>
+                </FullFloatingInside>
+              )}
+            </>
           ) : (
             ""
           )}
