@@ -1,40 +1,34 @@
-// import React from "react";
-// import PageLayout from "../../../../components/PageLayout/PageLay";
-// import PageWidth from "../../../../components/Width/PageWidth";
-
-// const Businesses = () => {
-//   return (
-//     <>
-//       <div style={{ color: "red" }}>index</div>
-//     </>
-//   );
-// };
-
-// export default Businesses;
-
 import styled from "styled-components";
 import Text from "../../../../components/Text/Text";
+import Link from "next/link";
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Adjust min and max width as needed */
   grid-gap: 1rem;
-  padding: 2em 10em;
+  padding: 2em;
   border-radius: 5px;
 `;
 
 const GridItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   text-align: center;
-  padding: 3rem;
+  padding: 2rem;
   font-weight: bold;
+  font-size: 1.5rem;
   border-radius: 5px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1);
-
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-image: linear-gradient(90deg, #bf5ae0 0%, #a811da 100%);
+    background-image: linear-gradient(to right, #ffa73d, gold);
     background-size: 100% 200%;
     background-position: 0 100%;
     cursor: pointer;
@@ -58,12 +52,15 @@ function ServicesGrid() {
         padding="0"
       />
       <GridContainer>
-        <GridItem>FMCG</GridItem>
-        <GridItem>Hotels</GridItem>
-        <GridItem>Paperboards & Specialty Papers</GridItem>
-        <GridItem>Packaging</GridItem>
-        <GridItem>Agri Business</GridItem>
-        <GridItem>Information Technology</GridItem>
+        <Link href="/fmcg">
+          <GridItem>FMCG</GridItem>
+        </Link>
+        <Link href="/electronics">
+          <GridItem>Electronics</GridItem>
+        </Link>
+        <Link href="/information-&-technology">
+          <GridItem>Information Technology</GridItem>
+        </Link>
       </GridContainer>
     </>
   );

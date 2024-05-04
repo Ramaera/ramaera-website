@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 const Text = (props) => {
   const StyledText = styled.p`
@@ -62,8 +62,8 @@ const Text = (props) => {
       font-size: ${props.mmsize ? props.mmsize : ""};
       margin: ${props.mm ? props.mm : ""};
     }
-  `
-  return <StyledText>{props.Text ? props.Text : "Default Text"}</StyledText>
-}
+  `;
+  return <StyledText>{props.Text ? props.Text : "Default Text"}</StyledText>;
+};
 
-export default Text
+export default Text;
