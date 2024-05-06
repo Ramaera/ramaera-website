@@ -1197,3 +1197,13 @@ a:hover {
   font-size: 0.8rem !important;
   font-family: "personal" !important;
 }
+
+.parentheses {
+  font-size: inherit; /* or specify a specific font size */
+  /* Add any other styling you need */
+}
+
+.apostrophie {
+  font-size: inherit; /* or specify a specific font size */
+  /* Add any other styling you need */
+}
