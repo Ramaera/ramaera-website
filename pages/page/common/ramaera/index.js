@@ -138,7 +138,8 @@ const index = ({ imageIndex = 0 }) => {
         <FullFloating
           onClick={() => {
             showFloating(false);
-          }}>
+          }}
+        >
           <FullFloatingInside>
             <Text
               Text="Upcoming Project"
@@ -195,7 +196,8 @@ const index = ({ imageIndex = 0 }) => {
           <FloatingProject
             onClick={() => {
               showFloating(true);
-            }}>
+            }}
+          >
             <UpcomingProject />
           </FloatingProject>
         )

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Navbar from "../../components/Navbar/Navbar";
 import Link from "next/link";
@@ -110,6 +110,7 @@ const Icon = styled.img`
 `;
 
 const Fmcg = () => {
+  const [showBrand, setShowBrand] = useState(false);
   return (
     <>
       <Navbar />
@@ -145,40 +146,49 @@ const Fmcg = () => {
           RAMAERA <span className="">'</span>s FMCG Portfolio
         </Heading>
         <GridContainer>
-          <Link href="https://www.planetsera.com/">
-            <GridItem>
-              Spice
-              <Icon src="/content/RedChilliPowder.webp" alt="spice" />
-            </GridItem>
-          </Link>
-          <Link href="https://www.planetsera.com/">
-            <GridItem>
-              Water
-              <Icon src="/content/water.png" alt="water" />
-            </GridItem>
-          </Link>
-          <Link href="https://www.planetsera.com/">
-            <GridItem>
-              Agra Mart
-              <Icon src="/logo/mymart.png" alt="water" />
-            </GridItem>
-          </Link>
+          {/* <Link href="https://www.planetsera.com/"> */}
+          <GridItem
+            onClick={() => {
+              setShowBrand(!showBrand);
+            }}
+          >
+            Spice
+            <Icon src="/content/RedChilliPowder.webp" alt="spice" />
+          </GridItem>
+          {/* </Link> */}
+          {/* <Link href="#"> */}
+          <GridItem>
+            Water
+            <Icon src="/content/water.png" alt="water" />
+          </GridItem>
+          {/* </Link> */}
+          {/* <Link href="#"> */}
+          <GridItem>
+            Agra Mart
+            <Icon src="/logo/mymart.png" alt="water" />
+          </GridItem>
+          {/* </Link> */}
         </GridContainer>
-        <Heading>RAMAERA Brands</Heading>
-        <GridContainer>
-          <Link href="https://www.planetsera.com/">
-            <GridItem>
-              Planetsera Spices
-              <Icon src="/logo/planetseralogo.webp" alt="spice" />
-            </GridItem>
-          </Link>
-          <Link href="https://www.planetsera.com/">
-            <GridItem>
-              Ramaera Spices
-              <Icon src="/logo/logo.png" alt="water" />
-            </GridItem>
-          </Link>
-        </GridContainer>
+        {showBrand && (
+          <>
+            {" "}
+            <Heading>RAMAERA Brands</Heading>
+            <GridContainer>
+              <Link href="https://www.planetsera.com/">
+                <GridItem>
+                  Planetsera Spices
+                  <Icon src="/logo/planetseralogo.webp" alt="spice" />
+                </GridItem>
+              </Link>
+              <Link href="#">
+                <GridItem>
+                  Ramaera Spices
+                  <Icon src="/logo/logo.png" alt="water" />
+                </GridItem>
+              </Link>
+            </GridContainer>
+          </>
+        )}
       </div>
       <hr />
       <Foot />
