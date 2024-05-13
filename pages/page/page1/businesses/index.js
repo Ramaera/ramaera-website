@@ -55,10 +55,10 @@ function ServicesGrid() {
         <Link href="/fmcg">
           <GridItem>FMCG</GridItem>
         </Link>
-        <Link href="/electronics">
+        <Link href="/Companies#Products">
           <GridItem>Electronics</GridItem>
         </Link>
-        <Link href="/information-&-technology">
+        <Link href="/#">
           <GridItem>Information Technology</GridItem>
         </Link>
       </GridContainer>
