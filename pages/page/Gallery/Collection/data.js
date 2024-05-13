@@ -11,53 +11,53 @@ export const images = [
     // about:
     //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
-  {
-    id: "2",
-    imageName: "/galleryPhoto/Co-Founder-1.jpg",
-    name: "Mr. Sanjay Kumar Dwivedi",
-    title: "Co-Founder",
-    tag: "lead",
-    // about:
-    //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  },
+  // {
+  //   id: "2",
+  //   imageName: "/galleryPhoto/Co-Founder-1.jpg",
+  //   name: "Mr. Sanjay Kumar Dwivedi",
+  //   title: "Co-Founder",
+  //   tag: "lead",
+  //   // about:
+  //   //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  // },
   //
-  {
-    id: "3",
-    imageName: "/galleryPhoto/Co-Founder-2.jpg",
-    name: "Mr. Shisupal Yadav ",
-    title: "Co-Founder",
-    tag: "lead",
-    // about:
-    //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  },
-  {
-    id: "4",
-    imageName: "/galleryPhoto/Co-Founder-3.jpg",
-    name: "Dr. Manoj Yadav",
-    title: "Co-Founder",
-    tag: "lead",
-    // about:
-    //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  },
+  // {
+  //   id: "3",
+  //   imageName: "/galleryPhoto/Co-Founder-2.jpg",
+  //   name: "Mr. Shisupal Yadav ",
+  //   title: "Co-Founder",
+  //   tag: "lead",
+  //   // about:
+  //   //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  // },
+  // {
+  //   id: "4",
+  //   imageName: "/galleryPhoto/Co-Founder-3.jpg",
+  //   name: "Dr. Manoj Yadav",
+  //   title: "Co-Founder",
+  //   tag: "lead",
+  //   // about:
+  //   //   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  // },
 
-  {
-    id: "11",
-    heading: "Team",
-    details:
-      "This is our team, a lot of smiling happy face who work hard to empower our teams.",
-    imageName: "/galleryPhoto/team-5.jpg",
-    tag: "team",
-  },
-  {
-    id: "12",
-    imageName: "/galleryPhoto/team-6.jpg",
-    tag: "team",
-  },
-  {
-    id: "13",
-    imageName: "/galleryPhoto/team-7.jpg",
-    tag: "team",
-  },
+  // {
+  //   id: "11",
+  //   heading: "Team",
+  //   details:
+  //     "This is our team, a lot of smiling happy face who work hard to empower our teams.",
+  //   imageName: "/galleryPhoto/team-5.jpg",
+  //   tag: "team",
+  // },
+  // {
+  //   id: "12",
+  //   imageName: "/galleryPhoto/team-6.jpg",
+  //   tag: "team",
+  // },
+  // {
+  //   id: "13",
+  //   imageName: "/galleryPhoto/team-7.jpg",
+  //   tag: "team",
+  // },
   {
     id: "14",
     imageName: "/galleryPhoto/team-8.jpg",
@@ -159,10 +159,10 @@ export const images = [
     imageName: "/galleryPhoto/fest-4.jpg",
     tag: "fest",
   },
-]
+];
 
 const Style = () => {
-  return <div>StyleImage</div>
-}
+  return <div>StyleImage</div>;
+};
 
-export default Style
+export default Style;
