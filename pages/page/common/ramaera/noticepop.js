@@ -173,7 +173,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
     return () => clearInterval(intervalId);
   }, [imageNo[currentIndex]]);
 
-  const festivalDate = new Date("2024-04-23");
+  const festivalDate = new Date("2024-05-23");
   const currentDate = new Date();
   const isFestivalDay =
     currentDate.getDate() === festivalDate.getDate() &&
@@ -199,7 +199,8 @@ const NoticePopup = ({ imageIndex = 0 }) => {
             onClick={() => {
               showFloating(false);
             }}
-            style={{ position: "relative" }}>
+            style={{ position: "relative" }}
+          >
             <CancelPresentationIcon
               sx={{
                 position: "absolute",
@@ -218,7 +219,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
               {isFestivalDay ? (
                 <FestiveFloatingInside>
                   <Image
-                    src="/content/RamaeraPost.jpg"
+                    src="/content/PurnimaPost.jpg"
                     width={0}
                     height={0}
                     // sizes="80vw"
@@ -271,7 +272,8 @@ const NoticePopup = ({ imageIndex = 0 }) => {
 
                   <Link
                     href="/Companies#Products"
-                    style={{ display: "flex", justifyContent: "center" }}>
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
                     <Button
                       Text="Enquiry Now"
                       secondary
