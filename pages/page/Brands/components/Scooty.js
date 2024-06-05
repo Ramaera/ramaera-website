@@ -100,7 +100,7 @@ const Scooty = ({ ProImg, ProName }) => {
   const [isFloating, showFloating] = useState(false);
   return (
     <Wrapper id="Products">
-      <Text
+      {/* <Text
         Text="Our Products"
         lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
         font
@@ -115,7 +115,7 @@ const Scooty = ({ ProImg, ProName }) => {
         xssize="4vw"
         msize="2rem"
         mpadding="0"
-      />
+      /> */}
       <MainContainer>
         <ValueContainer>
           <div data-aos="fade-right">
@@ -172,8 +172,7 @@ const Scooty = ({ ProImg, ProName }) => {
                 width: "100%",
                 textAlign: "left",
                 color: "white",
-              }}
-            >
+              }}>
               {scootyData?.map((list) => (
                 <tr>
                   <Th>{list.title}</Th>
@@ -181,8 +180,7 @@ const Scooty = ({ ProImg, ProName }) => {
                     style={{
                       padding: "8px",
                       fontFamily: "Arial, Helvetica, sans-serif",
-                    }}
-                  >
+                    }}>
                     {list.detail}
                   </th>
                 </tr>
@@ -195,8 +193,7 @@ const Scooty = ({ ProImg, ProName }) => {
               alignItems: "center",
               justifyContent: "center",
               marginTop: "1rem",
-            }}
-          >
+            }}>
             <Enquiry ProImg="/content/scooty.png" ProName="Electric Scooty" />
           </div>
         </TextContainer>

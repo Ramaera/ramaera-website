@@ -80,7 +80,7 @@ const Heading = styled.h3`
 
 const Tv = () => {
   return (
-    <Wrapper>
+    <Wrapper id="TV">
       <MainContainer>
         <ValueContainer>
           <div data-aos="fade-right">
@@ -116,8 +116,7 @@ const Tv = () => {
                 width: "100%",
                 textAlign: "left",
                 color: "white",
-              }}
-            >
+              }}>
               {TvData?.map((list) => (
                 <tr>
                   <Th>{list.title}</Th>
@@ -125,8 +124,7 @@ const Tv = () => {
                     style={{
                       padding: "8px",
                       fontFamily: "Arial, Helvetica, sans-serif",
-                    }}
-                  >
+                    }}>
                     {list.detail}
                   </th>
                 </tr>
@@ -139,8 +137,7 @@ const Tv = () => {
               alignItems: "center",
               justifyContent: "center",
               marginTop: "1rem",
-            }}
-          >
+            }}>
             <Enquiry ProImg="/content/ledTv.png" ProName="Led TV" />
           </div>
         </TextContainer>

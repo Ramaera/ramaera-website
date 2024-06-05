@@ -80,7 +80,7 @@ const Heading = styled.h3`
 
 const Ro = () => {
   return (
-    <Wrapper>
+    <Wrapper id="RO">
       <MainContainer>
         <ValueContainer>
           <div data-aos="fade-right">
@@ -116,8 +116,7 @@ const Ro = () => {
                 width: "100%",
                 textAlign: "left",
                 color: "white",
-              }}
-            >
+              }}>
               {RoData?.map((list) => (
                 <tr>
                   <Th>{list.title}</Th>
@@ -125,8 +124,7 @@ const Ro = () => {
                     style={{
                       padding: "8px",
                       fontFamily: "Arial, Helvetica, sans-serif",
-                    }}
-                  >
+                    }}>
                     {list.detail}
                   </th>
                 </tr>
@@ -139,8 +137,7 @@ const Ro = () => {
               alignItems: "center",
               justifyContent: "center",
               marginTop: "1rem",
-            }}
-          >
+            }}>
             <Enquiry ProImg="/content/ro.png" ProName="8 Stage RO" />
           </div>
         </TextContainer>
