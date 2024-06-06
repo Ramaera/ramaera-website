@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import data from "./AcData";
+import data from "../../../../components/AcData/AcData";
 import {
   Table,
   TableHead,
