@@ -127,16 +127,20 @@ const VisitLocations = () => {
     // }
     // if (clickOnce === 0) {
     try {
-      console.log(
-        "pwiddd",
-        nameVar,
-        emailVar,
-        mobileNumberVar,
-        addressVar,
-        pwIdVar,
-        numberOfPeopleVar,
-        addMoreName
-      );
+      // console.log(
+      //   "pwiddd---",
+      //   theDate,
+      //   emailVar,
+      //   mobileNumberVar,
+      //   addMoreName,
+      //   numberOfPeopleVar,
+      //   plantNameVar,
+      //   addressVar,
+      //   pwIdVar,
+      //   reasonVar,
+      //   typeOfVisitVar,
+      //   addressVar
+      // );
       await createGeneralMeetingVisitorForm({
         variables: {
           date: theDate,
@@ -154,7 +158,7 @@ const VisitLocations = () => {
       });
 
       toast.success(
-        `Your Response has been submitted, Welcome to the Anniversary Meet`,
+        `Your Response has been submitted, Welcome to the Annual General Meet`,
         {
           position: "bottom-center",
           autoClose: 3500,
@@ -171,6 +175,7 @@ const VisitLocations = () => {
       //setClickOnce(2)
       // clearForm();
     } catch (error) {
+      console.log("error---", error.message);
       toast.error(error.message, {
         position: "bottom-center",
         autoClose: 3500,

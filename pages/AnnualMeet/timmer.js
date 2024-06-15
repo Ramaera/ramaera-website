@@ -75,7 +75,7 @@ const CounterPage = () => {
     <CounterDiv>
       {/* <Countdown /> */}
       <h4 style={{ color: "white" }}>
-        Registration has been closed for 1st Anniversary Meet.
+        {/* Registration has been closed for 1st Anniversary Meet. */}
       </h4>
     </CounterDiv>
   );

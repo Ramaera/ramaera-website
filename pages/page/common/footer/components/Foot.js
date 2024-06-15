@@ -80,6 +80,20 @@ const Foot = () => {
     <>
       <Hr />
       <FootContainer>
+        <Link href="/AnnualMeet">
+          <div class="glow_button">
+            <Text
+              Text="Annual General Meet"
+              lg="linear-gradient(90deg, white 0%, white 100%)"
+              font
+              padding=" 0 "
+              size="14px"
+              msize="14px"
+              align="center"
+              mpadding="1vw"
+            />
+          </div>
+        </Link>
         <Link href="/DistributionChannel">
           <div class="glow_button">
             <Text

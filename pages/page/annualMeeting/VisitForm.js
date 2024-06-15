@@ -56,10 +56,10 @@ export function VisitForm({}) {
     dispatch(changenamemore(""));
   }, []);
   return (
-    <FormWrapper title="FIRST ANNIVERSARY MEET RAMAERA INDUSTRIES LIMITED">
+    <FormWrapper title="Annual General Meet">
       <div style={{ width: "500px", marginTop: "0px" }}>
         <div style={{ marginBottom: "40px" }}>
-          Date : <span style={{ fontWeight: "bold" }}>1 / August / 2023</span>
+          Date : <span style={{ fontWeight: "bold" }}>1 / August / 2024</span>
         </div>
         <label
           style={{
@@ -67,8 +67,7 @@ export function VisitForm({}) {
             opacity: ".9",
             fontWeight: "600",
             color: "#5a5a5a",
-          }}
-        >
+          }}>
           Details
         </label>
       </div>
@@ -83,7 +82,7 @@ export function VisitForm({}) {
           required
           text
           onChange={(e) => {
-            dispatch(changename("Anniversary Meet: " + e.target.value));
+            dispatch(changename("Annual Meet: " + e.target.value));
           }}
         />
       </div>
@@ -146,8 +145,7 @@ export function VisitForm({}) {
           onChange={(e) => {
             dispatch(changenumberOfPeople(e.target.value));
             setNoOfPeople(e.target.value);
-          }}
-        >
+          }}>
           <option value={""} disabled selected>
             Number Of People
           </option>

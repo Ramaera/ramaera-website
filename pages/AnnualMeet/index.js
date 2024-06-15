@@ -8,6 +8,7 @@ import Text from "../../components/Text/Text";
 import { useState } from "react";
 import SouthIcon from "@mui/icons-material/South";
 import CounterPage from "./timmer";
+import Button from "../../components/Button/Button";
 
 const HeightDiv = styled.div`
   height: 150px;
@@ -58,8 +59,7 @@ const JobPost = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-          }}
-        >
+          }}>
           <div>
             <div data-aos="zoom-in-up" data-aos-duration="800">
               <Text
@@ -82,7 +82,7 @@ const JobPost = () => {
                 mlh="unset"
               />
               <Text
-                Text="Ramaera Grand Anniversary"
+                Text="Ramaera Annual General Meet"
                 lg="linear-gradient(to right, #ffa73d, gold)"
                 font
                 size="clamp(2rem, 1.5vw, 2rem)"
@@ -103,7 +103,7 @@ const JobPost = () => {
               <CounterPage />
             </div>
 
-            <CardDiv>
+            {/* <CardDiv>
               <ImgDiv data-aos="slide-right" data-aos-duration="1200">
                 <img
                   src="/content/anniversary.jpg"
@@ -119,19 +119,19 @@ const JobPost = () => {
                   style={{ width: "100%" }}
                 />
               </ImgDiv>
-            </CardDiv>
+            </CardDiv> */}
           </div>
           {/* --------form fill button ------------*/}
-          {/* <div
+          <div
             style={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               textAlign: "center",
             }}>
-            <h3>Click here to register for the 1st anniversary meeting.</h3>
+            <h3>Click here to register for general annual meeting.</h3>
             <SouthIcon style={{ fontSize: "50px", color: "orange" }} />
-          </div> 
+          </div>
           <a href="#register">
             <ButtonContainer onClick={() => setShow(true)}>
               <button
@@ -147,12 +147,13 @@ const JobPost = () => {
               </button>
             </ButtonContainer>
           </a>
-          */}
+
           {/* --------form fill div end ------------*/}
         </div>
         <div id="register">
           <PageWidth full scale={"95%"} width="1500px" position="relative">
-            {show && <VisitLocations />}
+            {/* {show && <VisitLocations />} */}
+            <VisitLocations />
           </PageWidth>
         </div>
         <hr style={{ borderBottom: "1px solid white", width: "80vw" }} />
