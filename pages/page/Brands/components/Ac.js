@@ -2,6 +2,7 @@ import Text from "../../../../components/Text/Text";
 import styled from "styled-components";
 import { AcData } from "./data";
 import Enquiry from "./Enquiry";
+import AcTable from "../BrandTable/AcTable";
 
 export const ValueContainer = styled.div`
   width: 50%;
@@ -11,9 +12,9 @@ export const ValueContainer = styled.div`
   }
 `;
 export const Wrapper = styled.div`
-  margin: 5% auto 0 auto;
+  margin: 1% auto 0 auto;
   @media only screen and (max-width: 768px) {
-    margin: 10% auto 0 auto;
+    margin: 2% auto 0 auto;
   }
 `;
 export const BlockDiv = styled.div`
@@ -36,15 +37,16 @@ export const TextContainer = styled.div`
   }
 `;
 export const ImageTag = styled.img`
-  transform: scale(90%);
+  // transform: scale(90%);
   width: 100%;
-  object-fit: cover;
-  object-position: 0 0;
-  border-radius: 20px;
-  border: solid white 1px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  //background: #000;
-  background: #fff;
+  // max-height: 90vh;
+  object-fit: contain;
+  // object-position: 0 0;
+  // border-radius: 20px;
+  // border: solid white 1px;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  // background: #000;
+  // background: #fff;
   @media (max-width: 768px) {
     object-fit: contain;
     height: auto;
@@ -80,17 +82,28 @@ const Heading = styled.h3`
 
 const Ac = () => {
   return (
-    <Wrapper>
+    <Wrapper id="AC">
+      <div data-aos="fade-right">
+        <Heading> Ramaera AC</Heading>
+      </div>
+      <div data-aos="fade-up">
+        <ImageTag src="/content/AC 05.jpg" alt="Ac" />
+        <ImageTag src="/content/AC 04.jpg" alt="Ac" />
+        <ImageTag src="/content/AC 03.jpg" alt="Ac" />
+        <ImageTag src="/content/AC 02.jpg" alt="Ac" />
+        <ImageTag src="/content/AC 01.jpg" alt="Ac" />
+      </div>
+      <AcTable />
       <MainContainer>
-        <ValueContainer>
+        {/* <ValueContainer>
           <div data-aos="fade-right">
-            <Heading>Oxiair AC</Heading>
+            <Heading> Ramaera AC</Heading>
           </div>
           <div data-aos="fade-up">
             <ImageTag src="/content/AcFront.jpg" alt="Ac" />
           </div>
-        </ValueContainer>
-        <TextContainer>
+        </ValueContainer> */}
+        {/* <TextContainer>
           <Text
             Text="Specification"
             lg="linear-gradient(90deg, #ffe259 0%, #ffa751 100%)"
@@ -116,8 +129,7 @@ const Ac = () => {
                 width: "100%",
                 textAlign: "left",
                 color: "white",
-              }}
-            >
+              }}>
               {AcData?.map((list) => (
                 <tr>
                   <Th>{list.title}</Th>
@@ -125,25 +137,25 @@ const Ac = () => {
                     style={{
                       padding: "8px",
                       fontFamily: "Arial, Helvetica, sans-serif",
-                    }}
-                  >
+                    }}>
                     {list.detail}
                   </th>
                 </tr>
               ))}
             </table>
           </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              marginTop: "1rem",
-            }}
-          >
-            <Enquiry ProImg="/content/ac.png" ProName="Air Conditioner" />
-          </div>
-        </TextContainer>
+        
+        </TextContainer> */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "1rem 0 0 1.2rem",
+            width: "100%",
+          }}>
+          <Enquiry ProImg="/content/ac.png" ProName="Air Conditioner" />
+        </div>
       </MainContainer>
     </Wrapper>
   );
