@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9152],{20396:function(n,_,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/page/DashBoard/Settings",function(){return u(18107)}])}},function(n){n.O(0,[1664,2649,3420,8107,9774,2888,179],function(){return n(n.s=20396)}),_N_E=n.O()}]);
