@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Container, ButtonContainer } from "./allJobStyle.js";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import axios from "axios"
 
 const Br = styled.br`
   display: none;
@@ -87,6 +88,10 @@ const CounterDivMobile = styled.div`
 const VisitLocations = () => {
   const [clickOnce, setClickOnce] = useState(0);
 
+  const [data, setData] = useState(null);
+
+
+
   const [createGeneralMeetingVisitorForm] = useMutation(VISIT_US_ANNUAL);
   const fromDateVar = useSelector((state) => state.visitingInfo.fromDate);
   const toDateVar = useSelector((state) => state.visitingInfo.toDate);
@@ -109,8 +114,29 @@ const VisitLocations = () => {
 
   const addMoreName = nameVar + nameMore;
 
+
+
+
   const handleSubmit = async (e) => {
-    e.preventDefault();
+
+        e.preventDefault();
+
+    if(data){
+      const ch = data.find(user => user?.pw_id ===pwIdVar.toUpperCase() );
+
+      if (ch?.membership!="ADVANCE"){
+        toast.error("ONLY ADVANCE KYC HOLDER(30% Partner are Allowed)")
+        return 
+      }
+
+  }
+
+
+
+
+
+
+
     // if (!pwIdVar) {
     //   toast.error("Your PW ID is not Approved or invalid PW ID", {
     //     position: "top-center",
@@ -172,6 +198,7 @@ const VisitLocations = () => {
           theme: "light",
         }
       );
+    
       //setClickOnce(2)
       // clearForm();
     } catch (error) {
@@ -195,6 +222,24 @@ const VisitLocations = () => {
       location.reload();
     }, "4200");
   };
+
+  useEffect(() => {
+    // Define an async function to fetch data
+    const fetchData = async () => {
+      try {
+        // Start the data fetching process
+        const response = await axios.get('https://kycramaerabackend.ramaera.com/allSubscribers');
+        // Set the data from the response
+        setData(response.data);
+      } catch (err) {
+        // Handle any errors
+      
+      } 
+    };
+
+    // Call the fetch function
+    fetchData();
+  }, []); // 
 
   return (
     <>
