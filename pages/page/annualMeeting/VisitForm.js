@@ -56,7 +56,7 @@ export function VisitForm({}) {
     dispatch(changenamemore(""));
   }, []);
   return (
-    <FormWrapper title="Annual General Meet">
+    <FormWrapper title=" ANNUAL GENERAL  MEET RAMAERA INDUSTRIES LIMITED">
       <div style={{ width: "500px", marginTop: "0px" }}>
         <div style={{ marginBottom: "40px" }}>
           Date : <span style={{ fontWeight: "bold" }}>1 / August / 2024</span>
@@ -67,7 +67,8 @@ export function VisitForm({}) {
             opacity: ".9",
             fontWeight: "600",
             color: "#5a5a5a",
-          }}>
+          }}
+        >
           Details
         </label>
       </div>
@@ -82,7 +83,7 @@ export function VisitForm({}) {
           required
           text
           onChange={(e) => {
-            dispatch(changename("Annual Meet: " + e.target.value));
+            dispatch(changename("Anniversary Meet: " + e.target.value));
           }}
         />
       </div>
@@ -137,7 +138,7 @@ export function VisitForm({}) {
           placeholder="Coming From"
         />
       </div>
-      <div style={{ width: "450px" }}>
+      {/* <div style={{ width: "450px" }}>
         <label>Number Of People</label>
         <br />
         <select
@@ -145,7 +146,8 @@ export function VisitForm({}) {
           onChange={(e) => {
             dispatch(changenumberOfPeople(e.target.value));
             setNoOfPeople(e.target.value);
-          }}>
+          }}
+        >
           <option value={""} disabled selected>
             Number Of People
           </option>
@@ -172,7 +174,7 @@ export function VisitForm({}) {
         </select>
         <br />
         {noOfPeople >= 1 && noOfMember()}
-      </div>
+      </div> */}
 
       {/* {noOfPeople >= 1 && noOfMember()}
       {noOfPeople >= 2 && noOfMember()}

@@ -148,7 +148,7 @@ const VisitLocations = () => {
           mobileNumber: mobileNumberVar,
           // name: nameVar,
           name: addMoreName,
-          numberOfPeople: numberOfPeopleVar,
+          numberOfPeople: "1",
           plantName: plantNameVar,
           pwId: pwIdVar,
           reason: reasonVar,
