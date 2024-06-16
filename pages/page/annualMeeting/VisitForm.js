@@ -58,8 +58,13 @@ export function VisitForm({}) {
   return (
     <FormWrapper title=" ANNUAL GENERAL  MEET RAMAERA INDUSTRIES LIMITED">
       <div style={{ width: "500px", marginTop: "0px" }}>
-        <div style={{ marginBottom: "40px" }}>
+        <div style={{ marginBottom: "40px", display:"flex", flexDirection:"column" ,gap:15 }}>
+          <div>
           Date : <span style={{ fontWeight: "bold" }}>1 / August / 2024</span>
+          </div>
+          <div>
+          Meeting Time : <span style={{ fontWeight: "bold" }}> 10:30 AM to 5:00 PM</span>
+          </div>
         </div>
         <label
           style={{
