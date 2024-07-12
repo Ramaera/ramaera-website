@@ -82,7 +82,7 @@ const JobPost = () => {
                 mlh="unset"
               />
               <Text
-                Text="Ramaera Annual General Meet"
+                Text="Ramaera Annual General Meet "
                 lg="linear-gradient(to right, #ffa73d, gold)"
                 font
                 size="clamp(2rem, 1.5vw, 2rem)"
@@ -100,7 +100,26 @@ const JobPost = () => {
                 mta="center"
                 mlh="unset"
               />
-              <CounterPage />
+                <Text
+                Text="Registration Closed "
+                lg="linear-gradient(to right, #ffa73d, gold)"
+                font
+                size="clamp(2rem, 1.5vw, 2rem)"
+                fw="400"
+                align="center"
+                lh="50px"
+                m="0 0 1rem 0"
+                xmsize="clamp(2.4rem, 1.5vw, 2rem)"
+                xssize="clamp(2.4rem, 1.5vw, 2rem)"
+                msize="1.1rem"
+                mwidth="100%"
+                mmwidth="100%"
+                padding="0"
+                mpadding="0"
+                mta="center"
+                mlh="unset"
+              />
+              {/* <CounterPage /> */}
             </div>
 
             {/* <CardDiv>
@@ -122,7 +141,7 @@ const JobPost = () => {
             </CardDiv> */}
           </div>
           {/* --------form fill button ------------*/}
-          <div
+          {/* <div
             style={{
               display: "flex",
               flexDirection: "column",
@@ -146,16 +165,16 @@ const JobPost = () => {
                 />
               </button>
             </ButtonContainer>
-          </a>
+          </a> */}
 
           {/* --------form fill div end ------------*/}
         </div>
-        <div id="register">
-          <PageWidth full scale={"95%"} width="1500px" position="relative">
+        {/* <div id="register"> */}
+          {/* <PageWidth full scale={"95%"} width="1500px" position="relative"> */}
             {/* {show && <VisitLocations />} */}
-            <VisitLocations />
-          </PageWidth>
-        </div>
+            {/* <VisitLocations /> */}
+          {/* </PageWidth> */}
+        {/* </div> */}
         <hr style={{ borderBottom: "1px solid white", width: "80vw" }} />
         <Footer />
       </PageLayout>
