@@ -1,8 +1,8 @@
-import PageLayout from "../../../../components/PageLayout/PageLay"
-import PageWidth from "../../../../components/Width/PageWidth"
-import TextContainer from "./components/TextContainer"
-import { Image, Responsive } from "./components/StyleImage"
-import styled from "styled-components"
+import PageLayout from "../../../../components/PageLayout/PageLay";
+import PageWidth from "../../../../components/Width/PageWidth";
+import TextContainer from "./components/TextContainer";
+import { Image, Responsive } from "./components/StyleImage";
+import styled from "styled-components";
 
 const Animdiv = styled.div`
   position: absolute;
@@ -13,12 +13,12 @@ const Animdiv = styled.div`
     right: auto;
     bottom: 20vh;
   }
-`
+`;
 const Line = styled.div`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-`
+`;
 
 const Buy = () => {
   return (
@@ -28,20 +28,18 @@ const Buy = () => {
         paddingBottom="450px"
         mheight="100vh"
         height="120vh"
-      >
+        Zindex={-10}>
         <PageWidth full scale={"95%"} width="1500px" position="relative">
           <Animdiv
             data-aos="slide-right"
             data-aos-duration="500"
-            data-aos-anchor-placement="center-bottom"
-          >
+            data-aos-anchor-placement="center-bottom">
             <Image>
               <video
                 autoPlay
                 loop
                 muted
-                style={{ width: "115%", height: "110%" }}
-              >
+                style={{ width: "115%", height: "110%" }}>
                 <source src="/content/tech.webm" type="video/webm" />
               </video>
             </Image>
@@ -64,8 +62,7 @@ const Buy = () => {
               data-aos="slide-left"
               // data-aos-offset="2000"
               data-aos-duration="500"
-              data-aos-anchor-placement="top-bottom"
-            >
+              data-aos-anchor-placement="top-bottom">
               <Responsive>
                 <TextContainer />
               </Responsive>
@@ -87,7 +84,7 @@ const Buy = () => {
         </PageWidth>
       </PageLayout>
     </>
-  )
-}
+  );
+};
 
-export default Buy
+export default Buy;

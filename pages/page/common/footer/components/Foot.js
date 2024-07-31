@@ -80,7 +80,7 @@ const Foot = () => {
     <>
       <Hr />
       <FootContainer>
-        <Link href="/AnnualMeet">
+        {/* <Link href="/AnnualMeet">
           <div class="glow_button">
             <Text
               Text="Annual General Meet"
@@ -93,7 +93,7 @@ const Foot = () => {
               mpadding="1vw"
             />
           </div>
-        </Link>
+        </Link> */}
         <Link href="/DistributionChannel">
           <div class="glow_button">
             <Text
@@ -129,7 +129,7 @@ const Foot = () => {
 
         {/* <Link href="#">Site Map</Link> */}
       </FootContainer>
-      <CopyRight>© 2023 All Rights Reserved</CopyRight>
+      <CopyRight>© 2024 All Rights Reserved</CopyRight>
     </>
   );
 };
