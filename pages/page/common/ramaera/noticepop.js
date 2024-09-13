@@ -8,7 +8,7 @@ import MobileSocials from "./components/MobileSocials/MobileSocials";
 import MobileTab from "./components/MobileTab/MobileTab";
 import { Fragment } from "react";
 import disableScroll from "disable-scroll";
-import CancelPresentationIcon from "@mui/icons-material/CancelPresentation";
+import CancelPresentationIcon from "@mui/icons-material/Cancel";
 import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
 import {
@@ -68,6 +68,7 @@ const FestiveFloatingInside = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  object-fit: contain;
   @media only screen and (max-width: 768px) {
     height: unset;
     max-height: 100%;
@@ -173,7 +174,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
     return () => clearInterval(intervalId);
   }, [imageNo[currentIndex]]);
 
-  const festivalDate = new Date("2024-05-23");
+  const festivalDate = new Date("2024-09-16");
   const currentDate = new Date();
   const isFestivalDay =
     currentDate.getDate() === festivalDate.getDate() &&
@@ -199,13 +200,12 @@ const NoticePopup = ({ imageIndex = 0 }) => {
             onClick={() => {
               showFloating(false);
             }}
-            style={{ position: "relative" }}
-          >
+            style={{ position: "relative" }}>
             <CancelPresentationIcon
               sx={{
                 position: "absolute",
                 right: 0,
-                margin: 1,
+                margin: 0.5,
                 fontSize: 50,
                 color: "orange",
                 cursor: "pointer",
@@ -219,7 +219,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
               {isFestivalDay ? (
                 <FestiveFloatingInside>
                   <Image
-                    src="/content/PurnimaPost.jpg"
+                    src="/festival/milad-un-nabi.jpeg"
                     width={0}
                     height={0}
                     // sizes="80vw"
@@ -272,8 +272,7 @@ const NoticePopup = ({ imageIndex = 0 }) => {
 
                   <Link
                     href="/Companies#Products"
-                    style={{ display: "flex", justifyContent: "center" }}
-                  >
+                    style={{ display: "flex", justifyContent: "center" }}>
                     <Button
                       Text="Enquiry Now"
                       secondary
