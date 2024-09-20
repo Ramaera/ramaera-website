@@ -64,6 +64,7 @@ export function UserForm({}) {
         <label>Applicant's Name (आवेदक का नाम)</label>
         <br />
         <input
+          required
           type="text"
           onChange={(e) => dispatch(changeName(e.target.value))}
           placeholder="Type your name (अपना नाम लिखो)"
@@ -73,6 +74,7 @@ export function UserForm({}) {
         <label>Applicant's Email (आवेदक का ईमेल) </label>
         <br />
         <input
+          required
           type="email"
           onChange={(e) => dispatch(changeEmail(e.target.value))}
           placeholder="Type your email (अपना ईमेल लिखो)"
@@ -83,6 +85,7 @@ export function UserForm({}) {
         <label>Applicant's Mobile No. (आवेदक का मोबाइल नं.)</label>
         <br />
         <input
+          required
           type="number"
           onChange={(e) => dispatch(changeMobile(e.target.value))}
           placeholder="Type your mobile no. (अपना नाम मोबाइल नं.)"
@@ -93,6 +96,7 @@ export function UserForm({}) {
         <label>Alternate Mobile No. (वैकल्पिक मोबाइल नं.)</label>
         <br />
         <input
+          required
           type="number"
           onChange={(e) => dispatch(changeAltMobile(e.target.value))}
           placeholder="Type Alternate Mobile No. (वैकल्पिक मोबाइल नं.)"
@@ -109,7 +113,7 @@ export function UserForm({}) {
           placeholderText="dd/MM/yyyy"
         />
 
-        {/* <input
+        {/* <input required
           type="text"
           onChange={(e) => dispatch(changeDOB(e.target.value))}
           placeholder="Type your DOB (अपना जन्म तिथि)"
@@ -120,6 +124,7 @@ export function UserForm({}) {
         <label>Applicant's Aadhaar No. (आवेदक का आधार नं.)</label>
         <br />
         <input
+          required
           type="number"
           onChange={(e) => dispatch(changeAadhaar(e.target.value))}
           placeholder="Type your Aadhaar No. (अपना  आधार नं.)"
@@ -130,6 +135,7 @@ export function UserForm({}) {
         <label>State (राज्य)</label>
         <br />
         <input
+          required
           type="text"
           onChange={(e) => dispatch(changeState(e.target.value))}
           placeholder="Type State (राज्य)"
@@ -139,6 +145,7 @@ export function UserForm({}) {
         <label>District (ज़िला)</label>
         <br />
         <input
+          required
           type="text"
           onChange={(e) => dispatch(changeDistrict(e.target.value))}
           placeholder="Type District (ज़िला)"
@@ -148,6 +155,7 @@ export function UserForm({}) {
         <label>Pincode (पिन कोड)</label>
         <br />
         <input
+          required
           type="number"
           onChange={(e) => dispatch(changePincode(e.target.value))}
           placeholder="Type Pincode (पिन कोड)"
@@ -158,6 +166,7 @@ export function UserForm({}) {
         <label>Are you 30% shareholders? (क्या आप 30% शेयरधारक हैं?)</label>
         <br />
         <button
+          type="button"
           style={{
             padding: "5px",
             margin: "15px 0 0 0",
@@ -172,6 +181,7 @@ export function UserForm({}) {
         </button>
 
         <button
+          type="button"
           style={{
             padding: "5px",
             margin: "15px 0 0 15px",
@@ -186,7 +196,7 @@ export function UserForm({}) {
         {isPwid && (
           <div>
             <input
-              //
+              // required
               type="text"
               onChange={(e) => dispatch(changePWID(e.target.value))}
               placeholder="Type your PWID"
@@ -228,6 +238,7 @@ export function UserForm({}) {
         <label>Firm Name (फर्म का नाम)</label>
         <br />
         <input
+          required
           type="text"
           onChange={(e) => dispatch(changeFirmName(e.target.value))}
           placeholder="Type Firm's Name (फर्म का नाम)"
@@ -238,6 +249,7 @@ export function UserForm({}) {
         <label>Firm Registration no. (फर्म का पंजीकरण नं.)</label>
         <br />
         <input
+          required
           type="text"
           onChange={(e) => dispatch(changeFirmRegistration(e.target.value))}
           placeholder="Type Firm's Registration no. (फर्म का पंजीकरण नं.)"
@@ -248,6 +260,7 @@ export function UserForm({}) {
         <label>GST no. (जीएसटी नं.)</label>
         <br />
         <input
+          required
           type="text"
           onChange={(e) => dispatch(changeGst(e.target.value))}
           placeholder="Type GST no. (जीएसटी नं.)"
@@ -258,6 +271,7 @@ export function UserForm({}) {
         <label>Bank Name (बैंक का नाम)</label>
         <br />
         <input
+          required
           type="text"
           onChange={(e) => dispatch(changeBankName(e.target.value))}
           placeholder="Type Bank Name (बैंक का नाम)"
@@ -268,6 +282,7 @@ export function UserForm({}) {
         <label>Bank Account no. (बैंक खाता संख्या)</label>
         <br />
         <input
+          required
           type="number"
           onChange={(e) => dispatch(changeBankAccount(e.target.value))}
           placeholder="Type Bank Account no. (बैंक खाता संख्या)"
@@ -278,6 +293,7 @@ export function UserForm({}) {
         <label>Bank Ifsc code (बैंक का आईएफएससी कोड)</label>
         <br />
         <input
+          required
           type="text"
           onChange={(e) => dispatch(changeBankIfsc(e.target.value))}
           placeholder="Type Bank Ifsc code (बैंक का आईएफएससी कोड)"
@@ -314,11 +330,11 @@ export function UserForm({}) {
             <option value={""} disabled selected>
               Select (चुनें)
             </option>
-            <option value={"CITYLEVEL"}>CITY LEVEL (डिस्ट्रीब्यूटर)</option>
-            <option value={"BLOCKLEVEL"}> BLOCK LEVEL (स्टॉकिस्ट)</option>
-            <option value={"DISTRICTLEVEL"}> DISTRICT LEVEL (स्टॉकिस्ट)</option>
+            <option value={"CITYLEVEL"}>CITY LEVEL </option>
+            <option value={"BLOCKLEVEL"}> BLOCK LEVEL </option>
+            <option value={"DISTRICTLEVEL"}> DISTRICT LEVEL </option>
             <option value={"METROPOLITANLEVEL"}>
-              METROPOLITAN CITIES LEVEL(स्टॉकिस्ट)
+              METROPOLITAN CITIES LEVEL
             </option>
           </select>
         </div>
@@ -345,6 +361,23 @@ export function UserForm({}) {
           <p style={{ padding: " 10px 0" }}>
             Total Deposit Amount : <strong>₹2 Lakh</strong>
             <sup> *</sup>
+          </p>
+
+          <p style={{ padding: " 10px 0" }}>
+            {isPwid ? (
+              <strong>
+                If Total Turn Over in 4 Months = 8 Lakh.
+                <br /> Then, He will get Credit of 2 Lakh of Product Value of
+                their Security Amount of 1 Lakh.{" "}
+              </strong>
+            ) : (
+              <strong>
+                If Total Turn Over in 4 Months = 8 Lakh.
+                <br />
+                Then, He will get Credit of 1.1 Lakh of Product Value of their
+                Security Amount of 1 Lakh.
+              </strong>
+            )}
           </p>
         </div>
       )}
@@ -373,6 +406,23 @@ export function UserForm({}) {
               Total Deposit Amount : <strong>₹1 Lakh</strong>
               <sup> *</sup>
             </p>
+
+            <p style={{ padding: " 10px 0" }}>
+              {isPwid ? (
+                <strong>
+                  If Total Turn Over in 4 Months = 4 Lakh. <br />
+                  Then, He will get Credit of 1 Lakh of Product Value their
+                  Security Amount of 50 Thousand.
+                </strong>
+              ) : (
+                <strong>
+                  If Total Turn Over in 4 Months = 4 Lakh.
+                  <br />
+                  Then, He will get Credit of 55 Thousand of Product Value their
+                  Security Amount of 50 Thousand.
+                </strong>
+              )}
+            </p>
           </div>
         )}
 
@@ -399,6 +449,22 @@ export function UserForm({}) {
             <p style={{ padding: " 10px 0" }}>
               Total Deposit Amount : <strong>₹2 Lakh</strong>
               <sup> *</sup>
+            </p>
+
+            <p style={{ padding: " 10px 0" }}>
+              {isPwid ? (
+                <strong>
+                  If Total Turn Over in 4 Months = 8 Lakh.
+                  <br /> Then, He will get Credit of 2 Lakh of Product Value
+                  Security Amount of 1 Lakh.
+                </strong>
+              ) : (
+                <strong>
+                  If Total Turn Over in 4 Months = 8 Lakh. <br />
+                  Then, He will get Credit of 1.1 Lakh of Product Value of their
+                  Security Amount of 1 Lakh.
+                </strong>
+              )}
             </p>
           </div>
         )}
@@ -427,10 +493,28 @@ export function UserForm({}) {
               Total Deposit Amount : <strong>₹5 Lakh</strong>
               <sup> *</sup>
             </p>
+
+            <p style={{ padding: " 10px 0" }}>
+              {isPwid ? (
+                <strong>
+                  If Total Turn Over in 4 Months = 20 Lakh.
+                  <br />
+                  Then, He will get Credit of 5 Lakh of Product Value their
+                  Security Amount of 2.5 Lakh.
+                </strong>
+              ) : (
+                <strong>
+                  If Total Turn Over in 4 Months = 20 Lakh.
+                  <br />
+                  Then, He will get Credit of 2.75 Lakh of Product Value their
+                  Security Amount of 2.5 Lakh.
+                </strong>
+              )}
+            </p>
           </div>
         )}
 
-      <div style={{ width: "450px" }}></div>
+      <div style={{ width: "500px" }}></div>
 
       <div
         className="detailContact"
@@ -442,7 +526,7 @@ export function UserForm({}) {
         <br />
         <strong>Contact us:</strong>
         <br />
-        E-Mail: sales@ramaera.in | Phone: +91-0120-4152818
+        E-Mail: Ajay.project@ramaera.com | Phone: 8882201098
       </div>
       <div
         className="detailContact"
@@ -450,7 +534,7 @@ export function UserForm({}) {
         <br />
         <strong>संपर्क करें:</strong>
         <br />
-        ई-मेल: sales@ramaera.in | फोन: +91-120-4152818
+        ई-मेल: Ajay.project@ramaera.com | फोन: 8882201098
       </div>
 
       <div style={{ width: "500px" }}>

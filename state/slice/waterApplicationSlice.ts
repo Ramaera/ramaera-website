@@ -1,15 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  // address: "",
-  // appliedFor: "",
-  // district: "",
-  // email: "",
-  // mobile: "",
-  // name: "",
-  // pwID: "",
-  // state: "",
-
   name: "",
   email: "",
   mobile: "",

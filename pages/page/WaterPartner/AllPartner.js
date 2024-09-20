@@ -43,7 +43,7 @@ const Ideas = () => {
   );
 
   // console.log(
-  //   "TEEEE",
+  // "TEEEE",
   //   nameVar,
   //   emailVar,
   //   mobileVar,
@@ -62,7 +62,7 @@ const Ideas = () => {
   //   bankAccountVar,
   //   bankIfscVar,
   //   appliedForVar,
-  //   distributorAreaVar
+  //   distributorAreaVar;
   // );
 
   const handleSubmit = async (e) => {
@@ -70,21 +70,32 @@ const Ideas = () => {
     try {
       await createApplication({
         variables: {
-          address: addressVar,
-          appliedFor: appliedForVar,
-          district: districtVar,
+          name: nameVar,
           email: emailVar,
           mobile: mobileVar,
-          name: nameVar,
-          pwID: pwidVar,
+          altMobile: altMobileVar,
+          dob: dobVar,
+          aadhaar: addressVar,
           state: stateVar,
+          district: districtVar,
+          pincode: pincodeVar,
+          address: addressVar,
+          pwID: pwidVar,
+          firmName: firmNameVar,
+          firmRegistration: firmRegistrationVar,
+          bankName: bankNameVar,
+          bankAccount: bankAccountVar,
+          bankIfsc: bankIfscVar,
+          gst: gstVar,
+          appliedFor: appliedForVar,
+          distributorArea: distributorAreaVar,
         },
       });
 
       toast.success("Application Submitted!");
       setTimeout(() => {
         location.reload();
-      }, "3200");
+      }, "4500");
     } catch (error) {
       console.error("Submission error:", error);
       toast.error("An error occurred during submission. Please try again.");
