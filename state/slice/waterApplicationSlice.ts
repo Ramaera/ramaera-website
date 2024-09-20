@@ -83,6 +83,9 @@ export const waterApplicationSlice = createSlice({
     changeDistributorArea: (state, action) => {
       state.distributorArea = action.payload;
     },
+    clearForm: (state) => {
+      Object.assign(state, initialState);
+    },
   },
 });
 
@@ -106,6 +109,7 @@ export const {
   changeBankIfsc,
   changeAppliedFor,
   changeDistributorArea,
+  clearForm,
 } = waterApplicationSlice.actions;
 
 export default waterApplicationSlice.reducer;

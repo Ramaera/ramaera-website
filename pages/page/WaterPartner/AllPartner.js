@@ -3,12 +3,15 @@ import Button from "../../../components/Button/SubmitButton.js";
 import { CREATE_WATER_DISTRIBUTION_APPLICATIONS } from "../../../apollo/queries/index";
 import { useMutation } from "@apollo/client";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Container, ButtonContainer } from "./allPartnerStyle.js";
 import { useState } from "react";
+import { clearForm } from "state/slice/waterApplicationSlice";
 
 const Ideas = () => {
+  const dispatch = useDispatch();
   const [clickOnce, setClickOnce] = useState(0);
   const [createApplication] = useMutation(
     CREATE_WATER_DISTRIBUTION_APPLICATIONS
@@ -62,7 +65,7 @@ const Ideas = () => {
   //   bankAccountVar,
   //   bankIfscVar,
   //   appliedForVar,
-  //   distributorAreaVar;
+  //   distributorAreaVar
   // );
 
   const handleSubmit = async (e) => {
@@ -93,6 +96,8 @@ const Ideas = () => {
       });
 
       toast.success("Application Submitted!");
+      dispatch(clearForm());
+
       setTimeout(() => {
         location.reload();
       }, "4500");

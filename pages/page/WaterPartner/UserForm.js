@@ -107,6 +107,7 @@ export function UserForm({}) {
         <label>Applicant's DOB (आवेदक का जन्म तिथि)</label>
         <br />
         <DatePicker
+          required
           selected={dobVar}
           onChange={(date) => dispatch(changeDOB(date))}
           dateFormat="dd/MM/yyyy"
@@ -209,6 +210,7 @@ export function UserForm({}) {
         <label>Address (पता)</label>
         <br />
         <textarea
+          required
           rows={5}
           cols={60}
           type="text"
@@ -304,6 +306,7 @@ export function UserForm({}) {
         <label>Applied for (आवेदन)</label>
         <br />
         <select
+          required
           value={appliedFor}
           onChange={(e) => {
             handleAppliedFor(e.target.value);
@@ -322,6 +325,7 @@ export function UserForm({}) {
           <label>Distributor Channel Area (डिस्ट्रीब्यूटर चैनल क्षेत्र)</label>
           <br />
           <select
+            required
             value={distributorArea}
             onChange={(e) => {
               handleDistributorArea(e.target.value);
@@ -363,7 +367,7 @@ export function UserForm({}) {
             <sup> *</sup>
           </p>
 
-          <p style={{ padding: " 10px 0" }}>
+          <p style={{ padding: " 10px 0", maxWidth: "350px" }}>
             {isPwid ? (
               <strong>
                 If Total Turn Over in 4 Months = 8 Lakh.
@@ -407,7 +411,7 @@ export function UserForm({}) {
               <sup> *</sup>
             </p>
 
-            <p style={{ padding: " 10px 0" }}>
+            <p style={{ padding: " 10px 0", maxWidth: "350px" }}>
               {isPwid ? (
                 <strong>
                   If Total Turn Over in 4 Months = 4 Lakh. <br />
@@ -451,7 +455,7 @@ export function UserForm({}) {
               <sup> *</sup>
             </p>
 
-            <p style={{ padding: " 10px 0" }}>
+            <p style={{ padding: " 10px 0", maxWidth: "350px" }}>
               {isPwid ? (
                 <strong>
                   If Total Turn Over in 4 Months = 8 Lakh.
@@ -494,7 +498,7 @@ export function UserForm({}) {
               <sup> *</sup>
             </p>
 
-            <p style={{ padding: " 10px 0" }}>
+            <p style={{ padding: " 10px 0", maxWidth: "350px" }}>
               {isPwid ? (
                 <strong>
                   If Total Turn Over in 4 Months = 20 Lakh.
