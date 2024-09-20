@@ -164,24 +164,47 @@ query posenquiry {
 
 export const CREATE_WATER_DISTRIBUTION_APPLICATIONS = gql(`
   mutation CreateWaterDistributionApplication (
-  $address: String!,
-  $appliedFor: String!,
-  $district: String!,
-  $email: String!,
-  $mobile: String!,
-  $name: String!,
-  $pwID: String!,
-  $state: String!,
+          $name: String!,
+          $email: String!,
+          $mobile: String!,
+          $altMobile: String!,
+          $dob: String!,
+          $aadhaar: String!,
+          $state: String!,
+          $district: String!,
+          $pincode: String!,
+          $address: String!,
+          $pwID: String!,
+          $firmName: String!,
+          $firmRegistration: String!,
+          $bankName: String!,
+          $bankAccount: String!,
+          $bankIfsc: String!,
+          $gst: String!,
+          $appliedFor: String!,
+          $distributorArea: String!,
+
   ){createWaterDistributionApplication(
       data: {
-        address: $address
-        appliedFor: $appliedFor
-        district: $district
-        email: $email
-        mobile: $mobile
-        name: $name
-        pwID: $pwID
-        state: $state
+          name: $name
+          email: $email
+          mobile: $mobile
+          altMobile: $altMobile
+          dob: $dob
+          aadhaar: $aadhaar
+          state: $state
+          district: $district
+          pincode: $pincode
+          address: $address
+          pwID: $pwID
+          firmName: $firmName
+          firmRegistration: $firmRegistration
+          bankName: $bankName
+          bankAccount: $bankAccount
+          bankIfsc: $bankIfsc
+          gst: $gst
+          appliedFor: $appliedFor
+          distributorArea: $distributorArea
       }) 
       {
       State
