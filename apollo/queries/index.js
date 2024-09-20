@@ -161,3 +161,36 @@ query posenquiry {
    Number_of_persons_in_POS_City
   }
 }`);
+
+export const CREATE_WATER_DISTRIBUTION_APPLICATIONS = gql(`
+  mutation CreateWaterDistributionApplication (
+  $address: String!,
+  $appliedFor: String!,
+  $district: String!,
+  $email: String!,
+  $mobile: String!,
+  $name: String!,
+  $pwID: String!,
+  $state: String!,
+  ){createWaterDistributionApplication(
+      data: {
+        address: $address
+        appliedFor: $appliedFor
+        district: $district
+        email: $email
+        mobile: $mobile
+        name: $name
+        pwID: $pwID
+        state: $state
+      }) 
+      {
+      State
+      address
+      appliedFor
+      district
+      email
+      mobile
+      name
+      pwID
+      }
+  }`);

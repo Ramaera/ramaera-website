@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import applicationReducer from "../slice/applicationSlice";
+import waterApplicationReducer from "../slice/waterApplicationSlice";
 import logInUserReducer from "../slice/userSlice";
 import projectReducer from "../slice/projectSlice";
 import applicationDataReducer from "../slice/applicantDataSlice";
@@ -18,6 +19,11 @@ const applicationPersistedReducer = persistReducer(
   persistConfig,
   applicationReducer
 );
+const waterApplicationPersistedReducer = persistReducer(
+  persistConfig,
+  waterApplicationReducer
+);
+
 const logiInUserPersistedReducer = persistReducer(
   persistConfig,
   logInUserReducer
@@ -41,6 +47,7 @@ const jobPersistedReducer = persistReducer(persistConfig, jobReducer);
 export const store = configureStore({
   reducer: {
     application: applicationPersistedReducer,
+    waterApplication: waterApplicationPersistedReducer,
     logInUser: logiInUserPersistedReducer,
     project: projectPersistedReducer,
     applicationData: applicationDataPersistedReducer,
