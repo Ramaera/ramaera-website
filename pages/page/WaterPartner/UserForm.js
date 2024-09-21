@@ -521,7 +521,6 @@ export function UserForm({}) {
       <div style={{ width: "500px" }}></div>
 
       <div
-        className="detailContact"
         style={{
           width: "500px",
           paddingTop: "7px",
@@ -530,24 +529,25 @@ export function UserForm({}) {
         <br />
         <strong>Contact us:</strong>
         <br />
-        E-Mail: Ajay.project@ramaera.com | Phone: 8882201098
+        E-Mail: ajay.project@ramaera.com <br />
+        Phone: 8882201098 | 96252 21775
       </div>
-      <div
-        className="detailContact"
-        style={{ width: "450px", fontSize: "16px" }}>
+      <div style={{ width: "450px", fontSize: "16px" }}>
         <br />
         <strong>संपर्क करें:</strong>
         <br />
-        ई-मेल: Ajay.project@ramaera.com | फोन: 8882201098
+        ई-मेल: ajay.project@ramaera.com <br /> फोन: 8882201098 | 96252 21775
       </div>
-
-      <div style={{ width: "500px" }}>
-        <p style={{ fontSize: "12px" }}>
-          <sup>*</sup>All Data for the proposal purpose only,
-          <br />
-          It would be final as per demand and supply basis
-        </p>
-      </div>
+      {appliedFor === "WaterDistributor" &&
+        distributorArea === "METROPOLITANLEVEL" && (
+          <div style={{ width: "500px" }}>
+            <p style={{ fontSize: "12px" }}>
+              <sup>*</sup>All Data for the proposal purpose only,
+              <br />
+              It would be final as per demand and supply basis
+            </p>
+          </div>
+        )}
     </FormWrapper>
   );
 }

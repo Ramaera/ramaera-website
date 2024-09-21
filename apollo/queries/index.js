@@ -207,7 +207,7 @@ export const CREATE_WATER_DISTRIBUTION_APPLICATIONS = gql(`
           distributorArea: $distributorArea
       }) 
       {
-      State
+      state
       address
       appliedFor
       district

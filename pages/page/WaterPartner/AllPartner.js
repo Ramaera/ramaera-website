@@ -102,7 +102,7 @@ const Ideas = () => {
         location.reload();
       }, "4500");
     } catch (error) {
-      console.error("Submission error:", error);
+      console.error("Submission error:", error.message);
       toast.error("An error occurred during submission. Please try again.");
     }
   };
