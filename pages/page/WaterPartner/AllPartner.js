@@ -78,7 +78,7 @@ const Ideas = () => {
           mobile: mobileVar,
           altMobile: altMobileVar,
           dob: dobVar,
-          aadhaar: addressVar,
+          aadhaar: aadhaarVar,
           state: stateVar,
           district: districtVar,
           pincode: pincodeVar,
