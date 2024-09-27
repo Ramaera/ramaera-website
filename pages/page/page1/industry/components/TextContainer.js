@@ -2,14 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import Flex from "../../../../../components/Styling/Flex"
 import Text from "../../../../../components/Text/Text"
+import Link from "next/link"
+import TransparentButton from "../../../../../components/TransparentButton/TransparentButton"
 
 const StyleTextContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
-  // background: red;
   width: 50rem;
-  margin: 5rem 0 -5rem 0;
+  margin: 1rem 0 -7.5rem 100px;
   @media only screen and (max-width: 768px) {
     position: absolute;
     margin: 0;
@@ -17,9 +18,23 @@ const StyleTextContainer = styled.div`
     top: 0vh;
     overflow: hidden;
   }
+  /* @media only screen and (max-width: 400px) {
+    padding: 550px 0;
+  } */
+`
+const ButtonWrapper = styled.div`
+  padding: 2vh 23vw 0 0;
+  @media only screen and (max-width: 768px) {
+    padding: 2vh 30vw 2vh 30vw;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 2vh 25vw 2vh 25vw;
+  }
 `
 const IconDiv = styled.div`
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    left: -120px;
   }
 `
 
@@ -29,8 +44,8 @@ const TextContainer = () => {
       <Flex mcolumn>
         <IconDiv>
           <svg
-            width="155"
-            height="154"
+            width="123"
+            height="123"
             viewBox="0 0 155 154"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -123,29 +138,63 @@ const TextContainer = () => {
         </IconDiv>
         <div>
           <Text
-            Text="Offering the best with FMCG industry"
-            size="42px"
+            Text="Offering the best with"
             lg="linear-gradient(90deg, #F2EFD3 0%, #358D82 100%)"
+            align="left"
+            size="42px"
             lh="55px"
+            width="50vw"
+            mlh="30px"
+            xmsize="2rem"
+            xssize="3vw"
             msize="2rem"
             mta="center"
-            mwidth="100vw"
+            padding="0"
+          />
+          <Text
+            Text="FMCG industry"
+            lg="linear-gradient(90deg, #F2EFD3 0%, #358D82 100%)"
+            align="left"
+            size="42px"
+            lh="55px"
+            width="50vw"
+            mlh="30px"
+            xmsize="2rem"
+            xssize="3vw"
+            msize="2rem"
+            mta="center"
+            padding="0"
           />
         </div>
       </Flex>
       <Text
         Text="Ramaera FMCG industry has commenced an extensive range of FMCG to make your days more than ordinary. We plan to offer you nothing less than the best."
         fw="500"
-        size="23px"
+        size="20px"
         lh="45px"
-        width="40rem"
-        m="2rem 0 0 0"
+        width="32.5rem"
+        m=" 0"
         xssize="18px"
         mlh="30px"
         msize="18px"
         mwidth="100vw"
         mta="center"
+        padding="0 0 0 0vw"
       />
+      <ButtonWrapper>
+        <Link href="/Industries#goods">
+          <TransparentButton
+            Text="Read more"
+            border="solid #F2EFD3 1.6px"
+            bg="linear-gradient(90deg, #F2EFD3 0%, #358D82 100%)"
+            height="48px"
+            m="2rem 0 0 0"
+            br="1.1rem"
+            fw="300"
+            fontSize="14px"
+          />
+        </Link>
+      </ButtonWrapper>
     </StyleTextContainer>
   )
 }

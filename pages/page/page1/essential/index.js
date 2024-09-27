@@ -1,8 +1,8 @@
-import PageLayout from "../../../../components/PageLayout/PageLayout"
-import PageWidth from "../../../../components/Width/PageWidth"
-import TextContainer from "./components/TextContainer"
-import { Image, Responsive } from "./components/StyleImage"
-import styled from "styled-components"
+import PageLayout from "../../../../components/PageLayout/PageLay";
+import PageWidth from "../../../../components/Width/PageWidth";
+import TextContainer from "./components/TextContainer";
+import { Image, Responsive } from "./components/StyleImage";
+import styled from "styled-components";
 
 const Animdiv = styled.div`
   position: absolute;
@@ -10,21 +10,24 @@ const Animdiv = styled.div`
   @media only screen and (max-width: 768px) {
     padding: 0 0 0 5vh;
     margin: 0;
-    top: -20vh;
+    top: -40vh;
     left: auto;
     right: auto;
   }
-`
+  @media only screen and (max-width: 400px) {
+    top: -20vh;
+  }
+`;
 
 const Buy = () => {
   return (
-    <PageLayout>
-      <PageWidth scale={"90%"} width="1500px" position="relative">
+    <PageLayout mmheight="150vh" paddingBottom="0" mtpadding="0" height="100vh">
+      <PageWidth full>
         <div style={{ width: "100%" }}>
           <img
             loading="lazy"
             src="/content/LineY.png"
-            alt=""
+            alt="line"
             style={{ width: "100%", height: "10rem" }}
           />
           <div
@@ -39,7 +42,7 @@ const Buy = () => {
           <img
             loading="lazy"
             src="/content/LineY.png"
-            alt=""
+            alt="line"
             style={{ width: "100%", height: "10rem" }}
           />
         </div>
@@ -50,17 +53,20 @@ const Buy = () => {
           data-aos-anchor-placement="top-bottom"
         >
           <Image>
-            <img
+            <video autoPlay loop muted>
+              <source src="/content/e-commerce.webm" type="video/webm" />
+            </video>
+            {/* <img
               loading="lazy"
               src="/content/e-commerce.gif"
-              alt=""
-              style={{ width: "90%", height: "100%" }}
-            />
+              alt="e commerce gif"
+              style={{ width: "90%", height: "100%" }} 
+            />*/}
           </Image>
         </Animdiv>
       </PageWidth>
     </PageLayout>
-  )
-}
+  );
+};
 
-export default Buy
+export default Buy;

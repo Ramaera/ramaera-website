@@ -1,15 +1,15 @@
-import React, { useState } from "react"
-import { bool } from "prop-types"
-import { StyledMenu } from "./Menu.styled"
-import styled from "styled-components"
-import Link from "next/link"
-import Button from "../../../Button/Button"
+import React, { useState } from "react";
+import { bool } from "prop-types";
+import { StyledMenu } from "./Menu.styled";
+import styled from "styled-components";
+import Link from "next/link";
+import Button from "../../../Button/Button";
 
 const MenuItems = styled.div`
   display: grid;
   place-items: center;
   margin-top: 5rem;
-`
+`;
 
 const Link1 = styled.div`
   display: flex;
@@ -21,14 +21,14 @@ const Link1 = styled.div`
   left: 2rem;
   top: 1rem;
   width: 3rem;
-`
+`;
 
 const Right = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 0 2rem 0;
   align-items: center;
-`
+`;
 
 const T = styled.p`
   color: #fff;
@@ -39,23 +39,31 @@ const T = styled.p`
     font-weight: 510;
     font-size: 1rem;
   }
-`
+`;
 
 const H = styled.div`
   font-size: 1.5rem;
+  text-align: left;
+
   font-weight: bold;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   color: #000;
-`
+`;
 
 const Menu = ({ open, setOpen, ...props }) => {
-  const isHidden = open ? true : false
-  const tabIndex = isHidden ? 0 : -1
-
+  const isHidden = open ? true : false;
+  const tabIndex = isHidden ? 0 : -1;
+  if (typeof window !== "undefined") {
+    if (open) {
+      document.body.classList.add("fixed-position");
+    } else if (!open) {
+      document.body.classList.remove("fixed-position");
+    }
+  }
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <Link1 to="home" spy={true} smooth={true}></Link1>
+      <Link1 spy={true} smooth={true}></Link1>
 
       <MenuItems>
         <H>
@@ -64,39 +72,90 @@ const Menu = ({ open, setOpen, ...props }) => {
           </Link>
         </H>
         <H>
-          <Link href="/industries" onClick={() => setOpen(false)}>
+          <Link href="/Industries" onClick={() => setOpen(false)}>
             OUR INDUSTRIES
           </Link>
         </H>
         <H>
-          <Link href="/companies" onClick={() => setOpen(false)}>
+          <Link href="/Companies" onClick={() => setOpen(false)}>
             OUR COMPANIES
           </Link>
         </H>
+        {/* <H>
+          <Link href="/OurBrands">OUR BRANDS</Link>
+        </H> */}
+        <div style={{}}>
+          <a
+            style={{
+              fontSize: "14px",
+              padding: "5px",
+              background: "#f9b223",
+              borderRadius: "5px",
+              marginRight: "5px",
+            }}
+            href="https://planetsera.com/"
+            target="_blank">
+            PLANETSERA
+          </a>
+
+          <a
+            style={{
+              fontSize: "14px",
+              padding: "5px",
+              background: "#f9b223",
+              borderRadius: "5px",
+              marginRight: "5px",
+            }}
+            href="https://hednor.com/"
+            target="_blank">
+            HEDNOR
+          </a>
+
+          <a
+            style={{
+              fontSize: "14px",
+              padding: "5px",
+              background: "#f9b223",
+              borderRadius: "5px",
+            }}
+            href="https://www.groceryworld.in/"
+            target="_blank">
+            GROCERYWORLD
+          </a>
+        </div>
         <H>
-          <Link href="/career" onClick={() => setOpen(false)}>
-            Career
+          <Link href="/ContactUs">Contact Us</Link>
+        </H>
+        {/* <H>
+          <Link href="/ContactUs" onClick={() => setOpen(false)}>
+            CONTACT US
+          </Link>
+        </H> */}
+        <H>
+          <Link
+            href="/LocateDistributor"
+            onClick={() => setOpen(false)}
+            style={{ textAlign: "center" }}>
+            STOCKIST & DISTRIBUTOR
           </Link>
         </H>
-        <H>
-          <Link href="/contact" onClick={() => setOpen(false)}>
-            Contact
-          </Link>
-        </H>
-        <Button
-          nav
-          height="2.75rem"
-          Text="CONNECT WALLET"
-          inheight="2.5rem"
-          m="1rem 0 0 0"
-        />
+
+        <Link target="_blank" href="https://kyc1.ramaera.com">
+          <Button
+            nav
+            width="20px"
+            height="4rem"
+            Text="Ramaera Subscriber Login"
+            inheight="2.5rem"
+          />
+        </Link>
       </MenuItems>
     </StyledMenu>
-  )
-}
+  );
+};
 
 Menu.propTypes = {
   open: bool.isRequired,
-}
+};
 
-export default Menu
+export default Menu;

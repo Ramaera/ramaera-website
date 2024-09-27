@@ -22,6 +22,7 @@ const index = () => {
       >
         <Image
           src={"/content/left-c1.png"}
+          alt="left c1"
           layout="fill"
           objectFit="contain"
           objectPosition="center"
@@ -29,11 +30,11 @@ const index = () => {
       </div>
       <div
         style={{
-          padding: "15vh",
+          padding: "5vw",
         }}
         data-aos="fade-up"
-        data-aos-duration="500"
-        data-aos-anchor-placement="center-bottom"
+        data-aos-duration="1500"
+        data-aos-anchor-placement="top-bottom"
       >
         <Heading>
           <Text
@@ -47,11 +48,14 @@ const index = () => {
             xmsize="2rem"
             xssize="5vw"
             msize="1.4rem"
+            mta="center"
+            mwidth="100%"
+            mmwidth="100%"
           />
         </Heading>
         <Position
           role={"Senior Copywriter"}
-          place={"Noida, IN"}
+          place={"Noida,IN"}
           work={"Full Time"}
           description={
             "We are seeking a creative and enthusiastic Copywriter to join our awesome Marketing team  If you are creative  innovative and energetic, and if you love attracting people with your writing we want you in our team"
@@ -59,7 +63,7 @@ const index = () => {
         />
         <Position
           role={"Junior Copywriter"}
-          place={"Noida, IN"}
+          place={"Noida,IN"}
           work={"Full Time"}
           description={
             "We are looking for a Copywriter intern who is a professional who writes clear, concise copy for ads and marketing materials. They work closely alongside web and graphic designers to ensure their message is clear, whether in an email inbox or a website landing page."

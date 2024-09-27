@@ -5,29 +5,32 @@ const Div1 = styled.div`
   display: flex;
   justify-content: space-between;
   @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
 `
 const Div2 = styled.div`
   width: 70%;
   @media (max-width: 768px) {
-    width: 100%;
+    width: 90vw;
+    padding: 0 5vw;
   }
 `
 const Div3 = styled.div`
   margin: 1rem 0;
   display: flex;
+  height: fit-content;
+
   @media (max-width: 768px) {
-    margin: 0 0;
   }
 `
 const CustomText = styled.div`
   margin: 0 10vw;
   padding: 4rem 0;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid white;
   @media (max-width: 768px) {
-    width: 80vw;
-    padding: 0 0;
-    margin: 0 0;
+    border: none;
+    padding: 0 7vw;
   }
 `
 const Head = styled.h3`
@@ -38,6 +41,7 @@ const Head = styled.h3`
   }
 `
 const Button = styled.button`
+  color: white;
   border-radius: 999px;
   border: 1px solid;
   width: 200px;
@@ -50,12 +54,12 @@ const Button = styled.button`
     color: black;
   }
   @media (max-width: 768px) {
+    margin-bottom: 2rem;
   }
 `
 const Location = styled.div`
   margin-right: 1rem;
   @media (max-width: 768px) {
-    margin-right: 0;
   }
 `
 const Work = styled.div`
@@ -63,11 +67,11 @@ const Work = styled.div`
   border-left: 1px solid;
 
   @media (max-width: 768px) {
-    padding-left: 0;
   }
 `
 const Breif = styled.div`
   @media (max-width: 768px) {
+    width: 100%;
   }
 `
 
@@ -89,8 +93,9 @@ const position = ({ role, place, work, description }) => {
           padding="0"
           mpadding="0"
           msize="0.8rem"
-          mta="left"
-          mwidth="100vw"
+          mwidth="100%"
+          mmwidth="100%"
+          mta="center"
         />
       </Head>
       <Div1>
@@ -106,9 +111,10 @@ const position = ({ role, place, work, description }) => {
                 xmsize="2.2rem"
                 xssize="2rem"
                 padding="0"
-                msize="1.2rem"
+                msize="0.8rem"
                 mta="left"
                 mwidth="100%"
+                mmwidth="100%"
                 mpadding="0"
               />
             </Location>
@@ -123,17 +129,44 @@ const position = ({ role, place, work, description }) => {
                 xmsize="2.2rem"
                 xssize="2rem"
                 padding="0"
-                msize="1.2rem"
+                msize="0.8rem"
                 mta="left"
                 mwidth="100vw"
+                mmwidth="100%"
                 mpadding="0"
               />
             </Work>
           </Div3>
-          <Breif>{description}</Breif>
+          <Breif>
+            <Text
+              Text={description}
+              color="#FFF"
+              size="1rem"
+              lh="32px"
+              mlh="18px"
+              align="left"
+              xmsize="2.2rem"
+              xssize="2rem"
+              padding="0"
+              msize="1rem"
+              fw="400"
+              mwidth="100%"
+              mmwidth="100%"
+              mpadding="0 0 2rem 0"
+              mta="center"
+            />
+          </Breif>
         </Div2>
 
-        <Button>Apply Now</Button>
+        <Button>
+          <a
+            style={{ color: "white" }}
+            href="mailto:rajeev.hr@ramaera.com?subject=Job Application"
+          >
+            {" "}
+            Apply Now
+          </a>
+        </Button>
       </Div1>
     </CustomText>
   )

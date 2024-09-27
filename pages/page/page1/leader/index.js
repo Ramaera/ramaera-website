@@ -2,7 +2,7 @@ import React from "react"
 import PageLayout from "../../../../components/PageLayout/PageLayout"
 import PageWidth from "../../../../components/Width/PageWidth"
 import Text from "../../../../components/Text/Text"
-import { Responsive } from "./components/Style"
+import { ResponsiveLeader } from "./components/Style"
 import Imagecontainer from "./components/ImageContainer"
 import Textcontainer from "./components/Textcontainer"
 
@@ -28,10 +28,10 @@ const index = () => {
             msize="2.4rem"
           />
         </div>
-        <Responsive>
-          <Imagecontainer />
+        <ResponsiveLeader>
           <Textcontainer />
-        </Responsive>
+          <Imagecontainer />
+        </ResponsiveLeader>
       </PageWidth>
     </PageLayout>
   )
