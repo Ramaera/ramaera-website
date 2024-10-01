@@ -174,12 +174,37 @@ const NoticePopup = ({ imageIndex = 0 }) => {
     return () => clearInterval(intervalId);
   }, [imageNo[currentIndex]]);
 
-  const festivalDate = new Date("2024-09-16");
+  // const festivalDate = new Date("2024-09-16");
+  // const currentDate = new Date();
+  // const isFestivalDay =
+  //   currentDate.getDate() === festivalDate.getDate() &&
+  //   currentDate.getMonth() === festivalDate.getMonth() &&
+  //   currentDate.getFullYear() === festivalDate.getFullYear();
+
   const currentDate = new Date();
-  const isFestivalDay =
-    currentDate.getDate() === festivalDate.getDate() &&
-    currentDate.getMonth() === festivalDate.getMonth() &&
-    currentDate.getFullYear() === festivalDate.getFullYear();
+  const gandhiJayanti = new Date("2024-10-02");
+  const navratriStart = new Date("2024-10-03");
+  const navratriEnd = new Date("2024-10-11");
+
+  let isFestivalDay = false;
+  let festivalImg = "";
+
+  // Check if it's 2nd October (Gandhi Jayanti)
+  if (
+    currentDate.getDate() === gandhiJayanti.getDate() &&
+    currentDate.getMonth() === gandhiJayanti.getMonth() &&
+    currentDate.getFullYear() === gandhiJayanti.getFullYear()
+  ) {
+    isFestivalDay = true;
+    festivalImg = "/festival/2ndOctober.jpeg";
+  }
+  // Check if it's between 3rd October and 11th October (Navratri)
+  else if (currentDate >= navratriStart && currentDate <= navratriEnd) {
+    isFestivalDay = true;
+    festivalImg = "/festival/navratri.jpeg";
+  } else {
+    isFestivalDay = false;
+  }
 
   return (
     <Fragment>
@@ -219,7 +244,8 @@ const NoticePopup = ({ imageIndex = 0 }) => {
               {isFestivalDay ? (
                 <FestiveFloatingInside>
                   <Image
-                    src="/festival/milad-un-nabi.jpeg"
+                    src={festivalImg}
+                    // src="/festival/2ndOctober.jpeg"
                     width={0}
                     height={0}
                     // sizes="80vw"
