@@ -182,26 +182,48 @@ const NoticePopup = ({ imageIndex = 0 }) => {
   //   currentDate.getFullYear() === festivalDate.getFullYear();
 
   const currentDate = new Date();
-  const gandhiJayanti = new Date("2024-10-12");
-  const navratriStart = new Date("2024-10-03T00:00:00");
-  const navratriEnd = new Date("2024-10-11T23:59:59");
+
+  // Define the festival dates
+  const dantersa = new Date("2024-10-29");
+  const diwaliStart = new Date("2024-10-31T00:00:00");
+  const diwaliEnd = new Date("2024-11-01T23:59:59");
+  const govardhan = new Date("2024-11-02");
+  const bhaiDuj = new Date("2024-11-03");
 
   let isFestivalDay = false;
   let festivalImg = "";
 
-  // Check if it's dussehra
+  // Check if it's Dantersa on 29th October
   if (
-    currentDate.getDate() === gandhiJayanti.getDate() &&
-    currentDate.getMonth() === gandhiJayanti.getMonth() &&
-    currentDate.getFullYear() === gandhiJayanti.getFullYear()
+    currentDate.getDate() === dantersa.getDate() &&
+    currentDate.getMonth() === dantersa.getMonth() &&
+    currentDate.getFullYear() === dantersa.getFullYear()
   ) {
     isFestivalDay = true;
-    festivalImg = "/festival/dussehra.jpeg";
+    festivalImg = "/festival/dantersa.jpeg";
   }
-  // Check if it's between 3rd October and 11th October (Navratri)
-  else if (currentDate >= navratriStart && currentDate <= navratriEnd) {
+  // Check if it's between 31st October and 1st November (Diwali)
+  else if (currentDate >= diwaliStart && currentDate <= diwaliEnd) {
     isFestivalDay = true;
-    festivalImg = "/festival/navratri.jpeg";
+    festivalImg = "/festival/diwali.jpeg";
+  }
+  // Check if it's Govardhan on 2nd November
+  else if (
+    currentDate.getDate() === govardhan.getDate() &&
+    currentDate.getMonth() === govardhan.getMonth() &&
+    currentDate.getFullYear() === govardhan.getFullYear()
+  ) {
+    isFestivalDay = true;
+    festivalImg = "/festival/govardhan.jpeg";
+  }
+  // Check if it's Bhai Duj on 3rd November
+  else if (
+    currentDate.getDate() === bhaiDuj.getDate() &&
+    currentDate.getMonth() === bhaiDuj.getMonth() &&
+    currentDate.getFullYear() === bhaiDuj.getFullYear()
+  ) {
+    isFestivalDay = true;
+    festivalImg = "/festival/bhaiDuj.jpeg";
   } else {
     isFestivalDay = false;
   }
