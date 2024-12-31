@@ -182,51 +182,66 @@ const NoticePopup = ({ imageIndex = 0 }) => {
   //   currentDate.getFullYear() === festivalDate.getFullYear();
 
   const currentDate = new Date();
-
-  // Define the festival dates
-  const dantersa = new Date("2024-10-29");
-  const diwaliStart = new Date("2024-10-31T00:00:00");
-  const diwaliEnd = new Date("2024-11-01T23:59:59");
-  const govardhan = new Date("2024-11-02");
-  const bhaiDuj = new Date("2024-11-03");
+  const newYearStart = new Date("2024-01-01T00:00:00");
+  const newYearEnd = new Date("2024-01-01T23:59:59");
 
   let isFestivalDay = false;
   let festivalImg = "";
 
-  // Check if it's Dantersa on 29th October
-  if (
-    currentDate.getDate() === dantersa.getDate() &&
-    currentDate.getMonth() === dantersa.getMonth() &&
-    currentDate.getFullYear() === dantersa.getFullYear()
-  ) {
+  // Check if it's New Year's Day (1st January)
+  if (currentDate >= newYearStart && currentDate <= newYearEnd) {
     isFestivalDay = true;
-    festivalImg = "/festival/dantersa.jpeg";
-  }
-  // Check if it's between 31st October and 1st November (Diwali)
-  else if (currentDate >= diwaliStart && currentDate <= diwaliEnd) {
-    isFestivalDay = true;
-    festivalImg = "/festival/diwali.jpeg";
-  }
-  // Check if it's Govardhan on 2nd November
-  else if (
-    currentDate.getDate() === govardhan.getDate() &&
-    currentDate.getMonth() === govardhan.getMonth() &&
-    currentDate.getFullYear() === govardhan.getFullYear()
-  ) {
-    isFestivalDay = true;
-    festivalImg = "/festival/govardhan.jpeg";
-  }
-  // Check if it's Bhai Duj on 3rd November
-  else if (
-    currentDate.getDate() === bhaiDuj.getDate() &&
-    currentDate.getMonth() === bhaiDuj.getMonth() &&
-    currentDate.getFullYear() === bhaiDuj.getFullYear()
-  ) {
-    isFestivalDay = true;
-    festivalImg = "/festival/bhaiDuj.jpeg";
+    festivalImg = "/festival/newyear.jpeg";
   } else {
     isFestivalDay = false;
   }
+
+  // const currentDate = new Date();
+
+  // // Define the festival dates
+  // const dantersa = new Date("2024-10-29");
+  // const diwaliStart = new Date("2024-10-31T00:00:00");
+  // const diwaliEnd = new Date("2024-11-01T23:59:59");
+  // const govardhan = new Date("2024-11-02");
+  // const bhaiDuj = new Date("2024-11-03");
+
+  // let isFestivalDay = false;
+  // let festivalImg = "";
+
+  // // Check if it's Dantersa on 29th October
+  // if (
+  //   currentDate.getDate() === dantersa.getDate() &&
+  //   currentDate.getMonth() === dantersa.getMonth() &&
+  //   currentDate.getFullYear() === dantersa.getFullYear()
+  // ) {
+  //   isFestivalDay = true;
+  //   festivalImg = "/festival/dantersa.jpeg";
+  // }
+  // // Check if it's between 31st October and 1st November (Diwali)
+  // else if (currentDate >= diwaliStart && currentDate <= diwaliEnd) {
+  //   isFestivalDay = true;
+  //   festivalImg = "/festival/diwali.jpeg";
+  // }
+  // // Check if it's Govardhan on 2nd November
+  // else if (
+  //   currentDate.getDate() === govardhan.getDate() &&
+  //   currentDate.getMonth() === govardhan.getMonth() &&
+  //   currentDate.getFullYear() === govardhan.getFullYear()
+  // ) {
+  //   isFestivalDay = true;
+  //   festivalImg = "/festival/govardhan.jpeg";
+  // }
+  // // Check if it's Bhai Duj on 3rd November
+  // else if (
+  //   currentDate.getDate() === bhaiDuj.getDate() &&
+  //   currentDate.getMonth() === bhaiDuj.getMonth() &&
+  //   currentDate.getFullYear() === bhaiDuj.getFullYear()
+  // ) {
+  //   isFestivalDay = true;
+  //   festivalImg = "/festival/bhaiDuj.jpeg";
+  // } else {
+  //   isFestivalDay = false;
+  // }
 
   return (
     <Fragment>
