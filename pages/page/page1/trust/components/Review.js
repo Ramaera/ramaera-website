@@ -40,7 +40,7 @@ const Image = styled.img`
 const TopHalf = styled.div`
   margin-top: 40px;
   @media only screen and (max-width: 768px) {
-    transform: scale(75%);
+    transform: scale(0.75);
     margin-right: auto;
     margin-left: auto;
   }
@@ -108,7 +108,7 @@ const Review = ({ avatar, profileName, profileTitle, profileReview }) => {
       <BottomHalf>
         <Profile>
           <Avatar>
-            <Image src={avatar} height={110} width={110} />
+            <Image src={avatar} alt="profile photo" height={110} width={110} />
           </Avatar>
           <NameDiv>
             <Text

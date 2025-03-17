@@ -1,59 +1,48 @@
+import React from "react"
 import styled from "styled-components"
-import Heading from "../../../../../components/Heading/Heading"
 import Flex from "../../../../../components/Styling/Flex"
 import Text from "../../../../../components/Text/Text"
+import Link from "next/link"
+import TransparentButton from "../../../../../components/TransparentButton/TransparentButton"
 
 const StyleTextContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-end;
   flex-direction: column;
-  // background: red;
   width: 50rem;
-  margin: -6rem 0 4rem 0;
+  margin: 1rem 100px -7.5rem 0;
   @media only screen and (max-width: 768px) {
     position: absolute;
     margin: 0;
-    top: 10%;
-    width: 90vw;
+    width: 100vw;
+    top: 0vh;
+    overflow: hidden;
+  }
+`
+const ButtonWrapper = styled.div`
+  padding: 2vh 0 0 0;
+  @media only screen and (max-width: 768px) {
+    padding: 2vh 30vw 2vh 30vw;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 2vh 25vw 2vh 25vw;
   }
 `
 const IconDiv = styled.div`
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    right: -130px;
   }
 `
+
 const TextContainer = () => {
   return (
     <StyleTextContainer>
-      <Flex jc="flex-end" mrcolumn>
-        <div>
-          <Heading
-            Text="Agri-business to bestow"
-            align="right"
-            size="42px"
-            lh=""
-            color="#FFF"
-            xm="3vw"
-            mta="left"
-            ms="1.2rem"
-          />
-          <Text
-            Text="Nature's Love"
-            align="right"
-            size="42px"
-            lg="linear-gradient(90deg, #F7941E 0%, #72C6EF 50%, #00A651 100%),linear-gradient(0deg, #FFFFFF, #FFFFFF)"
-            lh="55px"
-            mlh="30px"
-            xmsize="2rem"
-            xssize="3vw"
-            msize="2rem"
-            mta="center"
-          />
-        </div>
+      <Flex jc="end" mcolumn>
         <IconDiv>
           <svg
-            width="150"
-            height="150"
+            width="123"
+            height="123"
             viewBox="0 0 150 150"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -144,20 +133,67 @@ const TextContainer = () => {
             </defs>
           </svg>
         </IconDiv>
+        <div>
+          <Text
+            Text="Agri-business to bestow"
+            align="right"
+            size="42px"
+            lh="55px"
+            mlh="30px"
+            xmsize="2rem"
+            xssize="3vw"
+            msize="2rem"
+            mta="center"
+            width="100%"
+            margin="0"
+            padding="0"
+          />
+          <Text
+            Text="Nature's Love"
+            lg="linear-gradient(90deg, #F7941E 0%, #72C6EF 50%, #00A651 100%),linear-gradient(0deg, #FFFFFF, #FFFFFF)"
+            align="right"
+            size="42px"
+            lh="55px"
+            width="100%"
+            mlh="30px"
+            xmsize="2rem"
+            xssize="3vw"
+            msize="2rem"
+            margin="0"
+            mta="center"
+            padding="0"
+          />
+        </div>
       </Flex>
       <Text
-        Text="We provide packaging solutions to help your business flourish with boosted outreach. Ensuring the protection, containment, and communication of packaged projects is our foremost priority."
-        align="right"
+        Text="Our Agri-business industry is established to get you fresh and organic fruits and vegetables with the blessed with the touch of nature."
         fw="500"
-        size="23px"
+        align="right"
+        size="20px"
         lh="45px"
-        width="40rem"
+        width="32.5rem"
+        m=" 0"
         xssize="18px"
         mlh="30px"
         msize="18px"
         mwidth="100vw"
         mta="center"
+        padding="0 0 0 0vw"
       />
+      <ButtonWrapper>
+        <Link href="/Industries#argiculture">
+          <TransparentButton
+            Text="Read more"
+            border="solid #00A651 1.6px"
+            bg="linear-gradient(90deg, #72C6EF 0%, #00A651 100%)"
+            height="48px"
+            m="2rem 0 0 0"
+            br="1.1rem"
+            fw="300"
+            fontSize="14px"
+          />
+        </Link>
+      </ButtonWrapper>
     </StyleTextContainer>
   )
 }

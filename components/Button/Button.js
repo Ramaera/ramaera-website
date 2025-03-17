@@ -12,8 +12,9 @@ const StyledButton = styled(motion.button)`
   padding: ${(props) =>
     props.secondary ? "2px" : props.padding ? props.padding : "0.85rem 2rem"};
   border-radius: ${(props) =>
-    props.br ? props.br : props.secondary ? "1.45rem" : "0.55rem"};
+    props.br ? props.br : props.secondary ? "1.2rem" : "0.8rem"};
   border: ${(props) => (props.lightBorder ? "2px solid #FFFFFF" : "none")};
+  border: ${(props) => (props.bborder ? props.bborder : "none")};
   cursor: pointer;
   min-width: ${(props) =>
     props.width
@@ -27,9 +28,10 @@ const StyledButton = styled(motion.button)`
       : "linear-gradient(90deg, #F9D423 0%, #E65C00 100%),linear-gradient(0deg, #FFFFFF, #FFFFFF)"};
   margin: ${(props) => (props.m ? props.m : "")};
   height: ${(props) => (props.height ? props.height : "")};
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: ${(props) =>
+    props.sh
+      ? props.sh
+      : "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset"};
 
   @media (max-width: 768px) {
     max-width: ${(props) =>

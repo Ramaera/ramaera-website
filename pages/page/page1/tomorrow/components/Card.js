@@ -2,12 +2,13 @@ import { animated } from "react-spring"
 import styled from "styled-components"
 
 const CardContainer = styled.div`
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 10px;
   @media only screen and (max-width: 1000px) {
-    transform: scale(60%);
+    transform: scale(0.6);
   }
 `
 
@@ -42,7 +43,7 @@ function Card({ imagen, onDate, title, subTitle }) {
   return (
     <animated.div>
       <CardContainer>
-        <Image src={imagen} alt="" />
+        <Image src={imagen} alt={title} />
         <TextContainer>
           <Date>{onDate}</Date>
           <Heading>{title}</Heading>

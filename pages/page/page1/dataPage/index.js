@@ -6,7 +6,9 @@ import Item from "./components/Item"
 import styled from "styled-components"
 
 const PolyBg = styled.div`
-  opacity: 50%;
+  @media only screen and (max-width: 768px) {
+    opacity: 50%;
+  }
 `
 const Image = styled.img`
   height: 80vh;
@@ -29,20 +31,12 @@ const index = () => {
           <Container>
             <Item
               img={svg1}
-              number="1600000+"
+              number="200+"
               desc="Ramaera Group Direct Employees"
             />
-            <Item
-              img={svg2}
-              number="20000"
-              desc="FMCG Upcoming Mother Brands"
-            />
-            <Item img={svg3} number="10000+" desc="Hotels across pan India" />
-            <Item
-              img={svg4}
-              number="5 Million"
-              desc="Sustainable Livelihoods"
-            />
+            <Item img={svg2} number="1000" desc="FMCG Upcoming Mother Brands" />
+            <Item img={svg3} number="15000+" desc="Community Members" />
+            <Item img={svg4} number="15" desc="States Reach" />
           </Container>
         </div>
       </PageWidth>
@@ -53,7 +47,10 @@ const index = () => {
         data-aos-anchor-placement="center-bottom"
       >
         <PolyBg>
-          <Image src={"/background/leftPoly.png"} alt="" />
+          <Image
+            src={"/background/leftPoly.png"}
+            alt="left polygon background"
+          />
         </PolyBg>
       </div>
     </PageLayout>

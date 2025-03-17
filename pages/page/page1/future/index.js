@@ -1,8 +1,15 @@
 import PageLayout from "../../../../components/PageLayout/PageLayout"
 import PageWidth from "../../../../components/Width/PageWidth"
 import Text from "../../../../components/Text/Text"
-import { bg, RotateImage, FutureContainer } from "./components/Style"
+import {
+  bg,
+  RotateImage,
+  TimelineWrapper,
+  FutureContainer,
+  TimelineContainer,
+} from "./components/Style"
 import Roadmap from "./components/Roadmap"
+import Timeline from "./components/Timeline"
 
 const index = () => {
   return (
@@ -14,7 +21,7 @@ const index = () => {
           data-aos-duration="500"
           data-aos-anchor-placement="top-bottom"
         >
-          <img loading="lazy" src="/content/card.png" />
+          <img loading="lazy" src="/content/card.png" alt="card" />
         </div>
       </RotateImage>
       <FutureContainer>
@@ -67,6 +74,11 @@ const index = () => {
             width="80vw"
           />
           <Roadmap />
+          {/* <TimelineContainer>
+            <TimelineWrapper>
+              <Timeline />
+            </TimelineWrapper>
+          </TimelineContainer> */}
         </PageWidth>
       </FutureContainer>
     </PageLayout>
